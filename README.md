@@ -1,4 +1,11 @@
 <p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/readme-banner-dark.png">
+    <img src="docs/images/readme-banner.png" alt="tokker.dev. What AI tokens really cost, per million. A split-flap board of $ per 1M token prices as of 5 Oct 2026." width="100%">
+  </picture>
+</p>
+
+<p align="center">
   <b>What AI tokens really cost, per million, with the source for every number.</b><br>
   An open price index for AI APIs and AI subscriptions, kept current by scheduled agents.
 </p>
