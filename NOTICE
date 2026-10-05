@@ -1,0 +1,9 @@
+Tokker
+Copyright 2026 The Tokker authors
+
+This product includes software developed by the Tokker project
+(https://github.com/Tokker-dev/tokker).
+
+The data in data/ is licensed separately; see data/LICENSE.
+Prices, limits and quotes in data/ are facts and short excerpts taken from
+each provider's public pages, which are named in every row's provenance.
