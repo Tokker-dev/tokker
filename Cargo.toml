@@ -1,0 +1,37 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+repository = "https://github.com/Tokker-dev/tokker"
+
+[workspace.dependencies]
+# All cratefield-* crates come from crates.io, pinned to compatible
+# versions. Never mix sources; `cargo tree -d --depth 0 | grep cratefield`
+# must print nothing (CLAUDE.md).
+cratefield-core = "0.8"
+cratefield-runtime-cloudflare = "0.4"
+
+# HTTP stack (versions aligned with what cratefield-core re-exports).
+axum = { version = "0.8", default-features = false, features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Workers runtime.
+worker = { version = "0.8", default-features = false, features = ["d1"] }
+async-trait = "0.1"
+
+# wasm32-only: getrandom needs the opt-in wasm_js backend.
+getrandom = { version = "0.4", default-features = false, features = ["wasm_js"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"
+pedantic = "warn"
+must_use_candidate = { level = "allow", priority = 1 }

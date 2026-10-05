@@ -1,0 +1,22 @@
+{
+  "name": "tokker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "build": "echo 'not implemented' && exit 1",
+    "fetch": "echo 'not implemented' && exit 1",
+    "extract": "echo 'not implemented' && exit 1",
+    "diff": "echo 'not implemented' && exit 1",
+    "confirm": "echo 'not implemented' && exit 1",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "vitest": "^3.0.0"
+  }
+}
