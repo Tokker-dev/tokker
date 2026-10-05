@@ -15,12 +15,12 @@ Worker that serves the API and MCP. The website lives in `Tokker-dev/website`.
 | :--- | :--- |
 | `data/` | the dataset, licensed separately (`data/LICENSE`). Today `pricing.json` plus two CSV exports; it is split per provider by an M0 issue |
 | `docs/` | the plan, the research report, the schema notes, design decisions |
-| `schema/` | (planned) `pricing.v1.json`, the JSON Schema every data file must pass |
-| `tools/` | (planned) data tooling: validate, build, fetch, extract, diff, confirm |
-| `extractors/` | (planned) one extractor per provider or plan source |
-| `loops/` | (planned) the Colonizer loop prompts and their `colonizer loop create` lines |
+| `schema/` | `pricing.v1.json`, the JSON Schema every data file must pass |
+| `tools/` | data tooling: validate, build, fetch, extract, diff, confirm |
+| `extractors/` | one extractor per provider or plan source |
+| `loops/` | the Colonizer loop prompts and their `colonizer loop create` lines |
 | `evidence/` | (planned) fetched source snapshots, `evidence/<date>/<sha256>.*` |
-| `crates/` | (planned) the Rust workspace: the Worker and its modules |
+| `crates/` | the Rust workspace: the Worker and its modules |
 
 ## Data rules (the product is trust)
 

@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: fmt
+        run: cargo fmt --all -- --check
+      - name: clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: test
+        run: cargo test --workspace
+      - name: doc
+        run: RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --workspace
+      - name: wasm build
+        run: cargo build -p tokker-worker --target wasm32-unknown-unknown
+      - name: duplicate cratefield check
+        run: |
+          tree=$(mktemp)
+          if ! cargo tree -d --depth 0 > "$tree"; then
+            echo "ERROR: cargo tree failed; duplicate check could not run"
+            exit 1
+          fi
+          cat "$tree"
+          if grep cratefield "$tree"; then
+            echo "ERROR: duplicate cratefield crate detected"
+            exit 1
+          fi
+
+  data:
+    name: Data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
+      - run: npm test
