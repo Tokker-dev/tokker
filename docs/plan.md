@@ -216,7 +216,10 @@ Rule from the owner: a new Cratefield module or port is only OK if it is **gener
 | G7 | **Small harness items** | (a) a cron field in the manifest so `fz build` emits `[triggers]` (today it is lost on regeneration); (b) a tiny static-text route helper for `/llms.txt` on API hosts; (c) a Queues port so watchers can fan out past 40 subrequests per tick | All ventures |
 | G8 | **Colonizer: a "refresh data and open PR" loop template** | A first-class loop kind: given `sources.json` and a validate command, fetch, extract, diff, validate, then open a PR with evidence. Domain-neutral. | Any data-repo venture |
 
-These would be filed later against `Cratefield/harness` (G1–G7) and `Colonizer-dev/harness` (G8). Nothing has been filed yet.
+Filed on 2026-10-05:
+- **Cratefield/harness:** G1 [#768](https://github.com/Cratefield/harness/issues/768), G2 [#769](https://github.com/Cratefield/harness/issues/769), G3 [#770](https://github.com/Cratefield/harness/issues/770), G4 [#771](https://github.com/Cratefield/harness/issues/771), G5 [#772](https://github.com/Cratefield/harness/issues/772) (coordinated with #576), G6 [#773](https://github.com/Cratefield/harness/issues/773), G7a [#774](https://github.com/Cratefield/harness/issues/774), G7b [#775](https://github.com/Cratefield/harness/issues/775), G7c [#776](https://github.com/Cratefield/harness/issues/776).
+- **Colonizer-dev/harness:** G8 [#1037](https://github.com/Colonizer-dev/harness/issues/1037); the §6.1 integration as [#1038](https://github.com/Colonizer-dev/harness/issues/1038) (per-model pricing and the price feed) and [#1039](https://github.com/Colonizer-dev/harness/issues/1039) (cheapest-host hint).
+- **Owlpost-to/backend:** nothing needed. Batch sends (up to 100), topic-scoped unsubscribe and `email.unsubscribed` webhooks already exist, and Cratefield `adapter-owlpost` exposes `batch` and topics.
 
 #### B. Venture-specific → the venture's own repo only
 

@@ -118,6 +118,15 @@ upstream issues are in [`docs/plan.md` §5](docs/plan.md).
 | **M2 · After launch** | history and the change feed, price-drop alerts through Owlpost, API keys, the Colonizer feed, dataset releases, embeds | [label: M2](https://github.com/Tokker-dev/tokker/issues?q=is%3Aissue+label%3AM2) |
 | **Later** | affiliate links (disclosed, never affecting rank) and a paid tier through Polar | [label: later](https://github.com/Tokker-dev/tokker/issues?q=is%3Aissue+label%3Alater) |
 
+The critical path to a launched API is #8 → #9 → #10 → #15 → #16 → #19 → #20 / #21 → #22 → #28, and freshness
+runs #30 → #31 → #37 → #38 → #39 → #44. Upstream harness work it waits on:
+[Cratefield/harness#768](https://github.com/Cratefield/harness/issues/768) (repo mirror),
+[#775](https://github.com/Cratefield/harness/issues/775) (llms.txt route) and
+[Colonizer-dev/harness#1037](https://github.com/Colonizer-dev/harness/issues/1037) (the data-refresh loop template).
+Epics: [#1](https://github.com/Tokker-dev/tokker/issues/1) M0 · [#2](https://github.com/Tokker-dev/tokker/issues/2) API and MCP ·
+[#3](https://github.com/Tokker-dev/tokker/issues/3) freshness · [#4](https://github.com/Tokker-dev/tokker/issues/4) alerts and accounts ·
+[#5](https://github.com/Tokker-dev/tokker/issues/5) integrations · [#6](https://github.com/Tokker-dev/tokker/issues/6) later.
+
 ## Money
 
 Free and open first. There are **no affiliate or referral links at launch** and we earn nothing from any
