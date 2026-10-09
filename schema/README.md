@@ -1,7 +1,14 @@
 # schema
 
-The JSON Schema every data file must pass: `pricing.v1.json`.
+The JSON Schema every data file must pass: [`pricing.v1.json`](pricing.v1.json)
+(JSON Schema draft 2020-12). `npm run validate` checks `data/pricing.json`
+against it (or any files you pass it) and enforces the dataset-wide rules the
+per-row schema cannot express: unique ids, non-empty `fetch_recipe.endpoint`,
+and an assumption profile on every numeric subscription estimate.
+
+The field-level contract — what `"unknown"` vs `null` means, per-field types,
+provenance — lives in [`docs/SCHEMA.md`](../docs/SCHEMA.md) and
+[`docs/plan.md`](../docs/plan.md) §3.
 
 Schema changes follow semver (CLAUDE.md rule 7): additive is minor, a rename or
-removal is major and needs a new `/v2`. The schema does not exist yet; until it
-lands, `npm run validate` reports "no schema yet" and exits 0.
+removal is major and needs a new `/v2`.

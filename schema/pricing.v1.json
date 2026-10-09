@@ -1,0 +1,423 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokker.dev/schema/pricing.v1.json",
+  "title": "Tokker price index, pricing document v1",
+  "description": "The public dataset shape: providers, API offers, subscription plans, FX rates, derived rankings and sources. \"unknown\" means the source does not publish the value; null means not applicable. See docs/SCHEMA.md and docs/plan.md §3.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset",
+    "generated_at",
+    "license",
+    "conventions",
+    "fx",
+    "counts",
+    "providers",
+    "api_offers",
+    "subscriptions",
+    "derived",
+    "sources",
+    "research_notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.\\d+\\.\\d+$"
+    },
+    "dataset": { "type": "string", "minLength": 1 },
+    "generated_at": { "$ref": "#/$defs/timestamp" },
+    "license": { "type": "string", "minLength": 1 },
+    "conventions": {
+      "type": "object",
+      "description": "Human-readable dataset conventions; keys are convention names.",
+      "additionalProperties": { "type": "string" }
+    },
+    "fx": { "$ref": "#/$defs/fx" },
+    "counts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 },
+      "required": ["api_providers", "api_offers", "subscription_vendors", "subscriptions", "sources"]
+    },
+    "providers": { "type": "array", "items": { "$ref": "#/$defs/provider" } },
+    "api_offers": { "type": "array", "items": { "$ref": "#/$defs/api_offer" } },
+    "subscriptions": { "type": "array", "items": { "$ref": "#/$defs/subscription" } },
+    "derived": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cheapest_provider_per_model"],
+      "properties": {
+        "cheapest_provider_per_model": {
+          "type": "object",
+          "description": "Keyed by model slug.",
+          "propertyNames": { "$ref": "#/$defs/slug" },
+          "additionalProperties": { "$ref": "#/$defs/cheapest_offer_entry" }
+        }
+      }
+    },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+    "research_notes": {
+      "type": "object",
+      "description": "Keyed by research part file name.",
+      "propertyNames": { "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" },
+      "additionalProperties": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "unknown": { "const": "unknown" },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "composite_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*/[a-z0-9][a-z0-9._-]*$"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "iso_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])([Tt]([01]\\d|2[0-3]):[0-5]\\d(:[0-5]\\d)?([Zz]|[+-](0\\d|1\\d|2[0-3]):[0-5]\\d))?$"
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])[Tt]([01]\\d|2[0-3]):[0-5]\\d(:[0-5]\\d)?([Zz]|[+-](0\\d|1\\d|2[0-3]):[0-5]\\d)$"
+    },
+    "number_or_unknown": {
+      "anyOf": [
+        { "type": "number", "minimum": 0 },
+        { "$ref": "#/$defs/unknown" }
+      ]
+    },
+    "number_null_or_unknown": {
+      "anyOf": [
+        { "type": "number", "minimum": 0 },
+        { "type": "null" },
+        { "$ref": "#/$defs/unknown" }
+      ]
+    },
+    "integer_or_unknown": {
+      "anyOf": [
+        { "type": "integer", "minimum": 0 },
+        { "$ref": "#/$defs/unknown" }
+      ]
+    },
+    "number_or_null": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "string_or_null": {
+      "type": ["string", "null"]
+    },
+    "provider_type": {
+      "enum": ["first_party", "aggregator", "inference_host", "cloud"]
+    },
+    "category": {
+      "enum": ["chat", "coding_agent", "ide", "token_plan", "api_credit_bundle"]
+    },
+    "confidence": {
+      "enum": ["official_page", "official_docs", "secondary"]
+    },
+    "fetch_method": {
+      "enum": ["json_api", "html_static", "html_js_rendered", "docs_markdown", "pdf", "manual"]
+    },
+    "volatility": {
+      "enum": ["high", "medium", "low"]
+    },
+    "limit_window": {
+      "enum": ["5h_rolling", "daily", "weekly", "monthly", "per_request", "unspecified"]
+    },
+    "limit_unit": {
+      "enum": ["tokens", "requests", "prompts", "messages", "credits", "usd", "unspecified"]
+    },
+    "fetch_recipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "endpoint", "selector_hint", "volatility"],
+      "properties": {
+        "method": { "$ref": "#/$defs/fetch_method" },
+        "endpoint": { "type": "string", "minLength": 1, "pattern": "\\S" },
+        "selector_hint": { "type": "string" },
+        "volatility": { "$ref": "#/$defs/volatility" }
+      }
+    },
+    "provenance_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "fetched_at", "method", "confidence"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "fetched_at": { "$ref": "#/$defs/iso_date" },
+        "method": { "$ref": "#/$defs/fetch_method" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["default"],
+      "properties": {
+        "default": { "$ref": "#/$defs/provenance_entry" },
+        "fields": {
+          "type": "object",
+          "description": "Per-field provenance: field name to \"default\" or its own provenance entry.",
+          "propertyNames": { "pattern": "^[a-z_][a-z0-9_]*$" },
+          "additionalProperties": {
+            "anyOf": [
+              { "const": "default" },
+              { "$ref": "#/$defs/provenance_entry" }
+            ]
+          }
+        }
+      }
+    },
+    "usd_api": {
+      "type": "object",
+      "description": "USD conversion of the row's native-currency numbers at fx.date.",
+      "additionalProperties": false,
+      "required": ["input_per_mtok", "output_per_mtok", "cached_input_per_mtok", "cache_write_per_mtok", "blended_3to1"],
+      "properties": {
+        "input_per_mtok": { "$ref": "#/$defs/number_or_null" },
+        "output_per_mtok": { "$ref": "#/$defs/number_or_null" },
+        "cached_input_per_mtok": { "$ref": "#/$defs/number_or_null" },
+        "cache_write_per_mtok": { "$ref": "#/$defs/number_or_null" },
+        "blended_3to1": { "$ref": "#/$defs/number_or_null" },
+        "fx_rate_date": { "$ref": "#/$defs/iso_date" }
+      }
+    },
+    "usd_subscription": {
+      "type": "object",
+      "description": "USD conversion of the row's native-currency numbers at fx.date.",
+      "additionalProperties": false,
+      "required": ["price_month", "price_year"],
+      "properties": {
+        "price_month": { "$ref": "#/$defs/number_or_null" },
+        "price_year": { "$ref": "#/$defs/number_or_null" },
+        "fx_rate_date": { "$ref": "#/$defs/iso_date" }
+      }
+    },
+    "fx": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base", "date", "source", "rates"],
+      "properties": {
+        "base": { "$ref": "#/$defs/currency" },
+        "date": { "$ref": "#/$defs/iso_date" },
+        "source": { "type": "string", "minLength": 1 },
+        "rates": {
+          "type": "object",
+          "description": "One unit of base currency in the target currency.",
+          "propertyNames": { "$ref": "#/$defs/currency" },
+          "additionalProperties": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "type", "country", "api_offer_count", "subscription_count"],
+      "properties": {
+        "id": { "$ref": "#/$defs/slug" },
+        "name": { "type": "string", "minLength": 1 },
+        "type": {
+          "anyOf": [
+            { "$ref": "#/$defs/provider_type" },
+            { "type": "null" }
+          ]
+        },
+        "country": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "api_offer_count": { "type": "integer", "minimum": 0 },
+        "subscription_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "limit_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["window", "unit", "amount", "quote"],
+      "properties": {
+        "window": { "$ref": "#/$defs/limit_window" },
+        "unit": { "$ref": "#/$defs/limit_unit" },
+        "amount": { "$ref": "#/$defs/number_or_unknown" },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The limit quoted verbatim from the source page."
+        }
+      }
+    },
+    "api_offer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "provider_id",
+        "provider_name",
+        "provider_type",
+        "provider_country",
+        "model_slug",
+        "model_name",
+        "model_creator",
+        "open_weights",
+        "currency",
+        "input_per_mtok",
+        "output_per_mtok",
+        "cached_input_per_mtok",
+        "cache_write_per_mtok",
+        "batch_discount_pct",
+        "offpeak",
+        "tiered_pricing",
+        "context_window",
+        "max_output",
+        "free_tier",
+        "region_notes",
+        "source",
+        "checked",
+        "confidence",
+        "notes",
+        "fetch_recipe",
+        "usd",
+        "last_verified_at",
+        "provenance"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/composite_id" },
+        "provider_id": { "$ref": "#/$defs/slug" },
+        "provider_name": { "type": "string", "minLength": 1 },
+        "provider_type": { "$ref": "#/$defs/provider_type" },
+        "provider_country": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "model_slug": { "$ref": "#/$defs/slug" },
+        "model_name": { "type": "string", "minLength": 1 },
+        "model_creator": { "type": "string", "minLength": 1 },
+        "open_weights": {
+          "enum": [true, false, "unknown"]
+        },
+        "currency": { "$ref": "#/$defs/currency" },
+        "input_per_mtok": { "$ref": "#/$defs/number_or_unknown" },
+        "output_per_mtok": { "$ref": "#/$defs/number_or_unknown" },
+        "cached_input_per_mtok": { "$ref": "#/$defs/number_null_or_unknown" },
+        "cache_write_per_mtok": { "$ref": "#/$defs/number_null_or_unknown" },
+        "batch_discount_pct": {
+          "anyOf": [
+            { "type": "number", "maximum": 100 },
+            { "type": "null" },
+            { "$ref": "#/$defs/unknown" }
+          ]
+        },
+        "offpeak": { "$ref": "#/$defs/string_or_null" },
+        "tiered_pricing": { "$ref": "#/$defs/string_or_null" },
+        "context_window": { "$ref": "#/$defs/integer_or_unknown" },
+        "max_output": { "$ref": "#/$defs/integer_or_unknown" },
+        "free_tier": { "$ref": "#/$defs/string_or_null" },
+        "region_notes": { "$ref": "#/$defs/string_or_null" },
+        "source": { "type": "string", "minLength": 1 },
+        "checked": { "$ref": "#/$defs/iso_date" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "notes": { "$ref": "#/$defs/string_or_null" },
+        "fetch_recipe": { "$ref": "#/$defs/fetch_recipe" },
+        "usd": { "$ref": "#/$defs/usd_api" },
+        "last_verified_at": { "$ref": "#/$defs/iso_date" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "supersedes": { "$ref": "#/$defs/composite_id" }
+      }
+    },
+    "subscription": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "vendor_id",
+        "vendor_name",
+        "product",
+        "plan_name",
+        "category",
+        "currency",
+        "price_month",
+        "price_year",
+        "models_included",
+        "limits_published",
+        "fair_use",
+        "est_tokens_per_month",
+        "est_usd_per_mtok_at_full_use",
+        "estimate_assumption",
+        "source",
+        "checked",
+        "confidence",
+        "notes",
+        "fetch_recipe",
+        "usd",
+        "last_verified_at",
+        "provenance"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/composite_id" },
+        "vendor_id": { "$ref": "#/$defs/slug" },
+        "vendor_name": { "type": "string", "minLength": 1 },
+        "product": { "type": "string", "minLength": 1 },
+        "plan_name": { "type": "string", "minLength": 1 },
+        "category": { "$ref": "#/$defs/category" },
+        "currency": { "$ref": "#/$defs/currency" },
+        "price_month": { "$ref": "#/$defs/number_null_or_unknown" },
+        "price_year": { "$ref": "#/$defs/number_null_or_unknown" },
+        "models_included": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "limits_published": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/limit_entry" }
+        },
+        "fair_use": { "$ref": "#/$defs/string_or_null" },
+        "est_tokens_per_month": { "$ref": "#/$defs/number_or_unknown" },
+        "est_usd_per_mtok_at_full_use": { "$ref": "#/$defs/number_or_unknown" },
+        "estimate_assumption": {
+          "type": "string",
+          "minLength": 1,
+          "description": "How the estimate was derived. A numeric estimate must name an assumption profile (the validator enforces this; the dataset's profile is STANDARD, see docs/plan.md §2)."
+        },
+        "source": { "type": "string", "minLength": 1 },
+        "checked": { "$ref": "#/$defs/iso_date" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "notes": { "$ref": "#/$defs/string_or_null" },
+        "fetch_recipe": { "$ref": "#/$defs/fetch_recipe" },
+        "usd": { "$ref": "#/$defs/usd_subscription" },
+        "last_verified_at": { "$ref": "#/$defs/iso_date" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "supersedes": { "$ref": "#/$defs/composite_id" }
+      }
+    },
+    "cheapest_offer_entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["offers", "cheapest_offer", "blended_3to1_usd"],
+      "properties": {
+        "offers": { "type": "integer", "minimum": 1 },
+        "cheapest_offer": { "$ref": "#/$defs/composite_id" },
+        "blended_3to1_usd": { "$ref": "#/$defs/number_or_null" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider_id", "url", "fetch_recipe", "fetch_ok", "notes", "part"],
+      "properties": {
+        "provider_id": { "$ref": "#/$defs/slug" },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://\\S+$"
+        },
+        "fetch_recipe": { "$ref": "#/$defs/fetch_recipe" },
+        "fetch_ok": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "part": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
