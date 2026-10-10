@@ -10,6 +10,7 @@ import {
   pointerToJsonPath,
   validateDocuments,
 } from './validate.mjs';
+import { buildDocument } from './build.mjs';
 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 const tmpDir = mkdtempSync(join(tmpdir(), 'tokker-validate-test-'));
@@ -175,9 +176,71 @@ test('a number and the string "unknown" both pass where number|"unknown" is allo
   withNumber.api_offers[0].input_per_mtok = 3;
   expect(errorsOf(withNumber)).toEqual([]);
 
+  // "unknown" is a legal native value; its usd block must follow (null there).
   const withUnknown = makeDoc();
   withUnknown.api_offers[0].input_per_mtok = 'unknown';
+  withUnknown.api_offers[0].output_per_mtok = 'unknown';
+  withUnknown.api_offers[0].cached_input_per_mtok = 'unknown';
+  withUnknown.api_offers[0].cache_write_per_mtok = 'unknown';
+  buildDocument(withUnknown, withUnknown.fx);
   expect(errorsOf(withUnknown)).toEqual([]);
+  expect(withUnknown.api_offers[0].usd).toEqual({
+    input_per_mtok: null,
+    output_per_mtok: null,
+    cached_input_per_mtok: null,
+    cache_write_per_mtok: null,
+    blended_3to1: null,
+  });
+});
+
+test('a hand-edited usd value fails as build drift', () => {
+  const doc = makeDoc();
+  doc.api_offers[0].usd.input_per_mtok = 3.01;
+  const errors = errorsOf(doc);
+  const hit = errors.find((e) => e.path === '$.api_offers[0].usd.input_per_mtok');
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain('is 3.01');
+  expect(hit.message).toContain('build computes 3');
+  expect(hit.message).toContain('run npm run build');
+});
+
+test('a usd block that keeps a stale fx_rate_date on a base-currency row fails', () => {
+  const doc = makeDoc();
+  doc.api_offers[0].usd.fx_rate_date = '2026-10-02';
+  const errors = errorsOf(doc);
+  const hit = errors.find((e) => e.path === '$.api_offers[0].usd.fx_rate_date');
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain("build does not produce 'fx_rate_date'");
+});
+
+test('a row in a currency fx has no rate for fails at its own path', () => {
+  const doc = makeDoc();
+  doc.api_offers[0].currency = 'XYZ';
+  doc.subscriptions[0].currency = 'AAA';
+  const errors = errorsOf(doc);
+  const apiHit = errors.find((e) => e.path === '$.api_offers[0].currency');
+  expect(apiHit).toBeDefined();
+  expect(apiHit.message).toBe('currency "XYZ" has no rate in fx (unsupported; see docs/fx.md)');
+  const subHit = errors.find((e) => e.path === '$.subscriptions[0].currency');
+  expect(subHit).toBeDefined();
+  expect(subHit.message).toContain('has no rate in fx');
+  // and the usd blocks are not piled on with drift errors for the same rows
+  expect(errors.filter((e) => e.path.startsWith('$.api_offers[0].usd'))).toEqual([]);
+  expect(errors.filter((e) => e.path.startsWith('$.subscriptions[0].usd'))).toEqual([]);
+});
+
+test('a document whose fx block drifts from data/fx.json fails the CLI', () => {
+  const drifted = join(tmpDir, 'drifted.json');
+  const doc = makeDoc();
+  doc.fx.date = '2020-01-01';
+  writeFileSync(drifted, JSON.stringify(doc));
+  const r = spawnSync(process.execPath, ['tools/validate.mjs', drifted], {
+    cwd: repoRoot,
+    encoding: 'utf-8',
+  });
+  expect(r.status).toBe(1);
+  expect(r.stderr).toContain(`${drifted}:$.fx:`);
+  expect(r.stderr).toContain('data/fx.json');
 });
 
 test('a missing provenance fails and names the row path', () => {

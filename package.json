@@ -8,7 +8,8 @@
   },
   "scripts": {
     "validate": "node tools/validate.mjs",
-    "build": "echo 'not implemented' && exit 1",
+    "build": "node tools/build.mjs",
+    "fx": "node tools/fx.mjs",
     "fetch": "echo 'not implemented' && exit 1",
     "extract": "echo 'not implemented' && exit 1",
     "diff": "echo 'not implemented' && exit 1",

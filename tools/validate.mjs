@@ -9,10 +9,15 @@ import { resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 
+import { offerUsd, subscriptionUsd } from './build.mjs';
+import { isSupportedCurrency } from './fx.mjs';
+
 const SCHEMA_FILE = 'schema/pricing.v1.json';
 const DEFAULT_DATA_FILE = 'data/pricing.json';
+const FX_DATA_FILE = 'data/fx.json';
 const schemaUrl = new URL('../' + SCHEMA_FILE, import.meta.url);
 const defaultDataUrl = new URL('../' + DEFAULT_DATA_FILE, import.meta.url);
+const fxDataUrl = new URL('../' + FX_DATA_FILE, import.meta.url);
 
 // A numeric estimate must say how it was derived: a named, versioned profile —
 // STANDARD is the dataset's (docs/plan.md §2 plans the other three) — or an
@@ -159,6 +164,53 @@ function namesProfile(assumption) {
   );
 }
 
+/** Render a value the way the usd-drift message quotes it. */
+function renderValue(value) {
+  return typeof value === 'string' ? JSON.stringify(value) : String(value);
+}
+
+/**
+ * A row's usd block is build output: every field must equal what
+ * tools/build.mjs computes from the native values and the document's fx block
+ * (docs/fx.md) — a hand-edited usd value is a drift error.
+ */
+function checkRowUsd(row, basePath, fx, compute, file, errors) {
+  const currency = row?.currency;
+  if (typeof currency === 'string' && !isSupportedCurrency(currency, fx)) {
+    errors.push({
+      file,
+      path: `${basePath}.currency`,
+      message: `currency "${currency}" has no rate in fx (unsupported; see docs/fx.md)`,
+    });
+    return;
+  }
+  let expected;
+  try {
+    expected = compute(row, fx);
+  } catch {
+    return; // an unsupported currency is already reported above
+  }
+  const actual = row?.usd;
+  if (actual === null || typeof actual !== 'object') return; // the schema reports the shape
+  const fields = new Set([...Object.keys(expected), ...Object.keys(actual)]);
+  for (const field of fields) {
+    if (!(field in expected)) {
+      errors.push({
+        file,
+        path: `${basePath}.usd.${field}`,
+        message: `build does not produce '${field}' from native values and fx; run npm run build`,
+      });
+    } else if (!Object.is(actual[field], expected[field])) {
+      errors.push({
+        file,
+        path: `${basePath}.usd.${field}`,
+        message: `is ${renderValue(actual[field])}, build computes ${renderValue(expected[field])} ` +
+          'from native values and fx; run npm run build',
+      });
+    }
+  }
+}
+
 /** Per-document checks the JSON Schema cannot express. */
 function checkDocument(doc, file) {
   const errors = [];
@@ -179,6 +231,15 @@ function checkDocument(doc, file) {
         `or stating the vendor publishes tokens directly (${VENDOR_DIRECT_ASSUMPTIONS.join('; ')})`,
     });
   });
+  const fx = doc?.fx;
+  if (fx !== null && typeof fx === 'object' && typeof fx.base === 'string' && fx.rates !== null && typeof fx.rates === 'object') {
+    (Array.isArray(doc.api_offers) ? doc.api_offers : []).forEach((row, i) => {
+      checkRowUsd(row, `$.api_offers[${i}]`, fx, offerUsd, file, errors);
+    });
+    subs.forEach((row, i) => {
+      checkRowUsd(row, `$.subscriptions[${i}]`, fx, subscriptionUsd, file, errors);
+    });
+  }
   return errors;
 }
 
@@ -204,6 +265,17 @@ function indexIds(entries, errors) {
       });
     }
   }
+}
+
+/** Deep equality ignoring key order (both values are JSON values). */
+function deepEqualJson(a, b) {
+  const canonical = (v) => JSON.stringify(v, (key, value) => {
+    if (value !== null && typeof value === 'object' && !Array.isArray(value)) {
+      return Object.fromEntries(Object.entries(value).sort(([x], [y]) => (x < y ? -1 : x > y ? 1 : 0)));
+    }
+    return value;
+  });
+  return canonical(a) === canonical(b);
 }
 
 /**
@@ -258,6 +330,29 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
     }
   }
   problems.push(...validateDocuments(entries, schema));
+
+  // The dataset holds one dated rate set; every document's fx block must be
+  // exactly what data/fx.json holds (docs/fx.md).
+  let fxBlock;
+  try {
+    fxBlock = JSON.parse(readFileSync(fxDataUrl, 'utf-8'));
+  } catch (err) {
+    if (err?.code !== 'ENOENT') {
+      problems.push({ file: FX_DATA_FILE, path: '$', message: `cannot read file: ${err.message}` });
+    }
+  }
+  if (fxBlock !== undefined) {
+    for (const { file, doc } of entries) {
+      if (doc?.fx === undefined) continue;
+      if (typeof doc.fx === 'object' && doc.fx !== null && !deepEqualJson(doc.fx, fxBlock)) {
+        problems.push({
+          file,
+          path: '$.fx',
+          message: `does not match ${FX_DATA_FILE} (base/date/source/rates must be one dated rate set); run npm run fx && npm run build`,
+        });
+      }
+    }
+  }
 
   if (problems.length > 0) {
     for (const p of problems) error(formatError(p));

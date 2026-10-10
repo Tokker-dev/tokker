@@ -4944,8 +4944,8 @@
       },
       "usd": {
         "input_per_mtok": 0.298303,
-        "output_per_mtok": 1.193211,
-        "cached_input_per_mtok": 0.005966,
+        "output_per_mtok": 1.19321,
+        "cached_input_per_mtok": 0.00596605,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.52203
@@ -5002,12 +5002,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.342362,
-        "output_per_mtok": 4.027086,
-        "cached_input_per_mtok": 0.044745,
+        "input_per_mtok": 1.34236,
+        "output_per_mtok": 4.02709,
+        "cached_input_per_mtok": 0.0447454,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 2.013543
+        "blended_3to1": 2.01354
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -5235,12 +5235,12 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.983027,
-        "output_per_mtok": 14.915133,
+        "input_per_mtok": 2.98303,
+        "output_per_mtok": 14.9151,
         "cached_input_per_mtok": 0.298303,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 5.966054
+        "blended_3to1": 5.96605
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -5295,11 +5295,11 @@
       },
       "usd": {
         "input_per_mtok": 0.969484,
-        "output_per_mtok": 4.027086,
+        "output_per_mtok": 4.02709,
         "cached_input_per_mtok": 0.164066,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.733884
+        "blended_3to1": 1.73388
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -5643,12 +5643,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.193211,
-        "output_per_mtok": 4.176237,
+        "input_per_mtok": 1.19321,
+        "output_per_mtok": 4.17624,
         "cached_input_per_mtok": 0.298303,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.938968
+        "blended_3to1": 1.93897
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -5704,7 +5704,7 @@
       "usd": {
         "input_per_mtok": 0.119321,
         "output_per_mtok": 0.417624,
-        "cached_input_per_mtok": 0.034305,
+        "cached_input_per_mtok": 0.0343048,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.193897
@@ -5762,11 +5762,11 @@
       },
       "usd": {
         "input_per_mtok": 0.894908,
-        "output_per_mtok": 3.579632,
+        "output_per_mtok": 3.57963,
         "cached_input_per_mtok": 0.193897,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.566089
+        "blended_3to1": 1.56609
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6054,8 +6054,8 @@
       },
       "usd": {
         "input_per_mtok": 0.313218,
-        "output_per_mtok": 1.252871,
-        "cached_input_per_mtok": 0.062644,
+        "output_per_mtok": 1.25287,
+        "cached_input_per_mtok": 0.0626436,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.548131
@@ -6113,8 +6113,8 @@
       },
       "usd": {
         "input_per_mtok": 0.313218,
-        "output_per_mtok": 1.252871,
-        "cached_input_per_mtok": 0.062644,
+        "output_per_mtok": 1.25287,
+        "cached_input_per_mtok": 0.0626436,
         "cache_write_per_mtok": 0.391522,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.548131
@@ -6519,12 +6519,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.789816,
-        "output_per_mtok": 5.369448,
+        "input_per_mtok": 1.78982,
+        "output_per_mtok": 5.36945,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 2.684724
+        "blended_3to1": 2.68472
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6579,8 +6579,8 @@
       },
       "usd": {
         "input_per_mtok": 0.298303,
-        "output_per_mtok": 1.193211,
-        "cached_input_per_mtok": 0.059661,
+        "output_per_mtok": 1.19321,
+        "cached_input_per_mtok": 0.0596605,
         "cache_write_per_mtok": 0.372878,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.52203
@@ -6696,10 +6696,10 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 0.02983,
+        "input_per_mtok": 0.0298303,
         "output_per_mtok": 0.119321,
-        "cached_input_per_mtok": 0.005966,
-        "cache_write_per_mtok": 0.037288,
+        "cached_input_per_mtok": 0.00596605,
+        "cache_write_per_mtok": 0.0372878,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.052203
       },
@@ -6760,7 +6760,7 @@
         "cached_input_per_mtok": 0.178982,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.789816
+        "blended_3to1": 1.78982
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6816,7 +6816,7 @@
       "usd": {
         "input_per_mtok": 0.447454,
         "output_per_mtok": 2.23727,
-        "cached_input_per_mtok": 0.089491,
+        "cached_input_per_mtok": 0.0894908,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.894908
@@ -6875,7 +6875,7 @@
       "usd": {
         "input_per_mtok": 0.119321,
         "output_per_mtok": 0.402709,
-        "cached_input_per_mtok": 0.023864,
+        "cached_input_per_mtok": 0.0238642,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.190168
@@ -6933,11 +6933,11 @@
       },
       "usd": {
         "input_per_mtok": 0.477284,
-        "output_per_mtok": 2.386421,
-        "cached_input_per_mtok": 0.095457,
+        "output_per_mtok": 2.38642,
+        "cached_input_per_mtok": 0.0954569,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.954568
+        "blended_3to1": 0.954569
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6991,12 +6991,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 0.02983,
+        "input_per_mtok": 0.0298303,
         "output_per_mtok": 0.298303,
-        "cached_input_per_mtok": 0.005966,
+        "cached_input_per_mtok": 0.00596605,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.096948
+        "blended_3to1": 0.0969484
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7051,8 +7051,8 @@
       },
       "usd": {
         "input_per_mtok": 0.298303,
-        "output_per_mtok": 1.193211,
-        "cached_input_per_mtok": 0.005966,
+        "output_per_mtok": 1.19321,
+        "cached_input_per_mtok": 0.00596605,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.52203
@@ -7458,11 +7458,11 @@
       },
       "usd": {
         "input_per_mtok": 0.596605,
-        "output_per_mtok": 2.684724,
+        "output_per_mtok": 2.68472,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.118635
+        "blended_3to1": 1.11863
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7517,11 +7517,11 @@
       },
       "usd": {
         "input_per_mtok": 0.894908,
-        "output_per_mtok": 3.579632,
+        "output_per_mtok": 3.57963,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.566089
+        "blended_3to1": 1.56609
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7577,7 +7577,7 @@
       "usd": {
         "input_per_mtok": 0.119321,
         "output_per_mtok": 0.477284,
-        "cached_input_per_mtok": 0.02983,
+        "cached_input_per_mtok": 0.0298303,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.208812
@@ -7635,8 +7635,8 @@
       },
       "usd": {
         "input_per_mtok": 0.298303,
-        "output_per_mtok": 1.193211,
-        "cached_input_per_mtok": 0.005966,
+        "output_per_mtok": 1.19321,
+        "cached_input_per_mtok": 0.00596605,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.52203
@@ -7752,11 +7752,11 @@
       },
       "usd": {
         "input_per_mtok": 0.894908,
-        "output_per_mtok": 2.684724,
-        "cached_input_per_mtok": 0.044745,
+        "output_per_mtok": 2.68472,
+        "cached_input_per_mtok": 0.0447454,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.342362
+        "blended_3to1": 1.34236
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7812,7 +7812,7 @@
       "usd": {
         "input_per_mtok": 0.149151,
         "output_per_mtok": 0.596605,
-        "cached_input_per_mtok": 0.037288,
+        "cached_input_per_mtok": 0.0372878,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.261015
@@ -7870,11 +7870,11 @@
       },
       "usd": {
         "input_per_mtok": 0.357963,
-        "output_per_mtok": 1.431853,
+        "output_per_mtok": 1.43185,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.626435
+        "blended_3to1": 0.626436
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7928,12 +7928,12 @@
         "volatility": "low"
       },
       "usd": {
-        "input_per_mtok": 0.074576,
+        "input_per_mtok": 0.0745757,
         "output_per_mtok": 0.298303,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.130508
+        "blended_3to1": 0.130507
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7987,12 +7987,12 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 1.044059,
-        "output_per_mtok": 2.983027,
+        "input_per_mtok": 1.04406,
+        "output_per_mtok": 2.98303,
         "cached_input_per_mtok": 0.052203,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.528801
+        "blended_3to1": 1.5288
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -8047,8 +8047,8 @@
       },
       "usd": {
         "input_per_mtok": 0.201354,
-        "output_per_mtok": 1.208126,
-        "cached_input_per_mtok": 0.040271,
+        "output_per_mtok": 1.20813,
+        "cached_input_per_mtok": 0.0402709,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.453047
@@ -8107,7 +8107,7 @@
       "usd": {
         "input_per_mtok": 0.104406,
         "output_per_mtok": 0.313218,
-        "cached_input_per_mtok": 0.020881,
+        "cached_input_per_mtok": 0.0208812,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.156609
@@ -8457,8 +8457,8 @@
       },
       "usd": {
         "input_per_mtok": 0.477284,
-        "output_per_mtok": 1.789816,
-        "cached_input_per_mtok": 0.071593,
+        "output_per_mtok": 1.78982,
+        "cached_input_per_mtok": 0.0715926,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.805417
@@ -8516,7 +8516,7 @@
       },
       "usd": {
         "input_per_mtok": 0.447454,
-        "output_per_mtok": 1.342362,
+        "output_per_mtok": 1.34236,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
@@ -8579,7 +8579,7 @@
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.335591
+        "blended_3to1": 0.33559
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -8634,11 +8634,11 @@
       },
       "usd": {
         "input_per_mtok": 0.596605,
-        "output_per_mtok": 2.386421,
+        "output_per_mtok": 2.38642,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.044059
+        "blended_3to1": 1.04406
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -8693,7 +8693,7 @@
       },
       "usd": {
         "input_per_mtok": 0.745757,
-        "output_per_mtok": 1.342362,
+        "output_per_mtok": 1.34236,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
@@ -8751,7 +8751,7 @@
         "volatility": "low"
       },
       "usd": {
-        "input_per_mtok": 1.491513,
+        "input_per_mtok": 1.49151,
         "output_per_mtok": 4.47454,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
@@ -8929,8 +8929,8 @@
       },
       "usd": {
         "input_per_mtok": 0.447454,
-        "output_per_mtok": 1.342362,
-        "cached_input_per_mtok": 0.044745,
+        "output_per_mtok": 1.34236,
+        "cached_input_per_mtok": 0.0447454,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.671181
@@ -8987,12 +8987,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.193211,
-        "output_per_mtok": 4.176237,
+        "input_per_mtok": 1.19321,
+        "output_per_mtok": 4.17624,
         "cached_input_per_mtok": 0.298303,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.938968
+        "blended_3to1": 1.93897
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -9047,11 +9047,11 @@
       },
       "usd": {
         "input_per_mtok": 0.969484,
-        "output_per_mtok": 4.027086,
+        "output_per_mtok": 4.02709,
         "cached_input_per_mtok": 0.164066,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.733884
+        "blended_3to1": 1.73388
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -9106,11 +9106,11 @@
       },
       "usd": {
         "input_per_mtok": 0.894908,
-        "output_per_mtok": 2.684724,
-        "cached_input_per_mtok": 0.044745,
+        "output_per_mtok": 2.68472,
+        "cached_input_per_mtok": 0.0447454,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.342362
+        "blended_3to1": 1.34236
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -9164,12 +9164,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 0.059661,
+        "input_per_mtok": 0.0596605,
         "output_per_mtok": 0.477284,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.164067
+        "blended_3to1": 0.164066
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -9515,10 +9515,10 @@
       "usd": {
         "input_per_mtok": 0.447454,
         "output_per_mtok": 0.894908,
-        "cached_input_per_mtok": 0.003729,
+        "cached_input_per_mtok": 0.00372878,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.559318
+        "blended_3to1": 0.559317
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -9574,7 +9574,7 @@
       "usd": {
         "input_per_mtok": 0.149151,
         "output_per_mtok": 0.298303,
-        "cached_input_per_mtok": 0.002983,
+        "cached_input_per_mtok": 0.00298303,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.186439
@@ -9633,10 +9633,10 @@
       "usd": {
         "input_per_mtok": 4.47454,
         "output_per_mtok": 8.94908,
-        "cached_input_per_mtok": 0.037288,
+        "cached_input_per_mtok": 0.0372878,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 5.593175
+        "blended_3to1": 5.59317
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -11144,7 +11144,7 @@
         "output_per_mtok": 0.25,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 0.132812
+        "blended_3to1": 0.132813
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22336,7 +22336,7 @@
       "usd": {
         "input_per_mtok": 0.448999,
         "output_per_mtok": 0.897999,
-        "cached_input_per_mtok": 0.0898,
+        "cached_input_per_mtok": 0.0897999,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
         "blended_3to1": 0.561249
@@ -22394,11 +22394,11 @@
       },
       "usd": {
         "input_per_mtok": 0.673499,
-        "output_per_mtok": 3.704244,
+        "output_per_mtok": 3.70424,
         "cached_input_per_mtok": 0.1347,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.431185
+        "blended_3to1": 1.43119
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22452,12 +22452,12 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 1.010248,
-        "output_per_mtok": 1.010248,
+        "input_per_mtok": 1.01025,
+        "output_per_mtok": 1.01025,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.010248
+        "blended_3to1": 1.01025
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22571,11 +22571,11 @@
       },
       "usd": {
         "input_per_mtok": 0.673499,
-        "output_per_mtok": 4.040994,
+        "output_per_mtok": 4.04099,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.515373
+        "blended_3to1": 1.51537
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22688,7 +22688,7 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 0.0898,
+        "input_per_mtok": 0.0897999,
         "output_per_mtok": 0.448999,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
@@ -22747,12 +22747,12 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 0.0449,
+        "input_per_mtok": 0.0448999,
         "output_per_mtok": 0.168375,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.075769
+        "blended_3to1": 0.0757686
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22866,11 +22866,11 @@
       },
       "usd": {
         "input_per_mtok": 0.448999,
-        "output_per_mtok": 3.030745,
+        "output_per_mtok": 3.03075,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.094435
+        "blended_3to1": 1.09444
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22925,11 +22925,11 @@
       },
       "usd": {
         "input_per_mtok": 0.673499,
-        "output_per_mtok": 4.040994,
+        "output_per_mtok": 4.04099,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.515373
+        "blended_3to1": 1.51537
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -23333,7 +23333,7 @@
       },
       "usd": {
         "input_per_mtok": 0.72583,
-        "output_per_mtok": 3.629149,
+        "output_per_mtok": 3.62915,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
@@ -23392,11 +23392,11 @@
       },
       "usd": {
         "input_per_mtok": 0.967773,
-        "output_per_mtok": 4.354979,
+        "output_per_mtok": 4.35498,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 1.814574
+        "blended_3to1": 1.81457
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -30471,7 +30471,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 6.737957,
+        "price_month": 6.73796,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -31650,7 +31650,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 5.816902,
+        "price_month": 5.8169,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -31716,7 +31716,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 74.426513,
+        "price_month": 74.4265,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -31932,7 +31932,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 5.966053,
+        "price_month": 5.96605,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -32011,7 +32011,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 29.830266,
+        "price_month": 29.8303,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -32080,7 +32080,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 7.308415,
+        "price_month": 7.30842,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -32151,7 +32151,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 14.765982,
+        "price_month": 14.766,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -32222,7 +32222,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 29.681114,
+        "price_month": 29.6811,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -32293,7 +32293,7 @@
         "volatility": "high"
       },
       "usd": {
-        "price_month": 104.256779,
+        "price_month": 104.257,
         "price_year": null,
         "fx_rate_date": "2026-10-02"
       },
@@ -35038,7 +35038,7 @@
       "qwen3.8-max": {
         "offers": 2,
         "cheapest_offer": "alibaba/qwen3.8-max-cn",
-        "blended_3to1_usd": 2.684724
+        "blended_3to1_usd": 2.68472
       },
       "qwen3.7-plus": {
         "offers": 2,
@@ -35063,12 +35063,12 @@
       "ernie-5.0": {
         "offers": 2,
         "cheapest_offer": "baidu/ernie-5.0-cn",
-        "blended_3to1_usd": 1.566089
+        "blended_3to1_usd": 1.56609
       },
       "hy4-preview": {
         "offers": 2,
         "cheapest_offer": "siliconflow/hy4-preview-cn",
-        "blended_3to1_usd": 1.342362
+        "blended_3to1_usd": 1.34236
       },
       "step-5-preview": {
         "offers": 2,
