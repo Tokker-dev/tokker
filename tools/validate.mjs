@@ -240,6 +240,35 @@ function checkDocument(doc, file) {
         `or stating the vendor publishes tokens directly (${VENDOR_DIRECT_ASSUMPTIONS.join('; ')})`,
     });
   });
+
+  // Check model_weights constraints
+  subs.forEach((row, i) => {
+    const weights = Array.isArray(row?.model_weights) ? row.model_weights : [];
+    const included = new Set(Array.isArray(row?.models_included) ? row.models_included : []);
+
+    if (weights.length > 0) {
+      // If model_weights is non-empty and est_tokens_per_month is numeric, default_model must be set
+      const hasNumericEstimate = typeof row?.est_tokens_per_month === 'number';
+      if (hasNumericEstimate && typeof row?.default_model !== 'string') {
+        errors.push({
+          file,
+          path: `$.subscriptions[${i}].default_model`,
+          message: `default_model is required when model_weights is non-empty and est_tokens_per_month is numeric`,
+        });
+      }
+
+      // Every model in model_weights must be in models_included
+      weights.forEach((weight, j) => {
+        if (typeof weight?.model === 'string' && !included.has(weight.model)) {
+          errors.push({
+            file,
+            path: `$.subscriptions[${i}].model_weights[${j}].model`,
+            message: `model '${weight.model}' is not in models_included`,
+          });
+        }
+      });
+    }
+  });
   const fx = doc?.fx;
   if (fx !== null && typeof fx === 'object' && typeof fx.base === 'string' && fx.rates !== null && typeof fx.rates === 'object') {
     (Array.isArray(doc.api_offers) ? doc.api_offers : []).forEach((row, i) => {

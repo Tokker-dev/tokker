@@ -109,13 +109,31 @@ into one canonical id per lab; the other spellings are `aliases`.
 | `currency` | ISO 4217 |
 | `price_month`, `price_year` | number >= 0 \| `null` \| `"unknown"` (`price_year` = total per year if annual billing is offered) |
 | `models_included` | array of non-empty strings |
+| `model_weights` *(optional)* | [model_weights[]](#model_weights) — per-model quota weights, used to compute `estimates_by_model`; may be empty or absent |
 | `limits_published` | [limits_published[]](#limits_published); may be empty |
 | `fair_use` | string \| `null` — verbatim fair-use wording |
 | `est_tokens_per_month`, `est_usd_per_mtok_at_full_use` | number >= 0 \| `"unknown"` |
 | `estimate_assumption` | non-empty string — how the estimate was derived |
+| `default_model` *(optional)* | slug from `models_included` — the model the top-level estimate uses; required if `est_tokens_per_month` is numeric and `model_weights` is non-empty |
+| `estimates_by_model` *(optional)* | map of model slug → estimate block (build output, never hand-edited) |
 | `source`, `checked`, `confidence`, `notes`, `last_verified_at`, `provenance` | as in api_offers[] |
 | `fetch_recipe`, `usd` | [shared objects](#shared-objects) (`usd` is the subscription block) |
 | `supersedes` *(optional)* | composite id this row replaces |
+
+### model_weights[] (all fields required)
+
+Per-model quota weight: the input/cached-input/output credit or token multipliers published for that model.
+
+| Field | Type |
+|---|---|
+| `model` | slug from the plan's `models_included` |
+| `input` | number >= 0 — input token multiplier |
+| `cached_input` | number >= 0 — cached-input token multiplier |
+| `output` | number >= 0 — output token multiplier |
+| `unit` | `"credits"` \| `"tokens"` — what the multipliers count in |
+| `quote` | non-empty string — the multipliers quoted verbatim from the source |
+| `source` | non-empty string — the exact URL the weights came from |
+| `checked` | ISO date — when the weight was verified |
 
 ### limits_published[] (all fields required)
 

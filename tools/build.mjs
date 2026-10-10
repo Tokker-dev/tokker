@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Build: recompute every usd{} block and blended_3to1 in data/pricing.json
 // from the native values and data/fx.json, then refresh the derived
-// cheapest-provider ranking and the committed CSV exports' usd_* columns.
+// cheapest-provider ranking, the committed CSV exports' usd_* columns, and
+// per-model estimates in subscriptions[].estimates_by_model.
 // Hand-edited usd values are impossible: the validator re-derives them
 // (docs/fx.md). Usage: npm run build [-- --out <path>].
 
@@ -10,9 +11,11 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import { toUsd, validateFx } from './fx.mjs';
+import { estimateForPlan, round4 } from './math.ts';
 
 const fxFileUrl = new URL('../data/fx.json', import.meta.url);
 const pricingFileUrl = new URL('../data/pricing.json', import.meta.url);
+const profileFileUrl = (name) => new URL(`../data/profiles/${name}.json`, import.meta.url);
 
 const rowsOf = (doc, key) => (Array.isArray(doc?.[key]) ? doc[key] : []);
 
@@ -50,6 +53,66 @@ export function subscriptionUsd(row, fx) {
   };
   if (row.currency !== fx.base) usd.fx_rate_date = fx.date;
   return usd;
+}
+
+/**
+ * Compute estimates_by_model for a subscription from its model_weights.
+ * Uses the STANDARD profile to compute per-model estimates.
+ * Returns a map of model slug → estimate block (or {status: "not_published"} if weights missing).
+ */
+export function estimatesByModel(row, profile) {
+  const result = {};
+  const weights = Array.isArray(row?.model_weights) ? row.model_weights : [];
+  const included = new Set(Array.isArray(row?.models_included) ? row.models_included : []);
+
+  for (const weight of weights) {
+    const modelSlug = weight.model;
+    if (!included.has(modelSlug)) continue; // Already validated, but skip if not in included
+
+    // Compute conversions for this model's weights
+    let modelConversions = undefined;
+    if (weight.unit === 'credits') {
+      // Calculate credits per standard call for this specific model
+      const { input_tokens: i, cached_input_tokens: c, output_tokens: o } = profile.call;
+      modelConversions = {
+        credits_per_call: ((i - c) * weight.input + c * weight.cached_input + o * weight.output) / 10000,
+        source: weight.source,
+      };
+    }
+
+    // Build a plan input using this model's weights
+    const planInput = {
+      price_usd_per_month: row.price_month === 'unknown' || typeof row.price_month !== 'number' ? 'unknown' : row.price_month,
+      confidence: row.confidence || 'official_docs',
+      limits: Array.isArray(row?.limits_published) ? row.limits_published : [],
+      conversions: modelConversions,
+    };
+
+    const estimate = estimateForPlan(planInput, profile);
+
+    if (estimate.estTokensPerMonth === 'unknown') {
+      result[modelSlug] = { status: 'not_published' };
+    } else {
+      result[modelSlug] = {
+        tokens_per_5h: estimate.tokensPerWindow ?? undefined,
+        tokens_per_week: estimate.tokensPerWeek ?? undefined,
+        tokens_per_month: estimate.estTokensPerMonth,
+        usd_per_mtok_at_full_use: estimate.estUsdPerMtokAtFullUse === 'unknown' ? undefined : estimate.estUsdPerMtokAtFullUse,
+        binds: estimate.bindingWindow ?? undefined,
+      };
+      // Remove undefined fields
+      Object.keys(result[modelSlug]).forEach((k) => result[modelSlug][k] === undefined && delete result[modelSlug][k]);
+    }
+  }
+
+  // Mark models in models_included that don't have weights as "not_published"
+  for (const modelSlug of included) {
+    if (!result[modelSlug] && !weights.some((w) => w.model === modelSlug)) {
+      result[modelSlug] = { status: 'not_published' };
+    }
+  }
+
+  return Object.keys(result).length > 0 ? result : undefined;
 }
 
 /** Min blend wins; ties break on the smaller row id. */
@@ -93,11 +156,12 @@ function rebuildDerived(doc) {
 
 /**
  * Recompute every derived number in `doc` from its native values and `fx`:
- * the top-level fx block (a copy), each row's usd block, and the derived
- * cheapest-provider ranking. Mutates and returns doc. Throws on a currency
- * fx has no rate for — add the rate, never guess one (docs/fx.md).
+ * the top-level fx block (a copy), each row's usd block, the derived
+ * cheapest-provider ranking, and per-model estimates (estimates_by_model).
+ * Mutates and returns doc. Throws on a currency fx has no rate for — add the rate,
+ * never guess one (docs/fx.md).
  */
-export function buildDocument(doc, fx) {
+export function buildDocument(doc, fx, profile) {
   doc.fx = {
     base: fx.base,
     date: fx.date,
@@ -105,7 +169,16 @@ export function buildDocument(doc, fx) {
     rates: { ...fx.rates },
   };
   for (const row of rowsOf(doc, 'api_offers')) row.usd = offerUsd(row, fx);
-  for (const row of rowsOf(doc, 'subscriptions')) row.usd = subscriptionUsd(row, fx);
+  for (const row of rowsOf(doc, 'subscriptions')) {
+    row.usd = subscriptionUsd(row, fx);
+    // Compute per-model estimates if model_weights exist
+    if (Array.isArray(row.model_weights) && row.model_weights.length > 0 && profile) {
+      row.estimates_by_model = estimatesByModel(row, profile);
+    } else {
+      // Remove estimates_by_model if no weights
+      delete row.estimates_by_model;
+    }
+  }
   rebuildDerived(doc);
   return doc;
 }
@@ -297,19 +370,22 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
 
   let fx;
   let doc;
+  let profile;
   let originalText;
   try {
     fx = JSON.parse(readFileSync(fxFileUrl, 'utf-8'));
     validateFx(fx, 'data/fx.json'); // a 0 or non-finite rate would divide to a silent wrong usd
     originalText = readFileSync(pricingFileUrl, 'utf-8');
     doc = JSON.parse(originalText);
+    // Load the STANDARD (agentic-coding-v1) profile for per-model estimates
+    profile = JSON.parse(readFileSync(profileFileUrl('agentic-coding-v1'), 'utf-8'));
   } catch (err) {
-    error(`cannot read inputs (need data/fx.json and data/pricing.json): ${err.message}`);
+    error(`cannot read inputs (need data/fx.json, data/pricing.json, and data/profiles/agentic-coding-v1.json): ${err.message}`);
     return 1;
   }
 
   try {
-    buildDocument(doc, fx);
+    buildDocument(doc, fx, profile);
   } catch (err) {
     error(`${err.message}`);
     return 1;
