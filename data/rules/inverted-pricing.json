@@ -1,0 +1,4 @@
+{
+  "$comment": "Provider ids known to publish input_per_mtok above output_per_mtok, so the check-pr bounds.inverted rule skips them. Keep the list sorted; add a provider only with a source that really shows inverted pricing.",
+  "providers": []
+}

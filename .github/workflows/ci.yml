@@ -54,3 +54,24 @@ jobs:
       - run: npm ci
       - run: npm run validate
       - run: npm test
+
+  data-pr:
+    name: Data PR guard
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: check-pr
+        run: |
+          if git diff --quiet "origin/${{ github.base_ref }}" HEAD -- data/; then
+            echo "no data/ changes; skipping check-pr"
+          else
+            npm run check-pr -- --base "origin/${{ github.base_ref }}"
+          fi
