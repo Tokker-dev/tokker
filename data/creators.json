@@ -1,0 +1,165 @@
+{
+  "creators": [
+    {
+      "id": "01ai",
+      "name": "01.AI",
+      "aliases": []
+    },
+    {
+      "id": "ai21",
+      "name": "AI21 Labs",
+      "aliases": []
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "aliases": []
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "aliases": []
+    },
+    {
+      "id": "baichuan",
+      "name": "Baichuan AI",
+      "aliases": []
+    },
+    {
+      "id": "baidu",
+      "name": "Baidu",
+      "aliases": []
+    },
+    {
+      "id": "bytedance",
+      "name": "ByteDance",
+      "aliases": []
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "aliases": []
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "aliases": []
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "aliases": []
+    },
+    {
+      "id": "iflytek",
+      "name": "iFlytek",
+      "aliases": []
+    },
+    {
+      "id": "krutrim",
+      "name": "Krutrim",
+      "aliases": []
+    },
+    {
+      "id": "mbzuai",
+      "name": "MBZUAI",
+      "aliases": []
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "aliases": []
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "aliases": []
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "aliases": []
+    },
+    {
+      "id": "moonshotai",
+      "name": "Moonshot AI",
+      "aliases": [
+        "moonshot"
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "aliases": []
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "aliases": []
+    },
+    {
+      "id": "qwen",
+      "name": "Alibaba Cloud",
+      "aliases": [
+        "alibaba"
+      ]
+    },
+    {
+      "id": "reka",
+      "name": "Reka AI",
+      "aliases": []
+    },
+    {
+      "id": "sakana",
+      "name": "Sakana AI",
+      "aliases": []
+    },
+    {
+      "id": "sarvam",
+      "name": "Sarvam AI",
+      "aliases": []
+    },
+    {
+      "id": "sensetime",
+      "name": "SenseTime",
+      "aliases": []
+    },
+    {
+      "id": "stepfun",
+      "name": "StepFun",
+      "aliases": []
+    },
+    {
+      "id": "tencent",
+      "name": "Tencent",
+      "aliases": []
+    },
+    {
+      "id": "upstage",
+      "name": "Upstage",
+      "aliases": []
+    },
+    {
+      "id": "writer",
+      "name": "Writer",
+      "aliases": []
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "aliases": []
+    },
+    {
+      "id": "xiaomi",
+      "name": "Xiaomi",
+      "aliases": []
+    },
+    {
+      "id": "zai",
+      "name": "Z.ai",
+      "aliases": [
+        "zhipu"
+      ]
+    }
+  ]
+}

@@ -152,8 +152,25 @@ function makeDoc() {
   };
 }
 
+// The registry check needs every offer's slug known to models.json with a
+// matching creator, so the fixture validates against a registry of its own
+// instead of the repo's data/ one.
+const fixtureRegistry = {
+  models: [
+    {
+      slug: 'test-model',
+      name: 'Test Model',
+      creator: 'testco',
+      open_weights: false,
+      aliases: ['Test Model', 'test-model-alias'],
+      released: 'unknown',
+    },
+  ],
+  creators: [{ id: 'testco', name: 'TestCo', aliases: [] }],
+};
+
 function errorsOf(doc) {
-  return validateDocuments([{ file: 'fixture.json', doc }]);
+  return validateDocuments([{ file: 'fixture.json', doc }], undefined, fixtureRegistry);
 }
 
 test('the valid fixture passes', () => {
@@ -338,4 +355,50 @@ test('pointerToJsonPath renders array indexes, identifiers and odd keys', () => 
     '$.api_offers[12].provenance.default'
   );
   expect(pointerToJsonPath('/weird key')).toBe('$["weird key"]');
+});
+
+test('an api_offer whose model_slug is not in models.json fails and names the row', () => {
+  const doc = makeDoc();
+  doc.api_offers[0].model_slug = 'ghost-model';
+  const errors = errorsOf(doc);
+  const hit = errors.find((e) => e.path === '$.api_offers[0].model_slug');
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain("model_slug 'ghost-model' is not in data/models.json");
+  expect(errors.some((e) => e.path === '$.api_offers[0].model_creator')).toBe(false);
+});
+
+test('a known slug with a mismatched model_creator fails', () => {
+  const doc = makeDoc();
+  doc.api_offers[0].model_creator = 'someone-else';
+  const errors = errorsOf(doc);
+  const hit = errors.find((e) => e.path === '$.api_offers[0].model_creator');
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain(
+    "model_creator 'someone-else' does not match data/models.json creator 'testco' for model 'test-model'"
+  );
+});
+
+test('a derived key that is not a known slug fails', () => {
+  const doc = makeDoc();
+  doc.derived.cheapest_provider_per_model['ghost-model'] = {
+    offers: 1,
+    cheapest_offer: 'testco/ghost-model',
+    blended_3to1_usd: 1,
+  };
+  const errors = errorsOf(doc);
+  const hit = errors.find(
+    (e) => e.path === '$.derived.cheapest_provider_per_model["ghost-model"]'
+  );
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain("derived key 'ghost-model' is not a known model_slug");
+});
+
+test('a registry document that violates its schema is reported against the registry file', () => {
+  const errors = validateDocuments([{ file: 'fixture.json', doc: makeDoc() }], undefined, {
+    models: [{ ...fixtureRegistry.models[0], released: 'soon' }],
+    creators: fixtureRegistry.creators,
+  });
+  const hit = errors.find((e) => e.file === 'data/models.json');
+  expect(hit).toBeDefined();
+  expect(hit.path).toBe('$.models[0].released');
 });

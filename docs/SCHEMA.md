@@ -31,6 +31,24 @@ removal is major: it ships as a new schema file `pricing.v2.json` and a new
 Composite ids match `^[a-z0-9][a-z0-9._-]*/[a-z0-9][a-z0-9._-]*$`, lowercase. Ids
 are stable and never reused; a renamed model or plan gets a new id with `supersedes`.
 
+## Model and creator registries
+
+`data/models.json` ([`schema/models.v1.json`](../schema/models.v1.json)) lists one
+entry per canonical model — `slug`, `name`, `creator`, `open_weights`, `aliases`,
+`released` (`"unknown"` when no source publishes a date), optional `supersedes`.
+`data/creators.json` ([`schema/creators.v1.json`](../schema/creators.v1.json))
+folds creator spellings (`moonshot`/`moonshotai`, `zhipu`/`zai`, `alibaba`/`qwen`)
+into one canonical id per lab; the other spellings are `aliases`.
+
+- **Dotted-version slugs are canonical**: `claude-opus-5.5`, never `claude-opus-5-5`.
+  A renamed model keeps its old spelling only as an alias (+ `supersedes`), and two
+  slugs may never differ only by `.` vs `-`.
+- **The normaliser never guesses** (`tools/slugs.mjs`): a name resolves on an exact
+  match of a canonical slug or alias after trim + lowercase; anything else is
+  `"unmapped"` — never dot/dash-repaired, stemmed or fuzzy-matched.
+- Extractors write the slug they resolved to; `model_creator` must be the model's
+  canonical creator id.
+
 ## Top level (all keys required, no extras)
 
 | Key | Shape |
@@ -169,6 +187,12 @@ number > 0: one unit of base in that currency).
   must equal what `npm run build` computes from the native values and the
   document's `fx` block. When `data/fx.json` exists, every document's `fx`
   block must match it exactly — one dated rate set per dataset.
+- **Model registry.** `data/models.json` + `data/creators.json` are validated
+  against their schemas and checked for collisions (duplicate slugs, slugs equal
+  after `.`→`-`, an alias mapping to two models or to another model's slug,
+  unknown creators, unknown `supersedes`). Every `api_offers[].model_slug` must be
+  a known model with a matching `model_creator`, and every `derived.
+  cheapest_provider_per_model` key a known slug.
 
 ## Part files (research agents)
 
