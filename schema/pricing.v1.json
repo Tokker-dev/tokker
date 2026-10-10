@@ -250,6 +250,50 @@
         }
       }
     },
+    "model_weight": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "input", "cached_input", "output", "unit", "quote", "source", "checked"],
+      "properties": {
+        "model": { "$ref": "#/$defs/slug" },
+        "input": { "type": "number", "minimum": 0 },
+        "cached_input": { "type": "number", "minimum": 0 },
+        "output": { "type": "number", "minimum": 0 },
+        "unit": {
+          "enum": ["credits", "tokens"],
+          "description": "The unit that the multipliers count in."
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The multipliers quoted verbatim from the source."
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The exact URL where the weights came from."
+        },
+        "checked": { "$ref": "#/$defs/iso_date" }
+      }
+    },
+    "estimate_by_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tokens_per_5h": { "type": "number", "minimum": 0 },
+        "tokens_per_week": { "type": "number", "minimum": 0 },
+        "tokens_per_month": { "type": "number", "minimum": 0 },
+        "usd_per_mtok_at_full_use": { "type": "number", "minimum": 0 },
+        "binds": {
+          "enum": ["5h_rolling", "daily", "weekly", "monthly"],
+          "description": "Which window binds the monthly estimate."
+        },
+        "status": {
+          "enum": ["not_published"],
+          "description": "When model weights are not published, the estimate is marked 'not_published' instead of computed."
+        }
+      }
+    },
     "api_offer": {
       "type": "object",
       "additionalProperties": false,
@@ -370,6 +414,15 @@
           "type": "array",
           "items": { "type": "string", "minLength": 1 }
         },
+        "model_weights": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/model_weight" },
+          "description": "Per-model quota weights (input/cached-input/output multipliers). Built from this, estimates_by_model is computed."
+        },
+        "default_model": {
+          "$ref": "#/$defs/slug",
+          "description": "The model the top-level estimate uses, when model_weights is non-empty and est_tokens_per_month is numeric."
+        },
         "limits_published": {
           "type": "array",
           "items": { "$ref": "#/$defs/limit_entry" }
@@ -385,6 +438,12 @@
           "type": "string",
           "minLength": 1,
           "description": "How the estimate was derived. A numeric estimate must name an assumption profile (the validator enforces this; the dataset's profile is STANDARD, see docs/plan.md §2)."
+        },
+        "estimates_by_model": {
+          "type": "object",
+          "description": "Per-model token and USD estimates, computed by build.mjs from model_weights.",
+          "propertyNames": { "$ref": "#/$defs/slug" },
+          "additionalProperties": { "$ref": "#/$defs/estimate_by_model" }
         },
         "source": { "type": "string", "minLength": 1 },
         "checked": { "$ref": "#/$defs/iso_date" },

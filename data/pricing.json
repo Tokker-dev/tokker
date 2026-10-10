@@ -711,7 +711,7 @@
         "output_per_mtok": 50,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": 12.5,
-        "blended_3to1": 20.0
+        "blended_3to1": 20
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -769,7 +769,7 @@
         "output_per_mtok": 50,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": 12.5,
-        "blended_3to1": 20.0
+        "blended_3to1": 20
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -827,7 +827,7 @@
         "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 5,
-        "blended_3to1": 8.0
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -886,7 +886,7 @@
         "output_per_mtok": 25,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": 6.25,
-        "blended_3to1": 10.0
+        "blended_3to1": 10
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -944,7 +944,7 @@
         "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1003,7 +1003,7 @@
         "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1061,7 +1061,7 @@
         "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": 3.75,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1119,7 +1119,7 @@
         "output_per_mtok": 5,
         "cached_input_per_mtok": 0.1,
         "cache_write_per_mtok": 1.25,
-        "blended_3to1": 2.0
+        "blended_3to1": 2
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1153,7 +1153,7 @@
       "currency": "USD",
       "input_per_mtok": 10,
       "output_per_mtok": 50,
-      "cached_input_per_mtok": 1.0,
+      "cached_input_per_mtok": 1,
       "cache_write_per_mtok": 12.5,
       "batch_discount_pct": 50,
       "offpeak": null,
@@ -1175,9 +1175,9 @@
       "usd": {
         "input_per_mtok": 10,
         "output_per_mtok": 50,
-        "cached_input_per_mtok": 1.0,
+        "cached_input_per_mtok": 1,
         "cache_write_per_mtok": 12.5,
-        "blended_3to1": 20.0
+        "blended_3to1": 20
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1235,7 +1235,7 @@
         "output_per_mtok": 10,
         "cached_input_per_mtok": 0.1,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1293,7 +1293,7 @@
         "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1409,7 +1409,7 @@
         "output_per_mtok": 20,
         "cached_input_per_mtok": 0.4,
         "cache_write_per_mtok": 5,
-        "blended_3to1": 8.0
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -1790,7 +1790,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.5,
-      "output_per_mtok": 9.0,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": 0.15,
       "cache_write_per_mtok": null,
       "batch_discount_pct": 50,
@@ -1812,7 +1812,7 @@
       },
       "usd": {
         "input_per_mtok": 1.5,
-        "output_per_mtok": 9.0,
+        "output_per_mtok": 9,
         "cached_input_per_mtok": 0.15,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.375
@@ -1963,8 +1963,8 @@
       "model_creator": "google",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 12.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 12,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": null,
       "batch_discount_pct": 50,
@@ -1985,8 +1985,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 12.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 12,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
         "blended_3to1": 4.5
@@ -2022,7 +2022,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.25,
-      "output_per_mtok": 10.0,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.125,
       "cache_write_per_mtok": null,
       "batch_discount_pct": 50,
@@ -2044,7 +2044,7 @@
       },
       "usd": {
         "input_per_mtok": 1.25,
-        "output_per_mtok": 10.0,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.125,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.4375
@@ -2195,8 +2195,8 @@
       "model_creator": "xai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -2217,11 +2217,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -2253,8 +2253,8 @@
       "model_creator": "xai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 0,
@@ -2275,11 +2275,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -2311,8 +2311,8 @@
       "model_creator": "xai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 0,
@@ -2333,11 +2333,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -2485,8 +2485,8 @@
       "model_creator": "xai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 1.0,
-      "output_per_mtok": 2.0,
+      "input_per_mtok": 1,
+      "output_per_mtok": 2,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 0,
@@ -2507,8 +2507,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.0,
-        "output_per_mtok": 2.0,
+        "input_per_mtok": 1,
+        "output_per_mtok": 2,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.25
@@ -2569,7 +2569,7 @@
         "output_per_mtok": 7.5,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -2949,8 +2949,8 @@
       "model_creator": "cohere",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 0.0,
-      "output_per_mtok": 0.0,
+      "input_per_mtok": 0,
+      "output_per_mtok": 0,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -2971,11 +2971,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 0.0,
-        "output_per_mtok": 0.0,
+        "input_per_mtok": 0,
+        "output_per_mtok": 0,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 0.0
+        "blended_3to1": 0
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -3124,7 +3124,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 2.5,
-      "output_per_mtok": 10.0,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -3146,7 +3146,7 @@
       },
       "usd": {
         "input_per_mtok": 2.5,
-        "output_per_mtok": 10.0,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 4.375
@@ -3323,7 +3323,7 @@
         "output_per_mtok": 1,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 1.0
+        "blended_3to1": 1
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -3381,7 +3381,7 @@
         "output_per_mtok": 15,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -3555,7 +3555,7 @@
         "output_per_mtok": 6,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -3762,7 +3762,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.25,
-      "output_per_mtok": 10.0,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.3125,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -3784,7 +3784,7 @@
       },
       "usd": {
         "input_per_mtok": 1.25,
-        "output_per_mtok": 10.0,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.3125,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.4375
@@ -3903,7 +3903,7 @@
         "output_per_mtok": 12.5,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 5.0
+        "blended_3to1": 5
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -4109,8 +4109,8 @@
       "model_creator": "writer",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 8.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 8,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -4131,8 +4131,8 @@
         "volatility": "low"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 8.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 8,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.5
@@ -4168,7 +4168,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 0.6,
-      "output_per_mtok": 6.0,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -4190,7 +4190,7 @@
       },
       "usd": {
         "input_per_mtok": 0.6,
-        "output_per_mtok": 6.0,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.95
@@ -4226,7 +4226,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 2.5,
-      "output_per_mtok": 10.0,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -4248,7 +4248,7 @@
       },
       "usd": {
         "input_per_mtok": 2.5,
-        "output_per_mtok": 10.0,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 4.375
@@ -4457,8 +4457,8 @@
       "model_creator": "sakana",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 5.0,
-      "output_per_mtok": 30.0,
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -4479,8 +4479,8 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 5.0,
-        "output_per_mtok": 30.0,
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
         "blended_3to1": 11.25
@@ -4515,8 +4515,8 @@
       "model_creator": "sakana",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.25,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -4537,11 +4537,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -4574,7 +4574,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.15,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -4596,7 +4596,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.15,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -4982,8 +4982,8 @@
       "model_creator": "deepseek",
       "open_weights": true,
       "currency": "CNY",
-      "input_per_mtok": 9.0,
-      "output_per_mtok": 27.0,
+      "input_per_mtok": 9,
+      "output_per_mtok": 27,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": null,
       "batch_discount_pct": null,
@@ -5041,8 +5041,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 40,
@@ -5063,11 +5063,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -5100,7 +5100,7 @@
       "open_weights": "unknown",
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.19,
       "cache_write_per_mtok": null,
       "batch_discount_pct": 40,
@@ -5122,7 +5122,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.19,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -5158,7 +5158,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.16,
       "cache_write_per_mtok": null,
       "batch_discount_pct": 40,
@@ -5180,7 +5180,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.16,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -5215,9 +5215,9 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "CNY",
-      "input_per_mtok": 20.0,
-      "output_per_mtok": 100.0,
-      "cached_input_per_mtok": 2.0,
+      "input_per_mtok": 20,
+      "output_per_mtok": 100,
+      "cached_input_per_mtok": 2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
       "offpeak": null,
@@ -5275,7 +5275,7 @@
       "open_weights": true,
       "currency": "CNY",
       "input_per_mtok": 6.5,
-      "output_per_mtok": 27.0,
+      "output_per_mtok": 27,
       "cached_input_per_mtok": 1.1,
       "cache_write_per_mtok": null,
       "batch_discount_pct": "unknown",
@@ -5591,7 +5591,7 @@
         "output_per_mtok": 0,
         "cached_input_per_mtok": 0,
         "cache_write_per_mtok": null,
-        "blended_3to1": 0.0
+        "blended_3to1": 0
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -5822,12 +5822,12 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 0.0,
-        "output_per_mtok": 0.0,
-        "cached_input_per_mtok": 0.0,
+        "input_per_mtok": 0,
+        "output_per_mtok": 0,
+        "cached_input_per_mtok": 0,
         "cache_write_per_mtok": null,
         "fx_rate_date": "2026-10-02",
-        "blended_3to1": 0.0
+        "blended_3to1": 0
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6177,7 +6177,7 @@
         "output_per_mtok": 6,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6467,7 +6467,7 @@
         "output_per_mtok": 5,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 1.25,
-        "blended_3to1": 2.0
+        "blended_3to1": 2
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -6735,8 +6735,8 @@
       "model_creator": "bytedance",
       "open_weights": false,
       "currency": "CNY",
-      "input_per_mtok": 6.0,
-      "output_per_mtok": 30.0,
+      "input_per_mtok": 6,
+      "output_per_mtok": 30,
       "cached_input_per_mtok": 1.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -6794,8 +6794,8 @@
       "model_creator": "bytedance",
       "open_weights": false,
       "currency": "CNY",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.6,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -6913,7 +6913,7 @@
       "open_weights": false,
       "currency": "CNY",
       "input_per_mtok": 3.2,
-      "output_per_mtok": 16.0,
+      "output_per_mtok": 16,
       "cached_input_per_mtok": 0.64,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -6972,7 +6972,7 @@
       "open_weights": false,
       "currency": "CNY",
       "input_per_mtok": 0.2,
-      "output_per_mtok": 2.0,
+      "output_per_mtok": 2,
       "cached_input_per_mtok": 0.04,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -7030,8 +7030,8 @@
       "model_creator": "deepseek",
       "open_weights": true,
       "currency": "CNY",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 8.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 8,
       "cached_input_per_mtok": 0.04,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": null,
@@ -7115,7 +7115,7 @@
         "output_per_mtok": 2.5,
         "cached_input_per_mtok": 0.1,
         "cache_write_per_mtok": null,
-        "blended_3to1": 1.0
+        "blended_3to1": 1
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -7148,7 +7148,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 0.5,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": 0.1,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -7170,7 +7170,7 @@
       },
       "usd": {
         "input_per_mtok": 0.5,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": 0.1,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.125
@@ -7206,7 +7206,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 0.25,
-      "output_per_mtok": 2.0,
+      "output_per_mtok": 2,
       "cached_input_per_mtok": 0.05,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -7228,7 +7228,7 @@
       },
       "usd": {
         "input_per_mtok": 0.25,
-        "output_per_mtok": 2.0,
+        "output_per_mtok": 2,
         "cached_input_per_mtok": 0.05,
         "cache_write_per_mtok": null,
         "blended_3to1": 0.6875
@@ -8144,7 +8144,7 @@
       "model_creator": "stepfun",
       "open_weights": "unknown",
       "currency": "USD",
-      "input_per_mtok": 1.0,
+      "input_per_mtok": 1,
       "output_per_mtok": 2.7,
       "cached_input_per_mtok": 0.05,
       "cache_write_per_mtok": null,
@@ -8166,7 +8166,7 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 1.0,
+        "input_per_mtok": 1,
         "output_per_mtok": 2.7,
         "cached_input_per_mtok": 0.05,
         "cache_write_per_mtok": null,
@@ -8908,8 +8908,8 @@
       "model_creator": "deepseek",
       "open_weights": true,
       "currency": "CNY",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 9.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": null,
       "batch_discount_pct": "unknown",
@@ -9435,8 +9435,8 @@
       "model_creator": "qwen",
       "open_weights": "unknown",
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.25,
       "cache_write_per_mtok": null,
       "batch_discount_pct": "unknown",
@@ -9457,11 +9457,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -9493,8 +9493,8 @@
       "model_creator": "xiaomi",
       "open_weights": "unknown",
       "currency": "CNY",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.025,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -9552,8 +9552,8 @@
       "model_creator": "xiaomi",
       "open_weights": "unknown",
       "currency": "CNY",
-      "input_per_mtok": 1.0,
-      "output_per_mtok": 2.0,
+      "input_per_mtok": 1,
+      "output_per_mtok": 2,
       "cached_input_per_mtok": 0.02,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -9611,8 +9611,8 @@
       "model_creator": "xiaomi",
       "open_weights": "unknown",
       "currency": "CNY",
-      "input_per_mtok": 30.0,
-      "output_per_mtok": 60.0,
+      "input_per_mtok": 30,
+      "output_per_mtok": 60,
       "cached_input_per_mtok": 0.25,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -10077,7 +10077,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.45,
-      "output_per_mtok": 5.0,
+      "output_per_mtok": 5,
       "cached_input_per_mtok": 0.4,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -10099,7 +10099,7 @@
       },
       "usd": {
         "input_per_mtok": 0.45,
-        "output_per_mtok": 5.0,
+        "output_per_mtok": 5,
         "cached_input_per_mtok": 0.4,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.5875
@@ -10250,8 +10250,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.25,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -10272,11 +10272,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -10773,7 +10773,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.67,
-      "output_per_mtok": 14.0,
+      "output_per_mtok": 14,
       "cached_input_per_mtok": 0.22,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": -240,
@@ -10795,7 +10795,7 @@
       },
       "usd": {
         "input_per_mtok": 0.67,
-        "output_per_mtok": 14.0,
+        "output_per_mtok": 14,
         "cached_input_per_mtok": 0.22,
         "cache_write_per_mtok": null,
         "blended_3to1": 4.0025
@@ -10831,7 +10831,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.16,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -10853,7 +10853,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.16,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -11178,10 +11178,10 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 4.0,
-      "output_per_mtok": 20.0,
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
       "cached_input_per_mtok": 0.2,
-      "cache_write_per_mtok": 5.0,
+      "cache_write_per_mtok": 5,
       "batch_discount_pct": 50,
       "offpeak": null,
       "tiered_pricing": null,
@@ -11200,11 +11200,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 4.0,
-        "output_per_mtok": 20.0,
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
-        "cache_write_per_mtok": 5.0,
-        "blended_3to1": 8.0
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -11236,8 +11236,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": 50,
@@ -11258,11 +11258,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -11294,8 +11294,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": 50,
@@ -11316,11 +11316,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -11410,8 +11410,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 5.0,
-      "output_per_mtok": 30.0,
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -11432,8 +11432,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 5.0,
-        "output_per_mtok": 30.0,
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
         "blended_3to1": 11.25
@@ -11527,7 +11527,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.5,
-      "output_per_mtok": 9.0,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": 0.15,
       "cache_write_per_mtok": 0.083333,
       "batch_discount_pct": 50,
@@ -11549,7 +11549,7 @@
       },
       "usd": {
         "input_per_mtok": 1.5,
-        "output_per_mtok": 9.0,
+        "output_per_mtok": 9,
         "cached_input_per_mtok": 0.15,
         "cache_write_per_mtok": 0.083333,
         "blended_3to1": 3.375
@@ -11584,8 +11584,8 @@
       "model_creator": "google",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 12.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 12,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 0.375,
       "batch_discount_pct": 50,
@@ -11606,8 +11606,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 12.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 12,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 0.375,
         "blended_3to1": 4.5
@@ -11758,8 +11758,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 4.0,
-      "output_per_mtok": 20.0,
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -11780,11 +11780,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 4.0,
-        "output_per_mtok": 20.0,
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
-        "blended_3to1": 8.0
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -11933,7 +11933,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.9,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -11955,7 +11955,7 @@
       },
       "usd": {
         "input_per_mtok": 0.9,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.675
@@ -12222,8 +12222,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -12244,11 +12244,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -12338,8 +12338,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -12360,11 +12360,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -12687,7 +12687,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.45,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": 0.22,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -12709,7 +12709,7 @@
       },
       "usd": {
         "input_per_mtok": 0.45,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": 0.22,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.0875
@@ -12745,7 +12745,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.5,
-      "output_per_mtok": 9.0,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -12767,7 +12767,7 @@
       },
       "usd": {
         "input_per_mtok": 1.5,
-        "output_per_mtok": 9.0,
+        "output_per_mtok": 9,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.375
@@ -13324,8 +13324,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -13346,11 +13346,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -13582,7 +13582,7 @@
         "output_per_mtok": 3.2,
         "cached_input_per_mtok": 0.135,
         "cache_write_per_mtok": null,
-        "blended_3to1": 2.0
+        "blended_3to1": 2
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -13615,7 +13615,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.42,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": 0.085,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -13637,7 +13637,7 @@
       },
       "usd": {
         "input_per_mtok": 0.42,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": 0.085,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.065
@@ -13672,8 +13672,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.25,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -13694,11 +13694,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -14310,8 +14310,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.25,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -14332,11 +14332,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.25,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -14369,7 +14369,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.5,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": 0.1,
       "cache_write_per_mtok": 0.625,
       "batch_discount_pct": "unknown",
@@ -14391,7 +14391,7 @@
       },
       "usd": {
         "input_per_mtok": 0.5,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": 0.1,
         "cache_write_per_mtok": 0.625,
         "blended_3to1": 1.125
@@ -14426,10 +14426,10 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 4.0,
-      "output_per_mtok": 20.0,
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
       "cached_input_per_mtok": 0.2,
-      "cache_write_per_mtok": 5.0,
+      "cache_write_per_mtok": 5,
       "batch_discount_pct": "unknown",
       "offpeak": null,
       "tiered_pricing": null,
@@ -14448,11 +14448,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 4.0,
-        "output_per_mtok": 20.0,
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
-        "cache_write_per_mtok": 5.0,
-        "blended_3to1": 8.0
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -14484,8 +14484,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": "unknown",
@@ -14506,11 +14506,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -14891,7 +14891,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.5,
-      "output_per_mtok": 9.0,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": 0.15,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -14913,7 +14913,7 @@
       },
       "usd": {
         "input_per_mtok": 1.5,
-        "output_per_mtok": 9.0,
+        "output_per_mtok": 9,
         "cached_input_per_mtok": 0.15,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.375
@@ -15297,7 +15297,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.16,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -15319,7 +15319,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.16,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -15354,8 +15354,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -15376,11 +15376,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -15412,8 +15412,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 5.0,
-      "output_per_mtok": 30.0,
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -15434,8 +15434,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 5.0,
-        "output_per_mtok": 30.0,
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
         "blended_3to1": 11.25
@@ -15528,8 +15528,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": "unknown",
@@ -15550,11 +15550,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -16050,8 +16050,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -16072,11 +16072,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -16514,10 +16514,10 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
-      "cache_write_per_mtok": 15.0,
+      "cache_write_per_mtok": 15,
       "batch_discount_pct": "unknown",
       "offpeak": null,
       "tiered_pricing": null,
@@ -16536,11 +16536,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
-        "cache_write_per_mtok": 15.0,
-        "blended_3to1": 6.0
+        "cache_write_per_mtok": 15,
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -16573,7 +16573,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.16,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -16595,7 +16595,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.16,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -16862,10 +16862,10 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 4.0,
-      "output_per_mtok": 20.0,
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
       "cached_input_per_mtok": 0.2,
-      "cache_write_per_mtok": 5.0,
+      "cache_write_per_mtok": 5,
       "batch_discount_pct": "unknown",
       "offpeak": null,
       "tiered_pricing": null,
@@ -16884,11 +16884,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 4.0,
-        "output_per_mtok": 20.0,
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
-        "cache_write_per_mtok": 5.0,
-        "blended_3to1": 8.0
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -16920,8 +16920,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": "unknown",
@@ -16942,11 +16942,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -16978,8 +16978,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": "unknown",
@@ -17000,11 +17000,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -17094,8 +17094,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 5.0,
-      "output_per_mtok": 30.0,
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -17116,8 +17116,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 5.0,
-        "output_per_mtok": 30.0,
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
         "blended_3to1": 11.25
@@ -17211,7 +17211,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.5,
-      "output_per_mtok": 9.0,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": 0.15,
       "cache_write_per_mtok": 1.583,
       "batch_discount_pct": "unknown",
@@ -17233,7 +17233,7 @@
       },
       "usd": {
         "input_per_mtok": 1.5,
-        "output_per_mtok": 9.0,
+        "output_per_mtok": 9,
         "cached_input_per_mtok": 0.15,
         "cache_write_per_mtok": 1.583,
         "blended_3to1": 3.375
@@ -17674,8 +17674,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -17696,11 +17696,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -17791,7 +17791,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.45,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -17813,7 +17813,7 @@
       },
       "usd": {
         "input_per_mtok": 0.45,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.0875
@@ -18313,7 +18313,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.9,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -18335,7 +18335,7 @@
       },
       "usd": {
         "input_per_mtok": 0.9,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.675
@@ -18602,8 +18602,8 @@
       "model_creator": "deepseek",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 1.0,
-      "output_per_mtok": 1.0,
+      "input_per_mtok": 1,
+      "output_per_mtok": 1,
       "cached_input_per_mtok": 0.1,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -18624,11 +18624,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.0,
-        "output_per_mtok": 1.0,
+        "input_per_mtok": 1,
+        "output_per_mtok": 1,
         "cached_input_per_mtok": 0.1,
         "cache_write_per_mtok": null,
-        "blended_3to1": 1.0
+        "blended_3to1": 1
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -18661,7 +18661,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.45,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": 0.045,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -18683,7 +18683,7 @@
       },
       "usd": {
         "input_per_mtok": 0.45,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": 0.045,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.0875
@@ -18892,8 +18892,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -18914,11 +18914,11 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -19008,7 +19008,7 @@
       "model_creator": "deepseek",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
+      "input_per_mtok": 3,
       "output_per_mtok": 4.5,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
@@ -19030,7 +19030,7 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
+        "input_per_mtok": 3,
         "output_per_mtok": 4.5,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
@@ -19788,7 +19788,7 @@
         "output_per_mtok": 3.2,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 2.0
+        "blended_3to1": 2
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -19878,8 +19878,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -19900,11 +19900,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -20168,8 +20168,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 1.0,
-      "output_per_mtok": 4.0,
+      "input_per_mtok": 1,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -20190,8 +20190,8 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 1.0,
-        "output_per_mtok": 4.0,
+        "input_per_mtok": 1,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.75
@@ -20285,7 +20285,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.4,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -20307,7 +20307,7 @@
       },
       "usd": {
         "input_per_mtok": 0.4,
-        "output_per_mtok": 3.0,
+        "output_per_mtok": 3,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.05
@@ -20632,8 +20632,8 @@
       "model_creator": "qwen",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 6.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -20654,11 +20654,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 6.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 3.0
+        "blended_3to1": 3
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -20864,8 +20864,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -20886,11 +20886,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -21271,7 +21271,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.8,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -21293,7 +21293,7 @@
       },
       "usd": {
         "input_per_mtok": 0.8,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.6
@@ -21386,8 +21386,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -21408,11 +21408,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22140,8 +22140,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -22162,11 +22162,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -22257,7 +22257,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 3.75,
-      "output_per_mtok": 10.0,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -22279,7 +22279,7 @@
       },
       "usd": {
         "input_per_mtok": 3.75,
-        "output_per_mtok": 10.0,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 5.3125
@@ -23022,7 +23022,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.67,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -23044,7 +23044,7 @@
       },
       "usd": {
         "input_per_mtok": 0.67,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.5025
@@ -23313,7 +23313,7 @@
       "open_weights": true,
       "currency": "CHF",
       "input_per_mtok": 0.6,
-      "output_per_mtok": 3.0,
+      "output_per_mtok": 3,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -23722,7 +23722,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -23744,7 +23744,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -23953,8 +23953,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -23975,11 +23975,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -24534,7 +24534,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.35,
-      "output_per_mtok": 1.0,
+      "output_per_mtok": 1,
       "cached_input_per_mtok": 0.17,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -24556,7 +24556,7 @@
       },
       "usd": {
         "input_per_mtok": 0.35,
-        "output_per_mtok": 1.0,
+        "output_per_mtok": 1,
         "cached_input_per_mtok": 0.17,
         "cache_write_per_mtok": null,
         "blended_3to1": 0.5125
@@ -24998,7 +24998,7 @@
       "open_weights": false,
       "currency": "USD",
       "input_per_mtok": 1.5,
-      "output_per_mtok": 9.0,
+      "output_per_mtok": 9,
       "cached_input_per_mtok": 0.15,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -25020,7 +25020,7 @@
       },
       "usd": {
         "input_per_mtok": 1.5,
-        "output_per_mtok": 9.0,
+        "output_per_mtok": 9,
         "cached_input_per_mtok": 0.15,
         "cache_write_per_mtok": null,
         "blended_3to1": 3.375
@@ -25055,8 +25055,8 @@
       "model_creator": "google",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 12.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 12,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -25077,8 +25077,8 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 12.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 12,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
         "blended_3to1": 4.5
@@ -25113,10 +25113,10 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 4.0,
-      "output_per_mtok": 20.0,
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
       "cached_input_per_mtok": 0.2,
-      "cache_write_per_mtok": 5.0,
+      "cache_write_per_mtok": 5,
       "batch_discount_pct": "unknown",
       "offpeak": null,
       "tiered_pricing": null,
@@ -25135,11 +25135,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 4.0,
-        "output_per_mtok": 20.0,
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
-        "cache_write_per_mtok": 5.0,
-        "blended_3to1": 8.0
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -25171,8 +25171,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": 50,
@@ -25193,11 +25193,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -26099,8 +26099,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 45,
@@ -26121,11 +26121,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -26215,10 +26215,10 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 4.0,
-      "output_per_mtok": 20.0,
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
       "cached_input_per_mtok": 0.2,
-      "cache_write_per_mtok": 5.0,
+      "cache_write_per_mtok": 5,
       "batch_discount_pct": "unknown",
       "offpeak": null,
       "tiered_pricing": null,
@@ -26237,11 +26237,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 4.0,
-        "output_per_mtok": 20.0,
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
         "cached_input_per_mtok": 0.2,
-        "cache_write_per_mtok": 5.0,
-        "blended_3to1": 8.0
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -26273,8 +26273,8 @@
       "model_creator": "anthropic",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": "unknown",
@@ -26295,11 +26295,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -26331,8 +26331,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 2.0,
-      "output_per_mtok": 10.0,
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": 2.5,
       "batch_discount_pct": "unknown",
@@ -26353,11 +26353,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 2.0,
-        "output_per_mtok": 10.0,
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": 2.5,
-        "blended_3to1": 4.0
+        "blended_3to1": 4
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -26447,8 +26447,8 @@
       "model_creator": "openai",
       "open_weights": false,
       "currency": "USD",
-      "input_per_mtok": 5.0,
-      "output_per_mtok": 30.0,
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
       "cached_input_per_mtok": 0.5,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": 50,
@@ -26469,8 +26469,8 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 5.0,
-        "output_per_mtok": 30.0,
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
         "cached_input_per_mtok": 0.5,
         "cache_write_per_mtok": null,
         "blended_3to1": 11.25
@@ -26622,7 +26622,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.25,
-      "output_per_mtok": 1.0,
+      "output_per_mtok": 1,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -26644,7 +26644,7 @@
       },
       "usd": {
         "input_per_mtok": 0.25,
-        "output_per_mtok": 1.0,
+        "output_per_mtok": 1,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 0.4375
@@ -26679,8 +26679,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": 0.3,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -26701,11 +26701,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": 0.3,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -26738,7 +26738,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.16,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -26760,7 +26760,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.16,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -27434,7 +27434,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 0.95,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -27456,7 +27456,7 @@
       },
       "usd": {
         "input_per_mtok": 0.95,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.7125
@@ -27491,8 +27491,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 3.0,
-      "output_per_mtok": 15.0,
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
       "cached_input_per_mtok": "unknown",
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -27513,11 +27513,11 @@
         "volatility": "medium"
       },
       "usd": {
-        "input_per_mtok": 3.0,
-        "output_per_mtok": 15.0,
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
         "cached_input_per_mtok": null,
         "cache_write_per_mtok": null,
-        "blended_3to1": 6.0
+        "blended_3to1": 6
       },
       "last_verified_at": "2026-10-05",
       "provenance": {
@@ -28246,7 +28246,7 @@
       "open_weights": true,
       "currency": "USD",
       "input_per_mtok": 1.2,
-      "output_per_mtok": 4.0,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -28268,7 +28268,7 @@
       },
       "usd": {
         "input_per_mtok": 1.2,
-        "output_per_mtok": 4.0,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.9
@@ -28477,8 +28477,8 @@
       "model_creator": "moonshotai",
       "open_weights": true,
       "currency": "USD",
-      "input_per_mtok": 1.0,
-      "output_per_mtok": 4.0,
+      "input_per_mtok": 1,
+      "output_per_mtok": 4,
       "cached_input_per_mtok": 0.2,
       "cache_write_per_mtok": "unknown",
       "batch_discount_pct": "unknown",
@@ -28499,8 +28499,8 @@
         "volatility": "high"
       },
       "usd": {
-        "input_per_mtok": 1.0,
-        "output_per_mtok": 4.0,
+        "input_per_mtok": 1,
+        "output_per_mtok": 4,
         "cached_input_per_mtok": 0.2,
         "cache_write_per_mtok": null,
         "blended_3to1": 1.75
@@ -29392,7 +29392,7 @@
       ],
       "fair_use": null,
       "est_tokens_per_month": 645000000,
-      "est_usd_per_mtok_at_full_use": 0.0,
+      "est_usd_per_mtok_at_full_use": 0,
       "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
       "source": "https://geminicli.com/docs/resources/quota-and-pricing",
       "checked": "2026-10-05",
@@ -30828,11 +30828,11 @@
         "price_month": 18,
         "price_year": null
       },
-      "last_verified_at": "2026-10-05",
+      "last_verified_at": "2026-10-10",
       "provenance": {
         "default": {
           "source": "https://docs.z.ai/devpack/overview",
-          "fetched_at": "2026-10-05",
+          "fetched_at": "2026-10-10",
           "method": "docs_markdown",
           "confidence": "official_docs"
         },
@@ -30841,7 +30841,48 @@
           "price_year": "default",
           "limits_published": "default",
           "fair_use": "default",
-          "est_usd_per_mtok_at_full_use": "default"
+          "est_usd_per_mtok_at_full_use": "default",
+          "model_weights": "default",
+          "default_model": "default"
+        }
+      },
+      "model_weights": [
+        {
+          "model": "glm-5.3",
+          "input": 6.9,
+          "cached_input": 1.7,
+          "output": 24,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        },
+        {
+          "model": "glm-5.3-flash",
+          "input": 2.3,
+          "cached_input": 0.56,
+          "output": 8,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3-Flash: 2.3 / 0.56 / 8]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        }
+      ],
+      "default_model": "glm-5.3",
+      "estimates_by_model": {
+        "glm-5.3": {
+          "tokens_per_5h": 5348258.706467662,
+          "tokens_per_week": 26741293.532338314,
+          "tokens_per_month": 114605544,
+          "usd_per_mtok_at_full_use": 0.1571,
+          "binds": "weekly"
+        },
+        "glm-5.3-flash": {
+          "tokens_per_5h": 16116941.529235382,
+          "tokens_per_week": 80584707.6461769,
+          "tokens_per_month": 345363033,
+          "usd_per_mtok_at_full_use": 0.0521,
+          "binds": "weekly"
         }
       }
     },
@@ -30897,11 +30938,11 @@
         "price_month": 80,
         "price_year": null
       },
-      "last_verified_at": "2026-10-05",
+      "last_verified_at": "2026-10-10",
       "provenance": {
         "default": {
           "source": "https://docs.z.ai/devpack/overview",
-          "fetched_at": "2026-10-05",
+          "fetched_at": "2026-10-10",
           "method": "docs_markdown",
           "confidence": "secondary"
         },
@@ -30910,7 +30951,40 @@
           "price_year": "default",
           "limits_published": "default",
           "fair_use": "default",
-          "est_usd_per_mtok_at_full_use": "default"
+          "est_usd_per_mtok_at_full_use": "default",
+          "model_weights": "default",
+          "default_model": "default"
+        }
+      },
+      "model_weights": [
+        {
+          "model": "glm-5.3",
+          "input": 6.9,
+          "cached_input": 1.7,
+          "output": 24,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        },
+        {
+          "model": "glm-5.3-flash",
+          "input": 2.3,
+          "cached_input": 0.56,
+          "output": 8,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3-Flash: 2.3 / 0.56 / 8]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        }
+      ],
+      "default_model": "glm-5.3",
+      "estimates_by_model": {
+        "glm-5.3": {
+          "status": "not_published"
+        },
+        "glm-5.3-flash": {
+          "status": "not_published"
         }
       }
     },
@@ -30966,11 +31040,11 @@
         "price_month": 168,
         "price_year": null
       },
-      "last_verified_at": "2026-10-05",
+      "last_verified_at": "2026-10-10",
       "provenance": {
         "default": {
           "source": "https://docs.z.ai/devpack/overview",
-          "fetched_at": "2026-10-05",
+          "fetched_at": "2026-10-10",
           "method": "docs_markdown",
           "confidence": "secondary"
         },
@@ -30979,7 +31053,40 @@
           "price_year": "default",
           "limits_published": "default",
           "fair_use": "default",
-          "est_usd_per_mtok_at_full_use": "default"
+          "est_usd_per_mtok_at_full_use": "default",
+          "model_weights": "default",
+          "default_model": "default"
+        }
+      },
+      "model_weights": [
+        {
+          "model": "glm-5.3",
+          "input": 6.9,
+          "cached_input": 1.7,
+          "output": 24,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        },
+        {
+          "model": "glm-5.3-flash",
+          "input": 2.3,
+          "cached_input": 0.56,
+          "output": 8,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3-Flash: 2.3 / 0.56 / 8]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        }
+      ],
+      "default_model": "glm-5.3",
+      "estimates_by_model": {
+        "glm-5.3": {
+          "status": "not_published"
+        },
+        "glm-5.3-flash": {
+          "status": "not_published"
         }
       }
     },
@@ -31029,11 +31136,11 @@
         "price_month": null,
         "price_year": null
       },
-      "last_verified_at": "2026-10-05",
+      "last_verified_at": "2026-10-10",
       "provenance": {
         "default": {
           "source": "https://docs.z.ai/devpack/teamplan",
-          "fetched_at": "2026-10-05",
+          "fetched_at": "2026-10-10",
           "method": "docs_markdown",
           "confidence": "official_page"
         },
@@ -31042,7 +31149,46 @@
           "price_year": "default",
           "limits_published": "default",
           "fair_use": "default",
-          "est_usd_per_mtok_at_full_use": "default"
+          "est_usd_per_mtok_at_full_use": "default",
+          "model_weights": "default",
+          "default_model": "default"
+        }
+      },
+      "model_weights": [
+        {
+          "model": "glm-5.3",
+          "input": 6.9,
+          "cached_input": 1.7,
+          "output": 24,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        },
+        {
+          "model": "glm-5.3-flash",
+          "input": 2.3,
+          "cached_input": 0.56,
+          "output": 8,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3-Flash: 2.3 / 0.56 / 8]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        }
+      ],
+      "default_model": "glm-5.3",
+      "estimates_by_model": {
+        "glm-5.3": {
+          "tokens_per_5h": 40111940.29850747,
+          "tokens_per_week": 176492537.31343284,
+          "tokens_per_month": 756396588,
+          "binds": "weekly"
+        },
+        "glm-5.3-flash": {
+          "tokens_per_5h": 120877061.46926536,
+          "tokens_per_week": 531859070.4647676,
+          "tokens_per_month": 2279396016,
+          "binds": "weekly"
         }
       }
     },
@@ -31092,11 +31238,11 @@
         "price_month": null,
         "price_year": null
       },
-      "last_verified_at": "2026-10-05",
+      "last_verified_at": "2026-10-10",
       "provenance": {
         "default": {
           "source": "https://docs.z.ai/devpack/teamplan",
-          "fetched_at": "2026-10-05",
+          "fetched_at": "2026-10-10",
           "method": "docs_markdown",
           "confidence": "official_page"
         },
@@ -31105,7 +31251,46 @@
           "price_year": "default",
           "limits_published": "default",
           "fair_use": "default",
-          "est_usd_per_mtok_at_full_use": "default"
+          "est_usd_per_mtok_at_full_use": "default",
+          "model_weights": "default",
+          "default_model": "default"
+        }
+      },
+      "model_weights": [
+        {
+          "model": "glm-5.3",
+          "input": 6.9,
+          "cached_input": 1.7,
+          "output": 24,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        },
+        {
+          "model": "glm-5.3-flash",
+          "input": 2.3,
+          "cached_input": 0.56,
+          "output": 8,
+          "unit": "credits",
+          "quote": "Model credit usage = (Input tokens × Input multiplier + Cached Input tokens × Cached Input multiplier + Output tokens × Output multiplier) / 10,000 [GLM-5.3-Flash: 2.3 / 0.56 / 8]",
+          "source": "https://docs.z.ai/devpack/overview",
+          "checked": "2026-10-10"
+        }
+      ],
+      "default_model": "glm-5.3",
+      "estimates_by_model": {
+        "glm-5.3": {
+          "tokens_per_5h": 93594527.3631841,
+          "tokens_per_week": 414490049.7512438,
+          "tokens_per_month": 1776385928,
+          "binds": "weekly"
+        },
+        "glm-5.3-flash": {
+          "tokens_per_5h": 282046476.7616192,
+          "tokens_per_week": 1249062968.515742,
+          "tokens_per_month": 5353127008,
+          "binds": "weekly"
         }
       }
     },
@@ -33793,7 +33978,7 @@
       ],
       "fair_use": null,
       "est_tokens_per_month": 2853982,
-      "est_usd_per_mtok_at_full_use": 0.0,
+      "est_usd_per_mtok_at_full_use": 0,
       "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
       "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
       "checked": "2026-10-05",
@@ -34557,7 +34742,7 @@
       ],
       "fair_use": null,
       "est_tokens_per_month": 10000000,
-      "est_usd_per_mtok_at_full_use": 3.0,
+      "est_usd_per_mtok_at_full_use": 3,
       "estimate_assumption": "Vendor counts tokens directly.",
       "source": "https://bolt.new/pricing",
       "checked": "2026-10-05",
@@ -34965,7 +35150,7 @@
       "gpt-6-sol": {
         "offers": 5,
         "cheapest_offer": "azure/gpt-6-sol",
-        "blended_3to1_usd": 4.0
+        "blended_3to1_usd": 4
       },
       "gpt-6-luna": {
         "offers": 5,
@@ -35025,7 +35210,7 @@
       "glm-4.7-flash": {
         "offers": 2,
         "cheapest_offer": "zai/glm-4.7-flash-cn",
-        "blended_3to1_usd": 0.0
+        "blended_3to1_usd": 0
       },
       "minimax-m3": {
         "offers": 14,
@@ -35185,12 +35370,12 @@
       "claude-opus-5.5": {
         "offers": 7,
         "cheapest_offer": "anthropic/claude-opus-5.5",
-        "blended_3to1_usd": 8.0
+        "blended_3to1_usd": 8
       },
       "claude-sonnet-5.5": {
         "offers": 7,
         "cheapest_offer": "anthropic/claude-sonnet-5.5",
-        "blended_3to1_usd": 4.0
+        "blended_3to1_usd": 4
       },
       "deepseek-r1": {
         "offers": 2,

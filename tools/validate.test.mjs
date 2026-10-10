@@ -393,6 +393,48 @@ test('a derived key that is not a known slug fails', () => {
   expect(hit.message).toContain("derived key 'ghost-model' is not a known model_slug");
 });
 
+test('a model_weight whose model is not in models_included fails', () => {
+  const doc = makeDoc();
+  doc.subscriptions[0].model_weights = [
+    {
+      model: 'ghost-model',
+      input: 1,
+      cached_input: 0.2,
+      output: 5,
+      unit: 'credits',
+      quote: 'test',
+      source: 'https://example.com',
+      checked: '2026-10-10',
+    },
+  ];
+  doc.subscriptions[0].default_model = 'test-model';
+  const errors = errorsOf(doc);
+  const hit = errors.find((e) => e.path === '$.subscriptions[0].model_weights[0].model');
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain("model 'ghost-model' is not in models_included");
+});
+
+test('model_weights without default_model when estimate is numeric fails', () => {
+  const doc = makeDoc();
+  doc.subscriptions[0].model_weights = [
+    {
+      model: 'test-model',
+      input: 1,
+      cached_input: 0.2,
+      output: 5,
+      unit: 'credits',
+      quote: 'test',
+      source: 'https://example.com',
+      checked: '2026-10-10',
+    },
+  ];
+  // est_tokens_per_month is numeric by default
+  const errors = errorsOf(doc);
+  const hit = errors.find((e) => e.path === '$.subscriptions[0].default_model');
+  expect(hit).toBeDefined();
+  expect(hit.message).toContain('default_model is required');
+});
+
 test('a registry document that violates its schema is reported against the registry file', () => {
   const errors = validateDocuments([{ file: 'fixture.json', doc: makeDoc() }], undefined, {
     models: [{ ...fixtureRegistry.models[0], released: 'soon' }],

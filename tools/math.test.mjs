@@ -264,3 +264,33 @@ test('exact ties on the monthly candidate prefer the coarser window', () => {
     'monthly'
   );
 });
+
+// --- per-model estimates (issue #71) ---
+
+test('Z.AI GLM-5.3 per-model estimate equals the current top-level estimate', () => {
+  const agentic = profile('agentic-coding-v1');
+  const lite = pricing.subscriptions.find((r) => r.id === 'zai/lite');
+
+  expect(lite.default_model).toBe('glm-5.3');
+  expect(lite.estimates_by_model).toBeDefined();
+  expect(lite.estimates_by_model['glm-5.3']).toBeDefined();
+
+  const modelEst = lite.estimates_by_model['glm-5.3'];
+  expect(modelEst.tokens_per_month).toBe(lite.est_tokens_per_month);
+  expect(modelEst.usd_per_mtok_at_full_use).toBe(lite.est_usd_per_mtok_at_full_use);
+});
+
+test('Z.AI GLM-5.3-Flash yields more tokens per month than GLM-5.3 at lower cost', () => {
+  const lite = pricing.subscriptions.find((r) => r.id === 'zai/lite');
+  const glm53 = lite.estimates_by_model['glm-5.3'];
+  const flash = lite.estimates_by_model['glm-5.3-flash'];
+
+  expect(flash).toBeDefined();
+  expect(flash.tokens_per_month).toBeGreaterThan(glm53.tokens_per_month);
+  expect(flash.usd_per_mtok_at_full_use).toBeLessThan(glm53.usd_per_mtok_at_full_use);
+
+  // Flash multipliers are 2.3/0.56/8 vs 6.9/1.7/24, so Flash should be roughly 3x cheaper
+  const ratio = glm53.usd_per_mtok_at_full_use / flash.usd_per_mtok_at_full_use;
+  expect(ratio).toBeGreaterThan(2.5);
+  expect(ratio).toBeLessThan(3.5);
+});
