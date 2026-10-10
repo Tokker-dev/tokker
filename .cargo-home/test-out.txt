@@ -1,0 +1,61 @@
+   Compiling pkcs8 v0.11.0
+   Compiling ulid v3.0.0
+   Compiling sha1 v0.11.0
+   Compiling base64 v0.23.1
+   Compiling elliptic-curve v0.14.1
+   Compiling primefield v0.14.0
+   Compiling heck v0.5.0
+   Compiling cratefield-core v0.8.0
+   Compiling strum_macros v0.28.0
+   Compiling wnaf v0.14.1
+   Compiling web-sys v0.3.106
+   Compiling rfc6979 v0.6.0
+   Compiling signature v3.0.0
+   Compiling ecdsa v0.17.0
+   Compiling primeorder v0.14.0
+   Compiling strum v0.28.0
+   Compiling wasm-bindgen-futures v0.4.79
+   Compiling pin-project-internal v1.1.13
+   Compiling worker-sys v0.8.6
+   Compiling pin-project v1.1.13
+   Compiling wasm-streams v0.6.0
+   Compiling p256 v0.14.0
+   Compiling worker-macros v0.8.6
+   Compiling serde-wasm-bindgen v0.6.5
+   Compiling chrono v0.4.45
+   Compiling futures-channel v0.3.34
+   Compiling tokio v1.53.2
+   Compiling matchit v0.7.3
+   Compiling worker v0.8.6
+   Compiling cratefield-auth-client v0.3.0
+   Compiling tokker-api v0.1.0 (/workspace/crates/tokker-api)
+   Compiling cratefield-runtime-cloudflare v0.4.0
+   Compiling tokker-worker v0.1.0 (/workspace/crates/tokker-worker)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 26.15s
+     Running unittests src/lib.rs (target/debug/deps/tokker_api-339a2a7fa81f99c0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/tokker_worker-019705e3b690ae8a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests tokker_api
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests tokker_worker
+
+running 1 test
+test crates/tokker-worker/src/lib.rs - (line 5) ... ignored
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+all doctests ran in 0.10s; merged doctests compilation took 0.09s
+EXIT:0

@@ -1,0 +1,42 @@
+[package]
+name = "cratefield-auth-client"
+description = "Verify auth-service tokens in a consuming app: JWKS fetch and cache, ES256 verification, and an axum extractor (issue #11)"
+version = "0.3.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+cratefield-core = { workspace = true }
+# The `Auth` port is an async trait object (ADR 0002).
+async-trait = { workspace = true }
+axum = { workspace = true }
+http = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+base64ct = { workspace = true }
+# Pinned here, not workspace-inherited: the workspace `p256` is 0.13.2 for
+# `cratefield-adapter-apns`, and the login stack is a major ahead (ADR 0013).
+p256 = { version = "0.14.0", default-features = false, features = [
+    "ecdsa",
+    # Apple hands out its signing key as a PKCS#8 PEM `.p8` file (#16), so
+    # the minting path parses one rather than asking an operator to convert
+    # a key by hand.
+    "pkcs8",
+    "pem",
+] }
+sha2 = { workspace = true }
+thiserror = { workspace = true }
+bytes = { workspace = true }
+
+[dev-dependencies]
+async-trait = { workspace = true }
+cratefield-testing = { workspace = true }
+pollster = { workspace = true }
+tower = { workspace = true }
+time = { workspace = true }

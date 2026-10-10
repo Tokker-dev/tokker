@@ -1,0 +1,6 @@
+{
+  "git": {
+    "sha1": "22e43ae00b3f414385d3b7d48352fb7af3d39feb"
+  },
+  "path_in_vcs": "crates/runtime-cloudflare"
+}
