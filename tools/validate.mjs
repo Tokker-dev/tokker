@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 // Validate Tokker price-index data files against schema/pricing.v1.json plus
 // dataset-wide checks a per-row schema cannot express (id uniqueness, estimate
-// assumptions). Usage: npm run validate [files...] (default data/pricing.json);
-// prints each problem as `file:jsonpath: message`, exits 1 if any exist.
+// assumptions, and — via the model registry — that every api_offers[].model_slug
+// is a known model with a matching creator). Usage: npm run validate [files...]
+// (default data/pricing.json); prints each problem as `file:jsonpath: message`,
+// exits 1 if any exist.
 
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
+import { CREATORS_FILE, MODELS_FILE, checkRegistry, loadRegistry } from './slugs.mjs';
 
 import { offerUsd, subscriptionUsd } from './build.mjs';
 import { isSupportedCurrency } from './fx.mjs';
@@ -15,9 +18,15 @@ import { isSupportedCurrency } from './fx.mjs';
 const SCHEMA_FILE = 'schema/pricing.v1.json';
 const DEFAULT_DATA_FILE = 'data/pricing.json';
 const FX_DATA_FILE = 'data/fx.json';
+const MODELS_SCHEMA_FILE = 'schema/models.v1.json';
+const CREATORS_SCHEMA_FILE = 'schema/creators.v1.json';
 const schemaUrl = new URL('../' + SCHEMA_FILE, import.meta.url);
 const defaultDataUrl = new URL('../' + DEFAULT_DATA_FILE, import.meta.url);
 const fxDataUrl = new URL('../' + FX_DATA_FILE, import.meta.url);
+const registrySchemaUrls = [
+  [MODELS_FILE, new URL('../' + MODELS_SCHEMA_FILE, import.meta.url)],
+  [CREATORS_FILE, new URL('../' + CREATORS_SCHEMA_FILE, import.meta.url)],
+];
 
 // A numeric estimate must say how it was derived: a named, versioned profile —
 // STANDARD is the dataset's (docs/plan.md §2 plans the other three) — or an
@@ -243,6 +252,49 @@ function checkDocument(doc, file) {
   return errors;
 }
 
+/**
+ * Every api_offers[].model_slug must be a known model whose creator matches the
+ * row's model_creator, and every derived key must be a known slug.
+ */
+function checkAgainstRegistry(doc, file, modelBySlug) {
+  const errors = [];
+  const offers = Array.isArray(doc?.api_offers) ? doc.api_offers : [];
+  offers.forEach((row, i) => {
+    const slug = row?.model_slug;
+    const model = typeof slug === 'string' ? modelBySlug.get(slug) : undefined;
+    if (!model) {
+      errors.push({
+        file,
+        path: `$.api_offers[${i}].model_slug`,
+        message: `model_slug '${slug}' is not in ${MODELS_FILE}`,
+      });
+      return;
+    }
+    if (row?.model_creator !== model.creator) {
+      errors.push({
+        file,
+        path: `$.api_offers[${i}].model_creator`,
+        message:
+          `model_creator '${row?.model_creator}' does not match ${MODELS_FILE} ` +
+          `creator '${model.creator}' for model '${slug}'`,
+      });
+    }
+  });
+  const derived = doc?.derived?.cheapest_provider_per_model;
+  if (derived !== undefined && typeof derived === 'object' && !Array.isArray(derived)) {
+    for (const key of Object.keys(derived)) {
+      if (!modelBySlug.has(key)) {
+        errors.push({
+          file,
+          path: `$.derived.cheapest_provider_per_model[${JSON.stringify(key)}]`,
+          message: `derived key '${key}' is not a known model_slug`,
+        });
+      }
+    }
+  }
+  return errors;
+}
+
 /** Row ids are unique across api_offers + subscriptions; provider ids likewise. */
 function indexIds(entries, errors) {
   const seen = { row: new Map(), provider: new Map() };
@@ -279,16 +331,42 @@ function deepEqualJson(a, b) {
 }
 
 /**
+ * Validate the registry documents against their schemas and run the registry
+ * consistency checks. Attributed to the registry files themselves.
+ */
+function checkRegistryDocuments(registry, ajv) {
+  const errors = [];
+  const docs = { [MODELS_FILE]: { models: registry.models }, [CREATORS_FILE]: { creators: registry.creators } };
+  for (const [file, schemaUrl] of registrySchemaUrls) {
+    const validate = ajv.compile(JSON.parse(readFileSync(schemaUrl, 'utf-8')));
+    if (!validate(docs[file])) {
+      for (const e of translateErrors(validate.errors)) {
+        errors.push({ file, path: e.path, message: e.message });
+      }
+    }
+  }
+  errors.push(...checkRegistry(registry));
+  return errors;
+}
+
+/**
  * Validate parsed documents: schema first, then dataset-wide checks.
  * @param {{file: string, doc: unknown}[]} entries
  * @param {object} [schema] defaults to the repo schema
+ * @param {{models: object[], creators: object[]}} [registry] defaults to
+ *   loading data/models.json + data/creators.json from the repo
  * @returns {{file: string, path: string, message: string}[]} every problem found
  */
-export function validateDocuments(entries, schema) {
+export function validateDocuments(entries, schema, registry) {
   if (schema === undefined) schema = JSON.parse(readFileSync(schemaUrl, 'utf-8'));
+  if (registry === undefined) registry = loadRegistry();
   const ajv = new Ajv2020({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
   const errors = [];
+  if (registry) errors.push(...checkRegistryDocuments(registry, ajv));
+  const modelBySlug = registry
+    ? new Map(registry.models.map((m) => [m.slug, m]).filter(([slug]) => typeof slug === 'string'))
+    : null;
   for (const { file, doc } of entries) {
     if (!validate(doc)) {
       for (const e of translateErrors(validate.errors)) {
@@ -296,6 +374,7 @@ export function validateDocuments(entries, schema) {
       }
     }
     errors.push(...checkDocument(doc, file));
+    if (modelBySlug) errors.push(...checkAgainstRegistry(doc, file, modelBySlug));
   }
   indexIds(entries, errors);
   return errors;
@@ -329,7 +408,20 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
       problems.push({ file, path: '$', message: `cannot read file: ${err.message}` });
     }
   }
-  problems.push(...validateDocuments(entries, schema));
+
+  let registry;
+  try {
+    registry = loadRegistry();
+  } catch (err) {
+    error(formatError({ file: MODELS_FILE, path: '$', message: `cannot read registry: ${err.message}` }));
+    return 1;
+  }
+  try {
+    problems.push(...validateDocuments(entries, schema, registry));
+  } catch (err) {
+    error(formatError({ file: SCHEMA_FILE, path: '$', message: `cannot run validation: ${err.message}` }));
+    return 1;
+  }
 
   // The dataset holds one dated rate set; every document's fx block must be
   // exactly what data/fx.json holds (docs/fx.md).

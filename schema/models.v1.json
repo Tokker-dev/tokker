@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokker.dev/schema/models.v1.json",
+  "title": "Tokker model registry v1",
+  "description": "The canonical model list behind data/models.json: one entry per model slug, with the creator, open-weights flag, provider-native name aliases and the slug this entry supersedes (for a genuinely renamed model). Extractors resolve a source's model name through this registry (tools/slugs.mjs); a name that matches nothing is \"unmapped\" and must never be guessed. See docs/SCHEMA.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["models"],
+  "properties": {
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "name", "creator", "open_weights", "aliases", "released"],
+        "properties": {
+          "slug": { "$ref": "#/$defs/slug" },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The creator's own model_name if it sells the model directly, else the most common provider-native model_name."
+          },
+          "creator": {
+            "$ref": "#/$defs/slug",
+            "description": "Canonical creator id in creators.v1.json."
+          },
+          "open_weights": { "enum": [true, false, "unknown"] },
+          "aliases": {
+            "type": "array",
+            "description": "Provider-native spellings that resolve to this slug: model_name values from offers, plus superseded slug spellings. Never another model's slug.",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "supersedes": {
+            "$ref": "#/$defs/slug",
+            "description": "The slug this entry replaces (a rename); the old spelling must stay in aliases so it still resolves."
+          },
+          "released": {
+            "anyOf": [{ "$ref": "#/$defs/iso_date" }, { "const": "unknown" }],
+            "description": "Release date, or \"unknown\" when the source does not publish one."
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "iso_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])([Tt]([01]\\d|2[0-3]):[0-5]\\d(:[0-5]\\d)?([Zz]|[+-](0\\d|1\\d|2[0-3]):[0-5]\\d))?$"
+    }
+  }
+}

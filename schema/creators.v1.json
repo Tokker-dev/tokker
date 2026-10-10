@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokker.dev/schema/creators.v1.json",
+  "title": "Tokker creator registry v1",
+  "description": "The canonical creator list behind data/creators.json: one entry per AI lab/company, folding variant spellings (moonshot/moonshotai, zai/zhipu, alibaba/qwen) into aliases so every api_offers[].model_creator normalises to one id. See docs/SCHEMA.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["creators"],
+  "properties": {
+    "creators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "aliases"],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/slug",
+            "description": "Canonical creator id; the model_creator value on every offer of this creator."
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Well-known display name of the company."
+          },
+          "aliases": {
+            "type": "array",
+            "description": "Other spellings of the same creator that must be folded into id.",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    }
+  }
+}
