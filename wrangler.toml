@@ -67,13 +67,13 @@ crons = ["*/30 * * * *"]
 binding = "DB"
 database_name = "tokker-staging"
 # Owner: create with `wrangler d1 create tokker-staging` and paste the id.
-database_id = "REPLACE_WITH_STAGING_D1_ID"
+database_id = "a2762eb2-6c10-42d3-a866-36ece1a92e49"
 migrations_dir = "migrations"
 
 [[env.staging.kv_namespaces]]
 binding = "KV"
 # Owner: create with `wrangler kv namespace create KV --env staging`.
-id = "REPLACE_WITH_STAGING_KV_ID"
+id = "c29a811ddc5b4145985f37b02bd3d76d"
 
 [[env.staging.r2_buckets]]
 binding = "BUCKET"
