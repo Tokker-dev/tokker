@@ -2,20 +2,24 @@
 // Build: recompute every usd{} block and blended_3to1 in data/pricing.json
 // from the native values and data/fx.json, then refresh the derived
 // cheapest-provider ranking, the committed CSV exports' usd_* columns, and
-// per-model estimates in subscriptions[].estimates_by_model.
-// Hand-edited usd values are impossible: the validator re-derives them
-// (docs/fx.md). Usage: npm run build [-- --out <path>].
+// per-model estimates in subscriptions[].estimates_by_model. Then stamp
+// freshness: stale, stale_since, stale_fields per row and counts.stale from
+// data/rules/freshness.json. Output to dist/pricing.json or --out PATH.
+// Usage: npm run build [-- --out <path>] [-- --as-of YYYY-MM-DD]
 
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import { toUsd, validateFx } from './fx.mjs';
 import { estimateForPlan, round4 } from './math.ts';
+import { annotate } from './freshness.mjs';
 
 const fxFileUrl = new URL('../data/fx.json', import.meta.url);
 const pricingFileUrl = new URL('../data/pricing.json', import.meta.url);
 const profileFileUrl = (name) => new URL(`../data/profiles/${name}.json`, import.meta.url);
+const DEFAULT_OUT = 'dist/pricing.json';
+const defaultOutUrl = new URL('../' + DEFAULT_OUT, import.meta.url);
 
 const rowsOf = (doc, key) => (Array.isArray(doc?.[key]) ? doc[key] : []);
 
@@ -359,12 +363,41 @@ export function csvUsdColumns(kind, row) {
   return new Map([['usd_price_month', row.usd.price_month]]);
 }
 
+const AS_OF_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
 export function run(argv, { log = console.log, error = console.error } = {}) {
+  // Parse arguments
+  let outPath = null;
+  let asOf = null;
   const args = argv.slice(2);
-  const outFlag = args.indexOf('--out');
-  const outPath = outFlag !== -1 ? args[outFlag + 1] : null;
-  if (outFlag !== -1 && !outPath) {
-    error('--out needs a path');
+
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === '--out') {
+      outPath = args[++i] ?? null;
+      if (!outPath) {
+        error('--out needs a path');
+        return 1;
+      }
+    } else if (args[i] === '--as-of') {
+      asOf = args[++i] ?? null;
+      if (!asOf) {
+        error('--as-of needs a date (YYYY-MM-DD)');
+        return 1;
+      }
+    } else if (args[i].startsWith('-')) {
+      error(`unknown argument: ${args[i]}`);
+      return 1;
+    }
+  }
+
+  // Default asOf to today if not provided
+  if (!asOf) {
+    asOf = new Date().toISOString().slice(0, 10);
+  }
+
+  // Validate asOf format
+  if (!AS_OF_PATTERN.test(asOf)) {
+    error(`--as-of must be YYYY-MM-DD, got: ${asOf}`);
     return 1;
   }
 
@@ -384,19 +417,30 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
     return 1;
   }
 
+  // Step 1: Build derived values (USD, estimates, rankings)
   try {
     buildDocument(doc, fx, profile);
   } catch (err) {
-    error(`${err.message}`);
+    error(`build failed: ${err.message}`);
     return 1;
   }
 
+  // Step 2: Apply freshness stamping
+  try {
+    doc = annotate(doc, { today: asOf });
+  } catch (err) {
+    error(`freshness annotation failed: ${err.message}`);
+    return 1;
+  }
+
+  // Step 3: Write output to dist/pricing.json (or --out PATH)
   const lexemes = collectNumberLexemes(originalText, JSON.parse(originalText));
-  const outUrl = outPath ? pathToFileURL(resolve(outPath)) : pricingFileUrl;
-  writeFileSync(outUrl, serializeDocument(doc, lexemes));
+  const outUrl = outPath ? pathToFileURL(resolve(outPath)) : defaultOutUrl;
+  mkdirSync(dirname(fileURLToPath(outUrl)), { recursive: true });
+  writeFileSync(outUrl, serializeDocument(doc, lexemes) + '\n');
 
   // The committed CSV exports carry the same usd_* numbers; refresh them by
-  // row id next to the written pricing file.
+  // row id next to the written pricing file (in the same directory as the output).
   const dir = dirname(fileURLToPath(outUrl));
   for (const [csvName, rows, kind] of [
     ['pricing_api.csv', doc.api_offers ?? [], 'api'],
@@ -411,7 +455,8 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
     writeFileSync(csvPath, updateCsvUsd(text, updates));
     log(`refreshed ${csvPath}`);
   }
-  log(`built ${fileURLToPath(outUrl)}: fx ${fx.base} ${fx.date}, ${doc.api_offers?.length ?? 0} api_offers, ${doc.subscriptions?.length ?? 0} subscriptions`);
+
+  log(`built ${fileURLToPath(outUrl)}: fx ${fx.base} ${fx.date}, ${doc.api_offers?.length ?? 0} api_offers, ${doc.subscriptions?.length ?? 0} subscriptions, ${doc.counts?.stale ?? 0} stale, as of ${asOf}`);
   return 0;
 }
 
