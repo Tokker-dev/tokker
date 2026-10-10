@@ -1,0 +1,70 @@
+[package]
+name = "cratefield-core"
+description = "Cratefield harness kernel: Module trait, Harness builder, ports, errors"
+readme = "README.md"
+keywords = ["cratefield", "harness", "backend", "axum", "modules"]
+categories = ["web-programming", "asynchronous"]
+include = ["src/**/*", "examples/**/*"]
+# Not the workspace version: core versions independently of the crates that
+# depend on it, and is ahead of them (release-plz.toml documents why that
+# gap needs a deliberate dependent release round).
+version = "0.8.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+axum = { workspace = true }
+http = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+bytes = { workspace = true }
+futures-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+schemars = { workspace = true }
+tracing = { workspace = true }
+sea-query = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+ulid = { workspace = true }
+time = { workspace = true }
+hmac = { workspace = true }
+sha2 = { workspace = true }
+sha1 = { workspace = true }
+base64 = { workspace = true }
+subtle = { workspace = true }
+unicode-normalization = { workspace = true }
+# One `origin_of` for the CSP builder and the VAPID `aud` (issue #215):
+# RFC 6454 is not something to re-derive by splitting on "://".
+url = { workspace = true }
+# The `Tracker` port's `Credential` (issue #431) clears its token on drop,
+# the same way `SecretBytes` in `cratefield-secrets` does — but core cannot
+# depend on that crate (it depends on core), so `Zeroizing` is wrapped
+# directly here.
+zeroize = { workspace = true }
+
+[dev-dependencies]
+schemars = { workspace = true }
+pollster = { workspace = true }
+futures-channel = { workspace = true }
+insta = { workspace = true }
+# errors-doc parses every workspace crate's source for `ProblemDef`
+# literals (issue #419); `span-locations` is what turns a found literal's
+# span into the file:line a failure names. Both are already in the tree.
+proc-macro2 = { version = "1", features = ["span-locations"] }
+syn = { version = "2", features = ["full", "visit"] }
+# Behaviour tests for the `api_key` store run against a real engine, the
+# way `cratefield-testing`'s idempotency suite does (see
+# tests/api_keys.rs); a dev-dependency never reaches the lib build, so
+# the wasm boundary is untouched. Path-only on purpose: adapter-sqlite
+# depends on core, so a versioned dev-dependency here would be a publish
+# cycle (core first-publishes before it). `cargo publish` strips a
+# path-only dev-dependency from the packaged manifest.
+cratefield-adapter-sqlite = { path = "../adapter-sqlite" }
+# Recomputing the stored digest in tests/api_keys.rs.
+hex = { workspace = true }

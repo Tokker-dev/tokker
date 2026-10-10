@@ -1,0 +1,31 @@
+[package]
+name = "cratefield-adapter-sqlite"
+description = "Database port over rusqlite for the Cratefield harness (tests and single-node self-hosting)"
+readme = "README.md"
+keywords = ["cratefield", "sqlite", "database", "adapter", "sql"]
+categories = ["database"]
+include = ["src/**/*", "README.md"]
+version = "0.3.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+cratefield-core = { workspace = true }
+async-trait = { workspace = true }
+rusqlite = { workspace = true }
+sea-query = { workspace = true }
+tracing = { workspace = true }
+time = { workspace = true }
+
+[dev-dependencies]
+pollster = { workspace = true }
+# Only so `tests/sqlite.rs` can run the kit's blob round-trip contract
+# against this adapter (issue #39). `default-features = false` keeps the
+# dev graph off the harness (axum, tower, this adapter again) — the
+# helper itself needs nothing beyond `cratefield-core`.
+cratefield-testing = { path = "../testing", default-features = false }
