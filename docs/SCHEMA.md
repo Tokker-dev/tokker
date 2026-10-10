@@ -130,6 +130,10 @@ The vendor's limits, quoted verbatim — an estimate never invents a cap.
 
 ### usd (derived from the row's native numbers at `fx.date`; number|null fields >= 0)
 
+Build output, never hand-edited: `tools/build.mjs` recomputes every block
+(native / rate, 6 significant digits) and the validator rejects drift —
+conversion and rounding rules: [fx.md](fx.md).
+
 | Block | Fields |
 |---|---|
 | API (`api_offers[].usd`) | `input_per_mtok`, `output_per_mtok`, `cached_input_per_mtok`, `cache_write_per_mtok`, `blended_3to1` (the 3:1 input:output blend used for ranking); `fx_rate_date` (ISO date) optional |
@@ -160,6 +164,11 @@ number > 0: one unit of base in that currency).
   `heavy-agentic`; case-insensitive, optionally `profile: detail` — or states the
   vendor publishes the token count itself (`vendor quotes raw tokens…`,
   `vendor counts tokens directly…`).
+- **USD is build output.** A row's `currency` must be supported by `fx`
+  (the base or a key in `fx.rates`; see [fx.md](fx.md)), and every `usd` field
+  must equal what `npm run build` computes from the native values and the
+  document's `fx` block. When `data/fx.json` exists, every document's `fx`
+  block must match it exactly — one dated rate set per dataset.
 
 ## Part files (research agents)
 
