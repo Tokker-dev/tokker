@@ -1,0 +1,120 @@
+# The Tokker API Worker (plan.md §5): the Cratefield harness on
+# cratefield-runtime-cloudflare, served from crates/tokker-worker.
+#
+# Build: worker-build is expected on PATH (`cargo install worker-build`);
+# output lands in the crate's gitignored `build/`.
+#
+# Secrets — set per environment with `wrangler secret put`, or in the
+# untracked `.dev.vars` for local dev; never values in this file:
+#   HARNESS_SECRET  >= 32 bytes; provides the harness Signer port
+#   ADMIN_TOKEN     unlocks the admin variant of GET /__surface
+#   HARNESS_SECRET_PREVIOUS  only during key rotation
+
+name = "tokker-api"
+main = "crates/tokker-worker/build/worker/shim.mjs"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+[build]
+command = "worker-build --release crates/tokker-worker"
+watch_dir = ["crates/tokker-worker/src"]
+
+[observability]
+enabled = true
+
+# Hand-maintained until Cratefield's manifest cron field lands
+# (plan.md §5.2 G7a, Cratefield/harness#774).
+[triggers]
+crons = ["*/30 * * * *"]
+
+# Default (local/dev) bindings; every deploy environment re-declares its own.
+[[d1_databases]]
+binding = "DB"
+database_name = "tokker"
+# Local dev keys the database on the name; remote deploys use the env blocks
+# below, which carry the real ids.
+database_id = "local"
+migrations_dir = "migrations"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "local"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "tokker-local"
+
+# Anonymous per-IP limit for the public read API (plan.md §5.1). Workers
+# rate limiting binding; counters are per colo, per namespace.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 120, period = 60 }
+
+# --- staging -------------------------------------------------------------
+
+[env.staging]
+name = "tokker-api-staging"
+workers_dev = true
+
+[env.staging.vars]
+ENV = "staging"
+
+[env.staging.triggers]
+crons = ["*/30 * * * *"]
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "tokker-staging"
+# Owner: create with `wrangler d1 create tokker-staging` and paste the id.
+database_id = "REPLACE_WITH_STAGING_D1_ID"
+migrations_dir = "migrations"
+
+[[env.staging.kv_namespaces]]
+binding = "KV"
+# Owner: create with `wrangler kv namespace create KV --env staging`.
+id = "REPLACE_WITH_STAGING_KV_ID"
+
+[[env.staging.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "tokker-staging"
+
+[[env.staging.ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "2001"
+simple = { limit = 120, period = 60 }
+
+# --- production ----------------------------------------------------------
+
+[env.production]
+name = "tokker-api-production"
+# No routes or custom domains yet; workers.dev only. Disable workers_dev
+# when the custom domain lands.
+workers_dev = true
+
+[env.production.vars]
+ENV = "production"
+
+[env.production.triggers]
+crons = ["*/30 * * * *"]
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "tokker-production"
+# Owner: create with `wrangler d1 create tokker-production` and paste the id.
+database_id = "REPLACE_WITH_PRODUCTION_D1_ID"
+migrations_dir = "migrations"
+
+[[env.production.kv_namespaces]]
+binding = "KV"
+# Owner: create with `wrangler kv namespace create KV --env production`.
+id = "REPLACE_WITH_PRODUCTION_KV_ID"
+
+[[env.production.r2_buckets]]
+binding = "BUCKET"
+bucket_name = "tokker-production"
+
+[[env.production.ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "3001"
+simple = { limit = 120, period = 60 }
