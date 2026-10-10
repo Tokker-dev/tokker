@@ -377,6 +377,10 @@
         "fair_use": { "$ref": "#/$defs/string_or_null" },
         "est_tokens_per_month": { "$ref": "#/$defs/number_or_unknown" },
         "est_usd_per_mtok_at_full_use": { "$ref": "#/$defs/number_or_unknown" },
+        "binding_window": {
+          "description": "Which published window binds the monthly token estimate under estimate_assumption; null or absent when the estimate is unknown. Written by the build.",
+          "enum": ["5h_rolling", "daily", "weekly", "monthly", null]
+        },
         "estimate_assumption": {
           "type": "string",
           "minLength": 1,

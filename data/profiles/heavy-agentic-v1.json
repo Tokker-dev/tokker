@@ -1,0 +1,24 @@
+{
+  "id": "heavy-agentic-v1",
+  "version": 1,
+  "title": "Heavy agentic",
+  "description": "One prompt/request/message = one heavy agentic model call: 60,000 input tokens (54,000 cache-read + 6,000 uncached) + 4,500 output. Four usable 5-hour windows a day; 30 days per month. Reference pricing for dollar- and credit-denominated caps: Claude Sonnet 5.5 list (USD $2 input / $0.20 cache-read / $10 output per Mtok).",
+  "policy": "immutable-once-published",
+  "call": {
+    "input_tokens": 60000,
+    "cached_input_tokens": 54000,
+    "output_tokens": 4500,
+    "tokens_per_call": 64500
+  },
+  "windows": {
+    "five_hour_windows_per_day": 4,
+    "days_per_week": 7,
+    "days_per_month": 30
+  },
+  "reference_pricing": {
+    "currency": "usd",
+    "input_per_mtok": 2,
+    "cached_input_per_mtok": 0.2,
+    "output_per_mtok": 10
+  }
+}
