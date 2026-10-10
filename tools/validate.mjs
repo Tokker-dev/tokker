@@ -17,7 +17,7 @@ const defaultDataUrl = new URL('../' + DEFAULT_DATA_FILE, import.meta.url);
 // A numeric estimate must say how it was derived: a named, versioned profile —
 // STANDARD is the dataset's (docs/plan.md §2 plans the other three) — or an
 // explicit statement that the vendor publishes the token allowance itself.
-export const ESTIMATE_PROFILES = ['standard', 'agentic-coding-v1', 'light-chat', 'heavy-agentic'];
+export const ESTIMATE_PROFILES = ['standard', 'agentic-coding-v1', 'light-chat', 'heavy-agentic', 'light-chat-v1', 'heavy-agentic-v1'];
 export const VENDOR_DIRECT_ASSUMPTIONS = [
   'vendor quotes raw tokens',
   'vendor counts tokens directly',

@@ -1,0 +1,867 @@
+{
+  "$comment": "Shared test vectors for subscription token math (issue #13). Consumed by tools/math.test.mjs (TypeScript) and crates/tokker-math/tests (Rust). amount, prices and conversions are f64; \"unknown\" is the literal string. Expected values were computed mechanically; see the PR description.",
+  "vectors": [
+    {
+      "name": "google/ai-pro: daily request cap binds",
+      "profile": "agentic-coding-v1",
+      "notes": "Gemini CLI 1 request = 1 standard call; the 5h app limit is unpublished ('4x higher usage'), so its unknown entry is ignored. No numeric 5h or weekly cap exists, so tokens_per_week is null (ERRATUM 2: the task's committed 903000000 extrapolated the daily cap by 28 windows, which the spec forbids).",
+      "plan": {
+        "price_usd_per_month": 19.99,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "requests",
+            "amount": 1500
+          },
+          {
+            "window": "5h_rolling",
+            "unit": "unspecified",
+            "amount": "unknown"
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 967500000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": 0.0207
+      }
+    },
+    {
+      "name": "google/free-google-login: zero-price daily cap",
+      "profile": "agentic-coding-v1",
+      "notes": "Zero price flows straight through: est_usd is exactly 0.",
+      "plan": {
+        "price_usd_per_month": 0,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "requests",
+            "amount": 1000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 645000000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": 0.0
+      }
+    },
+    {
+      "name": "google/ai-ultra-100: larger daily request cap",
+      "profile": "agentic-coding-v1",
+      "notes": "Unknown 5h app limit ignored (same shape as google/ai-pro).",
+      "plan": {
+        "price_usd_per_month": 100,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "requests",
+            "amount": 2000
+          },
+          {
+            "window": "5h_rolling",
+            "unit": "unspecified",
+            "amount": "unknown"
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 1290000000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": 0.0775
+      }
+    },
+    {
+      "name": "google/standard: unknown price keeps est_usd unknown",
+      "profile": "agentic-coding-v1",
+      "notes": "Token estimate is computable; the dollar figure is not (price unknown).",
+      "plan": {
+        "price_usd_per_month": "unknown",
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "requests",
+            "amount": 1500
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 967500000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": "unknown"
+      }
+    },
+    {
+      "name": "zai/lite: weekly credit cap binds (peak)",
+      "profile": "agentic-coding-v1",
+      "notes": "Off-peak doubling exists but is not applied; weekly binds at 4 windows/day. Conversion: 8.04 credits per standard call.",
+      "plan": {
+        "price_usd_per_month": 18,
+        "confidence": "official_docs",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "credits",
+            "amount": 2000
+          },
+          {
+            "window": "weekly",
+            "unit": "credits",
+            "amount": 10000
+          }
+        ],
+        "conversions": {
+          "credits_per_call": 8.04,
+          "source": "Z.AI published GLM-5.3 multipliers (6.9 input / 1.7 cached / 24 output) / 10,000"
+        }
+      },
+      "expected": {
+        "tokens_per_window": 5348258.706467662,
+        "tokens_per_week": 26741293.532338314,
+        "est_tokens_per_month": 114605544,
+        "binding_window": "weekly",
+        "est_usd_per_mtok_at_full_use": 0.1571
+      }
+    },
+    {
+      "name": "zai/pro: weekly credit cap binds (60k)",
+      "profile": "agentic-coding-v1",
+      "notes": "Off-peak doubling exists but is not applied. NOTE: the committed data row carries confidence 'secondary' while publishing these numbers; the vector uses official_docs because the caps come from Z.AI's official docs (flagged to the issue author).",
+      "plan": {
+        "price_usd_per_month": 80,
+        "confidence": "official_docs",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "credits",
+            "amount": 12000
+          },
+          {
+            "window": "weekly",
+            "unit": "credits",
+            "amount": 60000
+          },
+          {
+            "window": "per_request",
+            "unit": "credits",
+            "amount": "unknown"
+          }
+        ],
+        "conversions": {
+          "credits_per_call": 8.04,
+          "source": "Z.AI published GLM-5.3 multipliers (6.9 input / 1.7 cached / 24 output) / 10,000"
+        }
+      },
+      "expected": {
+        "tokens_per_window": 32089552.238805976,
+        "tokens_per_week": 160447761.19402987,
+        "est_tokens_per_month": 687633262,
+        "binding_window": "weekly",
+        "est_usd_per_mtok_at_full_use": 0.1163
+      }
+    },
+    {
+      "name": "zai/max: weekly credit cap binds (140k)",
+      "profile": "agentic-coding-v1",
+      "notes": "Off-peak doubling exists but is not applied. Confidence note as for zai/pro (data row is 'secondary', caps are from official docs).",
+      "plan": {
+        "price_usd_per_month": 168,
+        "confidence": "official_docs",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "credits",
+            "amount": 28000
+          },
+          {
+            "window": "weekly",
+            "unit": "credits",
+            "amount": 140000
+          },
+          {
+            "window": "per_request",
+            "unit": "credits",
+            "amount": "unknown"
+          }
+        ],
+        "conversions": {
+          "credits_per_call": 8.04,
+          "source": "Z.AI published GLM-5.3 multipliers (6.9 input / 1.7 cached / 24 output) / 10,000"
+        }
+      },
+      "expected": {
+        "tokens_per_window": 74875621.89054728,
+        "tokens_per_week": 374378109.4527364,
+        "est_tokens_per_month": 1604477612,
+        "binding_window": "weekly",
+        "est_usd_per_mtok_at_full_use": 0.1047
+      }
+    },
+    {
+      "name": "github/pro: monthly credits via usd_per_credit",
+      "profile": "agentic-coding-v1",
+      "notes": "Conversion: 1 AI Credit = $0.01 (GitHub published). Op order: ((monthly_units * p) / K) * T.",
+      "plan": {
+        "price_usd_per_month": 10,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "credits",
+            "amount": 1500
+          }
+        ],
+        "conversions": {
+          "usd_per_credit": 0.01,
+          "source": "GitHub published: 1 AI Credit = $0.01"
+        }
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 14269912,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.7008
+      }
+    },
+    {
+      "name": "github/max: 20k monthly credits via usd_per_credit",
+      "profile": "agentic-coding-v1",
+      "notes": "Conversion: 1 AI Credit = $0.01 (GitHub published).",
+      "plan": {
+        "price_usd_per_month": 100,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "credits",
+            "amount": 20000
+          }
+        ],
+        "conversions": {
+          "usd_per_credit": 0.01,
+          "source": "GitHub published: 1 AI Credit = $0.01"
+        }
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 190265487,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.5256
+      }
+    },
+    {
+      "name": "warp/build: monthly dollar pool",
+      "profile": "agentic-coding-v1",
+      "notes": "Dollar pool divided by the blended reference rate K = 0.0226 USD/Mtok for the standard mix.",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "usd",
+            "amount": 20
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 19026549,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 1.0512
+      }
+    },
+    {
+      "name": "warp/max: larger monthly dollar pool",
+      "profile": "agentic-coding-v1",
+      "notes": "Dollar pool at K = 0.0226 USD/Mtok.",
+      "plan": {
+        "price_usd_per_month": 200,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "usd",
+            "amount": 240
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 228318584,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.876
+      }
+    },
+    {
+      "name": "augment/standard: monthly dollar pool (same math as warp/build)",
+      "profile": "agentic-coding-v1",
+      "notes": "Identical inputs to warp/build; pins the invariant that identical pools give identical estimates.",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "usd",
+            "amount": 20
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 19026549,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 1.0512
+      }
+    },
+    {
+      "name": "jetbrains/ai-ultimate: dollar pool above the subscription price",
+      "profile": "agentic-coding-v1",
+      "notes": "Pool ($35) exceeds price ($30); the estimate uses the pool, not the price.",
+      "plan": {
+        "price_usd_per_month": 30,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "usd",
+            "amount": 35
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 33296460,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.901
+      }
+    },
+    {
+      "name": "jetbrains/ai-free: zero-price dollar pool",
+      "profile": "agentic-coding-v1",
+      "notes": "Free tier with a small published dollar pool; est_usd exactly 0.",
+      "plan": {
+        "price_usd_per_month": 0,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "usd",
+            "amount": 3
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 2853982,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.0
+      }
+    },
+    {
+      "name": "cerebras/code-pro: daily token cap",
+      "profile": "agentic-coding-v1",
+      "notes": "Unit tokens: the cap is already a token count, so no xT applies (see ERRATUM 1); 24M/day x 30 = 720M.",
+      "plan": {
+        "price_usd_per_month": 50,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "tokens",
+            "amount": 24000000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 720000000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": 0.0694
+      }
+    },
+    {
+      "name": "cerebras/code-max: daily token cap (120M)",
+      "profile": "agentic-coding-v1",
+      "notes": "Unit tokens, no xT (ERRATUM 1); 120M/day x 30 = 3.6B.",
+      "plan": {
+        "price_usd_per_month": 200,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "tokens",
+            "amount": 120000000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 3600000000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": 0.0556
+      }
+    },
+    {
+      "name": "stackblitz/pro: monthly token cap",
+      "profile": "agentic-coding-v1",
+      "notes": "Unit tokens, no xT (ERRATUM 1); monthly cap passes through unchanged.",
+      "plan": {
+        "price_usd_per_month": 25,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "tokens",
+            "amount": 10000000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 10000000,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 2.5
+      }
+    },
+    {
+      "name": "alibaba/coding-plan-pro: monthly request cap binds over 5h and weekly",
+      "profile": "agentic-coding-v1",
+      "notes": "Three published windows; the monthly cap is the tightest monthly-equivalent. 90000 x 21500 = 1.935B tokens/month.",
+      "plan": {
+        "price_usd_per_month": 50,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "requests",
+            "amount": 6000
+          },
+          {
+            "window": "weekly",
+            "unit": "requests",
+            "amount": 45000
+          },
+          {
+            "window": "monthly",
+            "unit": "requests",
+            "amount": 90000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": 129000000,
+        "tokens_per_week": 967500000,
+        "est_tokens_per_month": 1935000000,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.0258
+      }
+    },
+    {
+      "name": "byteplus/lite: monthly request cap binds (multiplier entry ignored)",
+      "profile": "agentic-coding-v1",
+      "notes": "The 'unspecified/unspecified/3' entry is a 3x multiplier, not an absolute cap, and is ignored. NOTE: the committed data row carries confidence 'secondary' while publishing these numbers; the vector uses official_page (flagged to the issue author).",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "requests",
+            "amount": 1900
+          },
+          {
+            "window": "weekly",
+            "unit": "requests",
+            "amount": 12000
+          },
+          {
+            "window": "monthly",
+            "unit": "requests",
+            "amount": 24000
+          },
+          {
+            "window": "unspecified",
+            "unit": "unspecified",
+            "amount": 3
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": 40850000,
+        "tokens_per_week": 258000000,
+        "est_tokens_per_month": 516000000,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 0.0388
+      }
+    },
+    {
+      "name": "synthetic/subscription-pack-1: 5h request cap binds",
+      "profile": "agentic-coding-v1",
+      "notes": "per_request|requests|1 is a concurrency limit, not a volume cap, and is ignored. No weekly cap published, so tokens_per_week falls back to tokens_per_window x 28.",
+      "plan": {
+        "price_usd_per_month": 30,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "requests",
+            "amount": 500
+          },
+          {
+            "window": "per_request",
+            "unit": "requests",
+            "amount": 1
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": 10750000,
+        "tokens_per_week": 301000000,
+        "est_tokens_per_month": 1290000000,
+        "binding_window": "5h_rolling",
+        "est_usd_per_mtok_at_full_use": 0.0233
+      }
+    },
+    {
+      "name": "anthropic/pro: no published cap stays unknown",
+      "profile": "agentic-coding-v1",
+      "notes": "Vendor publishes no numeric cap (5x Free is relative; weekly cap unpublished). The committed data row carries a secondary-derived number; this math deliberately does not derive it (data rule 6).",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "secondary",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "unspecified",
+            "amount": "unknown"
+          },
+          {
+            "window": "weekly",
+            "unit": "unspecified",
+            "amount": "unknown"
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": "unknown",
+        "binding_window": null,
+        "est_usd_per_mtok_at_full_use": "unknown"
+      }
+    },
+    {
+      "name": "openai/pro-200: relative multiple is not a cap",
+      "profile": "agentic-coding-v1",
+      "notes": "'20x Plus' (unspecified window/unit) is a multiple of another plan's unpublished cap, not an absolute number, and is ignored. The data row also carries confidence 'secondary' with a secondary-derived number; the vector uses official_page to isolate the window/unit rule (flagged to the issue author).",
+      "plan": {
+        "price_usd_per_month": 200,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "unspecified",
+            "amount": "unknown"
+          },
+          {
+            "window": "weekly",
+            "unit": "unspecified",
+            "amount": "unknown"
+          },
+          {
+            "window": "unspecified",
+            "unit": "unspecified",
+            "amount": 20
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": "unknown",
+        "binding_window": null,
+        "est_usd_per_mtok_at_full_use": "unknown"
+      }
+    },
+    {
+      "name": "alibaba-cn/token-plan-lite-china: credits without conversion stay unknown",
+      "profile": "agentic-coding-v1",
+      "notes": "Credits caps with no published credits_per_call or usd_per_credit never become tokens. Native price CNY 39; vector uses the usd-block equivalent 5.816902. Data row confidence is 'secondary'; the vector uses official_page to isolate the conversion rule.",
+      "plan": {
+        "price_usd_per_month": 5.816902,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "credits",
+            "amount": 700
+          },
+          {
+            "window": "weekly",
+            "unit": "credits",
+            "amount": 2500
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": "unknown",
+        "binding_window": null,
+        "est_usd_per_mtok_at_full_use": "unknown"
+      }
+    },
+    {
+      "name": "moonshot/andante: all-unknown amounts stay unknown",
+      "profile": "agentic-coding-v1",
+      "notes": "Every cap is 'unknown'; the numeric-amount rule filters all entries. Price is the usd-block equivalent of native CNY 49.",
+      "plan": {
+        "price_usd_per_month": 7.308415,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "credits",
+            "amount": "unknown"
+          },
+          {
+            "window": "weekly",
+            "unit": "unspecified",
+            "amount": "unknown"
+          },
+          {
+            "window": "5h_rolling",
+            "unit": "requests",
+            "amount": "unknown"
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": "unknown",
+        "binding_window": null,
+        "est_usd_per_mtok_at_full_use": "unknown"
+      }
+    },
+    {
+      "name": "perplexity/pro: secondary-confidence caps are never derived",
+      "profile": "agentic-coding-v1",
+      "notes": "Caps come from a secondary measurement (data rule 6): confidence 'secondary' makes every entry unusable, so all four outputs are null/unknown even though amounts are numeric.",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "secondary",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "requests",
+            "amount": 20
+          },
+          {
+            "window": "monthly",
+            "unit": "requests",
+            "amount": 50
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": "unknown",
+        "binding_window": null,
+        "est_usd_per_mtok_at_full_use": "unknown"
+      }
+    },
+    {
+      "name": "edge: 5h messages cap binds (midpoint)",
+      "profile": "agentic-coding-v1",
+      "notes": "87.5 = midpoint of OpenAI's published 15-160 local messages/5h range; the unknown weekly cap is ignored. Fractional amount flows through unrounded (1881250 tokens/window is integral).",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "messages",
+            "amount": 87.5
+          },
+          {
+            "window": "weekly",
+            "unit": "unspecified",
+            "amount": "unknown"
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": 1881250,
+        "tokens_per_week": 52675000,
+        "est_tokens_per_month": 225750000,
+        "binding_window": "5h_rolling",
+        "est_usd_per_mtok_at_full_use": 0.0886
+      }
+    },
+    {
+      "name": "edge: multiple caps in the same 5h window bind to the minimum",
+      "profile": "agentic-coding-v1",
+      "notes": "Every field takes the minimum usable cap; mirrors openai/plus's published 15-160 / 5-45 / 350-3,000 message ranges (the committed row uses the midpoint 87.5 instead -- see drift exceptions).",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "messages",
+            "amount": 160
+          },
+          {
+            "window": "5h_rolling",
+            "unit": "messages",
+            "amount": 45
+          },
+          {
+            "window": "5h_rolling",
+            "unit": "messages",
+            "amount": 3000
+          },
+          {
+            "window": "weekly",
+            "unit": "unspecified",
+            "amount": "unknown"
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": 967500,
+        "tokens_per_week": 27090000,
+        "est_tokens_per_month": 116100000,
+        "binding_window": "5h_rolling",
+        "est_usd_per_mtok_at_full_use": 0.1723
+      }
+    },
+    {
+      "name": "edge: weekly-only cap",
+      "profile": "agentic-coding-v1",
+      "notes": "No seed plan publishes only a weekly cap; synthetic entry pins the weekly path: monthly-units (7000*30)/7, tokens_per_window null.",
+      "plan": {
+        "price_usd_per_month": 20,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "weekly",
+            "unit": "messages",
+            "amount": 7000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": 150500000,
+        "est_tokens_per_month": 645000000,
+        "binding_window": "weekly",
+        "est_usd_per_mtok_at_full_use": 0.031
+      }
+    },
+    {
+      "name": "alt: google/ai-pro under light-chat-v1",
+      "profile": "light-chat-v1",
+      "notes": "Same daily cap under the light profile: 1500 x 30 x 3600 = 162M; token-unit-independent of K.",
+      "plan": {
+        "price_usd_per_month": 19.99,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "daily",
+            "unit": "requests",
+            "amount": 1500
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 162000000,
+        "binding_window": "daily",
+        "est_usd_per_mtok_at_full_use": 0.1234
+      }
+    },
+    {
+      "name": "alt: zai/lite under heavy-agentic-v1",
+      "profile": "heavy-agentic-v1",
+      "notes": "Same limits and credits_per_call (8.04) as zai/lite but the heavy call size T=64500; weekly binds. Off-peak doubling not applied. Computed mechanically; no independently committed value.",
+      "plan": {
+        "price_usd_per_month": 18,
+        "confidence": "official_docs",
+        "limits": [
+          {
+            "window": "5h_rolling",
+            "unit": "credits",
+            "amount": 2000
+          },
+          {
+            "window": "weekly",
+            "unit": "credits",
+            "amount": 10000
+          }
+        ],
+        "conversions": {
+          "credits_per_call": 8.04,
+          "source": "Z.AI published GLM-5.3 multipliers (6.9 input / 1.7 cached / 24 output) / 10,000"
+        }
+      },
+      "expected": {
+        "tokens_per_window": 16044776.119402986,
+        "tokens_per_week": 80223880.59701493,
+        "est_tokens_per_month": 343816631,
+        "binding_window": "weekly",
+        "est_usd_per_mtok_at_full_use": 0.0524
+      }
+    },
+    {
+      "name": "alt: stackblitz/pro under heavy-agentic-v1 (token-unit invariance)",
+      "profile": "heavy-agentic-v1",
+      "notes": "Token-denominated caps ignore the profile entirely (no xT, ERRATUM 1), so the result equals the default-profile vector 17.",
+      "plan": {
+        "price_usd_per_month": 25,
+        "confidence": "official_page",
+        "limits": [
+          {
+            "window": "monthly",
+            "unit": "tokens",
+            "amount": 10000000
+          }
+        ]
+      },
+      "expected": {
+        "tokens_per_window": null,
+        "tokens_per_week": null,
+        "est_tokens_per_month": 10000000,
+        "binding_window": "monthly",
+        "est_usd_per_mtok_at_full_use": 2.5
+      }
+    }
+  ]
+}
