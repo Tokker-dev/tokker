@@ -8,6 +8,7 @@
   },
   "scripts": {
     "validate": "node tools/validate.mjs",
+    "check-pr": "node tools/check-pr.ts",
     "build": "node tools/build.mjs",
     "fx": "node tools/fx.mjs",
     "fetch": "echo 'not implemented' && exit 1",
