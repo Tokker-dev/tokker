@@ -110,7 +110,10 @@ fn classify(row_type: RowType, volatility: Option<&str>) -> Result<(&'static str
             .get(&rule.class)
             .map(|class| class.sla_days)
             .ok_or_else(|| {
-                Error::Rules(format!("freshness rule names undefined class '{}'", rule.class))
+                Error::Rules(format!(
+                    "freshness rule names undefined class '{}'",
+                    rule.class
+                ))
             })?;
         return Ok((rule.class.as_str(), sla_days));
     }

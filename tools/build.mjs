@@ -363,6 +363,8 @@ export function csvUsdColumns(kind, row) {
   return new Map([['usd_price_month', row.usd.price_month]]);
 }
 
+const AS_OF_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
 export function run(argv, { log = console.log, error = console.error } = {}) {
   // Parse arguments
   let outPath = null;
@@ -382,12 +384,21 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
         error('--as-of needs a date (YYYY-MM-DD)');
         return 1;
       }
+    } else if (args[i].startsWith('-')) {
+      error(`unknown argument: ${args[i]}`);
+      return 1;
     }
   }
 
   // Default asOf to today if not provided
   if (!asOf) {
     asOf = new Date().toISOString().slice(0, 10);
+  }
+
+  // Validate asOf format
+  if (!AS_OF_PATTERN.test(asOf)) {
+    error(`--as-of must be YYYY-MM-DD, got: ${asOf}`);
+    return 1;
   }
 
   let fx;
