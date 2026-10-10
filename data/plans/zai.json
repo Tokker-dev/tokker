@@ -1,0 +1,338 @@
+{
+  "vendor_id": "zai",
+  "plans": [
+    {
+      "id": "zai/lite",
+      "vendor_id": "zai",
+      "vendor_name": "Z.AI (Zhipu)",
+      "product": "GLM Coding Plan",
+      "plan_name": "Lite",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 18,
+      "price_year": "unknown",
+      "models_included": [
+        "glm-5.3",
+        "glm-5.3-flash"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 2000,
+          "quote": "Lite | 2,000 [5-Hour Credits]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 10000,
+          "quote": "Lite | 10,000 [Weekly Credits]"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "Model credit usage = (Input tokens x Input multiplier + Cached Input tokens x Cached Input multiplier + Output tokens x Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]"
+        }
+      ],
+      "fair_use": "The GLM Coding Plan is strictly limited to use within officially supported tools and products.",
+      "est_tokens_per_month": 114605544,
+      "est_usd_per_mtok_at_full_use": 0.1571,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Z.AI credits per call (GLM-5.3, peak rate) = (2000x6.9 + 18000x1.7 + 1500x24)/10,000 = 8.04 credits; off-peak (all hours except Mon-Fri 14:00-18:00 SGT) is 50% -> up to 2x tokens. Binding cap: weekly.",
+      "source": "https://docs.z.ai/devpack/overview",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Official estimate table: 96% cache GLM-5.3 Lite = see docs (Lite 50-99M tokens/week). Weekly cap binds at 4 windows/day (5h cap alone would allow 6x more). Off-peak doubles tokens -> ~$0.079/Mtok. Promo 2026-09-25..10-07 all-day off-peak. API-equivalent at GLM-5.3 list ($1.4/$0.26/$4.4): ~$75/mo.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/devpack/overview.md",
+        "selector_hint": "'Usage Credit Allowance' table + multipliers table + 'Estimated Token Allowance' table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 18,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/devpack/overview",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/max",
+      "vendor_id": "zai",
+      "vendor_name": "Z.AI (Zhipu)",
+      "product": "GLM Coding Plan",
+      "plan_name": "Max",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 168,
+      "price_year": "unknown",
+      "models_included": [
+        "glm-5.3",
+        "glm-5.3-flash"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 28000,
+          "quote": "Max | 28,000 [5-Hour Credits]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 140000,
+          "quote": "Max | 140,000 [Weekly Credits]"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "Model credit usage = (Input tokens x Input multiplier + Cached Input tokens x Cached Input multiplier + Output tokens x Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]"
+        }
+      ],
+      "fair_use": "The GLM Coding Plan is strictly limited to use within officially supported tools and products.",
+      "est_tokens_per_month": 1604477612,
+      "est_usd_per_mtok_at_full_use": 0.1047,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Z.AI credits per call (GLM-5.3, peak rate) = (2000x6.9 + 18000x1.7 + 1500x24)/10,000 = 8.04 credits; off-peak (all hours except Mon-Fri 14:00-18:00 SGT) is 50% -> up to 2x tokens. Binding cap: weekly.",
+      "source": "https://docs.z.ai/devpack/overview",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Lite price 'Starting at just 18 USD per month' official; Pro $80 / Max $168 from secondary (codingplan.org, devpass compare); z.ai/subscribe is JS-rendered. Official estimate table: 96% cache GLM-5.3 Max = see docs (Lite 50-99M tokens/week). Weekly cap binds at 4 windows/day (5h cap alone would allow 6x more). Off-peak doubles tokens -> ~$0.052/Mtok. Promo 2026-09-25..10-07 all-day off-peak. API-equivalent at GLM-5.3 list ($1.4/$0.26/$4.4): ~$1051/mo.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/devpack/overview.md",
+        "selector_hint": "'Usage Credit Allowance' table + multipliers table + 'Estimated Token Allowance' table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 168,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/devpack/overview",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/pro",
+      "vendor_id": "zai",
+      "vendor_name": "Z.AI (Zhipu)",
+      "product": "GLM Coding Plan",
+      "plan_name": "Pro",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 80,
+      "price_year": "unknown",
+      "models_included": [
+        "glm-5.3",
+        "glm-5.3-flash"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 12000,
+          "quote": "Pro | 12,000 [5-Hour Credits]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 60000,
+          "quote": "Pro | 60,000 [Weekly Credits]"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "Model credit usage = (Input tokens x Input multiplier + Cached Input tokens x Cached Input multiplier + Output tokens x Output multiplier) / 10,000 [GLM-5.3: 6.9 / 1.7 / 24]"
+        }
+      ],
+      "fair_use": "The GLM Coding Plan is strictly limited to use within officially supported tools and products.",
+      "est_tokens_per_month": 687633262,
+      "est_usd_per_mtok_at_full_use": 0.1163,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Z.AI credits per call (GLM-5.3, peak rate) = (2000x6.9 + 18000x1.7 + 1500x24)/10,000 = 8.04 credits; off-peak (all hours except Mon-Fri 14:00-18:00 SGT) is 50% -> up to 2x tokens. Binding cap: weekly.",
+      "source": "https://docs.z.ai/devpack/overview",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Lite price 'Starting at just 18 USD per month' official; Pro $80 / Max $168 from secondary (codingplan.org, devpass compare); z.ai/subscribe is JS-rendered. Official estimate table: 96% cache GLM-5.3 Pro = see docs (Lite 50-99M tokens/week). Weekly cap binds at 4 windows/day (5h cap alone would allow 6x more). Off-peak doubles tokens -> ~$0.058/Mtok. Promo 2026-09-25..10-07 all-day off-peak. API-equivalent at GLM-5.3 list ($1.4/$0.26/$4.4): ~$450/mo.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/devpack/overview.md",
+        "selector_hint": "'Usage Credit Allowance' table + multipliers table + 'Estimated Token Allowance' table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 80,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/devpack/overview",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/team-premium-seat",
+      "vendor_id": "zai",
+      "vendor_name": "Z.AI (Zhipu)",
+      "product": "GLM Coding Plan (Team)",
+      "plan_name": "Team Premium seat",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": "unknown",
+      "price_year": "unknown",
+      "models_included": [
+        "glm-5.3",
+        "glm-5.3-flash"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 35000,
+          "quote": "Premium Seat | 35,000 [Quota per 5 hours / seat]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 155000,
+          "quote": "155,000 [Weekly quota / seat]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1776385928,
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Z.AI credits per call (GLM-5.3, peak rate) = (2000x6.9 + 18000x1.7 + 1500x24)/10,000 = 8.04 credits; off-peak (all hours except Mon-Fri 14:00-18:00 SGT) is 50% -> up to 2x tokens.",
+      "source": "https://docs.z.ai/devpack/teamplan",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Min 2 seats; seat price not in docs. Overage billed at 10% off API list (limited time).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/devpack/teamplan.md",
+        "selector_hint": "seat quota table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/devpack/teamplan",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/team-standard-seat",
+      "vendor_id": "zai",
+      "vendor_name": "Z.AI (Zhipu)",
+      "product": "GLM Coding Plan (Team)",
+      "plan_name": "Team Standard seat",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": "unknown",
+      "price_year": "unknown",
+      "models_included": [
+        "glm-5.3",
+        "glm-5.3-flash"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 15000,
+          "quote": "Standard Seat | 15,000 [Quota per 5 hours / seat]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 66000,
+          "quote": "66,000 [Weekly quota / seat]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 756396588,
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Z.AI credits per call (GLM-5.3, peak rate) = (2000x6.9 + 18000x1.7 + 1500x24)/10,000 = 8.04 credits; off-peak (all hours except Mon-Fri 14:00-18:00 SGT) is 50% -> up to 2x tokens.",
+      "source": "https://docs.z.ai/devpack/teamplan",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Min 2 seats; seat price not in docs. Overage billed at 10% off API list (limited time).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/devpack/teamplan.md",
+        "selector_hint": "seat quota table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/devpack/teamplan",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

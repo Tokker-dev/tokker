@@ -54,3 +54,9 @@ jobs:
       - run: npm ci
       - run: npm run validate
       - run: npm test
+      - name: build reproduces the committed generated files
+        run: |
+          npm run build
+          cmp dist/pricing.json data/pricing.json
+          cmp dist/pricing_api.csv data/pricing_api.csv
+          cmp dist/pricing_subscriptions.csv data/pricing_subscriptions.csv

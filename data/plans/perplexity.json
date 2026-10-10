@@ -1,0 +1,125 @@
+{
+  "vendor_id": "perplexity",
+  "plans": [
+    {
+      "id": "perplexity/max",
+      "vendor_id": "perplexity",
+      "vendor_name": "Perplexity",
+      "product": "Perplexity",
+      "plan_name": "Max",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": 2000,
+      "models_included": [
+        "frontier models",
+        "perplexity computer"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 10000,
+          "quote": "Perplexity Computer ... (10,000 credits/month included) [secondary]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.perplexity.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Unlimited Labs/Deep Research per secondary; official page 403.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://www.perplexity.ai/pricing",
+        "selector_hint": "plan cards (403 to bots)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": 2000
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.perplexity.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "perplexity/pro",
+      "vendor_id": "perplexity",
+      "vendor_name": "Perplexity",
+      "product": "Perplexity",
+      "plan_name": "Pro",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": 200,
+      "models_included": [
+        "sonar",
+        "frontier models"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 20,
+          "quote": "20 Research (Deep Research) queries per day [secondary]"
+        },
+        {
+          "window": "monthly",
+          "unit": "requests",
+          "amount": 50,
+          "quote": "50 Labs queries per month [secondary]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.perplexity.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Official page 403; figures from secondary (cloudzero/finout 2026).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://www.perplexity.ai/pricing",
+        "selector_hint": "plan cards (403 to bots)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": 200
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.perplexity.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

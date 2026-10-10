@@ -1,0 +1,61 @@
+{
+  "vendor_id": "t3chat",
+  "plans": [
+    {
+      "id": "t3chat/pro",
+      "vendor_id": "t3chat",
+      "vendor_name": "T3 Chat",
+      "product": "T3 Chat",
+      "plan_name": "Pro",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 8,
+      "price_year": null,
+      "models_included": [
+        "multi-provider"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "usd",
+          "amount": 0.4,
+          "quote": "approximately $0.40 every 4 hour window, plus $4 of overage credit [secondary: answeroverflow / Theo]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 49469027,
+      "est_usd_per_mtok_at_full_use": 0.1617,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. T3: 4 usable windows/day x $0.40 + $4 overage = $52 API value/month.",
+      "source": "https://t3.chat/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Legacy: 1,500 messages/month for $8. $50 tier: $1.50 per 4h + $30 overage (secondary).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://t3.chat/pricing",
+        "selector_hint": "pricing (429 to bot)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 8,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://t3.chat/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,590 @@
+{
+  "provider_id": "siliconflow",
+  "offers": [
+    {
+      "id": "siliconflow/deepseek-v4-flash-cn",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "deepseek-v4-flash",
+      "model_name": "DeepSeek-V4-Flash (deepseek-ai/DeepSeek-V4-Flash)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 3,
+      "output_per_mtok": 9,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": "Off-peak 02:00-08:00 (Beijing): ¥1.50/¥4.50/cache ¥0.15; other hours ¥3/¥9/¥0.30",
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China siliconflow.cn, CNY",
+      "source": "https://siliconflow.cn/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Off-peak window differs from DeepSeek's own. DeepSeek-V4-Pro ¥12/¥24/¥1.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://siliconflow.cn/pricing",
+        "selector_hint": "'对话模型' table: 厂商|模型|输入价格|输出价格|缓存价格 (¥/M tokens); collapsed '展开更多' rows may be missing in static HTML",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.447454,
+        "output_per_mtok": 1.342362,
+        "cached_input_per_mtok": 0.044745,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.671181
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://siliconflow.cn/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/deepseek-v4.1-flash-intl",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "deepseek-v4.1-flash",
+      "model_name": "DeepSeek-V4.1-Flash",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": 0.003,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1049000,
+      "max_output": "unknown",
+      "free_tier": "$1 free credits for new users",
+      "region_notes": "International siliconflow.com, USD",
+      "source": "https://www.siliconflow.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Matches DeepSeek OFF-PEAK price but no peak surcharge shown. DeepSeek-V4-Pro-0813 $1.32/$3.96/$0.044.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.siliconflow.com/pricing",
+        "selector_hint": "Per-vendor tables: Model Name|Context Length|Input|Cached Input|Output ($/M); 'Load More' hides rows",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": 0.003,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.siliconflow.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/glm-5.3-cn",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3 (zai-org/GLM-5.3)",
+      "model_creator": "zhipu",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 8,
+      "output_per_mtok": 28,
+      "cached_input_per_mtok": 2,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://siliconflow.cn/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Same as bigmodel list.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://siliconflow.cn/pricing",
+        "selector_hint": "'对话模型' table: 厂商|模型|输入价格|输出价格|缓存价格 (¥/M tokens); collapsed '展开更多' rows may be missing in static HTML",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.193211,
+        "output_per_mtok": 4.176237,
+        "cached_input_per_mtok": 0.298303,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.938968
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://siliconflow.cn/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/glm-5.3-intl",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zhipu",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "cached_input_per_mtok": 0.26,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1049000,
+      "max_output": "unknown",
+      "free_tier": "$1 free credits",
+      "region_notes": "International, USD",
+      "source": "https://www.siliconflow.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.siliconflow.com/pricing",
+        "selector_hint": "Per-vendor tables: Model Name|Context Length|Input|Cached Input|Output ($/M); 'Load More' hides rows",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.4,
+        "output_per_mtok": 4.4,
+        "cached_input_per_mtok": 0.26,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.siliconflow.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/hy4-preview-cn",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "hy4-preview",
+      "model_name": "Hy4 preview (tencent/Hy4-preview)",
+      "model_creator": "tencent",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 6,
+      "output_per_mtok": 18,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://siliconflow.cn/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Same as Tencent TokenHub.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://siliconflow.cn/pricing",
+        "selector_hint": "'对话模型' table: 厂商|模型|输入价格|输出价格|缓存价格 (¥/M tokens); collapsed '展开更多' rows may be missing in static HTML",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.894908,
+        "output_per_mtok": 2.684724,
+        "cached_input_per_mtok": 0.044745,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.342362
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://siliconflow.cn/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/kimi-k2.6-pro-cn",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "kimi-k2.6-pro",
+      "model_name": "Kimi-K2.6 (Pro/moonshotai/Kimi-K2.6)",
+      "model_creator": "moonshot",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 6.5,
+      "output_per_mtok": 27,
+      "cached_input_per_mtok": 1.1,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://siliconflow.cn/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Kimi-K2.7-Code ¥6.5/¥27/¥1.3.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://siliconflow.cn/pricing",
+        "selector_hint": "'对话模型' table: 厂商|模型|输入价格|输出价格|缓存价格 (¥/M tokens); collapsed '展开更多' rows may be missing in static HTML",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.969484,
+        "output_per_mtok": 4.027086,
+        "cached_input_per_mtok": 0.164066,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.733884
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://siliconflow.cn/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/kimi-k3-intl",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi-K3",
+      "model_creator": "moonshot",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 2.7,
+      "output_per_mtok": 13.5,
+      "cached_input_per_mtok": 0.27,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1049000,
+      "max_output": "unknown",
+      "free_tier": "$1 free credits",
+      "region_notes": "International, USD",
+      "source": "https://www.siliconflow.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "10% below Moonshot list ($3/$15).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.siliconflow.com/pricing",
+        "selector_hint": "Per-vendor tables: Model Name|Context Length|Input|Cached Input|Output ($/M); 'Load More' hides rows",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2.7,
+        "output_per_mtok": 13.5,
+        "cached_input_per_mtok": 0.27,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 5.4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.siliconflow.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/minimax-m3-intl",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "minimax-m3",
+      "model_name": "MiniMax-M3",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1049000,
+      "max_output": "unknown",
+      "free_tier": "$1 free credits",
+      "region_notes": "International, USD",
+      "source": "https://www.siliconflow.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.siliconflow.com/pricing",
+        "selector_hint": "Per-vendor tables: Model Name|Context Length|Input|Cached Input|Output ($/M); 'Load More' hides rows",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.siliconflow.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/qwen3.5-35b-a3b-cn",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "qwen3.5-35b-a3b",
+      "model_name": "Qwen3.5-35B-A3B",
+      "model_creator": "alibaba",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 0.4,
+      "output_per_mtok": 3.2,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": "Input [0,128K): ¥0.40/¥3.20; [128K,+inf): ¥1.60/¥12.80",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "Several small models free (e.g. Xing4.0-29B, PaddleOCR-VL-1.5, bge-m3)",
+      "region_notes": "China, CNY",
+      "source": "https://siliconflow.cn/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://siliconflow.cn/pricing",
+        "selector_hint": "'对话模型' table: 厂商|模型|输入价格|输出价格|缓存价格 (¥/M tokens); collapsed '展开更多' rows may be missing in static HTML",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.059661,
+        "output_per_mtok": 0.477284,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.164067
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://siliconflow.cn/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "siliconflow/qwen3.8-2.4t-a95b-intl",
+      "provider_id": "siliconflow",
+      "provider_name": "SiliconFlow",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "qwen3.8-2.4t-a95b",
+      "model_name": "Qwen3.8-2.4T-A95B",
+      "model_creator": "alibaba",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1049000,
+      "max_output": "unknown",
+      "free_tier": "$1 free credits",
+      "region_notes": "International, USD",
+      "source": "https://www.siliconflow.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Same headline as Alibaba qwen3.8-max ($2/$6) - possibly the same model; not confirmed.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.siliconflow.com/pricing",
+        "selector_hint": "Per-vendor tables: Model Name|Context Length|Input|Cached Input|Output ($/M); 'Load More' hides rows",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": 0.25,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.siliconflow.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

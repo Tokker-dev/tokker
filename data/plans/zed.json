@@ -1,0 +1,61 @@
+{
+  "vendor_id": "zed",
+  "plans": [
+    {
+      "id": "zed/pro",
+      "vendor_id": "zed",
+      "vendor_name": "Zed Industries",
+      "product": "Zed",
+      "plan_name": "Pro",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 10,
+      "price_year": null,
+      "models_included": [
+        "zed-hosted models (API list +10%)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 5,
+          "quote": "$5 of tokens included"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 4324216,
+      "est_usd_per_mtok_at_full_use": 2.3126,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Includes 10% markup.",
+      "source": "https://zed.dev/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Overage: 'API list price +10%'.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://zed.dev/pricing",
+        "selector_hint": "plan cards",
+        "volatility": "low"
+      },
+      "usd": {
+        "price_month": 10,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://zed.dev/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

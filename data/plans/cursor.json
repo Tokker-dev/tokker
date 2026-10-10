@@ -1,0 +1,389 @@
+{
+  "vendor_id": "cursor",
+  "plans": [
+    {
+      "id": "cursor/hobby",
+      "vendor_id": "cursor",
+      "vendor_name": "Cursor (Anysphere)",
+      "product": "Cursor",
+      "plan_name": "Hobby",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "composer"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "Limited Agent requests"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+        "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cursor.com/docs/models-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cursor/pro",
+      "vendor_id": "cursor",
+      "vendor_name": "Cursor (Anysphere)",
+      "product": "Cursor",
+      "plan_name": "Pro",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "grok-4.7",
+        "composer-2.5",
+        "third-party (API price)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Every plan includes a set amount of model usage."
+        },
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Cursor Models: Significantly more included usage for Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5."
+        },
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Other Models: The pool for third-party models, charged at the model's API price."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Included $ pools are NOT published any more (pricing page only says 'Extended limits on Agent'). Docs guidance: 'Daily Agent users: Typically $60-$100/mo total usage; Power users: Often $200+/mo'. Two pools reset monthly; overage at API rates. Grok 4.7 list $2/$0.5 cache/$6.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+        "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cursor.com/docs/models-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cursor/pro-plus",
+      "vendor_id": "cursor",
+      "vendor_name": "Cursor (Anysphere)",
+      "product": "Cursor",
+      "plan_name": "Pro+",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 60,
+      "price_year": null,
+      "models_included": [
+        "grok-4.7",
+        "composer-2.5",
+        "third-party (API price)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Every plan includes a set amount of model usage."
+        },
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Cursor Models: Significantly more included usage for Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5."
+        },
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Other Models: The pool for third-party models, charged at the model's API price."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Included $ pools are NOT published any more (pricing page only says 'Extended limits on Agent'). Docs guidance: 'Daily Agent users: Typically $60-$100/mo total usage; Power users: Often $200+/mo'. Two pools reset monthly; overage at API rates. Grok 4.7 list $2/$0.5 cache/$6.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+        "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 60,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cursor.com/docs/models-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cursor/start-india",
+      "vendor_id": "cursor",
+      "vendor_name": "Cursor (Anysphere)",
+      "product": "Cursor",
+      "plan_name": "Start (India)",
+      "category": "ide",
+      "currency": "INR",
+      "price_month": 649,
+      "price_year": null,
+      "models_included": [
+        "grok-4.7",
+        "grok-4.6",
+        "grok-4.5",
+        "composer-2.5"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Start includes generous usage of the Cursor Models pool"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Rs649/mo tax inclusive; India only; no Other Models pool; fixed medium effort.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+        "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 6.737957,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cursor.com/docs/models-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cursor/teams-standard-seat",
+      "vendor_id": "cursor",
+      "vendor_name": "Cursor (Anysphere)",
+      "product": "Cursor",
+      "plan_name": "Teams Standard seat",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 40,
+      "price_year": null,
+      "models_included": [
+        "grok-4.7",
+        "composer-2.5",
+        "third-party"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Standard ($40/user/mo) and Premium ($120/user/mo), where Premium adds 5x the Standard limits on Agent"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Teams also pay a Cursor Token Rate of $0.25/Mtok on third-party models (incl. BYOK).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+        "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 40,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cursor.com/docs/models-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cursor/ultra",
+      "vendor_id": "cursor",
+      "vendor_name": "Cursor (Anysphere)",
+      "product": "Cursor",
+      "plan_name": "Ultra",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "grok-4.7",
+        "composer-2.5",
+        "third-party (API price)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Every plan includes a set amount of model usage."
+        },
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Cursor Models: Significantly more included usage for Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5."
+        },
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Other Models: The pool for third-party models, charged at the model's API price."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://cursor.com/docs/models-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Included $ pools are NOT published any more (pricing page only says 'Extended limits on Agent'). Docs guidance: 'Daily Agent users: Typically $60-$100/mo total usage; Power users: Often $200+/mo'. Two pools reset monthly; overage at API rates. Grok 4.7 list $2/$0.5 cache/$6.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+        "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cursor.com/docs/models-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

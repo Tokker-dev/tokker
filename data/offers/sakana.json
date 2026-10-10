@@ -1,0 +1,179 @@
+{
+  "provider_id": "sakana",
+  "offers": [
+    {
+      "id": "sakana/fugu-max",
+      "provider_id": "sakana",
+      "provider_name": "Sakana AI",
+      "provider_type": "first_party",
+      "provider_country": "JP",
+      "model_slug": "fugu-max",
+      "model_name": "Sakana Fugu Max",
+      "model_creator": "sakana",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": "Flat 'regardless of context length'.",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.sakana.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://console.sakana.ai/pricing",
+        "selector_hint": "API models section (Fugu Ultra / Fugu Max / Namazu) input/cached/output per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": 0.25,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.sakana.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sakana/fugu-ultra",
+      "provider_id": "sakana",
+      "provider_name": "Sakana AI",
+      "provider_type": "first_party",
+      "provider_country": "JP",
+      "model_slug": "fugu-ultra",
+      "model_name": "Sakana Fugu Ultra",
+      "model_creator": "sakana",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
+      "cached_input_per_mtok": 0.5,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": ">272K context: input $10, cached $1.00, output $45.",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.sakana.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Fugu is also sold via subscriptions ($20/$100/$200 per month).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://console.sakana.ai/pricing",
+        "selector_hint": "API models section (Fugu Ultra / Fugu Max / Namazu) input/cached/output per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
+        "cached_input_per_mtok": 0.5,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 11.25
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.sakana.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sakana/namazu-v1.0",
+      "provider_id": "sakana",
+      "provider_name": "Sakana AI",
+      "provider_type": "first_party",
+      "provider_country": "JP",
+      "model_slug": "namazu-v1.0",
+      "model_name": "Sakana Namazu v1.0",
+      "model_creator": "sakana",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.95,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.15,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.sakana.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Web search $7/1K calls; code execution $0.12/hour.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://console.sakana.ai/pricing",
+        "selector_hint": "API models section (Fugu Ultra / Fugu Max / Namazu) input/cached/output per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.95,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": 0.15,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.7125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.sakana.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

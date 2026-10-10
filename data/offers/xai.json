@@ -1,0 +1,353 @@
+{
+  "provider_id": "xai",
+  "offers": [
+    {
+      "id": "xai/grok-4.20-0309-reasoning",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "grok-4.20-0309-reasoning",
+      "model_name": "Grok 4.20 (0309) reasoning",
+      "model_creator": "xai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.25,
+      "output_per_mtok": 2.5,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 20,
+      "offpeak": null,
+      "tiered_pricing": ">=200K prompt tokens: all tokens billed at 2x (input $2.5, cached $0.4, output $5).",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://docs.x.ai/docs/models.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Same price for non-reasoning and multi-agent variants. Priority processing = 2x. Batch: 20% off only for grok-4.3/4.20 family; other models no batch discount (0) or unsupported (null).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.x.ai/docs/models.md",
+        "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.25,
+        "output_per_mtok": 2.5,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.5625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.x.ai/docs/models.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xai/grok-4.3",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "grok-4.3",
+      "model_name": "Grok 4.3",
+      "model_creator": "xai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.25,
+      "output_per_mtok": 2.5,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 20,
+      "offpeak": null,
+      "tiered_pricing": ">=200K prompt tokens: all tokens billed at 2x (input $2.5, cached $0.4, output $5).",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://docs.x.ai/docs/models.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Priority processing = 2x. Batch: 20% off only for grok-4.3/4.20 family; other models no batch discount (0) or unsupported (null).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.x.ai/docs/models.md",
+        "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.25,
+        "output_per_mtok": 2.5,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.5625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.x.ai/docs/models.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xai/grok-4.5",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "grok-4.5",
+      "model_name": "Grok 4.5",
+      "model_creator": "xai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 0,
+      "offpeak": null,
+      "tiered_pricing": ">=200K prompt tokens: all tokens billed at 2x (input $4, cached $0.6, output $12).",
+      "context_window": 500000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://docs.x.ai/docs/models.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Priority processing = 2x. Batch: 20% off only for grok-4.3/4.20 family; other models no batch discount (0) or unsupported (null).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.x.ai/docs/models.md",
+        "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.x.ai/docs/models.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xai/grok-4.6",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "grok-4.6",
+      "model_name": "Grok 4.6",
+      "model_creator": "xai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.5,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 0,
+      "offpeak": null,
+      "tiered_pricing": ">=200K prompt tokens: all tokens billed at 2x (input $4, cached $1, output $12).",
+      "context_window": 500000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://docs.x.ai/docs/models.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Priority processing = 2x. Batch: 20% off only for grok-4.3/4.20 family; other models no batch discount (0) or unsupported (null).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.x.ai/docs/models.md",
+        "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": 0.5,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.x.ai/docs/models.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xai/grok-4.7",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "grok-4.7",
+      "model_name": "Grok 4.7",
+      "model_creator": "xai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.5,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": ">=200K prompt tokens: all tokens billed at 2x (input $4, cached $1, output $12).",
+      "context_window": 500000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://docs.x.ai/docs/models.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Flagship; Batch API not supported for this model. Knowledge cutoff May 2026. Priority processing = 2x. Batch: 20% off only for grok-4.3/4.20 family; other models no batch discount (0) or unsupported (null).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.x.ai/docs/models.md",
+        "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": 0.5,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.x.ai/docs/models.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xai/grok-build-0.1",
+      "provider_id": "xai",
+      "provider_name": "xAI",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "grok-build-0.1",
+      "model_name": "Grok Build 0.1",
+      "model_creator": "xai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 2,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 0,
+      "offpeak": null,
+      "tiered_pricing": ">=200K prompt tokens: all tokens billed at 2x (input $2, cached $0.4, output $4).",
+      "context_window": 256000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://docs.x.ai/docs/models.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Coding model. Priority processing = 2x. Batch: 20% off only for grok-4.3/4.20 family; other models no batch discount (0) or unsupported (null).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.x.ai/docs/models.md",
+        "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 2,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.25
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.x.ai/docs/models.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "vendor_id": "anthropic",
+  "plans": [
+    {
+      "id": "anthropic/enterprise",
+      "vendor_id": "anthropic",
+      "vendor_name": "Anthropic",
+      "product": "Claude",
+      "plan_name": "Enterprise",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": 240,
+      "models_included": [
+        "claude-opus",
+        "claude-sonnet",
+        "claude-haiku",
+        "claude-code"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "$20/seat/month + API-rate usage (annual billing)"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "Usage billed at API rates on top of seat fee -> marginal cost = API list price; no included quota.",
+      "source": "https://claude.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Seat fee + usage at API rates; effective $/Mtok = API list (e.g. Opus 5 standard mix $2.63/Mtok) plus seat.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://claude.com/pricing",
+        "selector_hint": "plan cards: Individual / Team / Enterprise tabs; usage wording under each plan",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": 240
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://claude.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/max-20x",
+      "vendor_id": "anthropic",
+      "vendor_name": "Anthropic",
+      "product": "Claude",
+      "plan_name": "Max 20x",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "claude-opus",
+        "claude-sonnet",
+        "claude-haiku",
+        "claude-fable (usage credits)",
+        "claude-code"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Max 20x includes 20 times the Pro plan's per-session usage allowance"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Max plans also have a weekly usage limit that applies across all models"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 2610578382,
+      "est_usd_per_mtok_at_full_use": 0.0766,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Anthropic publishes no token/prompt numbers; estimate converts SECONDARY measurements (finopsllm.com, Sept 2026, Claude Code on Opus 5, 96% cache reads) into the standard mix by API-dollar equivalence: measured mix = $0.843/Mtok at Opus 5 list vs standard mix $2.628/Mtok, factor 0.321.",
+      "source": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Secondary: ~155M tokens/5h session (projected from 5x) but weekly cap MEASURED ~1.9B tokens (hit twice) -> weekly binds: 155M x 4/day would hit 1.9B in ~3 days. So at full use 20x gives only ~1.75x the monthly tokens of 5x for 2x the price. API-equivalent at Opus 5 list ~$6860/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+        "selector_hint": "article body: 'Max 5x includes five times...' paragraph",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/max-5x",
+      "vendor_id": "anthropic",
+      "vendor_name": "Anthropic",
+      "product": "Claude",
+      "plan_name": "Max 5x",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "claude-opus",
+        "claude-sonnet",
+        "claude-haiku",
+        "claude-fable (usage credits)",
+        "claude-code"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Max 5x includes five times the Pro plan's per-session usage allowance"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Max plans also have a weekly usage limit that applies across all models"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1500395575,
+      "est_usd_per_mtok_at_full_use": 0.0666,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Anthropic publishes no token/prompt numbers; estimate converts SECONDARY measurements (finopsllm.com, Sept 2026, Claude Code on Opus 5, 96% cache reads) into the standard mix by API-dollar equivalence: measured mix = $0.843/Mtok at Opus 5 list vs standard mix $2.628/Mtok, factor 0.321.",
+      "source": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Session limits refresh every five hours (official). Secondary measurement (finopsllm.com/research/claude-pro-max-tokens-limit, Sept 2026): ~39M tokens per 5h session (median of 12 obs), weekly >=1.3B (cap never reached) -> 5h window binds at 4 windows/day. API-equivalent value at Opus 5 list ~$3943/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+        "selector_hint": "article body: 'Max 5x includes five times...' paragraph",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/pro",
+      "vendor_id": "anthropic",
+      "vendor_name": "Anthropic",
+      "product": "Claude",
+      "plan_name": "Pro",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": 200,
+      "models_included": [
+        "claude-opus",
+        "claude-sonnet",
+        "claude-haiku",
+        "claude-fable (usage credits)",
+        "claude-code"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "at least 5x more usage per 5-hour session than Free"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "with weekly caps"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 307773451,
+      "est_usd_per_mtok_at_full_use": 0.065,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Anthropic publishes no token/prompt numbers; estimate converts SECONDARY measurements (finopsllm.com, Sept 2026, Claude Code on Opus 5, 96% cache reads) into the standard mix by API-dollar equivalence: measured mix = $0.843/Mtok at Opus 5 list vs standard mix $2.628/Mtok, factor 0.321.",
+      "source": "https://claude.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Price official ($20/mo; $17/mo billed annually = $200 upfront). Token estimate is a SECONDARY projection (finopsllm: Pro ~8M tokens/5h session projected, not measured; weekly cap not published) -> 5h windows used, weekly cap unknown so this is an upper bound. API-equivalent at Opus 5 list for standard mix: ~$809/mo. Secondary sources also report Anthropic doubled Claude Code 5h limits on 2026-05-06 (claudefa.st/explainx.ai), unverified on official page.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://claude.com/pricing",
+        "selector_hint": "plan cards: Individual / Team / Enterprise tabs; usage wording under each plan",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": 200
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://claude.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/team-premium-seat",
+      "vendor_id": "anthropic",
+      "vendor_name": "Anthropic",
+      "product": "Claude",
+      "plan_name": "Team Premium seat",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 125,
+      "price_year": 1200,
+      "models_included": [
+        "claude-opus",
+        "claude-sonnet",
+        "claude-haiku",
+        "claude-code"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "5x more usage than standard seats"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://claude.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "$100/seat/mo annual, $125 monthly. No numbers published.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://claude.com/pricing",
+        "selector_hint": "plan cards: Individual / Team / Enterprise tabs; usage wording under each plan",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 125,
+        "price_year": 1200
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://claude.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/team-standard-seat",
+      "vendor_id": "anthropic",
+      "vendor_name": "Anthropic",
+      "product": "Claude",
+      "plan_name": "Team Standard seat",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 25,
+      "price_year": 240,
+      "models_included": [
+        "claude-opus",
+        "claude-sonnet",
+        "claude-haiku",
+        "claude-code"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "more usage than Pro"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://claude.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "$20/seat/mo annual, $25 monthly. No numbers published.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://claude.com/pricing",
+        "selector_hint": "plan cards: Individual / Team / Enterprise tabs; usage wording under each plan",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 25,
+        "price_year": 240
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://claude.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

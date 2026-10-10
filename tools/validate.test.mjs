@@ -1,13 +1,14 @@
 import { spawnSync } from 'node:child_process';
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { afterAll, expect, test } from 'vitest';
 import {
   ESTIMATE_PROFILES,
   formatError,
   pointerToJsonPath,
+  run,
   validateDocuments,
 } from './validate.mjs';
 
@@ -159,15 +160,45 @@ test('the valid fixture passes', () => {
   expect(errorsOf(makeDoc())).toEqual([]);
 });
 
-test('data/pricing.json passes via the CLI (explicit and default file)', () => {
-  for (const args of [['data/pricing.json'], []]) {
-    const r = spawnSync(process.execPath, ['tools/validate.mjs', ...args], {
-      cwd: repoRoot,
-      encoding: 'utf-8',
-    });
-    expect(r.status, `stderr: ${r.stderr}`).toBe(0);
-    expect(r.stdout.trim()).toBe('ok data/pricing.json');
-  }
+test('data/pricing.json passes via the CLI (explicit file)', () => {
+  const r = spawnSync(process.execPath, ['tools/validate.mjs', 'data/pricing.json'], {
+    cwd: repoRoot,
+    encoding: 'utf-8',
+  });
+  expect(r.status, `stderr: ${r.stderr}`).toBe(0);
+  expect(r.stdout.trim()).toBe('ok data/pricing.json');
+});
+
+test('a named shard passes via the CLI and prints only that file', () => {
+  const r = spawnSync(process.execPath, ['tools/validate.mjs', 'data/offers/anthropic.json'], {
+    cwd: repoRoot,
+    encoding: 'utf-8',
+  });
+  expect(r.status, `stderr: ${r.stderr}`).toBe(0);
+  expect(r.stdout.trim()).toBe('ok data/offers/anthropic.json');
+});
+
+test('the default invocation validates every fragment plus the generated document', () => {
+  const fragments = [
+    ...readdirSync(join(repoRoot, 'data/offers'))
+      .filter((name) => name.endsWith('.json'))
+      .map((name) => `data/offers/${name}`),
+    ...readdirSync(join(repoRoot, 'data/plans'))
+      .filter((name) => name.endsWith('.json'))
+      .map((name) => `data/plans/${name}`),
+    'data/fx.json',
+    'data/meta.json',
+    'data/providers.json',
+    'data/sources.json',
+  ].sort();
+  const expected = [...fragments, 'data/pricing.json'];
+
+  const r = spawnSync(process.execPath, ['tools/validate.mjs'], {
+    cwd: repoRoot,
+    encoding: 'utf-8',
+  });
+  expect(r.status, `stderr: ${r.stderr}`).toBe(0);
+  expect(r.stdout.trim().split('\n')).toEqual(expected.map((file) => `ok ${file}`));
 });
 
 test('a number and the string "unknown" both pass where number|"unknown" is allowed', () => {
@@ -275,4 +306,170 @@ test('pointerToJsonPath renders array indexes, identifiers and odd keys', () => 
     '$.api_offers[12].provenance.default'
   );
   expect(pointerToJsonPath('/weird key')).toBe('$["weird key"]');
+});
+
+// -- fragment validation (files classified by their data/ path) --------------
+
+const canonicalText = (doc) => JSON.stringify(doc, null, 2) + '\n';
+
+/** Write a file under the tmp data dir laid out like data/, return its path. */
+function writeFragment(relPath, text) {
+  const path = join(tmpDir, relPath);
+  mkdirSync(dirname(path), { recursive: true });
+  writeFileSync(path, text);
+  return path;
+}
+
+/** Run the validator in-process on paths; capture output. */
+function runTool(paths) {
+  const logs = [];
+  const errs = [];
+  const code = run(paths, { log: (line) => logs.push(line), error: (line) => errs.push(line) });
+  return { code, logs, errs: errs.join('\n') };
+}
+
+function offerShard(providerId = 'testco', mutateRow = (row) => row) {
+  return { provider_id: providerId, offers: [mutateRow(makeOffer())] };
+}
+
+function planShard() {
+  return { vendor_id: 'testco', plans: [makePlan()] };
+}
+
+test('an unsorted offers shard fails at the offending row', () => {
+  const shard = offerShard('testco', (row) => row);
+  shard.offers.push({ ...makeOffer(), id: 'testco/aaa-model', model_slug: 'aaa-model' });
+  const path = writeFragment('data/offers/testco.json', canonicalText(shard));
+  const { code, errs } = runTool([path]);
+  expect(code).toBe(1);
+  expect(errs).toContain(
+    `${path}:$.offers[1].id: ids must be strictly ascending (sorted, unique): ` +
+      `'testco/aaa-model' does not follow 'testco/test-model'`
+  );
+});
+
+test('a shard whose provider_id disagrees with the file name or its rows fails', () => {
+  const wrongWrapper = writeFragment(
+    'data/offers/testco.json',
+    canonicalText({ provider_id: 'other', offers: [] })
+  );
+  const wrongRow = writeFragment(
+    'data/offers/testco2.json',
+    canonicalText(offerShard('testco2', (row) => ({ ...row, provider_id: 'testco' })))
+  );
+  const { code, errs } = runTool([wrongWrapper, wrongRow]);
+  expect(code).toBe(1);
+  expect(errs).toContain(`${wrongWrapper}:$.provider_id: 'other' does not match the file name 'testco'`);
+  expect(errs).toContain(
+    `${wrongRow}:$.offers[0].provider_id: 'testco' does not match the fragment provider_id 'testco2'`
+  );
+});
+
+test('a duplicate id across two offer shards is caught across the pool', () => {
+  const first = writeFragment('data/offers/testco.json', canonicalText(offerShard()));
+  const second = writeFragment(
+    'data/offers/testco2.json',
+    canonicalText(offerShard('testco2', (row) => ({ ...row, provider_id: 'testco2' })))
+  );
+  const { code, errs } = runTool([first, second]);
+  expect(code).toBe(1);
+  expect(errs).toContain(
+    `${second}:$.offers[0].id: duplicate row id 'testco/test-model' (first occurrence at ${first} $.offers[0].id)`
+  );
+});
+
+test('a fragment with non-canonical formatting fails (missing newline, 4-space indent)', () => {
+  const noNewline = writeFragment('data/offers/testco.json', JSON.stringify(offerShard(), null, 2));
+  const wideIndent = writeFragment(
+    'data/offers/testco2.json',
+    JSON.stringify(offerShard('testco2', (row) => ({ ...row, provider_id: 'testco2', id: 'testco2/test-model' })), null, 4) + '\n'
+  );
+  const { code, errs } = runTool([noNewline, wideIndent]);
+  expect(code).toBe(1);
+  expect(errs).toContain(`${noNewline}:$: file is not in canonical form`);
+  expect(errs).toContain(`${wideIndent}:$: file is not in canonical form`);
+});
+
+test('a bad row inside a shard is reported under the shard path and array name', () => {
+  const shard = offerShard();
+  delete shard.offers[0].provenance;
+  const path = writeFragment('data/offers/testco.json', canonicalText(shard));
+  const { code, errs } = runTool([path]);
+  expect(code).toBe(1);
+  expect(errs).toContain(
+    `${path}:$.offers[0].provenance: required property 'provenance' is missing`
+  );
+});
+
+test('a duplicate (provider_id, part, url) in sources.json fails', () => {
+  const source = makeDoc().sources[0];
+  const path = writeFragment('data/sources.json', canonicalText([source, { ...source }]));
+  const { code, errs } = runTool([path]);
+  expect(code).toBe(1);
+  expect(errs).toContain(
+    `${path}:$[1]: duplicate source (provider_id, part, url) ('testco', 'api_western.json', 'https://testco.example/pricing'); first occurrence at $[0]`
+  );
+});
+
+test('an unsorted providers.json fails', () => {
+  const provider = makeDoc().providers[0];
+  const path = writeFragment(
+    'data/providers.json',
+    canonicalText([provider, { ...provider, id: 'aaa', name: 'AAA' }])
+  );
+  const { code, errs } = runTool([path]);
+  expect(code).toBe(1);
+  expect(errs).toContain(
+    `${path}:$[1].id: ids must be strictly ascending (sorted, unique): 'aaa' does not follow 'testco'`
+  );
+});
+
+test('a meta.json with a bad research_notes key fails', () => {
+  const meta = {
+    schema_version: '1.0.0',
+    dataset: 'test',
+    license: 'CC BY 4.0 (proposed)',
+    conventions: {},
+    research_notes: { '/bad key!': 'notes' },
+  };
+  const path = writeFragment('data/meta.json', canonicalText(meta));
+  const { code, errs } = runTool([path]);
+  expect(code).toBe(1);
+  expect(errs).toContain(
+    `${path}:$.research_notes: must be a string matching ^[A-Za-z0-9][A-Za-z0-9._-]*$`
+  );
+});
+
+test('a plans shard row with a numeric estimate and no profile fails under $.plans', () => {
+  const shard = planShard();
+  shard.plans[0].estimate_assumption = 'trust me';
+  const path = writeFragment('data/plans/testco.json', canonicalText(shard));
+  const { code, errs } = runTool([path]);
+  expect(code).toBe(1);
+  expect(errs).toContain(`${path}:$.plans[0].estimate_assumption: a numeric est_tokens_per_month/`);
+});
+
+test('a valid fragment set passes in one pool and prints each file', () => {
+  const doc = makeDoc();
+  const paths = [
+    writeFragment('data/offers/testco.json', canonicalText(offerShard())),
+    writeFragment('data/plans/testco.json', canonicalText(planShard())),
+    writeFragment('data/providers.json', canonicalText(doc.providers)),
+    writeFragment('data/sources.json', canonicalText(doc.sources)),
+    writeFragment('data/fx.json', canonicalText(doc.fx)),
+    writeFragment(
+      'data/meta.json',
+      canonicalText({
+        schema_version: doc.schema_version,
+        dataset: doc.dataset,
+        license: doc.license,
+        conventions: doc.conventions,
+        research_notes: doc.research_notes,
+      })
+    ),
+  ];
+  const { code, logs, errs } = runTool(paths);
+  expect(errs).toBe('');
+  expect(code).toBe(0);
+  expect(logs).toEqual(paths.map((p) => `ok ${p}`));
 });

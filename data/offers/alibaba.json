@@ -1,0 +1,589 @@
+{
+  "provider_id": "alibaba",
+  "offers": [
+    {
+      "id": "alibaba/qwen-flash-intl",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen-flash",
+      "model_name": "Qwen-Flash",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.05,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": 0.01,
+      "cache_write_per_mtok": 0.0625,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "0-256K: $0.05/$0.4; 256K-1M: $0.25/$2",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "1M tokens free quota per model, Singapore only, valid 90 days from activation.",
+      "region_notes": "Singapore, USD",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "= qwen-flash-2025-07-28. cached derived from 20% implicit rule.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.05,
+        "output_per_mtok": 0.4,
+        "cached_input_per_mtok": 0.01,
+        "cache_write_per_mtok": 0.0625,
+        "blended_3to1": 0.1375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3-coder-plus-intl",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3-coder-plus",
+      "model_name": "Qwen3-Coder-Plus",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 5,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 1.25,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "0-32K: $1/$5; 32K-128K: $1.8/$9; 128K-256K: $3/$15; 256K-1M: $6/$60",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "1M tokens free quota per model, Singapore only, valid 90 days from activation.",
+      "region_notes": "Singapore, USD",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "qwen3-coder-flash: $0.3/$1.5 (0-32K) up to $1.6/$9.6. Beijing (USD) coder-plus $0.574/$2.294 base tier. cached derived from 20% rule.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 5,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 1.25,
+        "blended_3to1": 2
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.7-flash-cn",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.7-flash",
+      "model_name": "Qwen3.7-Flash",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 0.2,
+      "output_per_mtok": 0.8,
+      "cached_input_per_mtok": 0.04,
+      "cache_write_per_mtok": 0.25,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "0-32K: ¥0.2/¥0.8; 32K-256K: ¥0.6/¥2.4; 256K-1M: ¥1.2/¥4.8",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "100万 Token, 90天",
+      "region_notes": "China (Beijing), CNY",
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "cached derived from 20% rule.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://help.aliyun.com/zh/model-studio/model-pricing",
+        "selector_hint": "'文本生成-通义千问' tables per family (元/每百万Token), 中国内地(北京)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.02983,
+        "output_per_mtok": 0.119321,
+        "cached_input_per_mtok": 0.005966,
+        "cache_write_per_mtok": 0.037288,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.052203
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.7-flash-intl",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.7-flash",
+      "model_name": "Qwen3.7-Flash",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.03,
+      "output_per_mtok": 0.13,
+      "cached_input_per_mtok": 0.006,
+      "cache_write_per_mtok": 0.0375,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "0-32K: $0.030/$0.130; 32K-256K: $0.100/$0.400; 256K-1M: $0.200/$0.800",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "1M tokens free quota per model, Singapore only, valid 90 days from activation.",
+      "region_notes": "Singapore, USD",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "cached derived from 20% implicit rule (base tier). Cache rules (model-studio/context-cache): implicit cache hit 20% of input, explicit cache hit 10%, explicit creation 125%; qwen3.8-max/qwen3.8-flash cache-hit price is an exception ('see console'). Batch and cache discounts don't stack.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.03,
+        "output_per_mtok": 0.13,
+        "cached_input_per_mtok": 0.006,
+        "cache_write_per_mtok": 0.0375,
+        "blended_3to1": 0.055
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.7-plus-cn",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.7-plus",
+      "model_name": "Qwen3.7-Plus",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 2,
+      "output_per_mtok": 8,
+      "cached_input_per_mtok": 0.4,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "0-256K: ¥2 / ¥8 (thinking ¥8); 256K-1M: ¥6 / ¥24. 限时8折.",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "100万 Token, 90天",
+      "region_notes": "China (Beijing), CNY",
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Headline = 原价; 限时8折. cached derived from 20% implicit rule. qwen3.6-plus: ¥2/¥12 (0-256K), ¥8/¥48.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://help.aliyun.com/zh/model-studio/model-pricing",
+        "selector_hint": "'文本生成-通义千问' tables per family (元/每百万Token), 中国内地(北京)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.298303,
+        "output_per_mtok": 1.193211,
+        "cached_input_per_mtok": 0.059661,
+        "cache_write_per_mtok": 0.372878,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.52203
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.7-plus-intl",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.7-plus",
+      "model_name": "Qwen3.7-Plus",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.4,
+      "output_per_mtok": 1.6,
+      "cached_input_per_mtok": 0.08,
+      "cache_write_per_mtok": 0.5,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "0-256K: $0.4 in / $1.6 out (thinking same); 256K-1M: $1.2 / $4.8. All shown as list price with 'Limited-time 20% off'.",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "1M tokens free quota per model, Singapore only, valid 90 days from activation.",
+      "region_notes": "Singapore, USD",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Headline = list price; limited-time 20% off. cached/cache_write derived from documented 20% implicit / 125% explicit-creation rule (not printed per model). Cache rules (model-studio/context-cache): implicit cache hit 20% of input, explicit cache hit 10%, explicit creation 125%; qwen3.8-max/qwen3.8-flash cache-hit price is an exception ('see console'). Batch and cache discounts don't stack.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.4,
+        "output_per_mtok": 1.6,
+        "cached_input_per_mtok": 0.08,
+        "cache_write_per_mtok": 0.5,
+        "blended_3to1": 0.7
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-flash-cn",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.8-flash",
+      "model_name": "Qwen3.8-Flash",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 2.7,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "Single tier 0<Token<=1M",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "100万 Token, 90天",
+      "region_notes": "China (Beijing), CNY",
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "zh page shows only cache tag (no batch tag) for qwen3.8-flash; intl page's Beijing table shows 50% batch - inconsistent.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://help.aliyun.com/zh/model-studio/model-pricing",
+        "selector_hint": "'文本生成-通义千问' tables per family (元/每百万Token), 中国内地(北京)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.119321,
+        "output_per_mtok": 0.402709,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.190168
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-flash-intl",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.8-flash",
+      "model_name": "Qwen3.8-Flash",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.47,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "Single tier 0<Token<=1M",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "1M tokens free quota per model, Singapore only, valid 90 days from activation.",
+      "region_notes": "Singapore, USD",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Cache rules (model-studio/context-cache): implicit cache hit 20% of input, explicit cache hit 10%, explicit creation 125%; qwen3.8-max/qwen3.8-flash cache-hit price is an exception ('see console'). Batch and cache discounts don't stack.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.47,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.23
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-max-cn",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.8-max",
+      "model_name": "Qwen3.8-Max",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 12,
+      "output_per_mtok": 36,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "Single tier 0<Token<=1M",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "100万 Token 免费额度, 90天",
+      "region_notes": "China (Beijing) Bailian, CNY (intl page also shows Beijing in USD: $1.65/$4.951)",
+      "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Batch 调用半价. qwen3.8-max-prime 24元/72元, no free quota.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://help.aliyun.com/zh/model-studio/model-pricing",
+        "selector_hint": "'文本生成-通义千问' tables per family (元/每百万Token), 中国内地(北京)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.789816,
+        "output_per_mtok": 5.369448,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 2.684724
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/qwen3.8-max-intl",
+      "provider_id": "alibaba",
+      "provider_name": "Alibaba Cloud Model Studio",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "qwen3.8-max",
+      "model_name": "Qwen3.8-Max",
+      "model_creator": "alibaba",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "Single tier 0<Token<=1M",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "1M tokens free quota per model, Singapore only, valid 90 days from activation.",
+      "region_notes": "Singapore (International deployment), USD",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "No batch tag on Singapore row (Beijing row has 50% batch). Cache rules (model-studio/context-cache): implicit cache hit 20% of input, explicit cache hit 10%, explicit creation 125%; qwen3.8-max/qwen3.8-flash cache-hit price is an exception ('see console'). Batch and cache discounts don't stack. qwen3.8-max-prime (fast mode) only in Beijing at $3.301/$9.902.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1165 @@
+{
+  "provider_id": "featherless",
+  "offers": [
+    {
+      "id": "featherless/deepseek-r1-0528",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-r1-0528",
+      "model_name": "DeepSeek R1 0528",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.385,
+      "output_per_mtok": 1.625,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.385,
+        "output_per_mtok": 1.625,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.695
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/deepseek-v3.2",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v3.2",
+      "model_name": "DeepSeek V3.2",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.264,
+      "output_per_mtok": 0.41,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.264,
+        "output_per_mtok": 0.41,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.3005
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/deepseek-v4-flash",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash",
+      "model_name": "DeepSeek V4 Flash (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.14,
+      "output_per_mtok": 0.28,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.28,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/deepseek-v4-flash-0731",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash-0731",
+      "model_name": "DeepSeek V4 Flash 0731",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.14,
+      "output_per_mtok": 0.28,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.28,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/deepseek-v4-pro",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-pro",
+      "model_name": "DeepSeek V4 Pro (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.6,
+      "output_per_mtok": 3.2,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.6,
+        "output_per_mtok": 3.2,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/deepseek-v4.1-flash",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4.1-flash",
+      "model_name": "DeepSeek V4.1 Flash",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/gemma-4-31b-it",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.12,
+      "output_per_mtok": 0.36,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32768,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.12,
+        "output_per_mtok": 0.36,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.18
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/glm-5.3",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.4,
+        "output_per_mtok": 4.4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/glm-5.3-flash",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "glm-5.3-flash",
+      "model_name": "GLM-5.3 Flash",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/gpt-oss-120b",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/gpt-oss-20b",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-20b",
+      "model_name": "gpt-oss-20b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.04,
+      "output_per_mtok": 0.15,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.04,
+        "output_per_mtok": 0.15,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.0675
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/kimi-k2.6",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 3.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.8,
+        "output_per_mtok": 3.4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.45
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/kimi-k3",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/llama-3.3-70b-instruct",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.65,
+      "output_per_mtok": 0.75,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32768,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.65,
+        "output_per_mtok": 0.75,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.675
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/minimax-m3",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "minimax-m3",
+      "model_name": "MiniMax M3",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.55,
+      "output_per_mtok": 2.2,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.55,
+        "output_per_mtok": 2.2,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.9625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/mistral-small-3.2-24b-instruct-2506",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "mistral-small-3.2-24b-instruct-2506",
+      "model_name": "Mistral Small 3.2 24B Instruct 2506",
+      "model_creator": "mistral",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.21675,
+      "output_per_mtok": 0.4025,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32768,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.21675,
+        "output_per_mtok": 0.4025,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.263188
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/qwen3-32b",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3-32b",
+      "model_name": "Qwen3 32B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.102,
+      "output_per_mtok": 0.493,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32768,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.102,
+        "output_per_mtok": 0.493,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.19975
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/qwen3.5-397b-a17b",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.55,
+      "output_per_mtok": 3.5,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.55,
+        "output_per_mtok": 3.5,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.2875
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/qwen3.8-2.4t-a95b",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.8-2.4t-a95b",
+      "model_name": "Qwen3.8 2.4T-A95B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=4.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.75
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/qwen3.8-27b",
+      "provider_id": "featherless",
+      "provider_name": "Featherless AI",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.8-27b",
+      "model_name": "Qwen3.8 27B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.4,
+      "output_per_mtok": 3,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://api.featherless.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Per-token rates apply on the Developer plan ($50/mo credits). Chat plan $25/mo = unlimited tokens, 4 concurrency units, 32K ctx. concurrency_cost=2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://api.featherless.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.4,
+        "output_per_mtok": 3,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.05
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api.featherless.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

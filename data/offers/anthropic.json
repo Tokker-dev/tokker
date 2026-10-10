@@ -1,0 +1,469 @@
+{
+  "provider_id": "anthropic",
+  "offers": [
+    {
+      "id": "anthropic/claude-fable-5-1",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-fable-5-1",
+      "model_name": "Claude Fable 5.1",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 10,
+      "output_per_mtok": 50,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": 12.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "No long-context surcharge: Claude 4.6+ bill the full 1M window at standard rates.",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache hits 0.025x base input. 1h cache write $20. Batch $5/$25. Newer tokenizer (~30% more tokens than pre-4.7 models). cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 10,
+        "output_per_mtok": 50,
+        "cached_input_per_mtok": 0.25,
+        "cache_write_per_mtok": 12.5,
+        "blended_3to1": 20
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-haiku-4-5",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-haiku-4-5",
+      "model_name": "Claude Haiku 4.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 5,
+      "cached_input_per_mtok": 0.1,
+      "cache_write_per_mtok": 1.25,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 200000,
+      "max_output": 64000,
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "1h cache write $2. Batch $0.50/$2.50. Model id claude-haiku-4-5-20251001. cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 5,
+        "cached_input_per_mtok": 0.1,
+        "cache_write_per_mtok": 1.25,
+        "blended_3to1": 2
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-mythos-5-1",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-mythos-5-1",
+      "model_name": "Claude Mythos 5.1",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 10,
+      "output_per_mtok": 50,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": 12.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Limited availability (Project Glasswing, invitation only). 1h cache write $20. cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 10,
+        "output_per_mtok": 50,
+        "cached_input_per_mtok": 0.25,
+        "cache_write_per_mtok": 12.5,
+        "blended_3to1": 20
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-opus-5",
+      "model_name": "Claude Opus 5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 5,
+      "output_per_mtok": 25,
+      "cached_input_per_mtok": 0.5,
+      "cache_write_per_mtok": 6.25,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "No long-context surcharge: Claude 4.6+ bill the full 1M window at standard rates.",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "1h cache write $10. Batch $2.50/$12.50. Fast mode $10/$50. cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 5,
+        "output_per_mtok": 25,
+        "cached_input_per_mtok": 0.5,
+        "cache_write_per_mtok": 6.25,
+        "blended_3to1": 10
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-opus-5-5",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-opus-5-5",
+      "model_name": "Claude Opus 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "No long-context surcharge: Claude 4.6+ bill the full 1M window at standard rates.",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache hits 0.05x base. 1h cache write $8. Batch $2/$10. Fast mode $8/$40. Cheaper than Opus 5 ($5/$25). cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-4-6",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-sonnet-4-6",
+      "model_name": "Claude Sonnet 4.6",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": 3.75,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "No long-context surcharge: Claude 4.6+ bill the full 1M window at standard rates.",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "1h cache write $6. Batch $1.50/$7.50. cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": 3.75,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-sonnet-5",
+      "model_name": "Claude Sonnet 5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "No long-context surcharge: Claude 4.6+ bill the full 1M window at standard rates.",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Launch intro price $2/$10 made permanent; scheduled Sept 1 2026 increase to $3/$15 cancelled. 1h cache write $4. cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5-5",
+      "provider_id": "anthropic",
+      "provider_name": "Anthropic",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "claude-sonnet-5-5",
+      "model_name": "Claude Sonnet 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "No long-context surcharge: Claude 4.6+ bill the full 1M window at standard rates.",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": "New users receive a small amount of free credits to test the API (amount not published).",
+      "region_notes": "inference_geo='us' = 1.1x on all token categories (Claude 4.6+). Bedrock/Vertex regional endpoints +10% vs global.",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "1h cache write $4. Batch $1/$5. cache_write = 5-minute write price. Context/max output from models/overview.md (max output = sync Messages API; batch up to 300k with beta header for some models).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

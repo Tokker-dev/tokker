@@ -1,0 +1,196 @@
+{
+  "vendor_id": "minimax",
+  "plans": [
+    {
+      "id": "minimax/m-plan-build",
+      "vendor_id": "minimax",
+      "vendor_name": "MiniMax",
+      "product": "M Plan",
+      "plan_name": "M Plan Build",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 132,
+      "price_year": 1320,
+      "models_included": [
+        "minimax-m3.1-flash-preview",
+        "image/audio",
+        "hailuo-h3 video"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Text, image, audio, and other non-video models: Subject to a 5-hour window and a weekly window."
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 7.5,
+          "quote": "Usage relative to Go | 7.5x"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://platform.minimax.io/docs/m-plan/intro",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "M Plan replaced Token Plan (Plus/Max/Ultra at same $22/$55/$132, which replaced the old prompt-count Coding Plan 100/300/1000 prompts per 5h). Annual = pay 10 months. First month 50% off until Oct 14. No absolute quotas published; usage deducts at endpoint list price. Credits packs 1,000 credits = $1.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimax.io/docs/m-plan/intro.md",
+        "selector_hint": "'Usage limits' relative table; prices in /docs/m-plan/monthly-offer.md",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 132,
+        "price_year": 1320
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimax.io/docs/m-plan/intro",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "minimax/m-plan-explore",
+      "vendor_id": "minimax",
+      "vendor_name": "MiniMax",
+      "product": "M Plan",
+      "plan_name": "M Plan Explore",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 55,
+      "price_year": 550,
+      "models_included": [
+        "minimax-m3.1-flash-preview",
+        "image/audio",
+        "hailuo-h3 video"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Text, image, audio, and other non-video models: Subject to a 5-hour window and a weekly window."
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 3,
+          "quote": "Usage relative to Go | 3x"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://platform.minimax.io/docs/m-plan/intro",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "M Plan replaced Token Plan (Plus/Max/Ultra at same $22/$55/$132, which replaced the old prompt-count Coding Plan 100/300/1000 prompts per 5h). Annual = pay 10 months. First month 50% off until Oct 14. No absolute quotas published; usage deducts at endpoint list price. Credits packs 1,000 credits = $1.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimax.io/docs/m-plan/intro.md",
+        "selector_hint": "'Usage limits' relative table; prices in /docs/m-plan/monthly-offer.md",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 55,
+        "price_year": 550
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimax.io/docs/m-plan/intro",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "minimax/m-plan-go",
+      "vendor_id": "minimax",
+      "vendor_name": "MiniMax",
+      "product": "M Plan",
+      "plan_name": "M Plan Go",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 22,
+      "price_year": 220,
+      "models_included": [
+        "minimax-m3.1-flash-preview",
+        "image/audio"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Text, image, audio, and other non-video models: Subject to a 5-hour window and a weekly window."
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 1,
+          "quote": "Usage relative to Go | 1x"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://platform.minimax.io/docs/m-plan/intro",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "M Plan replaced Token Plan (Plus/Max/Ultra at same $22/$55/$132, which replaced the old prompt-count Coding Plan 100/300/1000 prompts per 5h). Annual = pay 10 months. First month 50% off until Oct 14. No absolute quotas published; usage deducts at endpoint list price. Credits packs 1,000 credits = $1.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimax.io/docs/m-plan/intro.md",
+        "selector_hint": "'Usage limits' relative table; prices in /docs/m-plan/monthly-offer.md",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 22,
+        "price_year": 220
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimax.io/docs/m-plan/intro",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

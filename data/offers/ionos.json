@@ -1,0 +1,295 @@
+{
+  "provider_id": "ionos",
+  "offers": [
+    {
+      "id": "ionos/gpt-oss-120b",
+      "provider_id": "ionos",
+      "provider_name": "IONOS AI Model Hub",
+      "provider_type": "cloud",
+      "provider_country": "DE",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.17,
+      "output_per_mtok": 0.71,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "EU (DE) IONOS Cloud data centres; GDPR.",
+      "source": "https://cloud.ionos.com/managed/ai-model-hub",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "USD prices on IONOS Cloud Inc. (.com) page; EUR list prices exist for IONOS Cloud GmbH (docs.ionos.com price lists).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.ionos.com/managed/ai-model-hub",
+        "selector_hint": "LLM pricing table (per 1M input/output tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.17,
+        "output_per_mtok": 0.71,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.305
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.ionos.com/managed/ai-model-hub",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "ionos/llama-3.3-70b-instruct",
+      "provider_id": "ionos",
+      "provider_name": "IONOS AI Model Hub",
+      "provider_type": "cloud",
+      "provider_country": "DE",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.71,
+      "output_per_mtok": 0.71,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "EU (DE) IONOS Cloud data centres; GDPR.",
+      "source": "https://cloud.ionos.com/managed/ai-model-hub",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "USD prices on IONOS Cloud Inc. (.com) page; EUR list prices exist for IONOS Cloud GmbH (docs.ionos.com price lists).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.ionos.com/managed/ai-model-hub",
+        "selector_hint": "LLM pricing table (per 1M input/output tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.71,
+        "output_per_mtok": 0.71,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.71
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.ionos.com/managed/ai-model-hub",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "ionos/mistral-small-24b-instruct",
+      "provider_id": "ionos",
+      "provider_name": "IONOS AI Model Hub",
+      "provider_type": "cloud",
+      "provider_country": "DE",
+      "model_slug": "mistral-small-24b-instruct",
+      "model_name": "Mistral Small 24B Instruct (version unspecified)",
+      "model_creator": "mistral",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.11,
+      "output_per_mtok": 0.33,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "EU (DE) IONOS Cloud data centres; GDPR.",
+      "source": "https://cloud.ionos.com/managed/ai-model-hub",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "USD prices on IONOS Cloud Inc. (.com) page; EUR list prices exist for IONOS Cloud GmbH (docs.ionos.com price lists). Listed as 'Mistral Small 24B Instruct' (version not stated).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.ionos.com/managed/ai-model-hub",
+        "selector_hint": "LLM pricing table (per 1M input/output tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.11,
+        "output_per_mtok": 0.33,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.165
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.ionos.com/managed/ai-model-hub",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "ionos/qwen3.5-397b-a17b",
+      "provider_id": "ionos",
+      "provider_name": "IONOS AI Model Hub",
+      "provider_type": "cloud",
+      "provider_country": "DE",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.67,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "EU (DE) IONOS Cloud data centres; GDPR.",
+      "source": "https://cloud.ionos.com/managed/ai-model-hub",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "USD prices on IONOS Cloud Inc. (.com) page; EUR list prices exist for IONOS Cloud GmbH (docs.ionos.com price lists).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.ionos.com/managed/ai-model-hub",
+        "selector_hint": "LLM pricing table (per 1M input/output tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.67,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.5025
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.ionos.com/managed/ai-model-hub",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "ionos/qwen3.8-27b",
+      "provider_id": "ionos",
+      "provider_name": "IONOS AI Model Hub",
+      "provider_type": "cloud",
+      "provider_country": "DE",
+      "model_slug": "qwen3.8-27b",
+      "model_name": "Qwen3.8 27B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.45,
+      "output_per_mtok": 2.7,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "EU (DE) IONOS Cloud data centres; GDPR.",
+      "source": "https://cloud.ionos.com/managed/ai-model-hub",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "USD prices on IONOS Cloud Inc. (.com) page; EUR list prices exist for IONOS Cloud GmbH (docs.ionos.com price lists).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.ionos.com/managed/ai-model-hub",
+        "selector_hint": "LLM pricing table (per 1M input/output tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.45,
+        "output_per_mtok": 2.7,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.0125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.ionos.com/managed/ai-model-hub",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

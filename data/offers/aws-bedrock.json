@@ -1,0 +1,701 @@
+{
+  "provider_id": "aws-bedrock",
+  "offers": [
+    {
+      "id": "aws-bedrock/claude-opus-5.5",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "claude-opus-5.5",
+      "model_name": "Claude Opus 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 5,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global cross-region inference; in-region/geo $4.40/$22.00, cache read $0.22, cache write $5.50 (+10%).",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "1h cache write $8 (global)/$8.80. Reserved TPM tiers also exist for older Claude. Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/claude-sonnet-5.5",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "claude-sonnet-5.5",
+      "model_name": "Claude Sonnet 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; in-region $2.20/$11.00 (+10%).",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "1h cache write $4.00 global. Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/deepseek-r1",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-r1",
+      "model_name": "DeepSeek R1",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.35,
+      "output_per_mtok": 5.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock model 'R1' (DeepSeek-R1). Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.35,
+        "output_per_mtok": 5.4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.3625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/deepseek-v3.2",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-v3.2",
+      "model_name": "DeepSeek V3.2",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.62,
+      "output_per_mtok": 1.85,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.62,
+        "output_per_mtok": 1.85,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.9275
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/gemma-4-31b-it",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.14,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.205
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/gpt-oss-120b",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/gpt-oss-20b",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-20b",
+      "model_name": "gpt-oss-20b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.07,
+      "output_per_mtok": 0.3,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.07,
+        "output_per_mtok": 0.3,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.1275
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/kimi-k3",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 45,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global cross-region $3.00/$15.00; in-region us-east-1 $3.30/$16.50 (+10%).",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch/flex input $1.65/output $8.25 on in-region price (=50% of regional, 45% below global). Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/llama-3.3-70b-instruct",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.72,
+      "output_per_mtok": 0.72,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.72,
+        "output_per_mtok": 0.72,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.72
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/llama-4-maverick-17b-128e-instruct",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-4-maverick-17b-128e-instruct",
+      "model_name": "Llama 4 Maverick 17B-128E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.24,
+      "output_per_mtok": 0.97,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.24,
+        "output_per_mtok": 0.97,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.4225
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/llama-4-scout-17b-16e-instruct",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-4-scout-17b-16e-instruct",
+      "model_name": "Llama 4 Scout 17B-16E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.17,
+      "output_per_mtok": 0.66,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.17,
+        "output_per_mtok": 0.66,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2925
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-bedrock/qwen3-32b",
+      "provider_id": "aws-bedrock",
+      "provider_name": "Amazon Bedrock",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "qwen3-32b",
+      "model_name": "Qwen3 32B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "us-east-1 on-demand standard",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Bedrock also sells flex (50% off) and priority tiers; Provisioned Throughput via model units.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+        "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "vendor_id": "openai",
+  "plans": [
+    {
+      "id": "openai/business",
+      "vendor_id": "openai",
+      "vendor_name": "OpenAI",
+      "product": "ChatGPT / Codex",
+      "plan_name": "Business",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 25,
+      "price_year": 240,
+      "models_included": [
+        "gpt-6.1-sol",
+        "gpt-6-sol",
+        "gpt-6-luna",
+        "gpt-6-astra"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "messages",
+          "amount": 160,
+          "quote": "GPT-6.1 Sol | 15-160 [Standard Business local messages per five-hour period]"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Weekly limits may also apply."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 225750000,
+      "est_usd_per_mtok_at_full_use": 0.1107,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Codex: midpoint of published GPT-6.1 Sol range (15-160 -> 87.5 local messages/5h) x 120 windows; weekly cap unpublished so this is an UPPER bound on the window side, but a Codex 'local message' is a full agent turn (many model calls) so 21.5k tokens/message is a conservative token count.",
+      "source": "https://learn.chatgpt.com/docs/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "$20/user/mo billed annually (2+ users), $25 monthly. Same per-seat estimates as Plus; extend with workspace credits.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+        "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 25,
+        "price_year": 240
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://learn.chatgpt.com/docs/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "openai/go",
+      "vendor_id": "openai",
+      "vendor_name": "OpenAI",
+      "product": "ChatGPT / Codex",
+      "plan_name": "Go",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 8,
+      "price_year": null,
+      "models_included": [
+        "gpt-6-luna (Codex desktop, subject to rollout)"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "GPT-6 Luna at Standard speed in the desktop app, subject to rollout"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://learn.chatgpt.com/docs/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "$8/mo. No Codex quota numbers for Go. chatgpt.com/pricing returned 403 to WebFetch.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+        "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 8,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://learn.chatgpt.com/docs/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "openai/plus",
+      "vendor_id": "openai",
+      "vendor_name": "OpenAI",
+      "product": "ChatGPT / Codex",
+      "plan_name": "Plus",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "gpt-6.1-sol",
+        "gpt-6-sol",
+        "gpt-6-luna",
+        "gpt-6-astra",
+        "gpt-5.6-*"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "messages",
+          "amount": 160,
+          "quote": "GPT-6.1 Sol | 15-160 [local messages per five-hour period, Plus]"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "messages",
+          "amount": 45,
+          "quote": "GPT-6 Astra | 5-45"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "messages",
+          "amount": 3000,
+          "quote": "GPT-6 Luna | 350-3,000"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Local messages and cloud chats share your plan's usage allowance. Weekly limits may also apply."
+        }
+      ],
+      "fair_use": "If you reach your usage limits during an active turn, the agent will be able to continue working on that turn, subject to fair use limits.",
+      "est_tokens_per_month": 225750000,
+      "est_usd_per_mtok_at_full_use": 0.0886,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Codex: midpoint of published GPT-6.1 Sol range (15-160 -> 87.5 local messages/5h) x 120 windows; weekly cap unpublished so this is an UPPER bound on the window side, but a Codex 'local message' is a full agent turn (many model calls) so 21.5k tokens/message is a conservative token count.",
+      "source": "https://learn.chatgpt.com/docs/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit rates (purchased credits): GPT-6.1 Sol 50 credits/M input, 2.5 cached, 250 output. Fast mode uses 2.5x included usage; Astra Ultrafast 8x. GPT-5.5 retires from ChatGPT/Codex 2026-10-14. API-equivalent of estimate at GPT-6.1 Sol rates (Copilot-listed $2/$0.10/$10): ~$218/mo.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+        "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://learn.chatgpt.com/docs/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "openai/pro-100",
+      "vendor_id": "openai",
+      "vendor_name": "OpenAI",
+      "product": "ChatGPT / Codex",
+      "plan_name": "Pro $100",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-luna"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Pro plans currently have no five-hour limit."
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Weekly limits may also apply."
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 5,
+          "quote": "5x Plus usage [secondary: threatfrontier.com / search summaries; official multiple in help.openai.com/en/articles/9793128 which returned 403]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1128750000,
+      "est_usd_per_mtok_at_full_use": 0.0886,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Codex: midpoint of published GPT-6.1 Sol range (15-160 -> 87.5 local messages/5h) x 120 windows; weekly cap unpublished so this is an UPPER bound on the window side, but a Codex 'local message' is a full agent turn (many model calls) so 21.5k tokens/message is a conservative token count. Pro = secondary multiple x Plus estimate.",
+      "source": "https://learn.chatgpt.com/docs/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Official page: 'Plans at $100, $200, or $500 USD per month'; Astra Ultrafast only on Pro $500. Multiples are secondary. Pro $200 becomes 10x for new subs after 2026-10-30 -> $/Mtok doubles.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+        "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://learn.chatgpt.com/docs/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "openai/pro-200",
+      "vendor_id": "openai",
+      "vendor_name": "OpenAI",
+      "product": "ChatGPT / Codex",
+      "plan_name": "Pro $200",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-luna"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Pro plans currently have no five-hour limit."
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Weekly limits may also apply."
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 20,
+          "quote": "20x Plus (10x for new subscribers from 2026-10-30) [secondary: threatfrontier.com / search summaries; official multiple in help.openai.com/en/articles/9793128 which returned 403]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 4515000000,
+      "est_usd_per_mtok_at_full_use": 0.0443,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Codex: midpoint of published GPT-6.1 Sol range (15-160 -> 87.5 local messages/5h) x 120 windows; weekly cap unpublished so this is an UPPER bound on the window side, but a Codex 'local message' is a full agent turn (many model calls) so 21.5k tokens/message is a conservative token count. Pro = secondary multiple x Plus estimate.",
+      "source": "https://learn.chatgpt.com/docs/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Official page: 'Plans at $100, $200, or $500 USD per month'; Astra Ultrafast only on Pro $500. Multiples are secondary. Pro $200 becomes 10x for new subs after 2026-10-30 -> $/Mtok doubles.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+        "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://learn.chatgpt.com/docs/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "openai/pro-500",
+      "vendor_id": "openai",
+      "vendor_name": "OpenAI",
+      "product": "ChatGPT / Codex",
+      "plan_name": "Pro $500",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 500,
+      "price_year": null,
+      "models_included": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-luna",
+        "gpt-6-astra-ultrafast"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Pro plans currently have no five-hour limit."
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Weekly limits may also apply."
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 25,
+          "quote": "reported 25x [secondary: threatfrontier.com / search summaries; official multiple in help.openai.com/en/articles/9793128 which returned 403]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 5643750000,
+      "est_usd_per_mtok_at_full_use": 0.0886,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Codex: midpoint of published GPT-6.1 Sol range (15-160 -> 87.5 local messages/5h) x 120 windows; weekly cap unpublished so this is an UPPER bound on the window side, but a Codex 'local message' is a full agent turn (many model calls) so 21.5k tokens/message is a conservative token count. Pro = secondary multiple x Plus estimate.",
+      "source": "https://learn.chatgpt.com/docs/pricing",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Official page: 'Plans at $100, $200, or $500 USD per month'; Astra Ultrafast only on Pro $500. Multiples are secondary. Pro $200 becomes 10x for new subs after 2026-10-30 -> $/Mtok doubles.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+        "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 500,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://learn.chatgpt.com/docs/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

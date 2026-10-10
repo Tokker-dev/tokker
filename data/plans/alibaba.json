@@ -1,0 +1,503 @@
+{
+  "vendor_id": "alibaba",
+  "plans": [
+    {
+      "id": "alibaba/coding-plan-pro",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Coding Plan",
+      "plan_name": "Coding Plan Pro",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 50,
+      "price_year": null,
+      "models_included": [
+        "qwen3.7-plus",
+        "qwen3.6-plus",
+        "kimi-k2.5",
+        "glm-5",
+        "MiniMax-M2.5",
+        "qwen3-coder-plus",
+        "qwen3-max"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": 6000,
+          "quote": "Up to 6,000 requests per 5 hours"
+        },
+        {
+          "window": "weekly",
+          "unit": "requests",
+          "amount": 45000,
+          "quote": "Up to 45,000 requests per week"
+        },
+        {
+          "window": "monthly",
+          "unit": "requests",
+          "amount": 90000,
+          "quote": "Up to 90,000 requests per month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1935000000,
+      "est_usd_per_mtok_at_full_use": 0.0258,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Requests are model calls ('Each query consumes quota based on the number of model calls. Simple tasks typically use 5-10 calls'). Binding: monthly.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Limited availability: slots first-come first-served, restocked daily; docs say Coding Plan Pro 'is no longer available once sold out'. Lite discontinued (no new subs 2026-03-20, no renewals 2026-04-13). API-equivalent at qwen3.7-plus list ($0.32/$1.28, no cache discount assumed): ~$749/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+        "selector_hint": "'Plan details' -> Price / Quota block",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 50,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-essential",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Personal)",
+      "plan_name": "Token Plan Essential",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 10,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax",
+        "image/video/speech models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 25500,
+          "quote": "Monthly quota | 25,500 Credits [Original price $16/month, Limited-time $10/month]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Singapore region only. Credits-per-token rates NOT published ('Credits consumed per request are dynamically determined by model type, token usage, thinking mode, and tool calls'), so tokens unknown. Extra Bundle $15 = 20,000 Credits. Credit price ~$0.00039/credit.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 10,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-lite",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Personal)",
+      "plan_name": "Token Plan Lite",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 6,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax",
+        "image/video/speech models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 11500,
+          "quote": "Monthly quota | 11,500 Credits [Original price $8/month, Limited-time $6/month]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Singapore region only. Credits-per-token rates NOT published ('Credits consumed per request are dynamically determined by model type, token usage, thinking mode, and tool calls'), so tokens unknown. Extra Bundle $15 = 20,000 Credits. Credit price ~$0.00052/credit.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 6,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-pro",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Personal)",
+      "plan_name": "Token Plan Pro",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 68,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax",
+        "image/video/speech models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 180000,
+          "quote": "Monthly quota | 180,000 Credits [Original price $80/month, Limited-time $68/month]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Singapore region only. Credits-per-token rates NOT published ('Credits consumed per request are dynamically determined by model type, token usage, thinking mode, and tool calls'), so tokens unknown. Extra Bundle $15 = 20,000 Credits. Credit price ~$0.00038/credit.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 68,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-standard",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Personal)",
+      "plan_name": "Token Plan Standard",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 18,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax",
+        "image/video/speech models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 45000,
+          "quote": "Monthly quota | 45,000 Credits [Original price $25/month, Limited-time $18/month]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Singapore region only. Credits-per-token rates NOT published ('Credits consumed per request are dynamically determined by model type, token usage, thinking mode, and tool calls'), so tokens unknown. Extra Bundle $15 = 20,000 Credits. Credit price ~$0.00040/credit.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 18,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-team-max-seat",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Team)",
+      "plan_name": "Token Plan Team Max seat",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 250000,
+          "quote": "250,000 Credits/seat/month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit-to-token rate unpublished. Shared quota pack $700 = 625,000 Credits.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-team-pro-seat",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Team)",
+      "plan_name": "Token Plan Team Pro seat",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 75,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 100000,
+          "quote": "100,000 Credits/seat/month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit-to-token rate unpublished. Shared quota pack $700 = 625,000 Credits.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 75,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba/token-plan-team-standard-seat",
+      "vendor_id": "alibaba",
+      "vendor_name": "Alibaba Cloud (Model Studio, intl)",
+      "product": "Token Plan (Team)",
+      "plan_name": "Token Plan Team Standard seat",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi",
+        "minimax"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 25000,
+          "quote": "25,000 Credits/seat/month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit-to-token rate unpublished. Shared quota pack $700 = 625,000 Credits.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+        "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "vendor_id": "featherless",
+  "plans": [
+    {
+      "id": "featherless/chat",
+      "vendor_id": "featherless",
+      "vendor_name": "Featherless AI",
+      "product": "Featherless API",
+      "plan_name": "Chat",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 25,
+      "price_year": "unknown",
+      "models_included": [
+        "all catalog models (22k+ open-weight HF models)"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "tokens",
+          "amount": "unknown",
+          "quote": "Unlimited tokens"
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 4,
+          "quote": "4 concurrent units"
+        },
+        {
+          "window": "per_request",
+          "unit": "tokens",
+          "amount": 32768,
+          "quote": "32K context"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "Throughput-bound by 4 concurrency units; tokens/s per unit not published.",
+      "source": "https://featherless.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Positioned for chat/roleplay (SillyTavern etc.). Large models consume more concurrency units (concurrency_cost 2-4 in /v1/models).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://featherless.ai/pricing",
+        "selector_hint": "plan cards + 'Every spec, side by side' table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 25,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://featherless.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "featherless/developer",
+      "vendor_id": "featherless",
+      "vendor_name": "Featherless AI",
+      "product": "Featherless API",
+      "plan_name": "Developer",
+      "category": "api_credit_bundle",
+      "currency": "USD",
+      "price_month": 50,
+      "price_year": "unknown",
+      "models_included": [
+        "all catalog models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 50,
+          "quote": "$50 /credits per month"
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 100,
+          "quote": "100 concurrent units (comparison table)"
+        },
+        {
+          "window": "per_request",
+          "unit": "tokens",
+          "amount": 262144,
+          "quote": "up to 256K"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "Credits billed at per-token rates in /v1/models; credits never expire.",
+      "source": "https://featherless.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'Billed per token'; 'Rates are per model. Input and output are priced separately, per million tokens.' Credits never expire; top-up mid-cycle.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://featherless.ai/pricing",
+        "selector_hint": "plan cards + 'Every spec, side by side' table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 50,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://featherless.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

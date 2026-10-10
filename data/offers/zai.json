@@ -1,0 +1,531 @@
+{
+  "provider_id": "zai",
+  "offers": [
+    {
+      "id": "zai/glm-4.5-air-intl",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-4.5-air",
+      "model_name": "GLM-4.5-Air",
+      "model_creator": "zhipu",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.2,
+      "output_per_mtok": 1.1,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International, USD",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "cache_write_per_mtok as published: \"cache storage limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/guides/overview/pricing.md",
+        "selector_hint": "Markdown tables '### Latest Models' / '### Text Models' (Input | Cached Input | Cached Input Storage | Output)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.2,
+        "output_per_mtok": 1.1,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.425
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/guides/overview/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-4.7-flash-cn",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-4.7-flash",
+      "model_name": "GLM-4.7-Flash",
+      "model_creator": "zhipu",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 0,
+      "output_per_mtok": 0,
+      "cached_input_per_mtok": 0,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 200000,
+      "max_output": "unknown",
+      "free_tier": "免费 (free); also GLM-4-Flash-250414, GLM-Z1-Flash, GLM-4.6V-Flash free",
+      "region_notes": "China, CNY",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+        "selector_hint": "Tables '## 旗舰模型' and '### 文本模型' (+ accordion 更多文本模型); columns 上下文|输入|输出|缓存存储|缓存命中",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0,
+        "output_per_mtok": 0,
+        "cached_input_per_mtok": 0,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-4.7-flash-intl",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-4.7-flash",
+      "model_name": "GLM-4.7-Flash",
+      "model_creator": "zhipu",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0,
+      "output_per_mtok": 0,
+      "cached_input_per_mtok": 0,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "Free (input/output/cache all free). GLM-4.5-Flash and GLM-4.6V-Flash also free.",
+      "region_notes": "International, USD",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Listed price 'Free'.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/guides/overview/pricing.md",
+        "selector_hint": "Markdown tables '### Latest Models' / '### Text Models' (Input | Cached Input | Cached Input Storage | Output)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0,
+        "output_per_mtok": 0,
+        "cached_input_per_mtok": 0,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/guides/overview/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-5.1-cn",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-5.1",
+      "model_name": "GLM-5.1",
+      "model_creator": "zhipu",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 6,
+      "output_per_mtok": 24,
+      "cached_input_per_mtok": 1.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": "Input <32K: ¥6 in / ¥24 out / ¥1.3 hit; input >=32K: ¥8 / ¥28 / ¥2. Similar 32K tiers on GLM-5 (¥4/18 -> ¥6/22) and GLM-5-Turbo.",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Headline = <32K tier. cache_write_per_mtok as published: \"限时免费\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+        "selector_hint": "Tables '## 旗舰模型' and '### 文本模型' (+ accordion 更多文本模型); columns 上下文|输入|输出|缓存存储|缓存命中",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.894908,
+        "output_per_mtok": 3.579632,
+        "cached_input_per_mtok": 0.193897,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.566089
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-5.3-cn",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zhipu",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 8,
+      "output_per_mtok": 28,
+      "cached_input_per_mtok": 2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China bigmodel.cn (docs.bigmodel.cn), CNY",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 5折 (50%) for models that support it; per-model support not on page. CN cache-hit is 25% of input vs ~19% on intl. cache_write_per_mtok as published: \"缓存存储 限时免费\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+        "selector_hint": "Tables '## 旗舰模型' and '### 文本模型' (+ accordion 更多文本模型); columns 上下文|输入|输出|缓存存储|缓存命中",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.193211,
+        "output_per_mtok": 4.176237,
+        "cached_input_per_mtok": 0.298303,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.938968
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-5.3-flash-cn",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3-flash",
+      "model_name": "GLM-5.3-Flash",
+      "model_creator": "zhipu",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 2.8,
+      "cached_input_per_mtok": 0.23,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China bigmodel.cn, CNY",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "GLM-5.3-FlashX CN: ¥2 / ¥7 / hit ¥0.57. cache_write_per_mtok as published: \"限时免费\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+        "selector_hint": "Tables '## 旗舰模型' and '### 文本模型' (+ accordion 更多文本模型); columns 上下文|输入|输出|缓存存储|缓存命中",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.119321,
+        "output_per_mtok": 0.417624,
+        "cached_input_per_mtok": 0.034305,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.193897
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-5.3-flash-intl",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3-flash",
+      "model_name": "GLM-5.3-Flash",
+      "model_creator": "zhipu",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International, USD",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "320B total / 18B active, open-source, multimodal input. bigmodel lists 1M context. cache_write_per_mtok as published: \"cache storage limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/guides/overview/pricing.md",
+        "selector_hint": "Markdown tables '### Latest Models' / '### Text Models' (Input | Cached Input | Cached Input Storage | Output)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/guides/overview/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-5.3-flashx-intl",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3-flashx",
+      "model_name": "GLM-5.3-FlashX",
+      "model_creator": "zhipu",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 0.37,
+      "output_per_mtok": 1.25,
+      "cached_input_per_mtok": 0.075,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International, USD",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "~200 tok/s fast variant. cache_write_per_mtok as published: \"cache storage limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/guides/overview/pricing.md",
+        "selector_hint": "Markdown tables '### Latest Models' / '### Text Models' (Input | Cached Input | Cached Input Storage | Output)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.37,
+        "output_per_mtok": 1.25,
+        "cached_input_per_mtok": 0.075,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.59
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/guides/overview/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "zai/glm-5.3-intl",
+      "provider_id": "zai",
+      "provider_name": "Z.AI (Zhipu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zhipu",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "cached_input_per_mtok": 0.26,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "International api.z.ai, USD",
+      "source": "https://docs.z.ai/guides/overview/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Text-only. Same price as GLM-5.2 and GLM-5.1 on intl. No batch on intl pricing page. cache_write_per_mtok as published: \"cache storage limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.z.ai/guides/overview/pricing.md",
+        "selector_hint": "Markdown tables '### Latest Models' / '### Text Models' (Input | Cached Input | Cached Input Storage | Output)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.4,
+        "output_per_mtok": 4.4,
+        "cached_input_per_mtok": 0.26,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.z.ai/guides/overview/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

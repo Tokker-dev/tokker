@@ -1,0 +1,229 @@
+{
+  "vendor_id": "cognition",
+  "plans": [
+    {
+      "id": "cognition/free",
+      "vendor_id": "cognition",
+      "vendor_name": "Cognition (Devin / Windsurf)",
+      "product": "Devin + Windsurf",
+      "plan_name": "Free",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "unspecified"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Light quota to code with agents"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://devin.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "windsurf.com/pricing now redirects to devin.ai/pricing. Pro: 'Purchase extra usage at API pricing'. No numeric quotas.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://devin.ai/pricing",
+        "selector_hint": "plan cards (windsurf.com/pricing 308-redirects here)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://devin.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cognition/max",
+      "vendor_id": "cognition",
+      "vendor_name": "Cognition (Devin / Windsurf)",
+      "product": "Devin + Windsurf",
+      "plan_name": "Max",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "unspecified"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Significantly higher quotas"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://devin.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "windsurf.com/pricing now redirects to devin.ai/pricing. Pro: 'Purchase extra usage at API pricing'. No numeric quotas.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://devin.ai/pricing",
+        "selector_hint": "plan cards (windsurf.com/pricing 308-redirects here)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://devin.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cognition/pro",
+      "vendor_id": "cognition",
+      "vendor_name": "Cognition (Devin / Windsurf)",
+      "product": "Devin + Windsurf",
+      "plan_name": "Pro",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "unspecified"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Increased quotas"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://devin.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "windsurf.com/pricing now redirects to devin.ai/pricing. Pro: 'Purchase extra usage at API pricing'. No numeric quotas.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://devin.ai/pricing",
+        "selector_hint": "plan cards (windsurf.com/pricing 308-redirects here)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://devin.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cognition/teams",
+      "vendor_id": "cognition",
+      "vendor_name": "Cognition (Devin / Windsurf)",
+      "product": "Devin + Windsurf",
+      "plan_name": "Teams",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": "unknown",
+      "price_year": null,
+      "models_included": [
+        "unspecified"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "$80/month base + $40/month per developer seat"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://devin.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "windsurf.com/pricing now redirects to devin.ai/pricing. Pro: 'Purchase extra usage at API pricing'. No numeric quotas.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://devin.ai/pricing",
+        "selector_hint": "plan cards (windsurf.com/pricing 308-redirects here)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://devin.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

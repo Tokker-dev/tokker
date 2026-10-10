@@ -1,0 +1,241 @@
+{
+  "provider_id": "tencent",
+  "offers": [
+    {
+      "id": "tencent/hunyuan-a13b",
+      "provider_id": "tencent",
+      "provider_name": "Tencent Hunyuan (legacy console)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "hunyuan-a13b",
+      "model_name": "Hunyuan-A13B",
+      "model_creator": "tencent",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 0.5,
+      "output_per_mtok": 2,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "1M tokens free resource pack, valid 1 year from activation",
+      "region_notes": "China, CNY (legacy Hunyuan platform; page updated 2026-06-26)",
+      "source": "https://cloud.tencent.com/document/product/1729/97731",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Legacy platform being migrated to TokenHub.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.tencent.com/document/product/1729/97731",
+        "selector_hint": "'token 后付费' table 刊例价（每百万tokens）",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.074576,
+        "output_per_mtok": 0.298303,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.130508
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.tencent.com/document/product/1729/97731",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "tencent/hy-role-latest",
+      "provider_id": "tencent",
+      "provider_name": "Tencent Cloud TokenHub (Hunyuan)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "hy-role-latest",
+      "model_name": "Hy-Role-Latest",
+      "model_creator": "tencent",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 2.4,
+      "output_per_mtok": 9.6,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Guangzhou, CNY",
+      "source": "https://cloud.tencent.com/document/product/1823/130055",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.tencent.com/document/product/1823/130055",
+        "selector_hint": "'语言模型' tables (广州 tab then 新加坡 tab, both 元/百万tokens): 模型名称|条件|峰谷计费|推理输入|推理输出|缓存命中. Needs --compressed.",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.357963,
+        "output_per_mtok": 1.431853,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.626435
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.tencent.com/document/product/1823/130055",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "tencent/hy3",
+      "provider_id": "tencent",
+      "provider_name": "Tencent Cloud TokenHub (Hunyuan)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "hy3",
+      "model_name": "Hy3",
+      "model_creator": "tencent",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 1,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Guangzhou + Singapore, CNY",
+      "source": "https://cloud.tencent.com/document/product/1823/130055",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache hit 25% of input.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.tencent.com/document/product/1823/130055",
+        "selector_hint": "'语言模型' tables (广州 tab then 新加坡 tab, both 元/百万tokens): 模型名称|条件|峰谷计费|推理输入|推理输出|缓存命中. Needs --compressed.",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.149151,
+        "output_per_mtok": 0.596605,
+        "cached_input_per_mtok": 0.037288,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.261015
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.tencent.com/document/product/1823/130055",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "tencent/hy4-preview",
+      "provider_id": "tencent",
+      "provider_name": "Tencent Cloud TokenHub (Hunyuan)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "hy4-preview",
+      "model_name": "Hy4 preview",
+      "model_creator": "tencent",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 6,
+      "output_per_mtok": 18,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "TokenHub new users 1M tokens (per search snippet, not verified on page)",
+      "region_notes": "Guangzhou and Singapore tabs both list ¥6/¥18/¥0.3 (CNY)",
+      "source": "https://cloud.tencent.com/document/product/1823/130055",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Hunyuan models migrated to TokenHub; old Hunyuan console no longer sells new model services. Page updated 2026-09-24. TokenHub also resells MiMo, Step 5, Kimi K2.8 Preview (¥6.5/¥27), GLM, MiniMax.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.tencent.com/document/product/1823/130055",
+        "selector_hint": "'语言模型' tables (广州 tab then 新加坡 tab, both 元/百万tokens): 模型名称|条件|峰谷计费|推理输入|推理输出|缓存命中. Needs --compressed.",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.894908,
+        "output_per_mtok": 2.684724,
+        "cached_input_per_mtok": 0.044745,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.342362
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.tencent.com/document/product/1823/130055",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

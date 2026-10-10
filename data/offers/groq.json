@@ -1,0 +1,237 @@
+{
+  "provider_id": "groq",
+  "offers": [
+    {
+      "id": "groq/gpt-oss-120b",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.groq.com/docs/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "groq.com/pricing has no price table (fetched: marketing only). HF router lists Groq gpt-oss-120b at $0.15/$0.75 and gpt-oss-20b $0.10/$0.50 (differs from docs).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://console.groq.com/docs/models",
+        "selector_hint": "Production / Preview model tables (price column)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.groq.com/docs/models",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "groq/gpt-oss-20b",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-20b",
+      "model_name": "gpt-oss-20b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.075,
+      "output_per_mtok": 0.3,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.groq.com/docs/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "groq.com/pricing has no price table (fetched: marketing only). HF router lists Groq gpt-oss-120b at $0.15/$0.75 and gpt-oss-20b $0.10/$0.50 (differs from docs).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://console.groq.com/docs/models",
+        "selector_hint": "Production / Preview model tables (price column)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.075,
+        "output_per_mtok": 0.3,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.13125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.groq.com/docs/models",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "groq/llama-3.3-70b-instruct",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": "unknown",
+      "output_per_mtok": "unknown",
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 32768,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.groq.com/docs/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "groq.com/pricing has no price table (fetched: marketing only). HF router lists Groq gpt-oss-120b at $0.15/$0.75 and gpt-oss-20b $0.10/$0.50 (differs from docs). Price shown as 'Contact Sales' (llama-3.3-70b-versatile).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://console.groq.com/docs/models",
+        "selector_hint": "Production / Preview model tables (price column)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": null,
+        "output_per_mtok": null,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.groq.com/docs/models",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "groq/qwen3.8-27b",
+      "provider_id": "groq",
+      "provider_name": "Groq",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.8-27b",
+      "model_name": "Qwen3.8 27B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 16384,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://console.groq.com/docs/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "groq.com/pricing has no price table (fetched: marketing only). HF router lists Groq gpt-oss-120b at $0.15/$0.75 and gpt-oss-20b $0.10/$0.50 (differs from docs). Preview model.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://console.groq.com/docs/models",
+        "selector_hint": "Production / Preview model tables (price column)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.8,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://console.groq.com/docs/models",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "vendor_id": "openrouter",
+  "plans": [
+    {
+      "id": "openrouter/pay-as-you-go-credits-no-subscription",
+      "vendor_id": "openrouter",
+      "vendor_name": "OpenRouter",
+      "product": "OpenRouter credits",
+      "plan_name": "Pay-as-you-go credits (no subscription)",
+      "category": "api_credit_bundle",
+      "currency": "USD",
+      "price_month": null,
+      "price_year": null,
+      "models_included": [
+        "all routed models"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 50,
+          "quote": "50 requests/day [free models]; 1,000 per day after purchasing at least $10 in credits"
+        },
+        {
+          "window": "per_request",
+          "unit": "usd",
+          "amount": "unknown",
+          "quote": "Platform fee on credit purchases: Standard 5.5%"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "No subscription: $/Mtok = model list price x 1.055 (credit purchase fee).",
+      "source": "https://openrouter.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "BYOK: first $25,000/mo list-price inference free of fee, 5% after.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://openrouter.ai/pricing",
+        "selector_hint": "fees table; model prices via https://openrouter.ai/api/v1/models data[].pricing",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "provider_id": "ai21",
+  "offers": [
+    {
+      "id": "ai21/jamba-large",
+      "provider_id": "ai21",
+      "provider_name": "AI21 Labs",
+      "provider_type": "first_party",
+      "provider_country": "IL",
+      "model_slug": "jamba-large",
+      "model_name": "Jamba Large",
+      "model_creator": "ai21",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 8,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 256000,
+      "max_output": "unknown",
+      "free_tier": "$10 credits for 7 days, no credit card.",
+      "region_notes": null,
+      "source": "https://www.ai21.com/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Context 256K from https://docs.ai21.com/docs/jamba-foundation-models.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.ai21.com/pricing/",
+        "selector_hint": "plan cards 'Jamba Mini' / 'Jamba Large' with '$X / 1M input tokens'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 8,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.ai21.com/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "ai21/jamba-mini",
+      "provider_id": "ai21",
+      "provider_name": "AI21 Labs",
+      "provider_type": "first_party",
+      "provider_country": "IL",
+      "model_slug": "jamba-mini",
+      "model_name": "Jamba Mini",
+      "model_creator": "ai21",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.2,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 256000,
+      "max_output": "unknown",
+      "free_tier": "$10 credits for 7 days, no credit card.",
+      "region_notes": null,
+      "source": "https://www.ai21.com/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Context 256K from https://docs.ai21.com/docs/jamba-foundation-models.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.ai21.com/pricing/",
+        "selector_hint": "plan cards 'Jamba Mini' / 'Jamba Large' with '$X / 1M input tokens'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.2,
+        "output_per_mtok": 0.4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.25
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.ai21.com/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

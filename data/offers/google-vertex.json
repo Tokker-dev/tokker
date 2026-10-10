@@ -1,0 +1,701 @@
+{
+  "provider_id": "google-vertex",
+  "offers": [
+    {
+      "id": "google-vertex/claude-opus-5.5",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "claude-opus-5.5",
+      "model_name": "Claude Opus 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 5,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; US/EU multi-region & regional endpoints $4.40/$22.00 (+10%).",
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are). Batch input $2.50 / output $12.50 as published (not exactly 50% of $4/$20); 1h cache write $8.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/claude-sonnet-5.5",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "claude-sonnet-5.5",
+      "model_name": "Claude Sonnet 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; regional $2.20/$11.00 (+10%).",
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are). 1h cache write $4.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/deepseek-r1-0528",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-r1-0528",
+      "model_name": "DeepSeek R1 0528",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.35,
+      "output_per_mtok": 5.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.35,
+        "output_per_mtok": 5.4,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.3625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/deepseek-v3.2",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-v3.2",
+      "model_name": "DeepSeek V3.2",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.56,
+      "output_per_mtok": 1.68,
+      "cached_input_per_mtok": 0.056,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.56,
+        "output_per_mtok": 1.68,
+        "cached_input_per_mtok": 0.056,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.84
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/gemini-3.1-pro-preview",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gemini-3.1-pro-preview",
+      "model_name": "Gemini 3.1 Pro Preview",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 12,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": ">200K input tokens: $4.00 in / $18.00 out / $0.40 cached",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global",
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 12,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 4.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/gemini-3.5-flash",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gemini-3.5-flash",
+      "model_name": "Gemini 3.5 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.5,
+      "output_per_mtok": 9,
+      "cached_input_per_mtok": 0.15,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; non-global $1.65/$9.90 (+10%).",
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.5,
+        "output_per_mtok": 9,
+        "cached_input_per_mtok": 0.15,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3.375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/gemini-3.8-flash",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gemini-3.8-flash",
+      "model_name": "Gemini 3.8 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.75,
+      "output_per_mtok": 3.75,
+      "cached_input_per_mtok": 0.075,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; non-global (regional) $0.825/$4.125 (+10%).",
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are). Introductory price through 2026-12-31; from 2027-01-01 $1.50/$7.50. Batch/Flex $0.375 input.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.75,
+        "output_per_mtok": 3.75,
+        "cached_input_per_mtok": 0.075,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/gpt-oss-120b",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.09,
+      "output_per_mtok": 0.36,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.09,
+        "output_per_mtok": 0.36,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.1575
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/gpt-oss-20b",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-20b",
+      "model_name": "gpt-oss-20b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.07,
+      "output_per_mtok": 0.25,
+      "cached_input_per_mtok": 0.007,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.07,
+        "output_per_mtok": 0.25,
+        "cached_input_per_mtok": 0.007,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.115
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/llama-3.3-70b-instruct",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.72,
+      "output_per_mtok": 0.72,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.72,
+        "output_per_mtok": 0.72,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.72
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/llama-4-maverick-17b-128e-instruct",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-4-maverick-17b-128e-instruct",
+      "model_name": "Llama 4 Maverick 17B-128E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.35,
+      "output_per_mtok": 1.15,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.35,
+        "output_per_mtok": 1.15,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.55
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google-vertex/llama-4-scout-17b-16e-instruct",
+      "provider_id": "google-vertex",
+      "provider_name": "Google Cloud Vertex AI (Agent Platform)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-4-scout-17b-16e-instruct",
+      "model_name": "Llama 4 Scout 17B-16E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.25,
+      "output_per_mtok": 0.7,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Vertex AI pricing page is now titled 'Agent Platform Pricing'. Provisioned Throughput sold in GSUs (50% promo credit on Gemini 3.6-3.8 Flash PT through 2026-12-31). No DeepSeek V4 / Kimi K3 / GLM-5.3 / Qwen3.8 MaaS listed (GLM-5.2 $1.40/$4.40, Kimi-K2-Thinking $0.60/$2.50, MiniMax-M2 $0.30/$1.20 are).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.25,
+        "output_per_mtok": 0.7,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.3625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

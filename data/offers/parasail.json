@@ -1,0 +1,875 @@
+{
+  "provider_id": "parasail",
+  "offers": [
+    {
+      "id": "parasail/deepseek-v4-flash",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash",
+      "model_name": "DeepSeek V4 Flash (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.14,
+      "output_per_mtok": 0.28,
+      "cached_input_per_mtok": 0.07,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.28,
+        "cached_input_per_mtok": 0.07,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/deepseek-v4-pro",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-pro",
+      "model_name": "DeepSeek V4 Pro (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.74,
+      "output_per_mtok": 3.48,
+      "cached_input_per_mtok": 0.1,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.74,
+        "output_per_mtok": 3.48,
+        "cached_input_per_mtok": 0.1,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/deepseek-v4.1-flash",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4.1-flash",
+      "model_name": "DeepSeek V4.1 Flash",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.006,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.006,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/gemma-4-31b-it",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50. Special batch price $0.07/$0.20.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.4,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/glm-5.3",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "cached_input_per_mtok": 0.26,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.4,
+        "output_per_mtok": 4.4,
+        "cached_input_per_mtok": 0.26,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/glm-5.3-flash",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "glm-5.3-flash",
+      "model_name": "GLM-5.3 Flash",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/gpt-oss-120b",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.75,
+      "cached_input_per_mtok": 0.055,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50. gpt-oss-120b (Fast) $0.15/$0.60.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.75,
+        "cached_input_per_mtok": 0.055,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/gpt-oss-20b",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-20b",
+      "model_name": "gpt-oss-20b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.04,
+      "output_per_mtok": 0.2,
+      "cached_input_per_mtok": 0.02,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.04,
+        "output_per_mtok": 0.2,
+        "cached_input_per_mtok": 0.02,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.08
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/kimi-k2.6",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.75,
+      "output_per_mtok": 3.5,
+      "cached_input_per_mtok": 0.16,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.75,
+        "output_per_mtok": 3.5,
+        "cached_input_per_mtok": 0.16,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.4375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/kimi-k3",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/llama-3.3-70b-instruct",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.22,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": 0.11,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50. FP8.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.22,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": 0.11,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.29
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/llama-4-maverick-17b-128e-instruct",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "llama-4-maverick-17b-128e-instruct",
+      "model_name": "Llama 4 Maverick 17B-128E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.35,
+      "output_per_mtok": 1,
+      "cached_input_per_mtok": 0.17,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50. FP8.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.35,
+        "output_per_mtok": 1,
+        "cached_input_per_mtok": 0.17,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.5125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/minimax-m3",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "minimax-m3",
+      "model_name": "MiniMax M3",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/mistral-small-3.2-24b-instruct-2506",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "mistral-small-3.2-24b-instruct-2506",
+      "model_name": "Mistral Small 3.2 24B Instruct 2506",
+      "model_creator": "mistral",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.09,
+      "output_per_mtok": 0.3,
+      "cached_input_per_mtok": 0.05,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.09,
+        "output_per_mtok": 0.3,
+        "cached_input_per_mtok": 0.05,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.1425
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "parasail/qwen3.5-397b-a17b",
+      "provider_id": "parasail",
+      "provider_name": "Parasail",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.5,
+      "output_per_mtok": 3.6,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.parasail.io/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "'No minimums, no rate limits.' Separate batch price tables by param size and precision (FP4/FP8/FP16); e.g. FP8 41-80B $0.18/$0.50. Special batch price $0.25/$1.80 (FP8).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.parasail.io/pricing",
+        "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.5,
+        "output_per_mtok": 3.6,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.275
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.parasail.io/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

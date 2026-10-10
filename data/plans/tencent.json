@@ -1,0 +1,182 @@
+{
+  "vendor_id": "tencent",
+  "plans": [
+    {
+      "id": "tencent/free",
+      "vendor_id": "tencent",
+      "vendor_name": "Tencent Cloud",
+      "product": "CodeBuddy",
+      "plan_name": "Free",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "hunyuan",
+        "deepseek",
+        "glm",
+        "claude/gpt (intl)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 130,
+          "quote": "130 credits per month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit-to-token rate unpublished -> tokens unknown. Pro top-up 500 credits $15. Pro quota cut to 2,000/mo from 2026-08-07 (secondary: Tencent raised CodeBuddy prices 3x in 2026).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+        "selector_hint": "plans table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "tencent/pro",
+      "vendor_id": "tencent",
+      "vendor_name": "Tencent Cloud",
+      "product": "CodeBuddy",
+      "plan_name": "Pro",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 10,
+      "price_year": 96,
+      "models_included": [
+        "hunyuan",
+        "deepseek",
+        "glm",
+        "claude/gpt (intl)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 2000,
+          "quote": "2,000 credits per month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit-to-token rate unpublished -> tokens unknown. Pro top-up 500 credits $15. Pro quota cut to 2,000/mo from 2026-08-07 (secondary: Tencent raised CodeBuddy prices 3x in 2026).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+        "selector_hint": "plans table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 10,
+        "price_year": 96
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "tencent/team",
+      "vendor_id": "tencent",
+      "vendor_name": "Tencent Cloud",
+      "product": "CodeBuddy",
+      "plan_name": "Team",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 40,
+      "price_year": 480,
+      "models_included": [
+        "hunyuan",
+        "deepseek",
+        "glm",
+        "claude/gpt (intl)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 1000,
+          "quote": "1,000 credits per month per seat, shared through a team credit pool"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit-to-token rate unpublished -> tokens unknown. Pro top-up 500 credits $15. Pro quota cut to 2,000/mo from 2026-08-07 (secondary: Tencent raised CodeBuddy prices 3x in 2026).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+        "selector_hint": "plans table",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 40,
+        "price_year": 480
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

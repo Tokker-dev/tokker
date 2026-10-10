@@ -1,0 +1,356 @@
+{
+  "provider_id": "stepfun",
+  "offers": [
+    {
+      "id": "stepfun/step-3.5-flash-cn",
+      "provider_id": "stepfun",
+      "provider_name": "StepFun",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "step-3.5-flash",
+      "model_name": "Step 3.5 Flash",
+      "model_creator": "stepfun",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 0.7,
+      "output_per_mtok": 2.1,
+      "cached_input_per_mtok": 0.14,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China platform.stepfun.com, CNY",
+      "source": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache-miss price includes first cache write. Intl prices are much lower than CN at FX (~7.1): step-5-preview ¥7 vs $1.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+        "selector_hint": "Markdown tables under '### 多模态推理大模型的定价表' / '### 推理大模型的定价表'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.104406,
+        "output_per_mtok": 0.313218,
+        "cached_input_per_mtok": 0.020881,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.156609
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "stepfun/step-3.5-flash-intl",
+      "provider_id": "stepfun",
+      "provider_name": "StepFun",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "step-3.5-flash",
+      "model_name": "Step 3.5 Flash",
+      "model_creator": "stepfun",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.3,
+      "cached_input_per_mtok": 0.02,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International platform.stepfun.ai, USD",
+      "source": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache-miss price includes first cache write. Intl prices are much lower than CN at FX (~7.1): step-5-preview ¥7 vs $1.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.stepfun.ai/docs/en/guides/pricing/details.md",
+        "selector_hint": "Markdown tables under '### Pricing for Multimodal Reasoning Models' / '### Pricing for Reasoning Models'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.3,
+        "cached_input_per_mtok": 0.02,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "stepfun/step-3.7-flash-cn",
+      "provider_id": "stepfun",
+      "provider_name": "StepFun",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "step-3.7-flash",
+      "model_name": "Step 3.7 Flash",
+      "model_creator": "stepfun",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 1.35,
+      "output_per_mtok": 8.1,
+      "cached_input_per_mtok": 0.27,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China platform.stepfun.com, CNY",
+      "source": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache-miss price includes first cache write. Intl prices are much lower than CN at FX (~7.1): step-5-preview ¥7 vs $1.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+        "selector_hint": "Markdown tables under '### 多模态推理大模型的定价表' / '### 推理大模型的定价表'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.201354,
+        "output_per_mtok": 1.208126,
+        "cached_input_per_mtok": 0.040271,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.453047
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "stepfun/step-3.7-flash-intl",
+      "provider_id": "stepfun",
+      "provider_name": "StepFun",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "step-3.7-flash",
+      "model_name": "Step 3.7 Flash",
+      "model_creator": "stepfun",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 0.2,
+      "output_per_mtok": 1.15,
+      "cached_input_per_mtok": 0.04,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International platform.stepfun.ai, USD",
+      "source": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache-miss price includes first cache write. Intl prices are much lower than CN at FX (~7.1): step-5-preview ¥7 vs $1.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.stepfun.ai/docs/en/guides/pricing/details.md",
+        "selector_hint": "Markdown tables under '### Pricing for Multimodal Reasoning Models' / '### Pricing for Reasoning Models'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.2,
+        "output_per_mtok": 1.15,
+        "cached_input_per_mtok": 0.04,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.4375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "stepfun/step-5-preview-cn",
+      "provider_id": "stepfun",
+      "provider_name": "StepFun",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "step-5-preview",
+      "model_name": "Step 5 Preview",
+      "model_creator": "stepfun",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 7,
+      "output_per_mtok": 20,
+      "cached_input_per_mtok": 0.35,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China platform.stepfun.com, CNY",
+      "source": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache-miss price includes first cache write. Intl prices are much lower than CN at FX (~7.1): step-5-preview ¥7 vs $1.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+        "selector_hint": "Markdown tables under '### 多模态推理大模型的定价表' / '### 推理大模型的定价表'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.044059,
+        "output_per_mtok": 2.983027,
+        "cached_input_per_mtok": 0.052203,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.528801
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "stepfun/step-5-preview-intl",
+      "provider_id": "stepfun",
+      "provider_name": "StepFun",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "step-5-preview",
+      "model_name": "Step 5 Preview",
+      "model_creator": "stepfun",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 2.7,
+      "cached_input_per_mtok": 0.05,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International platform.stepfun.ai, USD",
+      "source": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Cache-miss price includes first cache write. Intl prices are much lower than CN at FX (~7.1): step-5-preview ¥7 vs $1.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.stepfun.ai/docs/en/guides/pricing/details.md",
+        "selector_hint": "Markdown tables under '### Pricing for Multimodal Reasoning Models' / '### Pricing for Reasoning Models'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 2.7,
+        "cached_input_per_mtok": 0.05,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.425
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

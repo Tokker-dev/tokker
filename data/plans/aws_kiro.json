@@ -1,0 +1,320 @@
+{
+  "vendor_id": "aws_kiro",
+  "plans": [
+    {
+      "id": "aws-kiro/free",
+      "vendor_id": "aws_kiro",
+      "vendor_name": "AWS (Kiro)",
+      "product": "Kiro",
+      "plan_name": "Free",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "auto",
+        "claude-sonnet-4.6 (1.3x credits)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 50,
+          "quote": "50 credits/month"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "a unit of work in response to user prompts... Simple requests consume less than one credit"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://kiro.dev/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Overage $0.04/credit; included credit costs $0.000 each. Credit-to-token mapping unpublished -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://kiro.dev/pricing/",
+        "selector_hint": "pricing table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://kiro.dev/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-kiro/power",
+      "vendor_id": "aws_kiro",
+      "vendor_name": "AWS (Kiro)",
+      "product": "Kiro",
+      "plan_name": "Power",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "auto",
+        "claude-sonnet-4.6 (1.3x credits)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 10000,
+          "quote": "10,000 credits/month"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "a unit of work in response to user prompts... Simple requests consume less than one credit"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://kiro.dev/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Overage $0.04/credit; included credit costs $0.020 each. Credit-to-token mapping unpublished -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://kiro.dev/pricing/",
+        "selector_hint": "pricing table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://kiro.dev/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-kiro/pro",
+      "vendor_id": "aws_kiro",
+      "vendor_name": "AWS (Kiro)",
+      "product": "Kiro",
+      "plan_name": "Pro",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "auto",
+        "claude-sonnet-4.6 (1.3x credits)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 1000,
+          "quote": "1,000 credits/month"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "a unit of work in response to user prompts... Simple requests consume less than one credit"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://kiro.dev/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Overage $0.04/credit; included credit costs $0.020 each. Credit-to-token mapping unpublished -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://kiro.dev/pricing/",
+        "selector_hint": "pricing table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://kiro.dev/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-kiro/pro-max",
+      "vendor_id": "aws_kiro",
+      "vendor_name": "AWS (Kiro)",
+      "product": "Kiro",
+      "plan_name": "Pro Max",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "auto",
+        "claude-sonnet-4.6 (1.3x credits)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 5000,
+          "quote": "5,000 credits/month"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "a unit of work in response to user prompts... Simple requests consume less than one credit"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://kiro.dev/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Overage $0.04/credit; included credit costs $0.020 each. Credit-to-token mapping unpublished -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://kiro.dev/pricing/",
+        "selector_hint": "pricing table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://kiro.dev/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "aws-kiro/pro-plus",
+      "vendor_id": "aws_kiro",
+      "vendor_name": "AWS (Kiro)",
+      "product": "Kiro",
+      "plan_name": "Pro+",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 40,
+      "price_year": null,
+      "models_included": [
+        "auto",
+        "claude-sonnet-4.6 (1.3x credits)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 2000,
+          "quote": "2,000 credits/month"
+        },
+        {
+          "window": "per_request",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "a unit of work in response to user prompts... Simple requests consume less than one credit"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://kiro.dev/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Overage $0.04/credit; included credit costs $0.020 each. Credit-to-token mapping unpublished -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://kiro.dev/pricing/",
+        "selector_hint": "pricing table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 40,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://kiro.dev/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

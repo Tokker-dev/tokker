@@ -1,0 +1,469 @@
+{
+  "provider_id": "google",
+  "offers": [
+    {
+      "id": "google/gemini-2.5-flash",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-2.5-flash",
+      "model_name": "Gemini 2.5 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 2.5,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Audio input $1.00. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 2.5,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.85
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-2.5-flash-lite",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-2.5-flash-lite",
+      "model_name": "Gemini 2.5 Flash-Lite",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": 0.01,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Audio input $0.30. Batch $0.05/$0.20. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.4,
+        "cached_input_per_mtok": 0.01,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-2.5-pro",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-2.5-pro",
+      "model_name": "Gemini 2.5 Pro",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.25,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.125,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": ">200K prompt: input $2.50, output $15.00, cache $0.25.",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Storage $4.50/1M/h. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.25,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.125,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3.4375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-3.1-flash-lite",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-3.1-flash-lite",
+      "model_name": "Gemini 3.1 Flash-Lite",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.25,
+      "output_per_mtok": 1.5,
+      "cached_input_per_mtok": 0.025,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Audio input $0.50. Batch $0.125/$0.75. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.25,
+        "output_per_mtok": 1.5,
+        "cached_input_per_mtok": 0.025,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.5625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-3.1-pro-preview",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-3.1-pro-preview",
+      "model_name": "Gemini 3.1 Pro (Preview)",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 12,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": ">200K prompt: input $4.00, output $18.00, cache $0.40.",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Only Pro model on the page (no 3.5+ Pro listed). Cache storage $4.50/1M/h. No free tier. Priority $3.60/$21.60. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 12,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 4.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-3.5-flash",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-3.5-flash",
+      "model_name": "Gemini 3.5 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.5,
+      "output_per_mtok": 9,
+      "cached_input_per_mtok": 0.15,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Older 3.5 Flash is pricier than 3.8 Flash's 2026 promo price. Storage $1.00/1M/h. Priority $2.70/$16.20. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.5,
+        "output_per_mtok": 9,
+        "cached_input_per_mtok": 0.15,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3.375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-3.5-flash-lite",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-3.5-flash-lite",
+      "model_name": "Gemini 3.5 Flash-Lite",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 2.5,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch $0.15/$1.25. Priority $0.54/$4.50. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 2.5,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.85
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "google/gemini-3.8-flash",
+      "provider_id": "google",
+      "provider_name": "Google (Gemini API)",
+      "provider_type": "first_party",
+      "provider_country": "US",
+      "model_slug": "gemini-3.8-flash",
+      "model_name": "Gemini 3.8 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.75,
+      "output_per_mtok": 3.75,
+      "cached_input_per_mtok": 0.075,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "Price doubles on 2027-01-01: input $1.50, output $7.50, cache $0.15.",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": "Free tier available in Gemini API (rate-limited; free-tier content may be used to improve Google products).",
+      "region_notes": null,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Listed price valid through 2026-12-31. Cache storage $0.50/1M tok/hour. Priority $1.35/$6.75. Same price for 3.7 Flash and 3.6 Flash. Batch & Flex = 50% of standard. Context caching charges storage per hour instead of a write premium (cache_write = null).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+        "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.75,
+        "output_per_mtok": 3.75,
+        "cached_input_per_mtok": 0.075,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://ai.google.dev/gemini-api/docs/pricing.md",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

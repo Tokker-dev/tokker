@@ -1,0 +1,137 @@
+{
+  "vendor_id": "alibaba_cn",
+  "plans": [
+    {
+      "id": "alibaba-cn/token-plan-lite-china",
+      "vendor_id": "alibaba_cn",
+      "vendor_name": "Alibaba Cloud Bailian (China)",
+      "product": "Token Plan (个人版)",
+      "plan_name": "Token Plan Lite (China)",
+      "category": "token_plan",
+      "currency": "CNY",
+      "price_month": 39,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 700,
+          "quote": "700 Credits for a 5-hour rolling window [secondary]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 2500,
+          "quote": "2500 Credits for a 7-day rolling window [secondary]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "CNY prices (Lite 39 / Essential 79 / Standard 139 / Pro 499 per month, limited-time) and 5h/7d credit windows from secondary search summary (developer.aliyun.com articles); official page fetch did not expose credit-per-token rates -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+        "selector_hint": "pricing table (Chinese)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 5.816902,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "alibaba-cn/token-plan-pro-china",
+      "vendor_id": "alibaba_cn",
+      "vendor_name": "Alibaba Cloud Bailian (China)",
+      "product": "Token Plan (个人版)",
+      "plan_name": "Token Plan Pro (China)",
+      "category": "token_plan",
+      "currency": "CNY",
+      "price_month": 499,
+      "price_year": null,
+      "models_included": [
+        "qwen",
+        "deepseek",
+        "glm",
+        "kimi"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "credits",
+          "amount": 12000,
+          "quote": "12000 Credits for a 5-hour rolling window [secondary]"
+        },
+        {
+          "window": "weekly",
+          "unit": "credits",
+          "amount": 40000,
+          "quote": "40000 Credits for a 7-day rolling window [secondary]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "CNY prices (Lite 39 / Essential 79 / Standard 139 / Pro 499 per month, limited-time) and 5h/7d credit windows from secondary search summary (developer.aliyun.com articles); official page fetch did not expose credit-per-token rates -> tokens unknown.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+        "selector_hint": "pricing table (Chinese)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 74.426513,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

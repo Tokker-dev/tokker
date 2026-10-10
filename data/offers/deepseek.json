@@ -1,0 +1,239 @@
+{
+  "provider_id": "deepseek",
+  "offers": [
+    {
+      "id": "deepseek/deepseek-flash-cn",
+      "provider_id": "deepseek",
+      "provider_name": "DeepSeek",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "deepseek-flash",
+      "model_name": "DeepSeek-V4.1-Flash (deepseek-flash)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 2,
+      "output_per_mtok": 8,
+      "cached_input_per_mtok": 0.04,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": "空闲时段价格为高峰时段一半。高峰: 北京时间周一至周五 9:00-12:00、14:00-18:00 (不含法定节假日); 其余时段空闲。 空闲: 输入1元/缓存命中0.02元/输出4元.",
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 384000,
+      "free_tier": null,
+      "region_notes": "China-mainland docs page (zh-cn), CNY",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Headline = 高峰 (peak) price; off-peak half.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+        "selector_hint": "'模型细节' 表: 价格 rows 空闲时段/高峰时段",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.298303,
+        "output_per_mtok": 1.193211,
+        "cached_input_per_mtok": 0.005966,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.52203
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "deepseek/deepseek-flash-intl",
+      "provider_id": "deepseek",
+      "provider_name": "DeepSeek",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "deepseek-flash",
+      "model_name": "DeepSeek-V4.1-Flash (deepseek-flash)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.006,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": "Off-peak = 50% of peak. Peak hours 01:00-04:00 and 06:00-10:00 UTC Mon-Fri excl. Chinese public holidays; all other hours (incl. weekends) off-peak. Off-peak: in $0.15 / cache-hit $0.003 / out $0.6.",
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 384000,
+      "free_tier": null,
+      "region_notes": "International (English) docs page, USD",
+      "source": "https://api-docs.deepseek.com/quick_start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Headline = PEAK price; off-peak is half. Legacy names deepseek-v4-flash / deepseek-v4-flash-vision-exp now served by V4.1-Flash at Flash price. Vision supported. Concurrency limit 2500. No batch API listed.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://api-docs.deepseek.com/quick_start/pricing",
+        "selector_hint": "'Model Details' table: PRICING rows (cache hit / cache miss / output) x OFF-PEAK / PEAK columns per model",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.006,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api-docs.deepseek.com/quick_start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-cn",
+      "provider_id": "deepseek",
+      "provider_name": "DeepSeek",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "deepseek-v4-pro",
+      "model_name": "DeepSeek-V4-Pro-0813",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 9,
+      "output_per_mtok": 27,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": "空闲时段价格为高峰时段一半。高峰: 北京时间周一至周五 9:00-12:00、14:00-18:00 (不含法定节假日); 其余时段空闲。 空闲: 输入4.5元/缓存命中0.15元/输出13.5元.",
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 384000,
+      "free_tier": null,
+      "region_notes": "China-mainland docs page, CNY",
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Headline = peak price.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+        "selector_hint": "'模型细节' 表: 价格 rows 空闲时段/高峰时段",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.342362,
+        "output_per_mtok": 4.027086,
+        "cached_input_per_mtok": 0.044745,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 2.013543
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-intl",
+      "provider_id": "deepseek",
+      "provider_name": "DeepSeek",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "deepseek-v4-pro",
+      "model_name": "DeepSeek-V4-Pro-0813",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.32,
+      "output_per_mtok": 3.96,
+      "cached_input_per_mtok": 0.044,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": "Off-peak = 50% of peak. Peak hours 01:00-04:00 and 06:00-10:00 UTC Mon-Fri excl. Chinese public holidays; all other hours (incl. weekends) off-peak. Off-peak: in $0.66 / cache-hit $0.022 / out $1.98.",
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 384000,
+      "free_tier": null,
+      "region_notes": "International docs, USD",
+      "source": "https://api-docs.deepseek.com/quick_start/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Headline = PEAK price. No vision. Concurrency 500.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://api-docs.deepseek.com/quick_start/pricing",
+        "selector_hint": "'Model Details' table: PRICING rows (cache hit / cache miss / output) x OFF-PEAK / PEAK columns per model",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.32,
+        "output_per_mtok": 3.96,
+        "cached_input_per_mtok": 0.044,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.98
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://api-docs.deepseek.com/quick_start/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

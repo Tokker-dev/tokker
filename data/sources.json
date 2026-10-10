@@ -1,0 +1,2056 @@
+[
+  {
+    "provider_id": "01ai",
+    "url": "https://platform.lingyiwanwu.com/docs",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://platform.lingyiwanwu.com/docs",
+      "selector_hint": "Next.js RSC payload in HTML: table after heading '模型与计费', column '价格/1M token'",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "RSC payload in HTML",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "ai21",
+    "url": "https://docs.ai21.com/docs/jamba-foundation-models",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.ai21.com/docs/jamba-foundation-models",
+      "selector_hint": "models table",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "context windows (256K)",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "ai21",
+    "url": "https://www.ai21.com/pricing/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.ai21.com/pricing/",
+      "selector_hint": "plan cards 'Jamba Mini' / 'Jamba Large' with '$X / 1M input tokens'",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "alibaba",
+    "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "selector_hint": "'文本生成-通义千问' tables per family (元/每百万Token), 中国内地(北京)",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "~2MB static page",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "alibaba",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/context-cache",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.alibabacloud.com/help/en/model-studio/context-cache",
+      "selector_hint": "Explicit vs implicit cache billing table",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "cache % rules",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "alibaba",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "selector_hint": "Section 'Text generation - Qwen' -> per-family tables, 'Singapore' then 'China (Beijing)' sub-tables; columns Input tokens per request tier | Input | Output | Free quota. Large page (~670KB).",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Large static page ~670KB",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "alibaba",
+    "url": "https://help.aliyun.com/en/model-studio/token-plan-personal-overview",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://help.aliyun.com/en/model-studio/token-plan-personal-overview",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "no credit-per-token rates",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "alibaba",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.alibabacloud.com/help/en/model-studio/coding-plan",
+      "selector_hint": "'Plan details' -> Price / Quota block",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "alibaba",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview",
+      "selector_hint": "'Personal Edition' and 'Team Edition' pricing tables",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "alibaba_cn",
+    "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "selector_hint": "pricing table (Chinese)",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "credit rates not exposed; secondary",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "amazon",
+    "url": "https://aws.amazon.com/bedrock/pricing/",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+      "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "WebFetch returned no numbers (JS placeholders); used nova/pricing + metered JSON",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "amazon",
+    "url": "https://aws.amazon.com/nova/pricing/",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+      "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "amazon",
+    "url": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+      "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "gzip JSON, keyed by RegionlessRateCode, price per 1K tokens",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "amp",
+    "url": "https://ampcode.com/docs/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://ampcode.com/docs/pricing",
+      "selector_hint": "'Amp Tiers' cards + 'How Usage Is Charged'",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "anthropic",
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.claude.com/docs/en/about-claude/models/overview.md",
+      "selector_hint": "models comparison table rows 'Context window' / 'Max output'",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "context window / max output",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "anthropic",
+    "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "selector_hint": "table under '## Model pricing'; batch table under '### Batch processing'; context from /docs/en/about-claude/models/overview.md",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "anthropic",
+    "url": "https://claude.com/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://claude.com/pricing",
+      "selector_hint": "plan cards: Individual / Team / Enterprise tabs; usage wording under each plan",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "JS page; WebFetch summary only",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "anthropic",
+    "url": "https://finopsllm.com/research/claude-pro-max-tokens-limit",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://finopsllm.com/research/claude-pro-max-tokens-limit",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "secondary measurement (Sept 2026)",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "anthropic",
+    "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+      "selector_hint": "article body: 'Max 5x includes five times...' paragraph",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "augment",
+    "url": "https://www.augmentcode.com/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://www.augmentcode.com/pricing",
+      "selector_hint": "plan cards",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "aws-bedrock",
+    "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Public AWS Price List API, no auth (1.5MB). No DeepSeek V4 / GLM-5.3 / Qwen3.8 / MiniMax M3 on Bedrock as of fetch.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "aws-bedrock",
+    "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrockFoundationModels/current/us-east-1/index.json",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+      "selector_hint": "products[].attributes.model + usagetype (…-input-tokens / -output-tokens / -mantle-…-global-standard); terms.OnDemand[sku].priceDimensions.pricePerUnit.USD per 1K tokens. Claude/3P marketplace models in AmazonBedrockFoundationModels offer (servicename 'Claude Opus 5.5 (Amazon Bedrock Edition)', per 1M tokens)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Claude (incl. Opus/Sonnet 5.5, Fable, Mythos) and GPT-6 Astra marketplace SKUs.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "aws_kiro",
+    "url": "https://kiro.dev/pricing/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://kiro.dev/pricing/",
+      "selector_hint": "pricing table",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "azure",
+    "url": "https://prices.azure.com/api/retail/prices",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+      "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Public Azure Retail Prices API, no auth; 1,770 Foundry Models meters in eastus2. No Claude meters (Claude on Foundry billed via Marketplace).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "baichuan",
+    "url": "https://platform.baichuan-ai.com/prices",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://platform.baichuan-ai.com/prices",
+      "selector_hint": "'通用大模型' table: 计费项|上下文长度|时间|价格 (元/千tokens)",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "static",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "baidu",
+    "url": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a",
+      "selector_hint": "price tables",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "Older duplicate; consistent ERNIE 5.x numbers",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "baidu",
+    "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "selector_hint": "Model service billing tables: 模型名称|版本|服务内容|子项|在线推理|批量推理|单位 (元/千tokens; multiply by 1000)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "static",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "baidu",
+    "url": "https://intl.cloud.baidu.com/zh/doc/qianfan/s/Jm8r1826a-intl",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://intl.cloud.baidu.com/zh/doc/qianfan/s/Jm8r1826a-intl",
+      "selector_hint": "Tables 模型名称|版本名称|服务内容|子项|在线推理|单位 (美元/百万tokens)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "intl USD",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "baseten",
+    "url": "https://www.baseten.co/pricing/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.baseten.co/pricing/",
+      "selector_hint": "Model APIs table (Input / Cached Input / Output per 1M)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "byteplus",
+    "url": "https://docs.byteplus.com/en/docs/ModelArk/1544106",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://docs.byteplus.com/en/docs/ModelArk/1544106",
+      "selector_hint": "Page embeds window._ROUTER_DATA JSON; parse 'MDContent' string -> markdown tables under '## Online inference (standard)', '## Online inference (Flex)', '## Batch inference'",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Embedded router JSON MDContent",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "byteplus",
+    "url": "https://kilo.ai/inference/subscriptions/byteplus",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://kilo.ai/inference/subscriptions/byteplus",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "secondary Lite numbers",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "byteplus",
+    "url": "https://www.byteplus.com/en/activity/codingplan",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://docs.byteplus.com/en/docs/modelark/coding-plan-personal-plan-overview",
+      "selector_hint": "plan overview table (JS rendered; WebFetch saw only nav)",
+      "volatility": "high"
+    },
+    "fetch_ok": false,
+    "notes": "JS: 'Loading pricing...'; secondary kilo.ai",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "cerebras",
+    "url": "https://www.cerebras.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://www.cerebras.ai/pricing",
+      "selector_hint": "Sanity CMS JSON embedded in page HTML: tableRow cells ['GPT OSS 120B','~3000 tokens/s','$0.35/M tokens','$0.75/M tokens']",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "WebFetch failed (JS-rendered); curl + grep of embedded CMS JSON worked.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "cerebras",
+    "url": "https://www.cerebras.ai/code",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.cerebras.ai/code",
+      "selector_hint": "Code plan cards",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "chutes",
+    "url": "https://llm.chutes.ai/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://llm.chutes.ai/v1/models",
+      "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. 14 models, all TEE.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "chutes",
+    "url": "https://chutes.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://chutes.ai/pricing",
+      "selector_hint": "plan cards + 'View plan limits'",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "limits behind 'View plan limits' (not fetched)",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "cloudflare",
+    "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+      "selector_hint": "LLM pricing table ('$X per M input tokens' + neurons)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "cognition",
+    "url": "https://devin.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://devin.ai/pricing",
+      "selector_hint": "plan cards (windsurf.com/pricing 308-redirects here)",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "cohere",
+    "url": "https://cohere.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cohere.com/pricing",
+      "selector_hint": "Next.js RSC payload: objects with \"modelName\":..,\"pricings\":[{\"inputPrice\":..,\"outputPrice\":..}]; legacy models in FAQ text",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "core42",
+    "url": "https://www.core42.ai/compass/documentation/compass-model-pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.core42.ai/compass/documentation/compass-model-pricing",
+      "selector_hint": "text model table: input/output per 1M tokens USD",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "cursor",
+    "url": "https://cursor.com/docs/models-and-pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://cursor.com/docs/models-and-pricing.md",
+      "selector_hint": "'## Plans' table + '## Usage pools'; per-model rate table",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "cursor",
+    "url": "https://cursor.com/help/models-and-usage/usage-limits.md",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cursor.com/help/models-and-usage/usage-limits.md",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "usage pools help",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "cursor",
+    "url": "https://cursor.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cursor.com/pricing",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "JSON-LD offers: Pro 20 / Pro+ 60 / Ultra 200 / Teams 40",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "deepinfra",
+    "url": "https://api.deepinfra.com/models/list",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://api.deepinfra.com/models/list",
+      "selector_hint": "[] where model_name==<id>: pricing.cents_per_input_token/cents_per_output_token (x1e4 = USD/Mtok); cached = input x pricing.rate_per_input_token_cached; skip rows with deprecated timestamp",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. 386 models. Prices in cents/token.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "deepseek",
+    "url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://api-docs.deepseek.com/quick_start/pricing",
+      "selector_hint": "'Model Details' table: PRICING rows (cache hit / cache miss / output) x OFF-PEAK / PEAK columns per model",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Static HTML, curl ok",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "deepseek",
+    "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+      "selector_hint": "'模型细节' 表: 价格 rows 空闲时段/高峰时段",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "zh-cn page CNY",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "factory",
+    "url": "https://factory.com/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://factory.com/pricing",
+      "selector_hint": "plan cards (factory.ai 307 -> factory.com)",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "featherless",
+    "url": "https://api.featherless.ai/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://api.featherless.ai/v1/models",
+      "selector_hint": "data[] where id==<id>: pricing.input / pricing.output (USD/Mtok); context_length; concurrency_cost (22k models, ~7MB)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth; 22,130 models (raw saved as filtered subset).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "featherless",
+    "url": "https://featherless.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://featherless.ai/pricing",
+      "selector_hint": "plan cards + 'Every spec, side by side' table",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Chat $25/mo unlimited tokens 4 conc units 32K ctx; Developer $50/mo credits per-token; Business custom.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "fireworks",
+    "url": "https://docs.fireworks.ai/serverless/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.fireworks.ai/serverless/pricing",
+      "selector_hint": "Headline models table (input / cached input / output); size-tier table; multipliers",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "fireworks.ai/pricing only links to docs for serverless; docs page used.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "fireworks",
+    "url": "https://fireworks.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://fireworks.ai/pricing",
+      "selector_hint": "links to docs for serverless prices",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "No serverless token table on marketing page.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "github",
+    "url": "https://docs.github.com/en/copilot/get-started/plans",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+      "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "github",
+    "url": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "per-model token rates for AI Credits",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "google",
+    "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://ai.google.dev/gemini-api/docs/models/<id>",
+      "selector_hint": "'Input token limit' / 'Output token limit' cells",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "token limits (also 3.5-flash, 3.5-flash-lite, 3.1-pro-preview, 3.1-flash-lite, 2.5-pro, 2.5-flash-lite)",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "google",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing.md",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://ai.google.dev/gemini-api/docs/pricing.md",
+      "selector_hint": "per-model <h2 id=model-id> sections, Standard/Batch/Flex/Priority tabs, 'Paid Tier, per 1M tokens in USD' rows; token limits on /gemini-api/docs/models/<id>",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "google",
+    "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "I/O 2026: 5h refresh until weekly limit; Ultra $100 new, $200 (was $250)",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "google",
+    "url": "https://docs.cloud.google.com/gemini/docs/quotas",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.cloud.google.com/gemini/docs/quotas",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Code Assist quotas",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "google",
+    "url": "https://gemini.google/subscriptions/",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://gemini.google/subscriptions/",
+      "selector_hint": "plan cards; geo-priced by IP (fetched from Indonesia -> IDR)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "google",
+    "url": "https://geminicli.com/docs/resources/quota-and-pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+      "selector_hint": "table 'Maximum requests per user per day'",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "google-vertex",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "selector_hint": "Gemini 3 table (Global / Non-global rows); 'Partner models' sections per vendor (Input/Output/Cache Hit/Batch rows); ~3.4MB HTML",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "WebFetch truncated; curl + HTML table strip worked.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "groq",
+    "url": "https://console.groq.com/docs/models",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://console.groq.com/docs/models",
+      "selector_hint": "Production / Preview model tables (price column)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "groq.com/pricing fetched OK but contains no prices; used console.groq.com/docs/models.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "groq",
+    "url": "https://groq.com/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://groq.com/pricing",
+      "selector_hint": "no price table present on 2026-10-05",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "No pricing data on page.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "huggingface",
+    "url": "https://huggingface.co/docs/inference-providers/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://huggingface.co/docs/inference-providers/pricing",
+      "selector_hint": "Free Credits table",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "No markup; monthly credits Free $0.10 / PRO $2.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "huggingface",
+    "url": "https://router.huggingface.co/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://router.huggingface.co/v1/models",
+      "selector_hint": "data[] where id==<hf repo id>: providers[] {provider, status, pricing.input, pricing.output (USD/Mtok), context_length}",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. 137 models with per-provider pricing (novita, deepinfra, together, fireworks-ai, groq, cerebras, nscale, scaleway, ovhcloud, baseten, featherless-ai, publicai, zai-org, cohere).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "hyperbolic",
+    "url": "https://www.hyperbolic.ai/docs/inference/overview",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://www.hyperbolic.ai/docs/inference/overview",
+      "selector_hint": "FAQ",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "Serverless inference API and playground retired (~2026-09-24); GPU rental only. No rows.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "ibm-watsonx",
+    "url": "https://www.ibm.com/products/watsonx-ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.ibm.com/products/watsonx-ai/pricing",
+      "selector_hint": "foundation model pricing table",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "iflytek",
+    "url": "https://inkmetaai.com/news/2026-09-08-iflytek-spark-x2-5-release",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://inkmetaai.com/news/2026-09-08-iflytek-spark-x2-5-release",
+      "selector_hint": "article body",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "SECONDARY source",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "iflytek",
+    "url": "https://www.xfyun.cn/doc/spark/BillingDescription.html",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.xfyun.cn/doc/spark/BillingDescription.html",
+      "selector_hint": "no prices; defers to console",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "No numbers published",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "iflytek",
+    "url": "https://xinghuo.xfyun.cn/sparkapi",
+    "fetch_recipe": {
+      "method": "manual",
+      "endpoint": "https://xinghuo.xfyun.cn/sparkapi",
+      "selector_hint": "JS SPA",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "JS-only, no prices in HTML",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "inflection",
+    "url": "https://developers.inflection.ai/docs/pricing",
+    "fetch_recipe": {
+      "method": "manual",
+      "endpoint": "https://developers.inflection.ai",
+      "selector_hint": "",
+      "volatility": "low"
+    },
+    "fetch_ok": false,
+    "notes": "DNS ENOTFOUND; only secondary sources (Inflection 3 Pi $2.5/$10, 8K ctx) - not recorded",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "infomaniak",
+    "url": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+      "selector_hint": "LLM cards 'Input token: CHF X / 1M tokens'",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "WebFetch returned truncated content; curl + HTML strip worked.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "ionos",
+    "url": "https://cloud.ionos.com/managed/ai-model-hub",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.ionos.com/managed/ai-model-hub",
+      "selector_hint": "LLM pricing table (per 1M input/output tokens)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "www.ionos.com/cloud/ai-model-hub returned HTTP 421; cloud.ionos.com page used.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "ionos",
+    "url": "https://www.ionos.com/cloud/ai-model-hub",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.ionos.com/cloud/ai-model-hub",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "HTTP 421 Misdirected Request.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "jetbrains",
+    "url": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "selector_hint": "license tiers table",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "kluster",
+    "url": "https://www.kluster.ai/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.kluster.ai/",
+      "selector_hint": "",
+      "volatility": "low"
+    },
+    "fetch_ok": false,
+    "notes": "api.kluster.ai unreachable; search results: kluster.ai joined MITO, services sunset 2026-06-09 (secondary). No rows.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "krutrim",
+    "url": "https://cloud.olakrutrim.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.olakrutrim.com/ai-studio",
+      "selector_hint": "Model-as-a-service list 'Text Generation' with INR per 1M tokens",
+      "volatility": "low"
+    },
+    "fetch_ok": false,
+    "notes": "404",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "krutrim",
+    "url": "https://www.olakrutrim.com/ai-studio",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.olakrutrim.com/ai-studio",
+      "selector_hint": "Model-as-a-service list 'Text Generation' with INR per 1M tokens",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "lambda",
+    "url": "https://lambda.ai/inference",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://lambda.ai/inference",
+      "selector_hint": "deprecation banner",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "Lambda Inference API is winding down ('As the Inference API winds down...'); no per-token prices published. No rows.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "liquid",
+    "url": "https://www.liquid.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.liquid.ai/pricing",
+      "selector_hint": "",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "no pay-per-token API; free license <$10M revenue, enterprise contact-sales",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "minimax",
+    "url": "https://platform.minimax.io/docs/guides/pricing-paygo",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.minimax.io/docs/guides/pricing-paygo.md",
+      "selector_hint": "'## LLM' section: <Tabs> Standard/Priority tables + M2.7 table; strikethrough = list price, second number = current",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "guides/pricing returns audio-subscription page; LLM PAYG is at pricing-paygo",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "minimax",
+    "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.minimaxi.com/docs/guides/pricing-paygo.md",
+      "selector_hint": "'LLM' section tables, prices in 元/百万tokens",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "CNY",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "minimax",
+    "url": "https://platform.minimax.io/docs/guides/pricing-token-plan.md",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://platform.minimax.io/docs/guides/pricing-token-plan.md",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Token Plan Plus/Max/Ultra (superseded by M Plan)",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "minimax",
+    "url": "https://platform.minimax.io/docs/m-plan/intro",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.minimax.io/docs/m-plan/intro.md",
+      "selector_hint": "'Usage limits' relative table; prices in /docs/m-plan/monthly-offer.md",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "minimax",
+    "url": "https://platform.minimax.io/docs/m-plan/monthly-offer.md",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://platform.minimax.io/docs/m-plan/monthly-offer.md",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "M Plan prices",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "mistral",
+    "url": "https://mistral.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://mistral.ai/pricing/api",
+      "selector_hint": "server-rendered model cards: model name then 'Input (/M tokens)' / 'Output (/M tokens)' values; strip tags",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "FAQ only (batch 50%, cache up to 90%); table is on /pricing/api",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "mistral",
+    "url": "https://mistral.ai/pricing/api",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://mistral.ai/pricing/api",
+      "selector_hint": "server-rendered model cards: model name then 'Input (/M tokens)' / 'Output (/M tokens)' values; strip tags",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "mistral",
+    "url": "https://mistral.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://mistral.ai/pricing",
+      "selector_hint": "Le Chat / Vibe plan cards",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "moonshot",
+    "url": "https://platform.kimi.ai/docs/pricing/batch.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.kimi.ai/docs/pricing/batch.md",
+      "selector_hint": "first paragraph '60% of the standard model price'",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "Batch 60%",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "moonshot",
+    "url": "https://platform.kimi.ai/docs/pricing/chat",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.kimi.ai/docs/pricing/chat.md",
+      "selector_hint": "<DocTable> rows under '### K3 Series Models' and '### K2 Series Models'",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "HTML table JS-rendered; .md variant has data. platform.moonshot.ai 301 -> platform.kimi.ai",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "moonshot",
+    "url": "https://platform.kimi.ai/docs/pricing/limits.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.kimi.ai/docs/pricing/limits.md",
+      "selector_hint": "bullet re recharge/voucher + Tier table",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "$5 voucher",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "moonshot",
+    "url": "https://platform.moonshot.cn/docs/pricing/chat",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.moonshot.cn/docs/pricing/chat.md",
+      "selector_hint": "<DocTable> rows under '### K3 系列模型' / '### K2 系列模型'",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": ".md variant",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "moonshot",
+    "url": "https://tracecheck.dev/kimi-code/usage-limits/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://tracecheck.dev/kimi-code/usage-limits/",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "secondary",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "moonshot",
+    "url": "https://www.kimi.com/en/help/membership/membership-pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "selector_hint": "'Plan Benefits' list + 'Kimi Code limit' paragraph",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "naver",
+    "url": "https://guide.ncloud-docs.com/docs/clovastudio-info",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://guide.ncloud-docs.com/docs/clovastudio-info",
+      "selector_hint": "",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "context only: HCX-007/HCX-005 128K combined; HCX-DASH-002 32K; no prices",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "naver",
+    "url": "https://www.ncloud.com/product/aiService/clovaStudio",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://www.ncloud.com/v2/product/aiService/clovaStudio#pricing",
+      "selector_hint": "pricing tab",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "pricing table not in static HTML; KRW per-token prices not extracted",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "nebius",
+    "url": "https://tokenfactory.nebius.com/organization/prices",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://nebius.com/token-factory/prices",
+      "selector_hint": "SPA; needs headless browser",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "Redirects to tokenfactory SPA (8.9KB shell, no prices).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "novita",
+    "url": "https://api.novita.ai/v3/openai/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://api.novita.ai/v3/openai/models",
+      "selector_hint": "data[] where id==<id>: pricing.prompt.price_per_m_decimal / pricing.completion.price_per_m_decimal / pricing.input_cache_read.price_per_m_decimal (USD/Mtok); is_tiered_billing flag",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. 121 models.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "nscale",
+    "url": "https://www.nscale.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.nscale.com/product/serverless",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "404; serverless page exists but not fetched for prices.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "openai",
+    "url": "https://developers.openai.com/api/docs/models/gpt-6-astra.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://developers.openai.com/api/docs/models/<id>.md",
+      "selector_hint": "bullet 'N context window', 'N max output tokens'",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "per-model pages for context (also gpt-6.1-sol, gpt-6-luna, gpt-5.6-*)",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "openai",
+    "url": "https://developers.openai.com/api/docs/pricing.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://developers.openai.com/api/docs/pricing.md",
+      "selector_hint": "'### Standard pricing data' table (+ Batch/Flex/Fast tables); context from /api/docs/models/<id>.md",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "openai",
+    "url": "https://platform.openai.com/docs/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://developers.openai.com/api/docs/pricing.md",
+      "selector_hint": "'### Standard pricing data' table (+ Batch/Flex/Fast tables); context from /api/docs/models/<id>.md",
+      "volatility": "high"
+    },
+    "fetch_ok": false,
+    "notes": "301 redirect to developers.openai.com/api/docs/pricing",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "openai",
+    "url": "https://chatgpt.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://chatgpt.com/pricing",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "403",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "openai",
+    "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "403",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "openai",
+    "url": "https://learn.chatgpt.com/docs/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://learn.chatgpt.com/docs/pricing.md",
+      "selector_hint": "FAQ 'What are the usage limits for my plan?' table (Plus / Standard Business local messages per 5h) + 'Token rates' credits table",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "openrouter",
+    "url": "https://openrouter.ai/api/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://openrouter.ai/api/v1/models",
+      "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. total_count=466 models on 2026-10-05.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "openrouter",
+    "url": "https://openrouter.ai/api/v1/models/{id}/endpoints",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://openrouter.ai/api/v1/models/{id}/endpoints",
+      "selector_hint": "data.endpoints[].pricing.prompt/completion per provider",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public per-provider endpoint prices; saved for 31 benchmark ids in raw_openrouter_endpoints.json",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "openrouter",
+    "url": "https://openrouter.ai/docs/faq",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://openrouter.ai/docs/faq",
+      "selector_hint": "fees section",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "5.5% Stripe credit fee ($0.80 min), 5% crypto; no token markup; BYOK free to $25k/mo then 5%; free models 50 req/day (1000 with >=$10 credits).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "openrouter",
+    "url": "https://openrouter.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://openrouter.ai/pricing",
+      "selector_hint": "fees table; model prices via https://openrouter.ai/api/v1/models data[].pricing",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "oracle-oci",
+    "url": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://apexapps.oracle.com/pls/apex/cetools/api/v1/products/?currencyCode=USD",
+      "selector_hint": "items[] where serviceCategory contains 'Generative AI': displayName, metricName, currencyCodeLocalizations[0].prices[PAY_AS_YOU_GO].value",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "Public Oracle price list API, no auth.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "oracle-oci",
+    "url": "https://www.oracle.com/cloud/ai/generative-ai/pricing/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.oracle.com/cloud/ai/generative-ai/pricing/",
+      "selector_hint": "",
+      "volatility": "low"
+    },
+    "fetch_ok": false,
+    "notes": "HTTP 403 to WebFetch; 404 to curl. Used price list API instead.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "ovhcloud",
+    "url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+      "selector_hint": "catalog cards 'X€/Mtoken(input)'",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "parasail",
+    "url": "https://www.parasail.io/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.parasail.io/pricing",
+      "selector_hint": "'Price per 1M tokens' table (Model / Input / Output / Cache read)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "perplexity",
+    "url": "https://docs.perplexity.ai/getting-started/models",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.perplexity.ai/getting-started/pricing",
+      "selector_hint": "Sonar token price table + request-fee table by search context size (low/medium/high)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "no context windows listed",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "perplexity",
+    "url": "https://docs.perplexity.ai/getting-started/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.perplexity.ai/getting-started/pricing",
+      "selector_hint": "Sonar token price table + request-fee table by search context size (low/medium/high)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "perplexity",
+    "url": "https://www.perplexity.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://www.perplexity.ai/pricing",
+      "selector_hint": "plan cards (403 to bots)",
+      "volatility": "medium"
+    },
+    "fetch_ok": false,
+    "notes": "403; secondary",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "reka",
+    "url": "https://docs.reka.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.reka.ai/pricing",
+      "selector_hint": "model pricing table (input/output per 1M tokens, image/video/audio columns)",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "replicate",
+    "url": "https://replicate.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://replicate.com/pricing",
+      "selector_hint": "featured models list ('$X / million input tokens')",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "replit",
+    "url": "https://replit.com/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://replit.com/pricing",
+      "selector_hint": "plan cards",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "requesty",
+    "url": "https://router.requesty.ai/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://router.requesty.ai/v1/models",
+      "selector_hint": "data[] where id==<provider>/<model>: input_price / output_price / cached_price / caching_price (USD per token); pricing[] tiers",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. 749 provider-model routes incl. Azure/Bedrock/Vertex regional variants (@region).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "requesty",
+    "url": "https://www.requesty.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.requesty.ai/pricing",
+      "selector_hint": "plans section",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "5% markup on provider prices; free tier 200 req/day on free models.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "sakana",
+    "url": "https://console.sakana.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://console.sakana.ai/pricing",
+      "selector_hint": "API models section (Fugu Ultra / Fugu Max / Namazu) input/cached/output per 1M",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "sambanova",
+    "url": "https://api.sambanova.ai/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://api.sambanova.ai/v1/models",
+      "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion (USD per token); cross-check https://cloud.sambanova.ai/plans/pricing",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth (6 models).",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "sambanova",
+    "url": "https://cloud.sambanova.ai/plans/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.sambanova.ai/plans/pricing",
+      "selector_hint": "pricing table",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "sarvam",
+    "url": "https://www.sarvam.ai/api-pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://www.sarvam.ai/api-pricing",
+      "selector_hint": "LLM section: per-model INR per 1M tokens input/cached/output",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "scaleway",
+    "url": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "sensetime",
+    "url": "https://platform.sensenova.cn/pricing",
+    "fetch_recipe": {
+      "method": "manual",
+      "endpoint": "https://platform.sensenova.cn/",
+      "selector_hint": "SPA",
+      "volatility": "low"
+    },
+    "fetch_ok": false,
+    "notes": "404",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "sensetime",
+    "url": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+      "selector_hint": "Tables '日日新-融合模态大模型': 服务|计费项|单价 (元/千tokens; x1000)",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "SenseCore help center",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "siliconflow",
+    "url": "https://siliconflow.cn/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://siliconflow.cn/pricing",
+      "selector_hint": "'对话模型' table: 厂商|模型|输入价格|输出价格|缓存价格 (¥/M tokens); collapsed '展开更多' rows may be missing in static HTML",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "static; collapsed rows not all visible",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "siliconflow",
+    "url": "https://www.siliconflow.com/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.siliconflow.com/pricing",
+      "selector_hint": "Per-vendor tables: Model Name|Context Length|Input|Cached Input|Output ($/M); 'Load More' hides rows",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "static; Load More hides rows",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "stackblitz",
+    "url": "https://bolt.new/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://bolt.new/pricing",
+      "selector_hint": "plan cards",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "stepfun",
+    "url": "https://platform.stepfun.ai/docs/en/guides/pricing/details",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.stepfun.ai/docs/en/guides/pricing/details.md",
+      "selector_hint": "Markdown tables under '### Pricing for Multimodal Reasoning Models' / '### Pricing for Reasoning Models'",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "md",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "stepfun",
+    "url": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://platform.stepfun.com/docs/zh/guides/pricing/details.md",
+      "selector_hint": "Markdown tables under '### 多模态推理大模型的定价表' / '### 推理大模型的定价表'",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "md",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "synthetic",
+    "url": "https://synthetic.new/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://synthetic.new/pricing",
+      "selector_hint": "'Subscription Packs' block",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "t3chat",
+    "url": "https://t3.chat/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://t3.chat/pricing",
+      "selector_hint": "pricing (429 to bot)",
+      "volatility": "high"
+    },
+    "fetch_ok": false,
+    "notes": "429; secondary",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "tencent",
+    "url": "https://cloud.tencent.com/document/product/1729/97731",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.tencent.com/document/product/1729/97731",
+      "selector_hint": "'token 后付费' table 刊例价（每百万tokens）",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "legacy Hunyuan pricing",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "tencent",
+    "url": "https://cloud.tencent.com/document/product/1823/130055",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://cloud.tencent.com/document/product/1823/130055",
+      "selector_hint": "'语言模型' tables (广州 tab then 新加坡 tab, both 元/百万tokens): 模型名称|条件|峰谷计费|推理输入|推理输出|缓存命中. Needs --compressed.",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "needs curl --compressed",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "tencent",
+    "url": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.codebuddy.ai/docs/ide/Account/pricing",
+      "selector_hint": "plans table",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "together",
+    "url": "https://www.together.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.together.ai/pricing",
+      "selector_hint": "Serverless Inference tables (Input / Cached input / Output / Batch API price columns)",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "upstage",
+    "url": "https://console.upstage.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://console.upstage.ai/pricing",
+      "selector_hint": "",
+      "volatility": "high"
+    },
+    "fetch_ok": false,
+    "notes": "JS shell; only promo banner extracted",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "upstage",
+    "url": "https://www.upstage.ai/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://www.upstage.ai/pricing",
+      "selector_hint": "'Generative intelligence' tab: model card, 'Input / Input(Cached) / Output ... 1M tokens'; promo windows encoded as 'start|end|input=..|cached=..|output=..' strings next to card",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "vercel",
+    "url": "https://ai-gateway.vercel.sh/v1/models",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://ai-gateway.vercel.sh/v1/models",
+      "selector_hint": "data[] where id==<id>: pricing.input / pricing.output / pricing.input_cache_read / pricing.input_cache_write (USD per token); *_tiers arrays; varies_by_provider flag",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Public, no auth. 406 models.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "vercel",
+    "url": "https://vercel.com/docs/ai-gateway/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://vercel.com/docs/ai-gateway/pricing",
+      "selector_hint": "'AI Gateway charges no markup' paragraph",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "No markup, no platform fee; free tier = monthly free credit on subset of models.",
+    "part": "api_hosts.json"
+  },
+  {
+    "provider_id": "volcengine",
+    "url": "https://www.volcengine.com/docs/82379/1544106",
+    "fetch_recipe": {
+      "method": "json_api",
+      "endpoint": "https://www.volcengine.com/api/doc/getDocDetail?DocumentID=1544106&LibraryID=82379&type=online",
+      "selector_hint": "Result.MDContent markdown; tables under '## 在线推理（常规）', '## 在线推理（低优）', '## 批量推理'. HTML page is JS-only.",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "HTML JS-only; JSON getDocDetail API works",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "volcengine",
+    "url": "https://docs.volcengine.com/docs/82379/1925114",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://docs.volcengine.com/docs/82379/1925114",
+      "selector_hint": "'套餐详情' table; quota cells rendered client-side",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "quota numbers rendered client-side; structure only",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "warp",
+    "url": "https://www.warp.dev/pricing",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://www.warp.dev/pricing",
+      "selector_hint": "plan cards",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "writer",
+    "url": "https://dev.writer.com/home/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://dev.writer.com/home/pricing",
+      "selector_hint": "Palmyra model pricing table (input/output per 1M tokens)",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "xai",
+    "url": "https://docs.x.ai/developers/pricing.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.x.ai/developers/pricing.md",
+      "selector_hint": "'## Batch API Pricing' list",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "batch discounts (20% for grok-4.3/4.20), priority 2x",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "xai",
+    "url": "https://docs.x.ai/docs/models.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.x.ai/docs/models.md",
+      "selector_hint": "'### Text API Pricing' table (two rows per model: <200k / >=200k prompt tokens); batch discounts in https://docs.x.ai/developers/pricing.md '## Batch API Pricing'",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "primary pricing source",
+    "part": "api_western.json"
+  },
+  {
+    "provider_id": "xai",
+    "url": "https://grok.com/plans",
+    "fetch_recipe": {
+      "method": "html_js_rendered",
+      "endpoint": "https://grok.com/plans",
+      "selector_hint": "plan cards (x.ai 403)",
+      "volatility": "high"
+    },
+    "fetch_ok": false,
+    "notes": "403 to WebFetch; data from secondary",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "xai",
+    "url": "https://justinmckelvey.com/blog/supergrok-pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://justinmckelvey.com/blog/supergrok-pricing",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "secondary tier list",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "xiaomi",
+    "url": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "platform.xiaomimimo.com and mimo.mi.com are SPAs; mimo.mi.com/llms.txt indexes static .md docs",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "zai",
+    "url": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "selector_hint": "Tables '## 旗舰模型' and '### 文本模型' (+ accordion 更多文本模型); columns 上下文|输入|输出|缓存存储|缓存命中",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "bigmodel.cn/pricing is JS SPA; docs .md has data",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "zai",
+    "url": "https://docs.z.ai/guides/llm/glm-5.3.md",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.z.ai/guides/llm/glm-5.3.md",
+      "selector_hint": "overview sentence: context/max output",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "1M ctx / 128K out",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "zai",
+    "url": "https://docs.z.ai/guides/overview/pricing",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.z.ai/guides/overview/pricing.md",
+      "selector_hint": "Markdown tables '### Latest Models' / '### Text Models' (Input | Cached Input | Cached Input Storage | Output)",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "Mintlify .md",
+    "part": "api_china_asia.json"
+  },
+  {
+    "provider_id": "zai",
+    "url": "https://docs.z.ai/devpack/notice/usage-revision.md",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://docs.z.ai/devpack/notice/usage-revision.md",
+      "selector_hint": "",
+      "volatility": "medium"
+    },
+    "fetch_ok": true,
+    "notes": "legacy prompt quotas (Lite ~80/5h, Pro ~400, Max ~1,600) replaced 2026-07-30",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "zai",
+    "url": "https://docs.z.ai/devpack/overview",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.z.ai/devpack/overview.md",
+      "selector_hint": "'Usage Credit Allowance' table + multipliers table + 'Estimated Token Allowance' table",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "zai",
+    "url": "https://docs.z.ai/devpack/teamplan",
+    "fetch_recipe": {
+      "method": "docs_markdown",
+      "endpoint": "https://docs.z.ai/devpack/teamplan.md",
+      "selector_hint": "seat quota table",
+      "volatility": "high"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  },
+  {
+    "provider_id": "zed",
+    "url": "https://zed.dev/pricing",
+    "fetch_recipe": {
+      "method": "html_static",
+      "endpoint": "https://zed.dev/pricing",
+      "selector_hint": "plan cards",
+      "volatility": "low"
+    },
+    "fetch_ok": true,
+    "notes": "",
+    "part": "subscriptions.json"
+  }
+]

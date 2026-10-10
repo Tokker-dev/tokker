@@ -1,0 +1,123 @@
+{
+  "provider_id": "01ai",
+  "offers": [
+    {
+      "id": "01ai/yi-lightning",
+      "provider_id": "01ai",
+      "provider_name": "01.AI (Lingyiwanwu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "yi-lightning",
+      "model_name": "Yi-Lightning",
+      "model_creator": "01ai",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 0.99,
+      "output_per_mtok": 0.99,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 16000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY; single blended price per 1M tokens (input+output)",
+      "source": "https://platform.lingyiwanwu.com/docs",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Page states yi-lightning now smart-routes to DeepSeek-V3, Qwen3-30B-A3B, Yi-Lightning etc. Platform alive but effectively a router; footer copyright 2024.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://platform.lingyiwanwu.com/docs",
+        "selector_hint": "Next.js RSC payload in HTML: table after heading '模型与计费', column '价格/1M token'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.14766,
+        "output_per_mtok": 0.14766,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.14766
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.lingyiwanwu.com/docs",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "01ai/yi-vision-v2",
+      "provider_id": "01ai",
+      "provider_name": "01.AI (Lingyiwanwu)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "yi-vision-v2",
+      "model_name": "Yi-Vision-V2",
+      "model_creator": "01ai",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 6,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 16000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY, blended",
+      "source": "https://platform.lingyiwanwu.com/docs",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Routes to Qwen2.5-VL-72B-Instruct etc.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://platform.lingyiwanwu.com/docs",
+        "selector_hint": "Next.js RSC payload in HTML: table after heading '模型与计费', column '价格/1M token'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.894908,
+        "output_per_mtok": 0.894908,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.894908
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.lingyiwanwu.com/docs",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

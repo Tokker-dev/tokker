@@ -1,0 +1,297 @@
+{
+  "provider_id": "minimax",
+  "offers": [
+    {
+      "id": "minimax/minimax-m2.7-cn",
+      "provider_id": "minimax",
+      "provider_name": "MiniMax",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "minimax-m2.7",
+      "model_name": "MiniMax-M2.7",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 2.1,
+      "output_per_mtok": 8.4,
+      "cached_input_per_mtok": 0.42,
+      "cache_write_per_mtok": 2.625,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimaxi.com/docs/guides/pricing-paygo.md",
+        "selector_hint": "'LLM' section tables, prices in 元/百万tokens",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.313218,
+        "output_per_mtok": 1.252871,
+        "cached_input_per_mtok": 0.062644,
+        "cache_write_per_mtok": 0.391522,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.548131
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "minimax/minimax-m2.7-highspeed-intl",
+      "provider_id": "minimax",
+      "provider_name": "MiniMax",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "minimax-m2.7-highspeed",
+      "model_name": "MiniMax-M2.7-highspeed",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.6,
+      "output_per_mtok": 2.4,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": 0.375,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International, USD",
+      "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": null,
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimax.io/docs/guides/pricing-paygo.md",
+        "selector_hint": "'## LLM' section: <Tabs> Standard/Priority tables + M2.7 table; strikethrough = list price, second number = current",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.6,
+        "output_per_mtok": 2.4,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": 0.375,
+        "blended_3to1": 1.05
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "minimax/minimax-m2.7-intl",
+      "provider_id": "minimax",
+      "provider_name": "MiniMax",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "minimax-m2.7",
+      "model_name": "MiniMax-M2.7",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": 0.375,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International, USD",
+      "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "M2.7-highspeed: $0.6/$2.4, same cache prices.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimax.io/docs/guides/pricing-paygo.md",
+        "selector_hint": "'## LLM' section: <Tabs> Standard/Priority tables + M2.7 table; strikethrough = list price, second number = current",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": 0.375,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "minimax/minimax-m3-cn",
+      "provider_id": "minimax",
+      "provider_name": "MiniMax",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "minimax-m3",
+      "model_name": "MiniMax-M3",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 2.1,
+      "output_per_mtok": 8.4,
+      "cached_input_per_mtok": 0.42,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "<=512K: ¥2.10/¥8.40/hit ¥0.42; >512K: ¥4.20/¥16.80/hit ¥0.84. Priority 1.5x.",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China platform.minimaxi.com, CNY",
+      "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "永久五折 from list ¥4.20/¥16.80.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimaxi.com/docs/guides/pricing-paygo.md",
+        "selector_hint": "'LLM' section tables, prices in 元/百万tokens",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.313218,
+        "output_per_mtok": 1.252871,
+        "cached_input_per_mtok": 0.062644,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.548131
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimaxi.com/docs/guides/pricing-paygo",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "minimax/minimax-m3-intl",
+      "provider_id": "minimax",
+      "provider_name": "MiniMax",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "minimax-m3",
+      "model_name": "MiniMax-M3",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "<=512K input: $0.30/$1.20/hit $0.06; >512K input: $0.60/$2.40/hit $0.12. Priority tier (service_tier=priority) = 1.5x: $0.45/$1.80 (<=512K).",
+      "context_window": 1000000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "International platform.minimax.io, USD",
+      "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Prices shown as 'Permanent 50% off' from list $0.60/$2.40/$0.12. Cache write for M3 not listed. MiniMax-M3.1-Flash-Preview only via M Plan / MiniMax Code (no PAYG).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.minimax.io/docs/guides/pricing-paygo.md",
+        "selector_hint": "'## LLM' section: <Tabs> Standard/Priority tables + M2.7 table; strikethrough = list price, second number = current",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.minimax.io/docs/guides/pricing-paygo",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

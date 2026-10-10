@@ -1,0 +1,287 @@
+{
+  "vendor_id": "moonshot",
+  "plans": [
+    {
+      "id": "moonshot/allegretto",
+      "vendor_id": "moonshot",
+      "vendor_name": "Moonshot AI",
+      "product": "Kimi membership + Kimi Code",
+      "plan_name": "Allegretto",
+      "category": "coding_agent",
+      "currency": "CNY",
+      "price_month": 199,
+      "price_year": "unknown",
+      "models_included": [
+        "kimi-for-coding",
+        "k3",
+        "k3-256k"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "About 150 Agent uses [shared credit pool]"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Kimi Code also has a separate limit of 5 hours per week, which applies only to Kimi Code"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "For the 5-hour cap and weekly frequency controls, please refer to the prompts shown on the page."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "CNY monthly price; annual 'save up to CNY1,680'. Secondary (tracecheck.dev, Sep 2026): Kimi Code ~300-1,200 requests per rolling 5h across tiers, not mapped to tiers; K3 consumes ~2x quota of k3-256k. USD annual-billed secondary: Moderato $15/mo, Allegretto $31/mo, Allegro $79/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.kimi.com/en/help/membership/membership-pricing",
+        "selector_hint": "'Plan Benefits' list + 'Kimi Code limit' paragraph",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 29.681114,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/allegro",
+      "vendor_id": "moonshot",
+      "vendor_name": "Moonshot AI",
+      "product": "Kimi membership + Kimi Code",
+      "plan_name": "Allegro",
+      "category": "coding_agent",
+      "currency": "CNY",
+      "price_month": 699,
+      "price_year": "unknown",
+      "models_included": [
+        "kimi-for-coding",
+        "k3",
+        "k3-256k"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "About 360 Agent uses [shared credit pool]"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Kimi Code also has a separate limit of 5 hours per week, which applies only to Kimi Code"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "For the 5-hour cap and weekly frequency controls, please refer to the prompts shown on the page."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "CNY monthly price; annual 'save up to CNY1,680'. Secondary (tracecheck.dev, Sep 2026): Kimi Code ~300-1,200 requests per rolling 5h across tiers, not mapped to tiers; K3 consumes ~2x quota of k3-256k. USD annual-billed secondary: Moderato $15/mo, Allegretto $31/mo, Allegro $79/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.kimi.com/en/help/membership/membership-pricing",
+        "selector_hint": "'Plan Benefits' list + 'Kimi Code limit' paragraph",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 104.256779,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/andante",
+      "vendor_id": "moonshot",
+      "vendor_name": "Moonshot AI",
+      "product": "Kimi membership + Kimi Code",
+      "plan_name": "Andante",
+      "category": "coding_agent",
+      "currency": "CNY",
+      "price_month": 49,
+      "price_year": "unknown",
+      "models_included": [
+        "kimi-for-coding"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "About 30 Agent uses [shared credit pool]"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Kimi Code also has a separate limit of 5 hours per week, which applies only to Kimi Code"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "For the 5-hour cap and weekly frequency controls, please refer to the prompts shown on the page."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "CNY monthly price; annual 'save up to CNY1,680'. Secondary (tracecheck.dev, Sep 2026): Kimi Code ~300-1,200 requests per rolling 5h across tiers, not mapped to tiers; K3 consumes ~2x quota of k3-256k. USD annual-billed secondary: Moderato $15/mo, Allegretto $31/mo, Allegro $79/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.kimi.com/en/help/membership/membership-pricing",
+        "selector_hint": "'Plan Benefits' list + 'Kimi Code limit' paragraph",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 7.308415,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/moderato",
+      "vendor_id": "moonshot",
+      "vendor_name": "Moonshot AI",
+      "product": "Kimi membership + Kimi Code",
+      "plan_name": "Moderato",
+      "category": "coding_agent",
+      "currency": "CNY",
+      "price_month": 99,
+      "price_year": "unknown",
+      "models_included": [
+        "kimi-for-coding",
+        "k3",
+        "k3-256k"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "About 60 Agent uses [shared credit pool]"
+        },
+        {
+          "window": "weekly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Kimi Code also has a separate limit of 5 hours per week, which applies only to Kimi Code"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "For the 5-hour cap and weekly frequency controls, please refer to the prompts shown on the page."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "CNY monthly price; annual 'save up to CNY1,680'. Secondary (tracecheck.dev, Sep 2026): Kimi Code ~300-1,200 requests per rolling 5h across tiers, not mapped to tiers; K3 consumes ~2x quota of k3-256k. USD annual-billed secondary: Moderato $15/mo, Allegretto $31/mo, Allegro $79/mo.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.kimi.com/en/help/membership/membership-pricing",
+        "selector_hint": "'Plan Benefits' list + 'Kimi Code limit' paragraph",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 14.765982,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.kimi.com/en/help/membership/membership-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

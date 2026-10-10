@@ -1,0 +1,411 @@
+{
+  "provider_id": "amazon",
+  "offers": [
+    {
+      "id": "amazon/nova-2-lite",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-2-lite",
+      "model_name": "Amazon Nova 2 Lite",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 2.5,
+      "cached_input_per_mtok": 0.075,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Geo/in-region standard $0.33/$2.75 (+10%). Priority $0.525/$4.375. Flex $0.15/$1.25.",
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input. Flex tier is 50% off; batch row for Nova 2 Lite not clearly mapped.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 2.5,
+        "cached_input_per_mtok": 0.075,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.85
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "amazon/nova-2-omni-preview",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-2-omni-preview",
+      "model_name": "Amazon Nova 2 Omni (Preview)",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 2.5,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input. Text in $0.30, audio in $1.00, text out $2.50, image out $40/1M.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 2.5,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.85
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "amazon/nova-2-pro-preview",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-2-pro-preview",
+      "model_name": "Amazon Nova 2 Pro (Preview)",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.25,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.3125,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Geo $1.375/$11. Priority $2.1875/$17.50. Flex $0.625/$5.",
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input. cached computed as 25% of input per page footnote.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.25,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.3125,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3.4375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "amazon/nova-lite",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-lite",
+      "model_name": "Amazon Nova Lite",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.06,
+      "output_per_mtok": 0.24,
+      "cached_input_per_mtok": 0.015,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.06,
+        "output_per_mtok": 0.24,
+        "cached_input_per_mtok": 0.015,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.105
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "amazon/nova-micro",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-micro",
+      "model_name": "Amazon Nova Micro",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.035,
+      "output_per_mtok": 0.14,
+      "cached_input_per_mtok": 0.00875,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input. Batch $0.0175/$0.07.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.035,
+        "output_per_mtok": 0.14,
+        "cached_input_per_mtok": 0.00875,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.06125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "amazon/nova-premier",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-premier",
+      "model_name": "Amazon Nova Premier",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2.5,
+      "output_per_mtok": 12.5,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input. Batch $1.25/$6.25.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2.5,
+        "output_per_mtok": 12.5,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "amazon/nova-pro",
+      "provider_id": "amazon",
+      "provider_name": "Amazon (Bedrock)",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "nova-pro",
+      "model_name": "Amazon Nova Pro",
+      "model_creator": "amazon",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 3.2,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://aws.amazon.com/nova/pricing/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices resolved from AWS metered price JSON (Global cross-Region inference, Standard tier). Cache read = 75% below on-demand input. Latency-optimized $1.00/$4.00. Batch $0.40/$1.60.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/bedrock/USD/current/bedrock.json",
+        "selector_hint": "page https://aws.amazon.com/nova/pricing/ has {priceOf!bedrock/bedrock!<HASH>!*!1000} placeholders; look up HASH as RegionlessRateCode in the JSON (gzip) -> 'price' is per 1K tokens; x1000 = per 1M",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.8,
+        "output_per_mtok": 3.2,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://aws.amazon.com/nova/pricing/",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

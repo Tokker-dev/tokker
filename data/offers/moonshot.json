@@ -1,0 +1,297 @@
+{
+  "provider_id": "moonshot",
+  "offers": [
+    {
+      "id": "moonshot/kimi-k2.6-cn",
+      "provider_id": "moonshot",
+      "provider_name": "Moonshot AI (Kimi)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshot",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 6.5,
+      "output_per_mtok": 27,
+      "cached_input_per_mtok": 1.1,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://platform.moonshot.cn/docs/pricing/chat",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "kimi-k2.7-code CN: ¥6.50/¥1.30 hit/¥27.00.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.moonshot.cn/docs/pricing/chat.md",
+        "selector_hint": "<DocTable> rows under '### K3 系列模型' / '### K2 系列模型'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.969484,
+        "output_per_mtok": 4.027086,
+        "cached_input_per_mtok": 0.164066,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.733884
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.moonshot.cn/docs/pricing/chat",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/kimi-k2.6-intl",
+      "provider_id": "moonshot",
+      "provider_name": "Moonshot AI (Kimi)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshot",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.95,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.16,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 40,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": "Recharge >= $1 to start; $5 voucher once cumulative recharge reaches $5 (platform.kimi.ai/docs/pricing/limits).",
+      "region_notes": "International, USD",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 60% of standard price (platform.kimi.ai/docs/pricing/batch).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.kimi.ai/docs/pricing/chat.md",
+        "selector_hint": "<DocTable> rows under '### K3 Series Models' and '### K2 Series Models'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.95,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": 0.16,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.7125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.kimi.ai/docs/pricing/chat",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/kimi-k2.7-code-intl",
+      "provider_id": "moonshot",
+      "provider_name": "Moonshot AI (Kimi)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "kimi-k2.7-code",
+      "model_name": "Kimi K2.7 Code",
+      "model_creator": "moonshot",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 0.95,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.19,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 40,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": "Recharge >= $1 to start; $5 voucher once cumulative recharge reaches $5 (platform.kimi.ai/docs/pricing/limits).",
+      "region_notes": "International, USD",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Highspeed variant kimi-k2.7-code-highspeed: $1.90 in / $0.38 hit / $8.00 out. Batch API = 60% of standard price (platform.kimi.ai/docs/pricing/batch).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.kimi.ai/docs/pricing/chat.md",
+        "selector_hint": "<DocTable> rows under '### K3 Series Models' and '### K2 Series Models'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.95,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": 0.19,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.7125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.kimi.ai/docs/pricing/chat",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/kimi-k3-cn",
+      "provider_id": "moonshot",
+      "provider_name": "Moonshot AI (Kimi)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshot",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 20,
+      "output_per_mtok": 100,
+      "cached_input_per_mtok": 2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China platform.moonshot.cn, CNY",
+      "source": "https://platform.moonshot.cn/docs/pricing/chat",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "CN batch page not fetched. cache_write_per_mtok as published: \"5min TTL ¥20; 1h TTL ¥40\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.moonshot.cn/docs/pricing/chat.md",
+        "selector_hint": "<DocTable> rows under '### K3 系列模型' / '### K2 系列模型'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2.983027,
+        "output_per_mtok": 14.915133,
+        "cached_input_per_mtok": 0.298303,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 5.966054
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.moonshot.cn/docs/pricing/chat",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "moonshot/kimi-k3-intl",
+      "provider_id": "moonshot",
+      "provider_name": "Moonshot AI (Kimi)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshot",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 40,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": "unknown",
+      "free_tier": "Recharge >= $1 to start; $5 voucher once cumulative recharge reaches $5 (platform.kimi.ai/docs/pricing/limits).",
+      "region_notes": "International platform.kimi.ai (platform.moonshot.ai 301-redirects here), USD, excl. tax",
+      "source": "https://platform.kimi.ai/docs/pricing/chat",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "2.8T-param open-weights flagship. Explicit cache-write pricing by TTL (new for Kimi). Batch API = 60% of standard price (platform.kimi.ai/docs/pricing/batch). Batch table includes K3? not verified per-model. cache_write_per_mtok as published: \"5min TTL $3.00; 1h TTL $6.00\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://platform.kimi.ai/docs/pricing/chat.md",
+        "selector_hint": "<DocTable> rows under '### K3 Series Models' and '### K2 Series Models'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.kimi.ai/docs/pricing/chat",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "provider_id": "baichuan",
+  "offers": [
+    {
+      "id": "baichuan/baichuan-m3",
+      "provider_id": "baichuan",
+      "provider_name": "Baichuan AI",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "baichuan-m3",
+      "model_name": "Baichuan-M3",
+      "model_creator": "baichuan",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 10,
+      "output_per_mtok": 30,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32000,
+      "max_output": "unknown",
+      "free_tier": "Sign-up gift ¥80 (3 months) per page text dated 2024-05-22 - may be stale",
+      "region_notes": "China, CNY (元/千tokens converted x1000)",
+      "source": "https://platform.baichuan-ai.com/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Medical model. Baichuan has pivoted to medical models (M-series).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://platform.baichuan-ai.com/prices",
+        "selector_hint": "'通用大模型' table: 计费项|上下文长度|时间|价格 (元/千tokens)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 1.491513,
+        "output_per_mtok": 4.47454,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 2.23727
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.baichuan-ai.com/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baichuan/baichuan-m3-plus",
+      "provider_id": "baichuan",
+      "provider_name": "Baichuan AI",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "baichuan-m3-plus",
+      "model_name": "Baichuan-M3-Plus",
+      "model_creator": "baichuan",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 5,
+      "output_per_mtok": 9,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32000,
+      "max_output": "unknown",
+      "free_tier": "Sign-up gift ¥80 (3 months) per page text dated 2024-05-22 - may be stale",
+      "region_notes": "China, CNY (元/千tokens converted x1000)",
+      "source": "https://platform.baichuan-ai.com/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Medical model; auto-triggers 医疗搜索 ¥0.03/call billed separately. Baichuan has pivoted to medical models (M-series).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://platform.baichuan-ai.com/prices",
+        "selector_hint": "'通用大模型' table: 计费项|上下文长度|时间|价格 (元/千tokens)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.745757,
+        "output_per_mtok": 1.342362,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.894908
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.baichuan-ai.com/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baichuan/baichuan4-air",
+      "provider_id": "baichuan",
+      "provider_name": "Baichuan AI",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "baichuan4-air",
+      "model_name": "Baichuan4-Air",
+      "model_creator": "baichuan",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 0.98,
+      "output_per_mtok": 0.98,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32000,
+      "max_output": "unknown",
+      "free_tier": "Sign-up gift ¥80 (3 months) per page text dated 2024-05-22 - may be stale",
+      "region_notes": "China, CNY (元/千tokens converted x1000)",
+      "source": "https://platform.baichuan-ai.com/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Blended. Baichuan has pivoted to medical models (M-series).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://platform.baichuan-ai.com/prices",
+        "selector_hint": "'通用大模型' table: 计费项|上下文长度|时间|价格 (元/千tokens)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.146168,
+        "output_per_mtok": 0.146168,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.146168
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.baichuan-ai.com/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baichuan/baichuan4-turbo",
+      "provider_id": "baichuan",
+      "provider_name": "Baichuan AI",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "baichuan4-turbo",
+      "model_name": "Baichuan4-Turbo",
+      "model_creator": "baichuan",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 15,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": null,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 32000,
+      "max_output": "unknown",
+      "free_tier": "Sign-up gift ¥80 (3 months) per page text dated 2024-05-22 - may be stale",
+      "region_notes": "China, CNY (元/千tokens converted x1000)",
+      "source": "https://platform.baichuan-ai.com/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Single blended price (input+output). Baichuan has pivoted to medical models (M-series).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://platform.baichuan-ai.com/prices",
+        "selector_hint": "'通用大模型' table: 计费项|上下文长度|时间|价格 (元/千tokens)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 2.23727,
+        "output_per_mtok": 2.23727,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 2.23727
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://platform.baichuan-ai.com/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

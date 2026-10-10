@@ -1,0 +1,117 @@
+{
+  "vendor_id": "stackblitz",
+  "plans": [
+    {
+      "id": "stackblitz/pro",
+      "vendor_id": "stackblitz",
+      "vendor_name": "StackBlitz",
+      "product": "Bolt.new",
+      "plan_name": "Pro",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 25,
+      "price_year": null,
+      "models_included": [
+        "claude (bolt)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "tokens",
+          "amount": 10000000,
+          "quote": "Start at 10M tokens per month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 10000000,
+      "est_usd_per_mtok_at_full_use": 2.5,
+      "estimate_assumption": "Vendor counts tokens directly.",
+      "source": "https://bolt.new/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Free: 300K tokens daily limit, 1M tokens per month.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://bolt.new/pricing",
+        "selector_hint": "plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 25,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://bolt.new/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "stackblitz/teams",
+      "vendor_id": "stackblitz",
+      "vendor_name": "StackBlitz",
+      "product": "Bolt.new",
+      "plan_name": "Teams",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 30,
+      "price_year": null,
+      "models_included": [
+        "claude (bolt)"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "tokens",
+          "amount": 10000000,
+          "quote": "10M tokens monthly per team member"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 10000000,
+      "est_usd_per_mtok_at_full_use": 3,
+      "estimate_assumption": "Vendor counts tokens directly.",
+      "source": "https://bolt.new/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://bolt.new/pricing",
+        "selector_hint": "plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 30,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://bolt.new/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

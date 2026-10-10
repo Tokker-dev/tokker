@@ -1,0 +1,182 @@
+{
+  "provider_id": "sensetime",
+  "offers": [
+    {
+      "id": "sensetime/sensenova-v6-reasoner",
+      "provider_id": "sensetime",
+      "provider_name": "SenseTime SenseNova (SenseCore)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "sensenova-v6-reasoner",
+      "model_name": "SenseNova-V6-Reasoner",
+      "model_creator": "sensetime",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 4,
+      "output_per_mtok": 16,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY (quoted 元/千tokens, converted)",
+      "source": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Hourly postpaid. platform.sensenova.cn is SPA; pricing found on SenseCore help center. No newer (V7) model on this page.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+        "selector_hint": "Tables '日日新-融合模态大模型': 服务|计费项|单价 (元/千tokens; x1000)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.596605,
+        "output_per_mtok": 2.386421,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.044059
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sensetime/sensenova-v6.5-pro",
+      "provider_id": "sensetime",
+      "provider_name": "SenseTime SenseNova (SenseCore)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "sensenova-v6.5-pro",
+      "model_name": "SenseNova-V6.5-Pro",
+      "model_creator": "sensetime",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 3,
+      "output_per_mtok": 9,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY (quoted 元/千tokens, converted)",
+      "source": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Hourly postpaid. platform.sensenova.cn is SPA; pricing found on SenseCore help center. No newer (V7) model on this page.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+        "selector_hint": "Tables '日日新-融合模态大模型': 服务|计费项|单价 (元/千tokens; x1000)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.447454,
+        "output_per_mtok": 1.342362,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.671181
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sensetime/sensenova-v6.5-turbo",
+      "provider_id": "sensetime",
+      "provider_name": "SenseTime SenseNova (SenseCore)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "sensenova-v6.5-turbo",
+      "model_name": "SenseNova-V6.5-Turbo",
+      "model_creator": "sensetime",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 1.5,
+      "output_per_mtok": 4.5,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY (quoted 元/千tokens, converted)",
+      "source": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Hourly postpaid. platform.sensenova.cn is SPA; pricing found on SenseCore help center. No newer (V7) model on this page.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+        "selector_hint": "Tables '日日新-融合模态大模型': 服务|计费项|单价 (元/千tokens; x1000)",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.223727,
+        "output_per_mtok": 0.671181,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.335591
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.sensecore.cn/help/docs/model-as-a-service/nova/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

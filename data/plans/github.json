@@ -1,0 +1,382 @@
+{
+  "vendor_id": "github",
+  "plans": [
+    {
+      "id": "github/business",
+      "vendor_id": "github",
+      "vendor_name": "GitHub",
+      "product": "GitHub Copilot",
+      "plan_name": "Business",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 19,
+      "price_year": null,
+      "models_included": [
+        "claude-opus-5.5",
+        "claude-sonnet-5.5",
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gemini-3.8-flash",
+        "grok-4.7",
+        "kimi-k3",
+        "..."
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 1900,
+          "quote": "Total per user per month: 1,900"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 18075221,
+      "est_usd_per_mtok_at_full_use": 1.0512,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Copilot bills GitHub AI Credits (1 credit = $0.01) at per-token model rates (docs models-and-pricing); tokens = credit $ / Sonnet 5.5 standard-mix rate.",
+      "source": "https://docs.github.com/en/copilot/get-started/plans",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Since June 2026 usage-based AI Credits replaced premium requests (legacy annual subs: Pro 300 / Pro+ 1500 premium requests/mo, $0.04 per extra request). Cheaper models stretch credits: at GPT-6 Luna ($0.10/$0.01/$0.50) the same credits buy ~20x more tokens. Credits value $19.00 vs price $19.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+        "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 19,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.github.com/en/copilot/get-started/plans",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "github/enterprise",
+      "vendor_id": "github",
+      "vendor_name": "GitHub",
+      "product": "GitHub Copilot",
+      "plan_name": "Enterprise",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 39,
+      "price_year": null,
+      "models_included": [
+        "claude-opus-5.5",
+        "claude-sonnet-5.5",
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gemini-3.8-flash",
+        "grok-4.7",
+        "kimi-k3",
+        "..."
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 3900,
+          "quote": "Total per user per month: 3,900"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 37101770,
+      "est_usd_per_mtok_at_full_use": 1.0512,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Copilot bills GitHub AI Credits (1 credit = $0.01) at per-token model rates (docs models-and-pricing); tokens = credit $ / Sonnet 5.5 standard-mix rate.",
+      "source": "https://docs.github.com/en/copilot/get-started/plans",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Since June 2026 usage-based AI Credits replaced premium requests (legacy annual subs: Pro 300 / Pro+ 1500 premium requests/mo, $0.04 per extra request). Cheaper models stretch credits: at GPT-6 Luna ($0.10/$0.01/$0.50) the same credits buy ~20x more tokens. Credits value $39.00 vs price $39.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+        "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 39,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.github.com/en/copilot/get-started/plans",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "github/free",
+      "vendor_id": "github",
+      "vendor_name": "GitHub",
+      "product": "GitHub Copilot",
+      "plan_name": "Free",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "selected models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": "unknown",
+          "quote": "An allowance of GitHub AI Credits"
+        },
+        {
+          "window": "monthly",
+          "unit": "requests",
+          "amount": 2000,
+          "quote": "Limited to 2,000 completions per month"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://docs.github.com/en/copilot/get-started/plans",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Credit allowance not quantified.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+        "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.github.com/en/copilot/get-started/plans",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "github/max",
+      "vendor_id": "github",
+      "vendor_name": "GitHub",
+      "product": "GitHub Copilot",
+      "plan_name": "Max",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "claude-opus-5.5",
+        "claude-sonnet-5.5",
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gemini-3.8-flash",
+        "grok-4.7",
+        "kimi-k3",
+        "..."
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 20000,
+          "quote": "Base Credits: 10,000 monthly; Flex: 10,000; Total: 20,000 monthly AI credits"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 190265487,
+      "est_usd_per_mtok_at_full_use": 0.5256,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Copilot bills GitHub AI Credits (1 credit = $0.01) at per-token model rates (docs models-and-pricing); tokens = credit $ / Sonnet 5.5 standard-mix rate.",
+      "source": "https://docs.github.com/en/copilot/get-started/plans",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Since June 2026 usage-based AI Credits replaced premium requests (legacy annual subs: Pro 300 / Pro+ 1500 premium requests/mo, $0.04 per extra request). Cheaper models stretch credits: at GPT-6 Luna ($0.10/$0.01/$0.50) the same credits buy ~20x more tokens. Credits value $200.00 vs price $100.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+        "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.github.com/en/copilot/get-started/plans",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "github/pro",
+      "vendor_id": "github",
+      "vendor_name": "GitHub",
+      "product": "GitHub Copilot",
+      "plan_name": "Pro",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 10,
+      "price_year": null,
+      "models_included": [
+        "claude-opus-5.5",
+        "claude-sonnet-5.5",
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gemini-3.8-flash",
+        "grok-4.7",
+        "kimi-k3",
+        "..."
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 1500,
+          "quote": "Base Credits: 1,000 monthly; Flex Allotment: 500 additional credits; Total: 1,500 monthly AI credits"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 14269912,
+      "est_usd_per_mtok_at_full_use": 0.7008,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Copilot bills GitHub AI Credits (1 credit = $0.01) at per-token model rates (docs models-and-pricing); tokens = credit $ / Sonnet 5.5 standard-mix rate.",
+      "source": "https://docs.github.com/en/copilot/get-started/plans",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Since June 2026 usage-based AI Credits replaced premium requests (legacy annual subs: Pro 300 / Pro+ 1500 premium requests/mo, $0.04 per extra request). Cheaper models stretch credits: at GPT-6 Luna ($0.10/$0.01/$0.50) the same credits buy ~20x more tokens. Credits value $15.00 vs price $10.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+        "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 10,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.github.com/en/copilot/get-started/plans",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "github/pro-plus",
+      "vendor_id": "github",
+      "vendor_name": "GitHub",
+      "product": "GitHub Copilot",
+      "plan_name": "Pro+",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 39,
+      "price_year": null,
+      "models_included": [
+        "claude-opus-5.5",
+        "claude-sonnet-5.5",
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gemini-3.8-flash",
+        "grok-4.7",
+        "kimi-k3",
+        "..."
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "credits",
+          "amount": 7000,
+          "quote": "Base Credits: 3,900 monthly; Flex: 3,100; Total: 7,000 monthly AI credits"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 66592920,
+      "est_usd_per_mtok_at_full_use": 0.5856,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Copilot bills GitHub AI Credits (1 credit = $0.01) at per-token model rates (docs models-and-pricing); tokens = credit $ / Sonnet 5.5 standard-mix rate.",
+      "source": "https://docs.github.com/en/copilot/get-started/plans",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Since June 2026 usage-based AI Credits replaced premium requests (legacy annual subs: Pro 300 / Pro+ 1500 premium requests/mo, $0.04 per extra request). Cheaper models stretch credits: at GPT-6 Luna ($0.10/$0.01/$0.50) the same credits buy ~20x more tokens. Credits value $70.00 vs price $39.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://docs.github.com/en/copilot/get-started/plans",
+        "selector_hint": "plan sections: 'AI Credits' base + flex allotment per plan",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 39,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.github.com/en/copilot/get-started/plans",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

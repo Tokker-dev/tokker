@@ -1,0 +1,173 @@
+{
+  "vendor_id": "factory",
+  "plans": [
+    {
+      "id": "factory/max",
+      "vendor_id": "factory",
+      "vendor_name": "Factory",
+      "product": "Droid",
+      "plan_name": "Max",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "frontier models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "~10x the usage of Pro"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://factory.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "No absolute token allowance published (previously 'Standard Tokens').",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://factory.com/pricing",
+        "selector_hint": "plan cards (factory.ai 307 -> factory.com)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://factory.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "factory/plus",
+      "vendor_id": "factory",
+      "vendor_name": "Factory",
+      "product": "Droid",
+      "plan_name": "Plus",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "frontier models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "~5x the usage of Pro"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://factory.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "No absolute token allowance published (previously 'Standard Tokens').",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://factory.com/pricing",
+        "selector_hint": "plan cards (factory.ai 307 -> factory.com)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://factory.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "factory/pro",
+      "vendor_id": "factory",
+      "vendor_name": "Factory",
+      "product": "Droid",
+      "plan_name": "Pro",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "frontier models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "base"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://factory.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "No absolute token allowance published (previously 'Standard Tokens').",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://factory.com/pricing",
+        "selector_hint": "plan cards (factory.ai 307 -> factory.com)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://factory.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

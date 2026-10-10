@@ -1,0 +1,241 @@
+{
+  "provider_id": "infomaniak",
+  "offers": [
+    {
+      "id": "infomaniak/gemma-4-31b-it",
+      "provider_id": "infomaniak",
+      "provider_name": "Infomaniak AI Services",
+      "provider_type": "cloud",
+      "provider_country": "CH",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "CHF",
+      "input_per_mtok": 0.2,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Switzerland (sovereign, data stays in CH).",
+      "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in CHF excl. VAT. Also Qwen3.5-122B-A10B CHF0.40/3.20, Ministral-3-14B CHF0.30/0.40, Apertus-v1.5-70B CHF0.70/2.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+        "selector_hint": "LLM cards 'Input token: CHF X / 1M tokens'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.241943,
+        "output_per_mtok": 0.483887,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.302429
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "infomaniak/kimi-k2.6",
+      "provider_id": "infomaniak",
+      "provider_name": "Infomaniak AI Services",
+      "provider_type": "cloud",
+      "provider_country": "CH",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "CHF",
+      "input_per_mtok": 0.6,
+      "output_per_mtok": 3,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Switzerland (sovereign, data stays in CH).",
+      "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in CHF excl. VAT. Also Qwen3.5-122B-A10B CHF0.40/3.20, Ministral-3-14B CHF0.30/0.40, Apertus-v1.5-70B CHF0.70/2.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+        "selector_hint": "LLM cards 'Input token: CHF X / 1M tokens'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.72583,
+        "output_per_mtok": 3.629149,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.45166
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "infomaniak/mistral-small-4-119b-2603",
+      "provider_id": "infomaniak",
+      "provider_name": "Infomaniak AI Services",
+      "provider_type": "cloud",
+      "provider_country": "CH",
+      "model_slug": "mistral-small-4-119b-2603",
+      "model_name": "Mistral Small 4 119B 2603",
+      "model_creator": "mistral",
+      "open_weights": true,
+      "currency": "CHF",
+      "input_per_mtok": 0.2,
+      "output_per_mtok": 0.75,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Switzerland (sovereign, data stays in CH).",
+      "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in CHF excl. VAT. Also Qwen3.5-122B-A10B CHF0.40/3.20, Ministral-3-14B CHF0.30/0.40, Apertus-v1.5-70B CHF0.70/2.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+        "selector_hint": "LLM cards 'Input token: CHF X / 1M tokens'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.241943,
+        "output_per_mtok": 0.907287,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.408279
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "infomaniak/qwen3.5-397b-a17b",
+      "provider_id": "infomaniak",
+      "provider_name": "Infomaniak AI Services",
+      "provider_type": "cloud",
+      "provider_country": "CH",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "CHF",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 3.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Switzerland (sovereign, data stays in CH).",
+      "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in CHF excl. VAT. Also Qwen3.5-122B-A10B CHF0.40/3.20, Ministral-3-14B CHF0.30/0.40, Apertus-v1.5-70B CHF0.70/2.50. Served as Qwen3.5-397B-A17B-FP8.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+        "selector_hint": "LLM cards 'Input token: CHF X / 1M tokens'",
+        "volatility": "low"
+      },
+      "usd": {
+        "input_per_mtok": 0.967773,
+        "output_per_mtok": 4.354979,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.814574
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.infomaniak.com/en/hosting/ai-services/prices",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

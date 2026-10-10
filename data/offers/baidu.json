@@ -1,0 +1,299 @@
+{
+  "provider_id": "baidu",
+  "offers": [
+    {
+      "id": "baidu/deepseek-v4.1-flash",
+      "provider_id": "baidu",
+      "provider_name": "Baidu Qianfan",
+      "provider_type": "inference_host",
+      "provider_country": "CN",
+      "model_slug": "deepseek-v4.1-flash",
+      "model_name": "DeepSeek-V4.1-Flash (on Qianfan)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "CNY",
+      "input_per_mtok": 2,
+      "output_per_mtok": 8,
+      "cached_input_per_mtok": 0.04,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": "Peak 8:00-22:00: ¥2/¥8/hit ¥0.04; idle 22:00-08:00: ¥1/¥4/hit ¥0.02. National Day promo price (国庆限定价) 40% off: peak ¥1.2/¥4.8.",
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Qianfan's peak window (8:00-22:00 daily) differs from DeepSeek's own. DeepSeek-V4-Pro-0813 peak ¥9/¥27.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+        "selector_hint": "Model service billing tables: 模型名称|版本|服务内容|子项|在线推理|批量推理|单位 (元/千tokens; multiply by 1000)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.298303,
+        "output_per_mtok": 1.193211,
+        "cached_input_per_mtok": 0.005966,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.52203
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baidu/ernie-4.5-turbo-128k",
+      "provider_id": "baidu",
+      "provider_name": "Baidu Qianfan",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "ernie-4.5-turbo-128k",
+      "model_name": "ERNIE-4.5-Turbo-128K",
+      "model_creator": "baidu",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 0.8,
+      "output_per_mtok": 3.2,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": 60,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 128000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Batch ¥0.32/¥1.28 (=60% off). Search-augmented trigger ¥0.004/call.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+        "selector_hint": "Model service billing tables: 模型名称|版本|服务内容|子项|在线推理|批量推理|单位 (元/千tokens; multiply by 1000)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.119321,
+        "output_per_mtok": 0.477284,
+        "cached_input_per_mtok": 0.02983,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.208812
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baidu/ernie-5.0-cn",
+      "provider_id": "baidu",
+      "provider_name": "Baidu Qianfan",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "ernie-5.0",
+      "model_name": "ERNIE-5.0",
+      "model_creator": "baidu",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 6,
+      "output_per_mtok": 24,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "Input <=32K: ¥6/¥24; 32K-128K: ¥10/¥40",
+      "context_window": 128000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Also covers ERNIE-5.0-Thinking-Preview/Latest/Exp.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+        "selector_hint": "Model service billing tables: 模型名称|版本|服务内容|子项|在线推理|批量推理|单位 (元/千tokens; multiply by 1000)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.894908,
+        "output_per_mtok": 3.579632,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.566089
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baidu/ernie-5.0-intl",
+      "provider_id": "baidu",
+      "provider_name": "Baidu Qianfan",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "ernie-5.0",
+      "model_name": "ERNIE-5.0",
+      "model_creator": "baidu",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 5.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Qianfan International (intl.cloud.baidu.com), USD",
+      "source": "https://intl.cloud.baidu.com/zh/doc/qianfan/s/Jm8r1826a-intl",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Intl also lists DeepSeek-V4-Pro $1.69/$3.38 (hit $0.14), DeepSeek-V4-Flash $0.14/$0.28, GLM-5.2 $1.4/$4.4, Kimi-K2.6 $0.95/$4.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://intl.cloud.baidu.com/zh/doc/qianfan/s/Jm8r1826a-intl",
+        "selector_hint": "Tables 模型名称|版本名称|服务内容|子项|在线推理|单位 (美元/百万tokens)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.4,
+        "output_per_mtok": 5.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.45
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://intl.cloud.baidu.com/zh/doc/qianfan/s/Jm8r1826a-intl",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "baidu/ernie-5.1",
+      "provider_id": "baidu",
+      "provider_name": "Baidu Qianfan",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "ernie-5.1",
+      "model_name": "ERNIE-5.1",
+      "model_creator": "baidu",
+      "open_weights": false,
+      "currency": "CNY",
+      "input_per_mtok": 4,
+      "output_per_mtok": 18,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": null,
+      "offpeak": null,
+      "tiered_pricing": "Input <=32K: ¥4/¥18 per M (0.004/0.018 元/千tokens); 32K-128K: ¥6/¥22",
+      "context_window": 128000,
+      "max_output": "unknown",
+      "free_tier": "New-user free quota exists (doc '新用户免费额度'), amount not on this page",
+      "region_notes": "China, CNY (page quotes 元/千tokens; converted x1000)",
+      "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "No batch price listed.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+        "selector_hint": "Model service billing tables: 模型名称|版本|服务内容|子项|在线推理|批量推理|单位 (元/千tokens; multiply by 1000)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.596605,
+        "output_per_mtok": 2.684724,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.118635
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

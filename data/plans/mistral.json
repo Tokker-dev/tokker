@@ -1,0 +1,119 @@
+{
+  "vendor_id": "mistral",
+  "plans": [
+    {
+      "id": "mistral/pro",
+      "vendor_id": "mistral",
+      "vendor_name": "Mistral AI",
+      "product": "Le Chat + Vibe",
+      "plan_name": "Pro",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 14.99,
+      "price_year": null,
+      "models_included": [
+        "mistral-large",
+        "devstral / vibe"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "messages",
+          "amount": "unknown",
+          "quote": "Higher message and search allowances than Free; All-day coding in the CLI, IDE, or on web"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://mistral.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Students $5.99. Page lists 'API Credits Included: Pro $15/month' (Free $10/month) - effectively a $15 API credit bundle; tokens depend on model.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://mistral.ai/pricing",
+        "selector_hint": "Le Chat / Vibe plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 14.99,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mistral.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "mistral/team",
+      "vendor_id": "mistral",
+      "vendor_name": "Mistral AI",
+      "product": "Le Chat + Vibe",
+      "plan_name": "Team",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 24.99,
+      "price_year": null,
+      "models_included": [
+        "mistral-large",
+        "vibe"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "$24.99/user/month ($50/month minimum)"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://mistral.ai/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://mistral.ai/pricing",
+        "selector_hint": "Le Chat / Vibe plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 24.99,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mistral.ai/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

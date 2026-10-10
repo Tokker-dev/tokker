@@ -1,0 +1,64 @@
+{
+  "provider_id": "iflytek",
+  "offers": [
+    {
+      "id": "iflytek/spark-x2.5",
+      "provider_id": "iflytek",
+      "provider_name": "iFlytek Spark (Astron MaaS)",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "spark-x2.5",
+      "model_name": "Spark X2.5",
+      "model_creator": "iflytek",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 3.2,
+      "output_per_mtok": 12,
+      "cached_input_per_mtok": 0.48,
+      "cache_write_per_mtok": null,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 256000,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "China, CNY",
+      "source": "https://inkmetaai.com/news/2026-09-08-iflytek-spark-x2-5-release",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Secondary source (inkmetaai.com news, citing Astron MaaS model page): list ¥3.2 in / ¥0.48 cached / ¥12 out; limited-time 50% off -> ¥1.6/¥0.24/¥6. Official xinghuo.xfyun.cn/sparkapi is JS-only; official billing doc (xfyun.cn/doc/spark/BillingDescription.html) defers prices to logged-in training.xfyun.cn/account.",
+      "fetch_recipe": {
+        "method": "manual",
+        "endpoint": "https://xinghuo.xfyun.cn/sparkapi",
+        "selector_hint": "JS-rendered SPA; prices need browser render or console login",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.477284,
+        "output_per_mtok": 1.789816,
+        "cached_input_per_mtok": 0.071593,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.805417
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://inkmetaai.com/news/2026-09-08-iflytek-spark-x2-5-release",
+          "fetched_at": "2026-10-05",
+          "method": "manual",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

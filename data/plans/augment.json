@@ -1,0 +1,117 @@
+{
+  "vendor_id": "augment",
+  "plans": [
+    {
+      "id": "augment/business",
+      "vendor_id": "augment",
+      "vendor_name": "Augment Code",
+      "product": "Augment",
+      "plan_name": "Business",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "frontier models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 100,
+          "quote": "$100/mo of usage included"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 95132743,
+      "est_usd_per_mtok_at_full_use": 1.0512,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.augmentcode.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Same coverage caveat.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://www.augmentcode.com/pricing",
+        "selector_hint": "plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.augmentcode.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "augment/standard",
+      "vendor_id": "augment",
+      "vendor_name": "Augment Code",
+      "product": "Augment",
+      "plan_name": "Standard",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "frontier models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 20,
+          "quote": "$20/mo of usage included"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 19026549,
+      "est_usd_per_mtok_at_full_use": 1.0512,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.augmentcode.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Usage covers LLM inference, Context Engine, and compute costs -> real token yield below estimate. Shared across up to 50 members.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://www.augmentcode.com/pricing",
+        "selector_hint": "plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.augmentcode.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

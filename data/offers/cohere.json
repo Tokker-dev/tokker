@@ -1,0 +1,237 @@
+{
+  "provider_id": "cohere",
+  "offers": [
+    {
+      "id": "cohere/command-a-plus",
+      "provider_id": "cohere",
+      "provider_name": "Cohere",
+      "provider_type": "first_party",
+      "provider_country": "CA",
+      "model_slug": "command-a-plus",
+      "model_name": "Command A+",
+      "model_creator": "cohere",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0,
+      "output_per_mtok": 0,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "Trial API keys are free but rate-limited and not for production/commercial use.",
+      "region_notes": null,
+      "source": "https://cohere.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Pricing card shows 'API key: Free' and 'Model download: Free' (Apache 2.0, runs on two H100s). Treat as free; verify before relying on it.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cohere.com/pricing",
+        "selector_hint": "Next.js RSC payload: objects with \"modelName\":..,\"pricings\":[{\"inputPrice\":..,\"outputPrice\":..}]; legacy models in FAQ text",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0,
+        "output_per_mtok": 0,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cohere.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "cohere/command-r",
+      "provider_id": "cohere",
+      "provider_name": "Cohere",
+      "provider_type": "first_party",
+      "provider_country": "CA",
+      "model_slug": "command-r",
+      "model_name": "Command R",
+      "model_creator": "cohere",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 128000,
+      "max_output": 4000,
+      "free_tier": "Trial API keys are free but rate-limited and not for production/commercial use.",
+      "region_notes": null,
+      "source": "https://cohere.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Pricing card values inputPrice 0.15 / outputPrice 0.6 per 1M tokens.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cohere.com/pricing",
+        "selector_hint": "Next.js RSC payload: objects with \"modelName\":..,\"pricings\":[{\"inputPrice\":..,\"outputPrice\":..}]; legacy models in FAQ text",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cohere.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "cohere/command-r-plus-08-2024",
+      "provider_id": "cohere",
+      "provider_name": "Cohere",
+      "provider_type": "first_party",
+      "provider_country": "CA",
+      "model_slug": "command-r-plus-08-2024",
+      "model_name": "Command R+ 08-2024 (legacy)",
+      "model_creator": "cohere",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2.5,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "Trial API keys are free but rate-limited and not for production/commercial use.",
+      "region_notes": null,
+      "source": "https://cohere.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Legacy pricing listed in FAQ.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cohere.com/pricing",
+        "selector_hint": "Next.js RSC payload: objects with \"modelName\":..,\"pricings\":[{\"inputPrice\":..,\"outputPrice\":..}]; legacy models in FAQ text",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2.5,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 4.375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cohere.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "cohere/command-r7b",
+      "provider_id": "cohere",
+      "provider_name": "Cohere",
+      "provider_type": "first_party",
+      "provider_country": "CA",
+      "model_slug": "command-r7b",
+      "model_name": "Command R7B",
+      "model_creator": "cohere",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.0375,
+      "output_per_mtok": 0.15,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 128000,
+      "max_output": 4000,
+      "free_tier": "Trial API keys are free but rate-limited and not for production/commercial use.",
+      "region_notes": null,
+      "source": "https://cohere.com/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Smallest Command model.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://cohere.com/pricing",
+        "selector_hint": "Next.js RSC payload: objects with \"modelName\":..,\"pricings\":[{\"inputPrice\":..,\"outputPrice\":..}]; legacy models in FAQ text",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.0375,
+        "output_per_mtok": 0.15,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.065625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://cohere.com/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

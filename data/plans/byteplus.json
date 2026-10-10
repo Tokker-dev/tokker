@@ -1,0 +1,142 @@
+{
+  "vendor_id": "byteplus",
+  "plans": [
+    {
+      "id": "byteplus/lite",
+      "vendor_id": "byteplus",
+      "vendor_name": "BytePlus (ByteDance intl)",
+      "product": "ModelArk Coding Plan",
+      "plan_name": "Lite",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 20,
+      "price_year": null,
+      "models_included": [
+        "dola-seed-2.0-pro",
+        "glm-5.3-flash",
+        "deepseek-v4",
+        "kimi-k2.5",
+        "gpt-oss-120b"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": 1900,
+          "quote": "roughly 1,900 requests per 5-hour window [secondary: kilo.ai]"
+        },
+        {
+          "window": "weekly",
+          "unit": "requests",
+          "amount": 12000,
+          "quote": "12,000 requests per week [secondary]"
+        },
+        {
+          "window": "monthly",
+          "unit": "requests",
+          "amount": 24000,
+          "quote": "24,000 requests per 30-day period [secondary]"
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 3,
+          "quote": "3x usage of the Claude Pro plan [official activity page]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 516000000,
+      "est_usd_per_mtok_at_full_use": 0.0388,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Binding: monthly.",
+      "source": "https://www.byteplus.com/en/activity/codingplan",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Official page shows 'Loading pricing...' (JS). $20 per 30 days via Kilo marketplace; BytePlus marketing 'Starting at just $10/month' (first-month promo).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://docs.byteplus.com/en/docs/modelark/coding-plan-personal-plan-overview",
+        "selector_hint": "plan overview table (JS rendered; WebFetch saw only nav)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 20,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.byteplus.com/en/activity/codingplan",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "byteplus/pro",
+      "vendor_id": "byteplus",
+      "vendor_name": "BytePlus (ByteDance intl)",
+      "product": "ModelArk Coding Plan",
+      "plan_name": "Pro",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": "unknown",
+      "price_year": null,
+      "models_included": [
+        "dola-seed-2.0-pro",
+        "glm-5.3-flash",
+        "deepseek-v4",
+        "kimi-k2.5"
+      ],
+      "limits_published": [
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": 5,
+          "quote": "5x Lite plan usage; Get 3x Claude Max's usage"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 2580000000,
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. 5x Lite estimate.",
+      "source": "https://www.byteplus.com/en/activity/codingplan",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Price not visible (JS). Includes ArkClaw.",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://docs.byteplus.com/en/docs/modelark/coding-plan-personal-plan-overview",
+        "selector_hint": "plan overview table (JS rendered; WebFetch saw only nav)",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.byteplus.com/en/activity/codingplan",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

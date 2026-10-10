@@ -1,0 +1,1803 @@
+{
+  "provider_id": "openrouter",
+  "offers": [
+    {
+      "id": "openrouter/claude-opus-5.5",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "claude-opus-5.5",
+      "model_name": "Claude Opus 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 11 provider endpoints. Cheapest 3:1 blended endpoint: Amazon Bedrock (amazon-bedrock) $4.0/$20.0. First-party/creator endpoint Google: $4.0/$20.0. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 4,
+        "output_per_mtok": 20,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 5,
+        "blended_3to1": 8
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/claude-sonnet-5.5",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "claude-sonnet-5.5",
+      "model_name": "Claude Sonnet 5.5",
+      "model_creator": "anthropic",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 8 provider endpoints. Cheapest 3:1 blended endpoint: Google (google-vertex/global) $2.0/$10.0. First-party/creator endpoint Google: $2.0/$10.0. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-r1-0528",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-r1-0528",
+      "model_name": "DeepSeek R1 0528",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.5,
+      "output_per_mtok": 2.15,
+      "cached_input_per_mtok": 0.35,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 163840,
+      "max_output": 32768,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 4 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/fp4) $0.5/$2.15.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.5,
+        "output_per_mtok": 2.15,
+        "cached_input_per_mtok": 0.35,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.9125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-v3.2",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-v3.2",
+      "model_name": "DeepSeek V3.2",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.28,
+      "output_per_mtok": 0.42,
+      "cached_input_per_mtok": 0.028,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 163840,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 13 provider endpoints. Cheapest 3:1 blended endpoint: GMICloud (gmicloud/fp8) $0.2088/$0.3096. First-party/creator endpoint Alibaba: $0.3705/$1.1115.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.28,
+        "output_per_mtok": 0.42,
+        "cached_input_per_mtok": 0.028,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.315
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-v4-flash",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash",
+      "model_name": "DeepSeek V4 Flash (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.03,
+      "output_per_mtok": 1.28,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 943718,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 16 provider endpoints. Cheapest 3:1 blended endpoint: StreamLake (streamlake/fp8) $0.042/$0.084. First-party/creator endpoint Alibaba: $0.134/$0.268.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.03,
+        "output_per_mtok": 1.28,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.3425
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-v4-flash-0731",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash-0731",
+      "model_name": "DeepSeek V4 Flash 0731",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.0152,
+      "output_per_mtok": 1.28,
+      "cached_input_per_mtok": 0.0152,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 943718,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 28 provider endpoints. Cheapest 3:1 blended endpoint: StreamLake (streamlake/fp8) $0.044/$0.132. First-party/creator endpoint Alibaba: $0.352/$1.056.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.0152,
+        "output_per_mtok": 1.28,
+        "cached_input_per_mtok": 0.0152,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.3314
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-v4-pro",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-pro",
+      "model_name": "DeepSeek V4 Pro (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.2088,
+      "output_per_mtok": 0.4176,
+      "cached_input_per_mtok": 0.0174,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 384000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 16 provider endpoints. Cheapest 3:1 blended endpoint: StreamLake (streamlake/fp8) $0.2088/$0.4176. First-party/creator endpoint Alibaba: $1.416/$2.832.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.2088,
+        "output_per_mtok": 0.4176,
+        "cached_input_per_mtok": 0.0174,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.261
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-v4-pro-0813",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-pro-0813",
+      "model_name": "DeepSeek V4 Pro 0813",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.45,
+      "output_per_mtok": 5,
+      "cached_input_per_mtok": 0.4,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 943718,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 20 provider endpoints. Cheapest 3:1 blended endpoint: Ionstream (ionstream) $0.237696/$1.980032. First-party/creator endpoint Alibaba: $1.122/$3.366.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.45,
+        "output_per_mtok": 5,
+        "cached_input_per_mtok": 0.4,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.5875
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/deepseek-v4.1-flash",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4.1-flash",
+      "model_name": "DeepSeek V4.1 Flash",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.006,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 63,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 943718,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 30 provider endpoints. Cheapest 3:1 blended endpoint: Decart (decart/fp4) $0.09/$0.18. First-party/creator endpoint Alibaba: $0.3/$1.2. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.006,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gemini-3.1-pro-preview",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gemini-3.1-pro-preview",
+      "model_name": "Gemini 3.1 Pro Preview",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 12,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 0.375,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 6 provider endpoints. Cheapest 3:1 blended endpoint: Google (google-vertex/global/flex) $1.0/$6.0. First-party/creator endpoint Google: $1.0/$6.0. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 12,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 0.375,
+        "blended_3to1": 4.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gemini-3.5-flash",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gemini-3.5-flash",
+      "model_name": "Gemini 3.5 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 1.5,
+      "output_per_mtok": 9,
+      "cached_input_per_mtok": 0.15,
+      "cache_write_per_mtok": 0.083333,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 7 provider endpoints. Cheapest 3:1 blended endpoint: Google (google-vertex/global/flex) $0.75/$4.5. First-party/creator endpoint Google: $0.75/$4.5. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.5,
+        "output_per_mtok": 9,
+        "cached_input_per_mtok": 0.15,
+        "cache_write_per_mtok": 0.083333,
+        "blended_3to1": 3.375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gemini-3.8-flash",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gemini-3.8-flash",
+      "model_name": "Gemini 3.8 Flash",
+      "model_creator": "google",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.75,
+      "output_per_mtok": 3.75,
+      "cached_input_per_mtok": 0.075,
+      "cache_write_per_mtok": 0.041667,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 6 provider endpoints. Cheapest 3:1 blended endpoint: Google AI Studio (google-ai-studio/flex) $0.375/$1.875. First-party/creator endpoint Google AI Studio: $0.375/$1.875. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.75,
+        "output_per_mtok": 3.75,
+        "cached_input_per_mtok": 0.075,
+        "cache_write_per_mtok": 0.041667,
+        "blended_3to1": 1.5
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gemma-4-31b-it",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.09,
+      "output_per_mtok": 0.34,
+      "cached_input_per_mtok": 0.05,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": 16384,
+      "free_tier": "':free' variant exists",
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 13 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/turbo) $0.09/$0.34.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.09,
+        "output_per_mtok": 0.34,
+        "cached_input_per_mtok": 0.05,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.1525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/glm-5.3",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "cached_input_per_mtok": 0.14,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 68,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 131072,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 42 provider endpoints. Cheapest 3:1 blended endpoint: Novita (novita/fp8) $0.42/$1.32. First-party/creator endpoint Alibaba: $1.19/$3.74. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1.4,
+        "output_per_mtok": 4.4,
+        "cached_input_per_mtok": 0.14,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/glm-5.3-flash",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "glm-5.3-flash",
+      "model_name": "GLM-5.3 Flash",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 60,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 943717,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 33 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/fp4) $0.075/$0.25. First-party/creator endpoint Z.AI: $0.15/$0.5. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gpt-5.5",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gpt-5.5",
+      "model_name": "GPT-5.5",
+      "model_creator": "openai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
+      "cached_input_per_mtok": 0.5,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1050000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 7 provider endpoints. Cheapest 3:1 blended endpoint: OpenAI (openai/flex) $2.5/$15.0. First-party/creator endpoint OpenAI: $2.5/$15.0. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
+        "cached_input_per_mtok": 0.5,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 11.25
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gpt-6-luna",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gpt-6-luna",
+      "model_name": "GPT-6 Luna",
+      "model_creator": "openai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": 0.01,
+      "cache_write_per_mtok": 0.125,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1050000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 7 provider endpoints. Cheapest 3:1 blended endpoint: OpenAI (openai/flex) $0.05/$0.25. First-party/creator endpoint OpenAI: $0.05/$0.25. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": 0.01,
+        "cache_write_per_mtok": 0.125,
+        "blended_3to1": 0.2
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gpt-6-sol",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gpt-6-sol",
+      "model_name": "GPT-6 Sol",
+      "model_creator": "openai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1050000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 7 provider endpoints. Cheapest 3:1 blended endpoint: OpenAI (openai/flex) $1.0/$5.0. First-party/creator endpoint OpenAI: $1.0/$5.0. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gpt-oss-120b",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.037,
+      "output_per_mtok": 0.17,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 20,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 117964,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 23 provider endpoints. Cheapest 3:1 blended endpoint: CoreWeave (coreweave/fp4) $0.03/$0.17. First-party/creator endpoint Google: $0.09/$0.36. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.037,
+        "output_per_mtok": 0.17,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.07025
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/gpt-oss-20b",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-20b",
+      "model_name": "gpt-oss-20b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.018,
+      "output_per_mtok": 0.09,
+      "cached_input_per_mtok": 0.009,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": -33,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 32768,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 12 provider endpoints. Cheapest 3:1 blended endpoint: Darkbloom (darkbloom/fp8) $0.018/$0.09. First-party/creator endpoint Google: $0.07/$0.25. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.018,
+        "output_per_mtok": 0.09,
+        "cached_input_per_mtok": 0.009,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.036
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/kimi-k2.6",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.95,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.16,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": 235929,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 18 provider endpoints. Cheapest 3:1 blended endpoint: Inceptron (inceptron/int4) $0.465/$2.45. First-party/creator endpoint Moonshot AI: $0.95/$4.0.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.95,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": 0.16,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.7125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/kimi-k3",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.67,
+      "output_per_mtok": 14,
+      "cached_input_per_mtok": 0.22,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": -240,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 943718,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 24 provider endpoints. Cheapest 3:1 blended endpoint: Decart (decart/mxfp4) $1.8/$9.0. First-party/creator endpoint Moonshot AI: $3.0/$15.0. Separate ':batch' variant listed.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.67,
+        "output_per_mtok": 14,
+        "cached_input_per_mtok": 0.22,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 4.0025
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/llama-3.3-70b-instruct",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.32,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 16384,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 11 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/turbo) $0.1/$0.32. First-party/creator endpoint Google: $0.72/$0.72.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.32,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.155
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/llama-4-maverick-17b-128e-instruct",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "llama-4-maverick-17b-128e-instruct",
+      "model_name": "Llama 4 Maverick 17B-128E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.1875,
+      "output_per_mtok": 0.6525,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 16384,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 4 provider endpoints. Cheapest 3:1 blended endpoint: DigitalOcean (digitalocean) $0.1875/$0.6525. First-party/creator endpoint Google: $0.35/$1.15.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.1875,
+        "output_per_mtok": 0.6525,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.30375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/llama-4-scout-17b-16e-instruct",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "llama-4-scout-17b-16e-instruct",
+      "model_name": "Llama 4 Scout 17B-16E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.3,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1310720,
+      "max_output": 16384,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 3 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/fp8) $0.1/$0.3. First-party/creator endpoint Google: $0.25/$0.7.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.3,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.15
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/minimax-m3",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "minimax-m3",
+      "model_name": "MiniMax M3",
+      "model_creator": "minimax",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.3,
+      "output_per_mtok": 1.2,
+      "cached_input_per_mtok": 0.06,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 512000,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 13 provider endpoints. Cheapest 3:1 blended endpoint: CoreWeave (coreweave/fp4) $0.23/$0.96. First-party/creator endpoint Minimax: $0.3/$1.2.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "cached_input_per_mtok": 0.06,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.525
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/mistral-small-3.2-24b-instruct-2506",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "mistral-small-3.2-24b-instruct-2506",
+      "model_name": "Mistral Small 3.2 24B Instruct 2506",
+      "model_creator": "mistral",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.09375,
+      "output_per_mtok": 0.25,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 256000,
+      "max_output": 16384,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 4 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/fp8) $0.075/$0.2. First-party/creator endpoint Mistral: $0.1/$0.3.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.09375,
+        "output_per_mtok": 0.25,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.132812
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/qwen3-32b",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "qwen3-32b",
+      "model_name": "Qwen3 32B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.08,
+      "output_per_mtok": 0.28,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 16384,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 3 provider endpoints. Cheapest 3:1 blended endpoint: DeepInfra (deepinfra/fp8) $0.08/$0.28.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.08,
+        "output_per_mtok": 0.28,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.13
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/qwen3.5-397b-a17b",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.55,
+      "output_per_mtok": 3.5,
+      "cached_input_per_mtok": 0.225,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": 235929,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 10 provider endpoints. Cheapest 3:1 blended endpoint: Alibaba (alibaba) $0.39/$2.34. First-party/creator endpoint Alibaba: $0.39/$2.34.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.55,
+        "output_per_mtok": 3.5,
+        "cached_input_per_mtok": 0.225,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.2875
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/qwen3.8-2.4t-a95b",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "qwen3.8-2.4t-a95b",
+      "model_name": "Qwen3.8 2.4T-A95B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 131072,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 7 provider endpoints. Cheapest 3:1 blended endpoint: Novita (novita) $2.0/$6.0. First-party/creator endpoint Alibaba: $2.0/$6.0.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 6,
+        "cached_input_per_mtok": 0.25,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 3
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "openrouter/qwen3.8-27b",
+      "provider_id": "openrouter",
+      "provider_name": "OpenRouter",
+      "provider_type": "aggregator",
+      "provider_country": "US",
+      "model_slug": "qwen3.8-27b",
+      "model_name": "Qwen3.8 27B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.425,
+      "output_per_mtok": 2.55,
+      "cached_input_per_mtok": 0.085,
+      "cache_write_per_mtok": 0.53125,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 131072,
+      "free_tier": "':free' variant exists",
+      "region_notes": null,
+      "source": "https://openrouter.ai/api/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "OpenRouter model-level price = lowest-input-price endpoint (pass-through, no markup; 5.5% Stripe credit fee, $0.80 min). 17 provider endpoints. Cheapest 3:1 blended endpoint: Phala (phala) $0.15/$1.875. First-party/creator endpoint Alibaba: $0.425/$2.55.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://openrouter.ai/api/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read / pricing.input_cache_write (USD per token, x1e6); per-provider: /api/v1/models/{id}/endpoints data.endpoints[].pricing",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.425,
+        "output_per_mtok": 2.55,
+        "cached_input_per_mtok": 0.085,
+        "cache_write_per_mtok": 0.53125,
+        "blended_3to1": 0.95625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://openrouter.ai/api/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

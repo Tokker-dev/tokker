@@ -1,0 +1,359 @@
+{
+  "provider_id": "scaleway",
+  "offers": [
+    {
+      "id": "scaleway/deepseek-v4-flash-0731",
+      "provider_id": "scaleway",
+      "provider_name": "Scaleway Generative APIs",
+      "provider_type": "cloud",
+      "provider_country": "FR",
+      "model_slug": "deepseek-v4-flash-0731",
+      "model_name": "DeepSeek V4 Flash 0731",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "EUR",
+      "input_per_mtok": 0.4,
+      "output_per_mtok": 0.8,
+      "cached_input_per_mtok": 0.08,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "First 1,000,000 tokens free; billing starts at token 1,000,001.",
+      "region_notes": "EU (Paris, FR); EU data residency.",
+      "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in EUR excl. VAT. Batch API = 50% discount. Also lists glm-5.2 EUR1.80/5.50, mistral-medium-3.5-128b EUR1.50/7.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+        "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.448999,
+        "output_per_mtok": 0.897999,
+        "cached_input_per_mtok": 0.0898,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.561249
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "scaleway/gpt-oss-120b",
+      "provider_id": "scaleway",
+      "provider_name": "Scaleway Generative APIs",
+      "provider_type": "cloud",
+      "provider_country": "FR",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "EUR",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "First 1,000,000 tokens free; billing starts at token 1,000,001.",
+      "region_notes": "EU (Paris, FR); EU data residency.",
+      "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in EUR excl. VAT. Batch API = 50% discount. Also lists glm-5.2 EUR1.80/5.50, mistral-medium-3.5-128b EUR1.50/7.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+        "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.168375,
+        "output_per_mtok": 0.673499,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.294656
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "scaleway/llama-3.3-70b-instruct",
+      "provider_id": "scaleway",
+      "provider_name": "Scaleway Generative APIs",
+      "provider_type": "cloud",
+      "provider_country": "FR",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "EUR",
+      "input_per_mtok": 0.9,
+      "output_per_mtok": 0.9,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "First 1,000,000 tokens free; billing starts at token 1,000,001.",
+      "region_notes": "EU (Paris, FR); EU data residency.",
+      "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in EUR excl. VAT. Batch API = 50% discount. Also lists glm-5.2 EUR1.80/5.50, mistral-medium-3.5-128b EUR1.50/7.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+        "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.010248,
+        "output_per_mtok": 1.010248,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.010248
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "scaleway/mistral-small-3.2-24b-instruct-2506",
+      "provider_id": "scaleway",
+      "provider_name": "Scaleway Generative APIs",
+      "provider_type": "cloud",
+      "provider_country": "FR",
+      "model_slug": "mistral-small-3.2-24b-instruct-2506",
+      "model_name": "Mistral Small 3.2 24B Instruct 2506",
+      "model_creator": "mistral",
+      "open_weights": true,
+      "currency": "EUR",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.35,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "First 1,000,000 tokens free; billing starts at token 1,000,001.",
+      "region_notes": "EU (Paris, FR); EU data residency.",
+      "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in EUR excl. VAT. Batch API = 50% discount. Also lists glm-5.2 EUR1.80/5.50, mistral-medium-3.5-128b EUR1.50/7.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+        "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.168375,
+        "output_per_mtok": 0.392874,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.2245
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "scaleway/qwen3.5-397b-a17b",
+      "provider_id": "scaleway",
+      "provider_name": "Scaleway Generative APIs",
+      "provider_type": "cloud",
+      "provider_country": "FR",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "EUR",
+      "input_per_mtok": 0.6,
+      "output_per_mtok": 3.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "First 1,000,000 tokens free; billing starts at token 1,000,001.",
+      "region_notes": "EU (Paris, FR); EU data residency.",
+      "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in EUR excl. VAT. Batch API = 50% discount. Also lists glm-5.2 EUR1.80/5.50, mistral-medium-3.5-128b EUR1.50/7.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+        "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.673499,
+        "output_per_mtok": 4.040994,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.515373
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "scaleway/qwen3.8-27b",
+      "provider_id": "scaleway",
+      "provider_name": "Scaleway Generative APIs",
+      "provider_type": "cloud",
+      "provider_country": "FR",
+      "model_slug": "qwen3.8-27b",
+      "model_name": "Qwen3.8 27B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "EUR",
+      "input_per_mtok": 0.6,
+      "output_per_mtok": 3.3,
+      "cached_input_per_mtok": 0.12,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": "First 1,000,000 tokens free; billing starts at token 1,000,001.",
+      "region_notes": "EU (Paris, FR); EU data residency.",
+      "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Prices in EUR excl. VAT. Batch API = 50% discount. Also lists glm-5.2 EUR1.80/5.50, mistral-medium-3.5-128b EUR1.50/7.50.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+        "selector_hint": "Generative APIs table (EUR per 1M input/output)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.673499,
+        "output_per_mtok": 3.704244,
+        "cached_input_per_mtok": 0.1347,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 1.431185
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.scaleway.com/en/pricing/model-as-a-service/",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

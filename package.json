@@ -8,7 +8,7 @@
   },
   "scripts": {
     "validate": "node tools/validate.mjs",
-    "build": "echo 'not implemented' && exit 1",
+    "build": "vite-node tools/build.ts",
     "fetch": "echo 'not implemented' && exit 1",
     "extract": "echo 'not implemented' && exit 1",
     "diff": "echo 'not implemented' && exit 1",

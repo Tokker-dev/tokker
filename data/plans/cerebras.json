@@ -1,0 +1,117 @@
+{
+  "vendor_id": "cerebras",
+  "plans": [
+    {
+      "id": "cerebras/code-max",
+      "vendor_id": "cerebras",
+      "vendor_name": "Cerebras",
+      "product": "Cerebras Code",
+      "plan_name": "Code Max",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "glm-4.7"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "tokens",
+          "amount": 120000000,
+          "quote": "120 million tokens per day"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 3600000000,
+      "est_usd_per_mtok_at_full_use": 0.0556,
+      "estimate_assumption": "Vendor quotes raw tokens/day (all token types): daily cap x 30.",
+      "source": "https://www.cerebras.ai/code",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Both plans currently 'sold out'. Earlier TPM limits 300k/400k (X post 2025).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.cerebras.ai/code",
+        "selector_hint": "Code plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.cerebras.ai/code",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "cerebras/code-pro",
+      "vendor_id": "cerebras",
+      "vendor_name": "Cerebras",
+      "product": "Cerebras Code",
+      "plan_name": "Code Pro",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 50,
+      "price_year": null,
+      "models_included": [
+        "glm-4.7"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "tokens",
+          "amount": 24000000,
+          "quote": "24 million tokens per day"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 720000000,
+      "est_usd_per_mtok_at_full_use": 0.0694,
+      "estimate_assumption": "Vendor quotes raw tokens/day (all token types): daily cap x 30.",
+      "source": "https://www.cerebras.ai/code",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Both plans currently 'sold out'. Earlier TPM limits 300k/400k (X post 2025).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.cerebras.ai/code",
+        "selector_hint": "Code plan cards",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 50,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.cerebras.ai/code",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

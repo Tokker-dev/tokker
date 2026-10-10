@@ -1,0 +1,469 @@
+{
+  "provider_id": "chutes",
+  "offers": [
+    {
+      "id": "chutes/deepseek-v3.2",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v3.2",
+      "model_name": "DeepSeek V3.2",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 1,
+      "cached_input_per_mtok": 0.1,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id deepseek-ai/DeepSeek-V3.2-TEE; quantization=fp8; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 1,
+        "cached_input_per_mtok": 0.1,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/deepseek-v4-flash-0731",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash-0731",
+      "model_name": "DeepSeek V4 Flash 0731",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.44,
+      "output_per_mtok": 1.32,
+      "cached_input_per_mtok": 0.044,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 131072,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id deepseek-ai/DeepSeek-V4-Flash-0731-TEE; quantization=fp8; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.44,
+        "output_per_mtok": 1.32,
+        "cached_input_per_mtok": 0.044,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.66
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/gemma-4-31b-it",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.12,
+      "output_per_mtok": 0.37,
+      "cached_input_per_mtok": 0.012,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id google/gemma-4-31B-turbo-TEE; quantization=fp4; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.12,
+        "output_per_mtok": 0.37,
+        "cached_input_per_mtok": 0.012,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.1825
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/kimi-k2.6",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.5,
+      "output_per_mtok": 2.85,
+      "cached_input_per_mtok": 0.05,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": 65535,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id moonshotai/Kimi-K2.6-TEE; quantization=int4; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.5,
+        "output_per_mtok": 2.85,
+        "cached_input_per_mtok": 0.05,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.0875
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/kimi-k3",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": 65535,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id moonshotai/Kimi-K3-TEE; quantization=mxfp4; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/qwen3-32b",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3-32b",
+      "model_name": "Qwen3 32B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.104,
+      "output_per_mtok": 0.416,
+      "cached_input_per_mtok": 0.0104,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 40960,
+      "max_output": 40960,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id Qwen/Qwen3-32B-TEE; quantization=fp8; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.104,
+        "output_per_mtok": 0.416,
+        "cached_input_per_mtok": 0.0104,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.182
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/qwen3.5-397b-a17b",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.5-397b-a17b",
+      "model_name": "Qwen3.5 397B-A17B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.45,
+      "output_per_mtok": 3,
+      "cached_input_per_mtok": 0.045,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id Qwen/Qwen3.5-397B-A17B-TEE; quantization=fp8; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.45,
+        "output_per_mtok": 3,
+        "cached_input_per_mtok": 0.045,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.0875
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "chutes/qwen3.8-27b",
+      "provider_id": "chutes",
+      "provider_name": "Chutes",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "qwen3.8-27b",
+      "model_name": "Qwen3.8 27B",
+      "model_creator": "qwen",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.24,
+      "output_per_mtok": 2.2,
+      "cached_input_per_mtok": 0.024,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": 65536,
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://llm.chutes.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Chutes id Qwen/Qwen3.8-27B-TEE; quantization=fp8; confidential_compute (TEE)=True. Also payable in TAO. Only 14 models listed publicly on 2026-10-05.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://llm.chutes.ai/v1/models",
+        "selector_hint": "data[] where id==<id>: pricing.prompt / pricing.completion / pricing.input_cache_read (USD/Mtok); price.*.tao for TAO",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.24,
+        "output_per_mtok": 2.2,
+        "cached_input_per_mtok": 0.024,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.73
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://llm.chutes.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

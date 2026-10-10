@@ -1,0 +1,175 @@
+{
+  "vendor_id": "jetbrains",
+  "plans": [
+    {
+      "id": "jetbrains/ai-free",
+      "vendor_id": "jetbrains",
+      "vendor_name": "JetBrains",
+      "product": "JetBrains AI",
+      "plan_name": "AI Free",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "ai assistant models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 3,
+          "quote": "3 AI Credits per 30-days"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 2853982,
+      "est_usd_per_mtok_at_full_use": 0,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+        "selector_hint": "license tiers table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "jetbrains/ai-pro",
+      "vendor_id": "jetbrains",
+      "vendor_name": "JetBrains",
+      "product": "JetBrains AI",
+      "plan_name": "AI Pro",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 10,
+      "price_year": 100,
+      "models_included": [
+        "junie",
+        "ai assistant models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 10,
+          "quote": "10 AI Credits per 30-days"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 9513274,
+      "est_usd_per_mtok_at_full_use": 1.0512,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Each credit ~= $1 USD; assumed spent at list rates. Business: 20 credits at $20. Annual price $100 (secondary $8.33/mo).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+        "selector_hint": "license tiers table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 10,
+        "price_year": 100
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "jetbrains/ai-ultimate",
+      "vendor_id": "jetbrains",
+      "vendor_name": "JetBrains",
+      "product": "JetBrains AI",
+      "plan_name": "AI Ultimate",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": 30,
+      "price_year": 300,
+      "models_included": [
+        "junie",
+        "ai assistant models"
+      ],
+      "limits_published": [
+        {
+          "window": "monthly",
+          "unit": "usd",
+          "amount": 35,
+          "quote": "35 AI Credits per 30-days"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 33296460,
+      "est_usd_per_mtok_at_full_use": 0.901,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "$35 of credits for $30 (secondary: '$5 bonus'). Business: 70 credits at $60.",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+        "selector_hint": "license tiers table",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 30,
+        "price_year": 300
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

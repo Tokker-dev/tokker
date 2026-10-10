@@ -1,0 +1,73 @@
+{
+  "vendor_id": "synthetic",
+  "plans": [
+    {
+      "id": "synthetic/subscription-pack-1",
+      "vendor_id": "synthetic",
+      "vendor_name": "Synthetic",
+      "product": "Synthetic subscription",
+      "plan_name": "Subscription Pack (1)",
+      "category": "token_plan",
+      "currency": "USD",
+      "price_month": 30,
+      "price_year": null,
+      "models_included": [
+        "deepseek-v4.1-flash",
+        "kimi-k3",
+        "glm-5.3",
+        "glm-5.3-flash",
+        "gpt-oss-120b",
+        "qwen3.8-27b",
+        "nemotron-3-super"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": 500,
+          "quote": "Rate Limit 500 requests/5hr"
+        },
+        {
+          "window": "per_request",
+          "unit": "requests",
+          "amount": 1,
+          "quote": "1 concurrent request per model (buy more packs to increase)"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1290000000,
+      "est_usd_per_mtok_at_full_use": 0.0233,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. No weekly cap published.",
+      "source": "https://synthetic.new/pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "$1/day or $30/mo; packs stack. Marketed '3x higher rate limits than Claude's $20/month plan'. Concurrency 1 per model limits real throughput. Page mentions 'credit regeneration' (details on separate page, not fetched).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://synthetic.new/pricing",
+        "selector_hint": "'Subscription Packs' block",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 30,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://synthetic.new/pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

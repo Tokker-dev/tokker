@@ -1,0 +1,618 @@
+[
+  {
+    "id": "01ai",
+    "name": "01.AI (Lingyiwanwu)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 2,
+    "subscription_count": 0
+  },
+  {
+    "id": "ai21",
+    "name": "AI21 Labs",
+    "type": "first_party",
+    "country": "IL",
+    "api_offer_count": 2,
+    "subscription_count": 0
+  },
+  {
+    "id": "alibaba",
+    "name": "Alibaba Cloud Model Studio",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 10,
+    "subscription_count": 8
+  },
+  {
+    "id": "alibaba_cn",
+    "name": "Alibaba Cloud Bailian (China)",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 2
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon (Bedrock)",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 7,
+    "subscription_count": 0
+  },
+  {
+    "id": "amp",
+    "name": "Amp (Sourcegraph)",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 1
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 8,
+    "subscription_count": 6
+  },
+  {
+    "id": "augment",
+    "name": "Augment Code",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 2
+  },
+  {
+    "id": "aws-bedrock",
+    "name": "Amazon Bedrock",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 12,
+    "subscription_count": 0
+  },
+  {
+    "id": "aws_kiro",
+    "name": "AWS (Kiro)",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 5
+  },
+  {
+    "id": "azure",
+    "name": "Microsoft Azure AI Foundry",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 14,
+    "subscription_count": 0
+  },
+  {
+    "id": "baichuan",
+    "name": "Baichuan AI",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "baidu",
+    "name": "Baidu Qianfan",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 5,
+    "subscription_count": 0
+  },
+  {
+    "id": "baseten",
+    "name": "Baseten Model APIs",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 7,
+    "subscription_count": 0
+  },
+  {
+    "id": "byteplus",
+    "name": "BytePlus ModelArk (ByteDance)",
+    "type": "first_party",
+    "country": "SG",
+    "api_offer_count": 6,
+    "subscription_count": 2
+  },
+  {
+    "id": "cerebras",
+    "name": "Cerebras",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 2,
+    "subscription_count": 2
+  },
+  {
+    "id": "chutes",
+    "name": "Chutes",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 8,
+    "subscription_count": 2
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare Workers AI",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 8,
+    "subscription_count": 0
+  },
+  {
+    "id": "cognition",
+    "name": "Cognition (Devin / Windsurf)",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 4
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "type": "first_party",
+    "country": "CA",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "core42",
+    "name": "Core42 (G42) Compass",
+    "type": "cloud",
+    "country": "AE",
+    "api_offer_count": 1,
+    "subscription_count": 0
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor (Anysphere)",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 6
+  },
+  {
+    "id": "deepinfra",
+    "name": "DeepInfra",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 25,
+    "subscription_count": 0
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "factory",
+    "name": "Factory",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 3
+  },
+  {
+    "id": "featherless",
+    "name": "Featherless AI",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 20,
+    "subscription_count": 2
+  },
+  {
+    "id": "fireworks",
+    "name": "Fireworks AI",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 6,
+    "subscription_count": 0
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 6
+  },
+  {
+    "id": "google",
+    "name": "Google (Gemini API)",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 8,
+    "subscription_count": 7
+  },
+  {
+    "id": "google-vertex",
+    "name": "Google Cloud Vertex AI (Agent Platform)",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 12,
+    "subscription_count": 0
+  },
+  {
+    "id": "groq",
+    "name": "Groq",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face Inference Providers",
+    "type": "aggregator",
+    "country": "US",
+    "api_offer_count": 22,
+    "subscription_count": 0
+  },
+  {
+    "id": "ibm-watsonx",
+    "name": "IBM watsonx.ai",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 2,
+    "subscription_count": 0
+  },
+  {
+    "id": "iflytek",
+    "name": "iFlytek Spark (Astron MaaS)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 1,
+    "subscription_count": 0
+  },
+  {
+    "id": "infomaniak",
+    "name": "Infomaniak AI Services",
+    "type": "cloud",
+    "country": "CH",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "ionos",
+    "name": "IONOS AI Model Hub",
+    "type": "cloud",
+    "country": "DE",
+    "api_offer_count": 5,
+    "subscription_count": 0
+  },
+  {
+    "id": "jetbrains",
+    "name": "JetBrains",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 3
+  },
+  {
+    "id": "krutrim",
+    "name": "Krutrim (Ola)",
+    "type": "first_party",
+    "country": "IN",
+    "api_offer_count": 1,
+    "subscription_count": 0
+  },
+  {
+    "id": "minimax",
+    "name": "MiniMax",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 5,
+    "subscription_count": 3
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "type": "first_party",
+    "country": "FR",
+    "api_offer_count": 7,
+    "subscription_count": 2
+  },
+  {
+    "id": "moonshot",
+    "name": "Moonshot AI (Kimi)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 5,
+    "subscription_count": 4
+  },
+  {
+    "id": "nebius",
+    "name": "Nebius Token Factory",
+    "type": "inference_host",
+    "country": "NL",
+    "api_offer_count": 7,
+    "subscription_count": 0
+  },
+  {
+    "id": "novita",
+    "name": "Novita AI",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 20,
+    "subscription_count": 0
+  },
+  {
+    "id": "nscale",
+    "name": "Nscale",
+    "type": "inference_host",
+    "country": "GB",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 10,
+    "subscription_count": 6
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "type": "aggregator",
+    "country": "US",
+    "api_offer_count": 31,
+    "subscription_count": 1
+  },
+  {
+    "id": "oracle-oci",
+    "name": "Oracle OCI Generative AI",
+    "type": "cloud",
+    "country": "US",
+    "api_offer_count": 5,
+    "subscription_count": 0
+  },
+  {
+    "id": "ovhcloud",
+    "name": "OVHcloud AI Endpoints",
+    "type": "cloud",
+    "country": "FR",
+    "api_offer_count": 5,
+    "subscription_count": 0
+  },
+  {
+    "id": "parasail",
+    "name": "Parasail",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 15,
+    "subscription_count": 0
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 4,
+    "subscription_count": 2
+  },
+  {
+    "id": "reka",
+    "name": "Reka AI",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 3,
+    "subscription_count": 0
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 1,
+    "subscription_count": 0
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 2
+  },
+  {
+    "id": "requesty",
+    "name": "Requesty",
+    "type": "aggregator",
+    "country": "GB",
+    "api_offer_count": 25,
+    "subscription_count": 0
+  },
+  {
+    "id": "runware",
+    "name": "Runware",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 5,
+    "subscription_count": 0
+  },
+  {
+    "id": "sail-research",
+    "name": "Sail Research",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 4,
+    "subscription_count": 0
+  },
+  {
+    "id": "sakana",
+    "name": "Sakana AI",
+    "type": "first_party",
+    "country": "JP",
+    "api_offer_count": 3,
+    "subscription_count": 0
+  },
+  {
+    "id": "sambanova",
+    "name": "SambaNova Cloud",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 5,
+    "subscription_count": 0
+  },
+  {
+    "id": "sarvam",
+    "name": "Sarvam AI",
+    "type": "first_party",
+    "country": "IN",
+    "api_offer_count": 1,
+    "subscription_count": 0
+  },
+  {
+    "id": "scaleway",
+    "name": "Scaleway Generative APIs",
+    "type": "cloud",
+    "country": "FR",
+    "api_offer_count": 6,
+    "subscription_count": 0
+  },
+  {
+    "id": "sensetime",
+    "name": "SenseTime SenseNova (SenseCore)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 3,
+    "subscription_count": 0
+  },
+  {
+    "id": "siliconflow",
+    "name": "SiliconFlow",
+    "type": "inference_host",
+    "country": "CN",
+    "api_offer_count": 10,
+    "subscription_count": 0
+  },
+  {
+    "id": "stackblitz",
+    "name": "StackBlitz",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 2
+  },
+  {
+    "id": "stepfun",
+    "name": "StepFun",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 6,
+    "subscription_count": 0
+  },
+  {
+    "id": "synthetic",
+    "name": "Synthetic",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 1
+  },
+  {
+    "id": "t3chat",
+    "name": "T3 Chat",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 1
+  },
+  {
+    "id": "tencent",
+    "name": "Tencent Cloud TokenHub (Hunyuan)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 4,
+    "subscription_count": 3
+  },
+  {
+    "id": "together",
+    "name": "Together AI",
+    "type": "inference_host",
+    "country": "US",
+    "api_offer_count": 12,
+    "subscription_count": 0
+  },
+  {
+    "id": "upstage",
+    "name": "Upstage",
+    "type": "first_party",
+    "country": "KR",
+    "api_offer_count": 3,
+    "subscription_count": 0
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel AI Gateway",
+    "type": "aggregator",
+    "country": "US",
+    "api_offer_count": 27,
+    "subscription_count": 0
+  },
+  {
+    "id": "volcengine",
+    "name": "Volcengine Ark (ByteDance)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 6,
+    "subscription_count": 2
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 3
+  },
+  {
+    "id": "writer",
+    "name": "Writer",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 3,
+    "subscription_count": 0
+  },
+  {
+    "id": "xai",
+    "name": "xAI",
+    "type": "first_party",
+    "country": "US",
+    "api_offer_count": 6,
+    "subscription_count": 4
+  },
+  {
+    "id": "xiaomi",
+    "name": "Xiaomi MiMo",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 6,
+    "subscription_count": 0
+  },
+  {
+    "id": "zai",
+    "name": "Z.AI (Zhipu)",
+    "type": "first_party",
+    "country": "CN",
+    "api_offer_count": 9,
+    "subscription_count": 5
+  },
+  {
+    "id": "zed",
+    "name": "Zed Industries",
+    "type": null,
+    "country": null,
+    "api_offer_count": 0,
+    "subscription_count": 1
+  }
+]

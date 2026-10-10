@@ -1,0 +1,163 @@
+{
+  "vendor_id": "volcengine",
+  "plans": [
+    {
+      "id": "volcengine/lite",
+      "vendor_id": "volcengine",
+      "vendor_name": "Volcengine (ByteDance China)",
+      "product": "方舟 Coding Plan",
+      "plan_name": "Lite",
+      "category": "token_plan",
+      "currency": "CNY",
+      "price_month": 40,
+      "price_year": null,
+      "models_included": [
+        "deepseek-v4.1-flash",
+        "glm-5.3",
+        "doubao-seed-evolving",
+        "kimi-k3",
+        "auto"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "每5小时限额：根据首次请求发生时间，以 5 小时为周期定时刷新限额。"
+        },
+        {
+          "window": "weekly",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "周限额：每周一 00:00:00 重置周限额。"
+        },
+        {
+          "window": "monthly",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "月限额：每订阅月第 1 日 00:00:00 重置月限额。"
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "中等强度的开发任务，适合大多数开发者。"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://docs.volcengine.com/docs/82379/1925114",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Window structure official; numbers not exposed. Prices CNY 40 / 200 per month from secondary (codingplan.org, zhihu); promo 2.5-fold discount ~CNY 9.9/49.9 first months. Coding Plan only valid in AI coding tools, not raw API. Volcengine now steering users to 'Agent Plan' (AFP deduction).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://docs.volcengine.com/docs/82379/1925114",
+        "selector_hint": "'套餐详情' table; quota cells rendered client-side",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 5.966053,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.volcengine.com/docs/82379/1925114",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "volcengine/pro",
+      "vendor_id": "volcengine",
+      "vendor_name": "Volcengine (ByteDance China)",
+      "product": "方舟 Coding Plan",
+      "plan_name": "Pro",
+      "category": "token_plan",
+      "currency": "CNY",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "deepseek-v4.1-flash",
+        "glm-5.3",
+        "doubao-seed-evolving",
+        "kimi-k3",
+        "auto"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "每5小时限额：根据首次请求发生时间，以 5 小时为周期定时刷新限额。"
+        },
+        {
+          "window": "weekly",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "周限额：每周一 00:00:00 重置周限额。"
+        },
+        {
+          "window": "monthly",
+          "unit": "requests",
+          "amount": "unknown",
+          "quote": "月限额：每订阅月第 1 日 00:00:00 重置月限额。"
+        },
+        {
+          "window": "unspecified",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "Pro 套餐 5 倍于 Lite 套餐的用量"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://docs.volcengine.com/docs/82379/1925114",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Window structure official; numbers not exposed. Prices CNY 40 / 200 per month from secondary (codingplan.org, zhihu); promo 2.5-fold discount ~CNY 9.9/49.9 first months. Coding Plan only valid in AI coding tools, not raw API. Volcengine now steering users to 'Agent Plan' (AFP deduction).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://docs.volcengine.com/docs/82379/1925114",
+        "selector_hint": "'套餐详情' table; quota cells rendered client-side",
+        "volatility": "high"
+      },
+      "usd": {
+        "price_month": 29.830266,
+        "price_year": null,
+        "fx_rate_date": "2026-10-02"
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://docs.volcengine.com/docs/82379/1925114",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

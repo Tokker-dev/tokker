@@ -1,0 +1,237 @@
+{
+  "provider_id": "sail-research",
+  "offers": [
+    {
+      "id": "sail-research/deepseek-v4-flash-0731",
+      "provider_id": "sail-research",
+      "provider_name": "Sail Research",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash-0731",
+      "model_name": "DeepSeek V4 Flash 0731",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.09,
+      "output_per_mtok": 0.18,
+      "cached_input_per_mtok": 0.02,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1048576,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://router.requesty.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Secondary: Requesty route 'sail/deepseek-v4-flash-0731'; provider's own pricing page not fetched. Country unverified.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://router.requesty.ai/v1/models",
+        "selector_hint": "data[] where id startswith '<provider>/' (secondary)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.09,
+        "output_per_mtok": 0.18,
+        "cached_input_per_mtok": 0.02,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.1125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://router.requesty.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sail-research/gemma-4-31b-it",
+      "provider_id": "sail-research",
+      "provider_name": "Sail Research",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gemma-4-31b-it",
+      "model_name": "Gemma 4 31B IT",
+      "model_creator": "google",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.4,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://router.requesty.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Secondary: Requesty route 'sail/gemma-4-31b-it'; provider's own pricing page not fetched. Country unverified.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://router.requesty.ai/v1/models",
+        "selector_hint": "data[] where id startswith '<provider>/' (secondary)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.4,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.45
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://router.requesty.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sail-research/gpt-oss-120b",
+      "provider_id": "sail-research",
+      "provider_name": "Sail Research",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.06,
+      "output_per_mtok": 0.4,
+      "cached_input_per_mtok": 0.03,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 131072,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://router.requesty.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Secondary: Requesty route 'sail/gpt-oss-120b'; provider's own pricing page not fetched. Country unverified.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://router.requesty.ai/v1/models",
+        "selector_hint": "data[] where id startswith '<provider>/' (secondary)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.06,
+        "output_per_mtok": 0.4,
+        "cached_input_per_mtok": 0.03,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.145
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://router.requesty.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "sail-research/kimi-k2.6",
+      "provider_id": "sail-research",
+      "provider_name": "Sail Research",
+      "provider_type": "inference_host",
+      "provider_country": "US",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 262144,
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://router.requesty.ai/v1/models",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Secondary: Requesty route 'sail/kimi-k2.6'; provider's own pricing page not fetched. Country unverified.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://router.requesty.ai/v1/models",
+        "selector_hint": "data[] where id startswith '<provider>/' (secondary)",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.75
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://router.requesty.ai/v1/models",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "provider_id": "core42",
+  "offers": [
+    {
+      "id": "core42/k2-think",
+      "provider_id": "core42",
+      "provider_name": "Core42 (G42) Compass",
+      "provider_type": "cloud",
+      "provider_country": "AE",
+      "model_slug": "k2-think",
+      "model_name": "K2 Think",
+      "model_creator": "mbzuai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": null,
+      "source": "https://www.core42.ai/compass/documentation/compass-model-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "UAE (MBZUAI/G42) reasoning model on Core42 Compass. Jais and Falcon listed as custom/contact-sales only. Compass resells Claude Opus 4.8 at $5.50/$27.50 (10% over Anthropic).",
+      "fetch_recipe": {
+        "method": "html_static",
+        "endpoint": "https://www.core42.ai/compass/documentation/compass-model-pricing",
+        "selector_hint": "text model table: input/output per 1M tokens USD",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://www.core42.ai/compass/documentation/compass-model-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "html_static",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

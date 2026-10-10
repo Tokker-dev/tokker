@@ -1,0 +1,817 @@
+{
+  "provider_id": "azure",
+  "offers": [
+    {
+      "id": "azure/deepseek-v3.2",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-v3.2",
+      "model_name": "DeepSeek V3.2",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.62,
+      "output_per_mtok": 1.85,
+      "cached_input_per_mtok": 0.31,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Data Zone (Fireworks-on-Azure).",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.62,
+        "output_per_mtok": 1.85,
+        "cached_input_per_mtok": 0.31,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.9275
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/deepseek-v4-flash",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash",
+      "model_name": "DeepSeek V4 Flash (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.19,
+      "output_per_mtok": 0.51,
+      "cached_input_per_mtok": 0.028,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone $0.21/$0.56.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.19,
+        "output_per_mtok": 0.51,
+        "cached_input_per_mtok": 0.028,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.27
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/deepseek-v4-flash-0731",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-flash-0731",
+      "model_name": "DeepSeek V4 Flash 0731",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.44,
+      "output_per_mtok": 1.32,
+      "cached_input_per_mtok": 0.014,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone $0.484/$1.452.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.44,
+        "output_per_mtok": 1.32,
+        "cached_input_per_mtok": 0.014,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.66
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/deepseek-v4-pro",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "deepseek-v4-pro",
+      "model_name": "DeepSeek V4 Pro (0424)",
+      "model_creator": "deepseek",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.925,
+      "output_per_mtok": 3.828,
+      "cached_input_per_mtok": 0.165,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Data Zone only (meter 'FW DeepSeek-V4-Pro').",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.925,
+        "output_per_mtok": 3.828,
+        "cached_input_per_mtok": 0.165,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.40075
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/glm-5.3",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "glm-5.3",
+      "model_name": "GLM-5.3",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 1.75,
+      "output_per_mtok": 5.5,
+      "cached_input_per_mtok": 0.325,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global (meter 'FW GLM 5.3'); Data Zone $2.10/$6.60.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Fireworks-operated on Azure; priced above Fireworks direct ($1.40/$4.40). eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 1.75,
+        "output_per_mtok": 5.5,
+        "cached_input_per_mtok": 0.325,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 2.6875
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/glm-5.3-flash",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "glm-5.3-flash",
+      "model_name": "GLM-5.3 Flash",
+      "model_creator": "zai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.188,
+      "output_per_mtok": 0.625,
+      "cached_input_per_mtok": 0.038,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.188,
+        "output_per_mtok": 0.625,
+        "cached_input_per_mtok": 0.038,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.29725
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/gpt-5.5",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-5.5",
+      "model_name": "GPT-5.5",
+      "model_creator": "openai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 5,
+      "output_per_mtok": 30,
+      "cached_input_per_mtok": 0.5,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": "LongCo $10.00/$45.00",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone $5.50/$33.00; Priority $12.50/$75.00.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 5,
+        "output_per_mtok": 30,
+        "cached_input_per_mtok": 0.5,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 11.25
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/gpt-6-luna",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-6-luna",
+      "model_name": "GPT-6 Luna",
+      "model_creator": "openai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 0.1,
+      "output_per_mtok": 0.5,
+      "cached_input_per_mtok": 0.01,
+      "cache_write_per_mtok": 0.125,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": "LongCo $0.20/$0.75",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone $0.11/$0.55.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.1,
+        "output_per_mtok": 0.5,
+        "cached_input_per_mtok": 0.01,
+        "cache_write_per_mtok": 0.125,
+        "blended_3to1": 0.2
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/gpt-6-sol",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-6-sol",
+      "model_name": "GPT-6 Sol",
+      "model_creator": "openai",
+      "open_weights": false,
+      "currency": "USD",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cached_input_per_mtok": 0.2,
+      "cache_write_per_mtok": 2.5,
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": "Long context (LongCo): $4.00 in / $15.00 out / $0.40 cached",
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global standard; Data Zone $2.20/$11.00 (+10%); Priority (PP) 2x.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.2,
+        "cache_write_per_mtok": 2.5,
+        "blended_3to1": 4
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/gpt-oss-120b",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "gpt-oss-120b",
+      "model_name": "gpt-oss-120b",
+      "model_creator": "openai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.6,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone $0.165/$0.66.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.2625
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/kimi-k2.6",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "kimi-k2.6",
+      "model_name": "Kimi K2.6",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.95,
+      "output_per_mtok": 4,
+      "cached_input_per_mtok": 0.16,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone $1.045/$5.00.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.95,
+        "output_per_mtok": 4,
+        "cached_input_per_mtok": 0.16,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 1.7125
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/kimi-k3",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "kimi-k3",
+      "model_name": "Kimi K3",
+      "model_creator": "moonshotai",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 3,
+      "output_per_mtok": 15,
+      "cached_input_per_mtok": 0.3,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global (Fireworks-on-Azure); Data Zone $3.30/$16.50.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Meter 'FW Kimi-K3' (Azure Fireworks Models). eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 3,
+        "output_per_mtok": 15,
+        "cached_input_per_mtok": 0.3,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 6
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/llama-3.3-70b-instruct",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-3.3-70b-instruct",
+      "model_name": "Llama 3.3 70B Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.71,
+      "output_per_mtok": 0.71,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone/regional $0.781/$0.781.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.71,
+        "output_per_mtok": 0.71,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.71
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "azure/llama-4-maverick-17b-128e-instruct",
+      "provider_id": "azure",
+      "provider_name": "Microsoft Azure AI Foundry",
+      "provider_type": "cloud",
+      "provider_country": "US",
+      "model_slug": "llama-4-maverick-17b-128e-instruct",
+      "model_name": "Llama 4 Maverick 17B-128E Instruct",
+      "model_creator": "meta",
+      "open_weights": true,
+      "currency": "USD",
+      "input_per_mtok": 0.25,
+      "output_per_mtok": 1,
+      "cached_input_per_mtok": "unknown",
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": "unknown",
+      "max_output": "unknown",
+      "free_tier": null,
+      "region_notes": "Global; Data Zone/regional $0.275/$1.10.",
+      "source": "https://prices.azure.com/api/retail/prices",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "eastus2 retail meters; PTU (provisioned) via 'Provisioned Managed' units $1-2/hr.",
+      "fetch_recipe": {
+        "method": "json_api",
+        "endpoint": "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Foundry Models' and armRegionName eq 'eastus2'",
+        "selector_hint": "Items[] productName ('Azure OpenAI GPT6', 'Azure OpenAI OSS Models', 'Azure Fireworks Models', 'Azure Deepseek Models', 'Azure Llama Models', 'Azure Kimi') + meterName (Inp/Opt/Cd Inp/Cd Wr; Gl/Glbl=global, DZ=data zone, regnl; ShortCo/LongCo; Std/PP=priority); retailPrice per unitOfMeasure (1K or 1M); paginate NextPageLink",
+        "volatility": "medium"
+      },
+      "usd": {
+        "input_per_mtok": 0.25,
+        "output_per_mtok": 1,
+        "cached_input_per_mtok": null,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.4375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://prices.azure.com/api/retail/prices",
+          "fetched_at": "2026-10-05",
+          "method": "json_api",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "vendor_id": "google",
+  "plans": [
+    {
+      "id": "google/ai-plus",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Google AI Plus",
+      "plan_name": "AI Plus",
+      "category": "chat",
+      "currency": "USD",
+      "price_month": 4.99,
+      "price_year": null,
+      "models_included": [
+        "gemini-3.1-pro (limited)",
+        "gemini-3.5-flash"
+      ],
+      "limits_published": [
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "2x higher usage limits [vs free]; Your limit will now refresh every five hours until you reach your weekly limit."
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": "unknown",
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "unknown: vendor publishes no absolute quota; STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok.",
+      "source": "https://gemini.google/subscriptions/",
+      "checked": "2026-10-05",
+      "confidence": "secondary",
+      "notes": "Gemini CLI explicitly NOT supported on AI Plus. USD price $4.99 is secondary (search); official page served IDR Rp 75,000 by geo-IP. Google moved from daily prompt caps to compute-based 5h + weekly (I/O 2026 blog).",
+      "fetch_recipe": {
+        "method": "html_js_rendered",
+        "endpoint": "https://gemini.google/subscriptions/",
+        "selector_hint": "plan cards; geo-priced by IP (fetched from Indonesia -> IDR)",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 4.99,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://gemini.google/subscriptions/",
+          "fetched_at": "2026-10-05",
+          "method": "html_js_rendered",
+          "confidence": "secondary"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "google/ai-pro",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Google AI Pro",
+      "plan_name": "AI Pro",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 19.99,
+      "price_year": null,
+      "models_included": [
+        "gemini-3.1-pro",
+        "gemini-3.5-flash",
+        "gemini-cli",
+        "antigravity",
+        "jules"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 1500,
+          "quote": "Google AI Pro | 1,500 requests [Maximum requests per user per day, Gemini CLI]"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "4x higher usage limits; Your limit will now refresh every five hours until you reach your weekly limit. [Gemini app]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 967500000,
+      "est_usd_per_mtok_at_full_use": 0.0207,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
+      "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Price $19.99 US (secondary confirm; official geo-page showed IDR 309,000). Includes $10/mo Google Cloud credits. API-equivalent of estimate at Gemini Flash rates ($0.75/$0.075/$3.75): ~$381/mo; CLI routes across Pro+Flash.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+        "selector_hint": "table 'Maximum requests per user per day'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 19.99,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "google/ai-ultra-100",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Google AI Ultra",
+      "plan_name": "AI Ultra $100 (5x Pro)",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 100,
+      "price_year": null,
+      "models_included": [
+        "gemini-3.1-pro",
+        "gemini-spark",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 2000,
+          "quote": "Google AI Ultra | 2,000 requests [Gemini CLI per user per day]"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "5x or 20x higher than AI Pro limits [Gemini app]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1290000000,
+      "est_usd_per_mtok_at_full_use": 0.0775,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
+      "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "New $100 tier announced at I/O 2026 (blog.google). Gemini CLI quota doc does not distinguish the two Ultra tiers.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+        "selector_hint": "table 'Maximum requests per user per day'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 100,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "google/ai-ultra-200",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Google AI Ultra",
+      "plan_name": "AI Ultra $200 (20x Pro)",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 200,
+      "price_year": null,
+      "models_included": [
+        "gemini-3.1-pro",
+        "gemini-spark",
+        "project-genie",
+        "gemini-cli",
+        "antigravity"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 2000,
+          "quote": "Google AI Ultra | 2,000 requests [Gemini CLI per user per day]"
+        },
+        {
+          "window": "5h_rolling",
+          "unit": "unspecified",
+          "amount": "unknown",
+          "quote": "5x or 20x higher than AI Pro limits [Gemini app]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1290000000,
+      "est_usd_per_mtok_at_full_use": 0.155,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
+      "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Reduced from $250 to $200 (I/O 2026 blog). For CLI-only use the $100 tier gives the same 2,000 req/day.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+        "selector_hint": "table 'Maximum requests per user per day'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 200,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "google/enterprise",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Gemini Code Assist",
+      "plan_name": "Enterprise",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": "unknown",
+      "price_year": "unknown",
+      "models_included": [
+        "gemini family"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 2000,
+          "quote": "Code Assist Enterprise | 2,000 requests [per user per day]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 1290000000,
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
+      "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Seat price not fetched -> unknown.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+        "selector_hint": "table 'Maximum requests per user per day'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "google/free-google-login",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Gemini Code Assist for individuals / Gemini CLI",
+      "plan_name": "Free (Google login)",
+      "category": "coding_agent",
+      "currency": "USD",
+      "price_month": 0,
+      "price_year": null,
+      "models_included": [
+        "gemini family as determined by Gemini CLI"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 1000,
+          "quote": "1000 maximum model requests / user / day"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 645000000,
+      "est_usd_per_mtok_at_full_use": 0,
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
+      "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Free; $/Mtok = 0. Also per-minute limits (unpublished).",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+        "selector_hint": "table 'Maximum requests per user per day'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": 0,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    },
+    {
+      "id": "google/standard",
+      "vendor_id": "google",
+      "vendor_name": "Google",
+      "product": "Gemini Code Assist",
+      "plan_name": "Standard",
+      "category": "ide",
+      "currency": "USD",
+      "price_month": "unknown",
+      "price_year": "unknown",
+      "models_included": [
+        "gemini family"
+      ],
+      "limits_published": [
+        {
+          "window": "daily",
+          "unit": "requests",
+          "amount": 1500,
+          "quote": "Code Assist Standard | 1,500 requests [per user per day]"
+        }
+      ],
+      "fair_use": null,
+      "est_tokens_per_month": 967500000,
+      "est_usd_per_mtok_at_full_use": "unknown",
+      "estimate_assumption": "STANDARD: 1 request/prompt/message = 1 agentic model call of 20,000 input tokens (18,000 cache-read + 2,000 uncached) + 1,500 output = 21,500 tokens. Window plans: 4 usable 5h windows/day x 30 days = 120 windows/month, then capped by weekly cap x 30/7 and by any monthly cap (whichever binds first). Dollar-pool plans: pool / blended reference rate for the same token mix at Claude Sonnet 5.5 list ($2 in / $0.20 cache-read / $10 out per Mtok) = $1.0512/Mtok. Gemini CLI: 1 model request = 1 standard call; daily cap x 30 (5h-window app limits are separate and not numeric).",
+      "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+      "checked": "2026-10-05",
+      "confidence": "official_page",
+      "notes": "Seat price not fetched (Google Cloud pricing page) -> unknown.",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://geminicli.com/docs/resources/quota-and-pricing.md",
+        "selector_hint": "table 'Maximum requests per user per day'",
+        "volatility": "medium"
+      },
+      "usd": {
+        "price_month": null,
+        "price_year": null
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://geminicli.com/docs/resources/quota-and-pricing",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_page"
+        },
+        "fields": {
+          "price_month": "default",
+          "price_year": "default",
+          "limits_published": "default",
+          "fair_use": "default",
+          "est_usd_per_mtok_at_full_use": "default"
+        }
+      }
+    }
+  ]
+}

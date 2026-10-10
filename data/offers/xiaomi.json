@@ -1,0 +1,356 @@
+{
+  "provider_id": "xiaomi",
+  "offers": [
+    {
+      "id": "xiaomi/mimo-v2.6-flash-cn",
+      "provider_id": "xiaomi",
+      "provider_name": "Xiaomi MiMo",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "mimo-v2.6-flash",
+      "model_name": "MiMo-V2.6-Flash",
+      "model_creator": "xiaomi",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 1,
+      "output_per_mtok": 2,
+      "cached_input_per_mtok": 0.02,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "Domestic (China) pricing, CNY",
+      "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 50% (pro & flash). Cache write limited-time free. mimo-v2.5-pro / mimo-v2.5 deprecated 2026-10-21 10:00 Beijing. Cache-hit ~0.8% of input on pro (extremely cheap cached input). cache_write_per_mtok as published: \"limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+        "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.149151,
+        "output_per_mtok": 0.298303,
+        "cached_input_per_mtok": 0.002983,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.186439
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash-intl",
+      "provider_id": "xiaomi",
+      "provider_name": "Xiaomi MiMo",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "mimo-v2.6-flash",
+      "model_name": "MiMo-V2.6-Flash",
+      "model_creator": "xiaomi",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 0.14,
+      "output_per_mtok": 0.28,
+      "cached_input_per_mtok": 0.0028,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "Overseas pricing, USD",
+      "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 50% (pro & flash). Cache write limited-time free. mimo-v2.5-pro / mimo-v2.5 deprecated 2026-10-21 10:00 Beijing. Cache-hit ~0.8% of input on pro (extremely cheap cached input). cache_write_per_mtok as published: \"limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+        "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.28,
+        "cached_input_per_mtok": 0.0028,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro-cn",
+      "provider_id": "xiaomi",
+      "provider_name": "Xiaomi MiMo",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "mimo-v2.6-pro",
+      "model_name": "MiMo-V2.6-Pro",
+      "model_creator": "xiaomi",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 3,
+      "output_per_mtok": 6,
+      "cached_input_per_mtok": 0.025,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "Domestic (China) pricing, CNY",
+      "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 50% (pro & flash). Cache write limited-time free. mimo-v2.5-pro / mimo-v2.5 deprecated 2026-10-21 10:00 Beijing. Cache-hit ~0.8% of input on pro (extremely cheap cached input). cache_write_per_mtok as published: \"limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+        "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.447454,
+        "output_per_mtok": 0.894908,
+        "cached_input_per_mtok": 0.003729,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 0.559318
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro-intl",
+      "provider_id": "xiaomi",
+      "provider_name": "Xiaomi MiMo",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "mimo-v2.6-pro",
+      "model_name": "MiMo-V2.6-Pro",
+      "model_creator": "xiaomi",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 0.435,
+      "output_per_mtok": 0.87,
+      "cached_input_per_mtok": 0.0036,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": 50,
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "Overseas pricing, USD",
+      "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 50% (pro & flash). Cache write limited-time free. mimo-v2.5-pro / mimo-v2.5 deprecated 2026-10-21 10:00 Beijing. Cache-hit ~0.8% of input on pro (extremely cheap cached input). cache_write_per_mtok as published: \"limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+        "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 0.435,
+        "output_per_mtok": 0.87,
+        "cached_input_per_mtok": 0.0036,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 0.54375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro-ultraspeed-cn",
+      "provider_id": "xiaomi",
+      "provider_name": "Xiaomi MiMo",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "mimo-v2.6-pro-ultraspeed",
+      "model_name": "MiMo-V2.6-Pro-UltraSpeed",
+      "model_creator": "xiaomi",
+      "open_weights": "unknown",
+      "currency": "CNY",
+      "input_per_mtok": 30,
+      "output_per_mtok": 60,
+      "cached_input_per_mtok": 0.25,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "Domestic (China) pricing, CNY",
+      "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 50% (pro & flash). Cache write limited-time free. mimo-v2.5-pro / mimo-v2.5 deprecated 2026-10-21 10:00 Beijing. Cache-hit ~0.8% of input on pro (extremely cheap cached input). cache_write_per_mtok as published: \"limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+        "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 4.47454,
+        "output_per_mtok": 8.94908,
+        "cached_input_per_mtok": 0.037288,
+        "cache_write_per_mtok": null,
+        "fx_rate_date": "2026-10-02",
+        "blended_3to1": 5.593175
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro-ultraspeed-intl",
+      "provider_id": "xiaomi",
+      "provider_name": "Xiaomi MiMo",
+      "provider_type": "first_party",
+      "provider_country": "CN",
+      "model_slug": "mimo-v2.6-pro-ultraspeed",
+      "model_name": "MiMo-V2.6-Pro-UltraSpeed",
+      "model_creator": "xiaomi",
+      "open_weights": "unknown",
+      "currency": "USD",
+      "input_per_mtok": 4.35,
+      "output_per_mtok": 8.7,
+      "cached_input_per_mtok": 0.036,
+      "cache_write_per_mtok": "unknown",
+      "batch_discount_pct": "unknown",
+      "offpeak": null,
+      "tiered_pricing": null,
+      "context_window": 1000000,
+      "max_output": 128000,
+      "free_tier": null,
+      "region_notes": "Overseas pricing, USD",
+      "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+      "checked": "2026-10-05",
+      "confidence": "official_docs",
+      "notes": "Batch API = 50% (pro & flash). Cache write limited-time free. mimo-v2.5-pro / mimo-v2.5 deprecated 2026-10-21 10:00 Beijing. Cache-hit ~0.8% of input on pro (extremely cheap cached input). cache_write_per_mtok as published: \"limited-time free\"",
+      "fetch_recipe": {
+        "method": "docs_markdown",
+        "endpoint": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+        "selector_hint": "HTML <table> under '### Domestic Pricing of the Model' (¥) and '### Overseas Pricing of the Model' ($); rows Real-time API / Batch API; columns Input(Cache Hit)|Input(Cache Miss)|Output",
+        "volatility": "high"
+      },
+      "usd": {
+        "input_per_mtok": 4.35,
+        "output_per_mtok": 8.7,
+        "cached_input_per_mtok": 0.036,
+        "cache_write_per_mtok": null,
+        "blended_3to1": 5.4375
+      },
+      "last_verified_at": "2026-10-05",
+      "provenance": {
+        "default": {
+          "source": "https://mimo.mi.com/static/docs/price/pay-as-you-go.md",
+          "fetched_at": "2026-10-05",
+          "method": "docs_markdown",
+          "confidence": "official_docs"
+        },
+        "fields": {
+          "input_per_mtok": "default",
+          "output_per_mtok": "default",
+          "cached_input_per_mtok": "default",
+          "cache_write_per_mtok": "default",
+          "context_window": "default",
+          "batch_discount_pct": "default",
+          "free_tier": "default"
+        }
+      }
+    }
+  ]
+}
