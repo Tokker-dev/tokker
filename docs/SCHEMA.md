@@ -65,6 +65,7 @@ into one canonical id per lab; the other spellings are `aliases`.
 | `derived` | `{cheapest_provider_per_model}` — keyed by `model_slug`; each entry `{offers: integer >= 1, cheapest_offer: composite id, blended_3to1_usd: number|null}` |
 | `sources` | [sources[]](#sources) |
 | `research_notes` | map of part-file name → notes string |
+| `freshness` *(optional, build-only)* | `{as_of, oldest[]}` — the staleness snapshot `npm run build` stamps in; the Worker recomputes at read time. `oldest` = the five rows with the oldest `last_verified_at` (ties by id), each `{id, row_type, last_verified_at, stale, stale_since}` |
 
 ## providers[] (all fields required)
 
@@ -97,6 +98,7 @@ into one canonical id per lab; the other spellings are `aliases`.
 | `checked`, `last_verified_at` | ISO dates — day researched / day the source last agreed with the row |
 | `confidence` | `official_page` \| `official_docs` \| `secondary` |
 | `fetch_recipe`, `usd`, `provenance` | see [shared objects](#shared-objects) |
+| `stale`, `stale_since`, `stale_fields` *(optional, build-only)* | boolean; ISO date or null; map of field name → ISO date — past the freshness SLA (plan §4.5: volatile 3, standard 10, subscriptions 14 days; rules in `data/rules/freshness.json`) |
 | `supersedes` *(optional)* | composite id this row replaces |
 
 ## subscriptions[] — one row per plan (required unless marked optional)
@@ -118,6 +120,7 @@ into one canonical id per lab; the other spellings are `aliases`.
 | `estimates_by_model` *(optional)* | map of model slug → estimate block (build output, never hand-edited) |
 | `source`, `checked`, `confidence`, `notes`, `last_verified_at`, `provenance` | as in api_offers[] |
 | `fetch_recipe`, `usd` | [shared objects](#shared-objects) (`usd` is the subscription block) |
+| `stale`, `stale_since`, `stale_fields` *(optional, build-only)* | as in api_offers[] — subscriptions are always the 14-day class |
 | `supersedes` *(optional)* | composite id this row replaces |
 
 ### model_weights[] (all fields required)

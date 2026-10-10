@@ -61,6 +61,31 @@
       "description": "Keyed by research part file name.",
       "propertyNames": { "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" },
       "additionalProperties": { "type": "string" }
+    },
+    "freshness": {
+      "type": "object",
+      "description": "Build-only: the staleness snapshot the build stamped in (the Worker recomputes at read time).",
+      "additionalProperties": false,
+      "required": ["as_of", "oldest"],
+      "properties": {
+        "as_of": { "$ref": "#/$defs/iso_date" },
+        "oldest": {
+          "type": "array",
+          "description": "The five rows with the oldest last_verified_at, ties broken by id.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "row_type", "last_verified_at", "stale", "stale_since"],
+            "properties": {
+              "id": { "$ref": "#/$defs/composite_id" },
+              "row_type": { "enum": ["api_offer", "subscription"] },
+              "last_verified_at": { "$ref": "#/$defs/iso_date" },
+              "stale": { "type": "boolean" },
+              "stale_since": { "$ref": "#/$defs/stale_since" }
+            }
+          }
+        }
+      }
     }
   },
   "$defs": {
@@ -72,6 +97,19 @@
     "composite_id": {
       "type": "string",
       "pattern": "^[a-z0-9][a-z0-9._-]*/[a-z0-9][a-z0-9._-]*$"
+    },
+    "stale_since": {
+      "description": "The first day the row (or field) was past its SLA; null while fresh.",
+      "anyOf": [
+        { "$ref": "#/$defs/iso_date" },
+        { "type": "null" }
+      ]
+    },
+    "stale_fields": {
+      "type": "object",
+      "description": "Build-only: per-field staleness for provenance.fields overrides, keyed by field name; the value is the date the field went stale under its row's SLA. Omitted when empty.",
+      "propertyNames": { "pattern": "^[a-z_][a-z0-9_]*$" },
+      "additionalProperties": { "$ref": "#/$defs/iso_date" }
     },
     "currency": {
       "type": "string",
@@ -369,6 +407,12 @@
         "usd": { "$ref": "#/$defs/usd_api" },
         "last_verified_at": { "$ref": "#/$defs/iso_date" },
         "provenance": { "$ref": "#/$defs/provenance" },
+        "stale": {
+          "type": "boolean",
+          "description": "Build-only: past the freshness SLA (data/rules/freshness.json). The Worker recomputes it at read time."
+        },
+        "stale_since": { "$ref": "#/$defs/stale_since" },
+        "stale_fields": { "$ref": "#/$defs/stale_fields" },
         "supersedes": { "$ref": "#/$defs/composite_id" }
       }
     },
@@ -453,6 +497,12 @@
         "usd": { "$ref": "#/$defs/usd_subscription" },
         "last_verified_at": { "$ref": "#/$defs/iso_date" },
         "provenance": { "$ref": "#/$defs/provenance" },
+        "stale": {
+          "type": "boolean",
+          "description": "Build-only: past the freshness SLA (data/rules/freshness.json). The Worker recomputes it at read time."
+        },
+        "stale_since": { "$ref": "#/$defs/stale_since" },
+        "stale_fields": { "$ref": "#/$defs/stale_fields" },
         "supersedes": { "$ref": "#/$defs/composite_id" }
       }
     },
