@@ -1,0 +1,13 @@
+{
+  "description": "Freshness SLAs (docs/plan.md 4.5): a row is stale when the whole UTC days from its last_verified_at date to the build/read date exceed sla_days. The first matching rule wins; a rule key that is absent matches anything. Row type comes first so a volatile subscription is still a subscription.",
+  "classes": {
+    "volatile_api": { "sla_days": 3, "description": "API pricing that moves often (fetch_recipe.volatility high)." },
+    "standard_api": { "sla_days": 10, "description": "API pricing at the default cadence." },
+    "subscription": { "sla_days": 14, "description": "Subscription plans, whatever their volatility." }
+  },
+  "rules": [
+    { "row_type": "subscription", "class": "subscription" },
+    { "row_type": "api_offer", "volatility": "high", "class": "volatile_api" },
+    { "row_type": "api_offer", "class": "standard_api" }
+  ]
+}

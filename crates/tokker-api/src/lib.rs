@@ -1,9 +1,12 @@
 //! Tokker's Cratefield harness modules.
 //!
-//! For now a single empty [`Module`] stub. As the venture grows, the pricing
-//! routes, the calculator and the MCP tool surface live here.
+//! A [`Module`] stub plus [`freshness`], the freshness SLAs. As the venture
+//! grows, the pricing routes, the calculator and the MCP tool surface live
+//! here too.
 
 #![forbid(unsafe_code)]
+
+pub mod freshness;
 
 use cratefield_core::{Config, ConfigError, Migrations, Module, ModuleContext, Port};
 
