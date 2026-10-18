@@ -1,12 +1,17 @@
 //! Tokker's Cratefield harness modules.
 //!
-//! A [`Module`] stub plus [`freshness`], the freshness SLAs. As the venture
-//! grows, the pricing routes, the calculator and the MCP tool surface live
-//! here too.
+//! [`offers`] serves the public price index at `/v1/offers` (issue #19);
+//! [`freshness`] holds the freshness SLAs both the build and the Worker
+//! compute staleness with. As the venture grows, the remaining pricing
+//! routes, the calculator and the MCP tool surface live here too.
 
 #![forbid(unsafe_code)]
 
 pub mod freshness;
+pub mod offers;
+pub(crate) mod offers_query;
+
+pub use offers::Offers;
 
 use cratefield_core::{Config, ConfigError, Migrations, Module, ModuleContext, Port};
 

@@ -18,4 +18,12 @@ workspace = true
 cratefield-core = { workspace = true }
 axum = { workspace = true }
 serde = { workspace = true }
-serde_json = { workspace = true }
+# float_roundtrip: a stored row's numbers must re-serialise unchanged.
+serde_json = { workspace = true, features = ["float_roundtrip"] }
+sea-query = { workspace = true }
+
+[dev-dependencies]
+cratefield-adapter-sqlite = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+tower = { workspace = true }

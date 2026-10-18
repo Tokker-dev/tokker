@@ -23,7 +23,7 @@ use std::sync::OnceLock;
 
 use cratefield_core::{Harness, Venture};
 use cratefield_runtime_cloudflare::{Cloudflare, serve, serve_scheduled};
-use tokker_api::TokkerApi;
+use tokker_api::{Offers, TokkerApi};
 use worker::{Context, Env, Request, Response, ScheduleContext, ScheduledEvent, event};
 
 static INSTANCE: OnceLock<(Harness, Cloudflare)> = OnceLock::new();
@@ -49,6 +49,7 @@ fn instance() -> &'static (Harness, Cloudflare) {
                     .cors_origins(["https://tokker.dev"]),
             )
             .module(TokkerApi)
+            .module(Offers::default())
             .runtime(runtime.clone())
             .build()
             .expect("tokker harness is valid");
