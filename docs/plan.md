@@ -49,14 +49,15 @@ For each plan: `est_tokens_per_month = min(window_cap × windows_per_month, week
 - **`last_verified_at`:** the date the source was last fetched and agreed with the row. It is shown everywhere.
 - **`fetch_recipe`:** `{method: json_api|html_static|html_js_rendered|docs_markdown|pdf|manual, endpoint, selector_hint, volatility}`. This is the scheduled agent's instruction for how to re-check the row (see §4).
 - **API endpoints:**
-  - `GET /v1/offers?model=&provider=&creator=&open_weights=&max_input=`
-  - `GET /v1/offers/{id}`
+  - `GET /v1/offers?model=&provider=&creator=&provider_type=&open_weights=&max_input=&max_output=&currency=&stale=&sort=blended|input|output&cursor=&limit=`
+  - `GET /v1/offers/{id}` (ids contain `/`, so the route is `/v1/offers/{provider}/{model}`)
   - `GET /v1/models/{slug}/cheapest`
   - `GET /v1/plans`, `GET /v1/plans/{id}`
   - `GET /v1/changes?since=&id=`
   - `POST /v1/estimate` (calculator)
   - `GET /v1/sources` (freshness)
   - `GET /data/pricing.json`, `/data/*.csv`
+- **`/v1/offers` contract (issue #19, shipped):** rows are the verbatim `api_offers[]` objects plus a read-time `stale`/`stale_since` verdict; the raw native-currency columns are always present and `"unknown"` stays the string `"unknown"`. `max_*` compare USD values; the default sort is blended 3:1, NULLs (unpriced rows) last, id as the tiebreak — the same order the cursor walks, so pagination is stable. `limit` defaults to 50 (max 200). The envelope carries `as_of` (the dataset's latest `last_verified_at` across offers and plans), `source_commit` and `license` (from `dataset_meta`, with the dataset's own values as fallbacks). Errors are problem+json and name the offending `parameter`. 200s are read-through cached in KV keyed by the normalised query plus the loaded dataset's identity (the source commit; the mirror's diff hook sets it via `invalidate_cache` — a changed identity orphans every entry at once, a failed set fails the load), and a KV failure never fails a request.
 
 ## 4. Freshness: scheduled agents (core system)
 
