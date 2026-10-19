@@ -178,9 +178,9 @@ dependencies = [
 
 [[package]]
 name = "cratefield-adapter-sqlite"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0673c2dbc6d797a38cf010985410bffeb773dad246dadaa680bd220283286fc1"
+checksum = "c60eb608f258be2ff8d4da675d4d7882b0f7fb72d578eaac50c57e6ad4918e70"
 dependencies = [
  "async-trait",
  "cratefield-core",
@@ -192,15 +192,16 @@ dependencies = [
 
 [[package]]
 name = "cratefield-auth-client"
-version = "0.3.0"
+version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "212f03772edd81edba3f30dbbe82e1c4cf27bd83838cb99204212175b0f6eb12"
+checksum = "4362370e247465ae1e97d035cf9f84152c7addbd66bc176dad106bb8db3a53d7"
 dependencies = [
  "async-trait",
  "axum",
  "base64ct",
  "bytes",
  "cratefield-core",
+ "futures-util",
  "http",
  "p256",
  "serde",
@@ -212,15 +213,19 @@ dependencies = [
 
 [[package]]
 name = "cratefield-core"
-version = "0.8.0"
+version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "40d159c9c54cfd5199802573a9a23526312bcf6d7657414845a70990196ee4a4"
+checksum = "cb13274aadff22d6c20584314ea344ea3b6eeabd862a87ac639a9fa2d78649e1"
 dependencies = [
  "async-trait",
  "axum",
  "base64",
  "bytes",
+ "futures-channel",
  "futures-core",
+ "futures-timer",
+ "futures-util",
+ "getrandom",
  "hmac",
  "http",
  "schemars",
@@ -243,23 +248,26 @@ dependencies = [
 
 [[package]]
 name = "cratefield-runtime-cloudflare"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "93ecc68b9f1b8034852d0287a3feb32745b5e78eff362d2d61167e212c91e272"
+checksum = "8925c8bfd5b5c8b99d122ee9823a00bccb4fc4fe58f72a934baeb3b493eda085"
 dependencies = [
  "async-trait",
  "axum",
+ "base64",
  "bytes",
  "cratefield-auth-client",
  "cratefield-core",
  "futures-core",
  "futures-util",
  "getrandom",
+ "hmac",
  "http",
  "sea-query",
  "serde",
  "serde_json",
  "sha2",
+ "subtle",
  "time",
  "tower",
  "tracing",
@@ -482,6 +490,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b1f9e3d69d39e4862ffed03ed071a76f9a13ba1d9109d355b0f0aa6b15e393c4"
 dependencies = [
  "futures-core",
+ "futures-sink",
 ]
 
 [[package]]
@@ -518,6 +527,12 @@ name = "futures-task"
 version = "0.3.34"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cd417de3d1d015fc3bfd2b1ea46dfc7bab72ef86f1cc7cc9c78e728b34a6d1fd"
+
+[[package]]
+name = "futures-timer"
+version = "3.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "af43fadb8a98512d547e37b4e92e0ced13e205c061b87b4623eff01d918d6968"
 
 [[package]]
 name = "futures-util"
