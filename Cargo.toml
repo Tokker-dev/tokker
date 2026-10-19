@@ -13,13 +13,13 @@ repository = "https://github.com/Tokker-dev/tokker"
 # All cratefield-* crates come from crates.io, pinned to compatible
 # versions. Never mix sources; `cargo tree -d --depth 0 | grep cratefield`
 # must print nothing (CLAUDE.md).
-cratefield-core = "0.8"
-cratefield-runtime-cloudflare = "0.4"
+cratefield-core = "0.10.0"
+cratefield-runtime-cloudflare = "0.5.0"
 
 # Test-only: the rusqlite-backed Database port (bundled SQLite) the route
 # tests run real SQL through. Pinned: 0.3.1 moved to cratefield-core 0.9,
 # and the workspace stays on 0.8 (CLAUDE.md: one cratefield source).
-cratefield-adapter-sqlite = "=0.3.0"
+cratefield-adapter-sqlite = "=0.3.2"
 
 # HTTP stack (versions aligned with what cratefield-core re-exports).
 axum = { version = "0.8", default-features = false, features = ["json"] }
