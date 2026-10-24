@@ -94,7 +94,7 @@ curl -X POST https://api.tokker.dev/v1/estimate -d '{"input_mtok":400,"output_mt
 ```json
 {
   "mcpServers": {
-    "tokker": { "command": "npx", "args": ["-y", "@tokker/mcp"] }
+    "tokker": { "command": "bunx", "args": ["@tokker/mcp"] }
   }
 }
 ```

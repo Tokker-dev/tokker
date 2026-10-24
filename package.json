@@ -7,10 +7,10 @@
     "node": "22"
   },
   "scripts": {
-    "validate": "node tools/validate.mjs",
-    "check-pr": "node tools/check-pr.ts",
-    "build": "node tools/build.mjs",
-    "fx": "node tools/fx.mjs",
+    "validate": "bun tools/validate.mjs",
+    "check-pr": "bun tools/check-pr.ts",
+    "build": "bun tools/build.mjs",
+    "fx": "bun tools/fx.mjs",
     "fetch": "echo 'not implemented' && exit 1",
     "extract": "echo 'not implemented' && exit 1",
     "diff": "echo 'not implemented' && exit 1",
@@ -18,7 +18,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "ajv": "^8.17.1",
-    "vitest": "^3.0.0"
+    "ajv": "8.20.0",
+    "vitest": "3.2.7"
   }
 }

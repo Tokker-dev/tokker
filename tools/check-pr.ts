@@ -10,7 +10,7 @@
 // rules apply to new rows and rows with non-bookkeeping changes, so untouched
 // legacy rows never block an unrelated PR.
 //
-// Usage: npm run check-pr [-- --base <ref>] [--base-dir <dir>] [--head-dir <dir>]
+// Usage: bun run check-pr [-- --base <ref>] [--base-dir <dir>] [--head-dir <dir>]
 //   [--date YYYY-MM-DD] [--json]
 //
 // The base side comes from git (`git ls-tree`/`git show`) or --base-dir; the head

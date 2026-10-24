@@ -218,7 +218,7 @@ test('a hand-edited usd value fails as build drift', () => {
   expect(hit).toBeDefined();
   expect(hit.message).toContain('is 3.01');
   expect(hit.message).toContain('build computes 3');
-  expect(hit.message).toContain('run npm run build');
+  expect(hit.message).toContain('run bun run build');
 });
 
 test('a usd block that keeps a stale fx_rate_date on a base-currency row fails', () => {

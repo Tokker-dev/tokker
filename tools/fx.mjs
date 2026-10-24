@@ -2,7 +2,7 @@
 // FX for the price index: one dated rate set (ECB euro reference rates served
 // by frankfurter.app, cross-rate to USD) in data/fx.json; every usd{} block is
 // derived from it by tools/build.mjs. Policy: docs/fx.md.
-// Usage: npm run fx [-- --out <path>] — fetch today's rates, write data/fx.json.
+// Usage: bun run fx [-- --out <path>] — fetch today's rates, write data/fx.json.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';

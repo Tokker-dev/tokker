@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Smoke-test a running Tokker Worker: the harness built-ins (/__health,
 // /__ready, /__surface) and the 404 fallback. Start the Worker first
-// (`npx wrangler dev --local` from the repo root), then run
+// (`bunx wrangler dev --local` from the repo root), then run
 // `node tools/smoke.mjs [base-url]`. SMOKE_URL or the first argument set the
 // base URL (default http://127.0.0.1:8787); prints one PASS/FAIL line per
 // check and exits 1 if any check fails.
