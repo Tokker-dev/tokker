@@ -2,7 +2,7 @@
 // Validate Tokker price-index data files against schema/pricing.v1.json plus
 // dataset-wide checks a per-row schema cannot express (id uniqueness, estimate
 // assumptions, and — via the model registry — that every api_offers[].model_slug
-// is a known model with a matching creator). Usage: npm run validate [files...]
+// is a known model with a matching creator). Usage: bun run validate [files...]
 // (default data/pricing.json); prints each problem as `file:jsonpath: message`,
 // exits 1 if any exist.
 
@@ -207,14 +207,14 @@ function checkRowUsd(row, basePath, fx, compute, file, errors) {
       errors.push({
         file,
         path: `${basePath}.usd.${field}`,
-        message: `build does not produce '${field}' from native values and fx; run npm run build`,
+        message: `build does not produce '${field}' from native values and fx; run bun run build`,
       });
     } else if (!Object.is(actual[field], expected[field])) {
       errors.push({
         file,
         path: `${basePath}.usd.${field}`,
         message: `is ${renderValue(actual[field])}, build computes ${renderValue(expected[field])} ` +
-          'from native values and fx; run npm run build',
+          'from native values and fx; run bun run build',
       });
     }
   }
@@ -469,7 +469,7 @@ export function run(argv, { log = console.log, error = console.error } = {}) {
         problems.push({
           file,
           path: '$.fx',
-          message: `does not match ${FX_DATA_FILE} (base/date/source/rates must be one dated rate set); run npm run fx && npm run build`,
+          message: `does not match ${FX_DATA_FILE} (base/date/source/rates must be one dated rate set); run bun run fx && bun run build`,
         });
       }
     }

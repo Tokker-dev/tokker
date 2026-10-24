@@ -5,7 +5,7 @@
 // per-model estimates in subscriptions[].estimates_by_model. Then stamp
 // freshness: stale, stale_since, stale_fields per row and counts.stale from
 // data/rules/freshness.json. Output to dist/pricing.json or --out PATH.
-// Usage: npm run build [-- --out <path>] [-- --as-of YYYY-MM-DD]
+// Usage: bun run build [-- --out <path>] [-- --as-of YYYY-MM-DD]
 
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';

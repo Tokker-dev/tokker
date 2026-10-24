@@ -16,8 +16,8 @@ working day, around 16:00 CET on TARGET working days. frankfurter computes the
 cross rates for the `USD` base, so `fx.rates` is *units of currency per 1 USD*
 and `fx.base` is always the dataset's accounting currency, `USD`.
 
-The daily loop refreshes rates with `npm run fx` (writes `data/fx.json`) and
-then rebuilds with `npm run build`. `npm run fx` refuses to write if the
+The daily loop refreshes rates with `bun run fx` (writes `data/fx.json`) and
+then rebuilds with `bun run build`. `bun run fx` refuses to write if the
 response is missing a rate for any currency a row uses — a silent gap would
 break the build.
 
@@ -41,7 +41,7 @@ break the build.
 ## Supported currencies
 
 A row's `currency` must be `fx.base` or a key in `fx.rates`. Anything else is
-refused: `npm run build` throws and `npm run validate` reports
+refused: `bun run build` throws and `bun run validate` reports
 `currency "XYZ" has no rate in fx (unsupported; see docs/fx.md)`. The seed
 dataset uses USD, CNY, EUR, CHF and INR — all covered by the ECB list. There
 is **no secondary FX source**; adding one (e.g. for a currency the ECB does
@@ -55,6 +55,6 @@ the same model in two currencies gets two rows with distinct ids.
 `tools/validate.mjs` re-derives every usd block from the native values and the
 document's `fx` block. A block that disagrees with the build (or an `fx` block
 that disagrees with `data/fx.json`) fails validation with
-`run npm run build`. After `npm run fx`, always run `npm run build` so the
+`run bun run build`. After `bun run fx`, always run `bun run build` so the
 derived `blended_3to1` values and `derived.cheapest_provider_per_model`
 follow the new rates.

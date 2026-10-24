@@ -2,7 +2,7 @@
 
 The machine contract is [`schema/pricing.v1.json`](../schema/pricing.v1.json)
 (JSON Schema draft 2020-12); this file is the human one. Check data with
-`npm run validate [files…]` (default `data/pricing.json`): problems print one
+`bun run validate [files…]` (default `data/pricing.json`): problems print one
 per line as `file:jsonpath: message` and the run exits 1 (`ok <file>` when
 clean). Decisions: [`plan.md`](plan.md) §3.
 
@@ -65,7 +65,7 @@ into one canonical id per lab; the other spellings are `aliases`.
 | `derived` | `{cheapest_provider_per_model}` — keyed by `model_slug`; each entry `{offers: integer >= 1, cheapest_offer: composite id, blended_3to1_usd: number|null}` |
 | `sources` | [sources[]](#sources) |
 | `research_notes` | map of part-file name → notes string |
-| `freshness` *(optional, build-only)* | `{as_of, oldest[]}` — the staleness snapshot `npm run build` stamps in; the Worker recomputes at read time. `oldest` = the five rows with the oldest `last_verified_at` (ties by id), each `{id, row_type, last_verified_at, stale, stale_since}` |
+| `freshness` *(optional, build-only)* | `{as_of, oldest[]}` — the staleness snapshot `bun run build` stamps in; the Worker recomputes at read time. `oldest` = the five rows with the oldest `last_verified_at` (ties by id), each `{id, row_type, last_verified_at, stale, stale_since}` |
 
 ## providers[] (all fields required)
 
@@ -205,7 +205,7 @@ number > 0: one unit of base in that currency).
   `vendor counts tokens directly…`).
 - **USD is build output.** A row's `currency` must be supported by `fx`
   (the base or a key in `fx.rates`; see [fx.md](fx.md)), and every `usd` field
-  must equal what `npm run build` computes from the native values and the
+  must equal what `bun run build` computes from the native values and the
   document's `fx` block. When `data/fx.json` exists, every document's `fx`
   block must match it exactly — one dated rate set per dataset.
 - **Model registry.** `data/models.json` + `data/creators.json` are validated

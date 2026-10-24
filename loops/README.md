@@ -10,5 +10,5 @@ The Colonizer loop prompts and their `colonizer loop create` lines.
 | `discovery` | weekly@thu@07:00 | New providers, models and plans. |
 
 See `docs/plan.md` §4.8 for the `colonizer loop create` lines. The `api-daily`
-loop starts with `npm run fx && npm run build` so USD conversions and the
+loop starts with `bun run fx && bun run build` so USD conversions and the
 derived cheapest-provider ranking follow the fresh rates (`docs/fx.md`).

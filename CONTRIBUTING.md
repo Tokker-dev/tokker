@@ -38,9 +38,9 @@ fi
 ## Data (Node 22)
 
 ```sh
-npm ci
-npm run validate
-npm test
+bun install --frozen-lockfile
+bun run validate
+bun run test
 ```
 
 [cc]: https://www.conventionalcommits.org/
